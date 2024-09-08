@@ -55,21 +55,21 @@ Twoja przeglądarka nie wspiera odtwarzania filmów.
 </video>
 -->
 
-![wsl-install](wsl-install.gif)
+TODO: wsl-install.mp4
 
-![gcc-intsall](gcc-install.gif)
+TODO: gcc-install.mp4
 
 
 # Krok 2a: Instalacja Visual Studio Code
 
-![vscode-intsall](vscode-install.gif)
+TODO: vscode-install.mp4
 
 # Krok 2b: Instalacja Geany
 
 Instalator `geany-2.0_setup.exe` można pobrać ze strony [geany.org](https://www.geany.org/download/releases/){:target="\_blank"}.
 Kroki instalacyjne są prostsze, niż te dla Visual Studio Code.
 
-![geany-intsall](geany-install.gif)
+TODO: geany-install.mp4
 
 # Krok 3: Napisanie programu
 
