@@ -24,9 +24,10 @@ Istnieją też inne języki programowania, na przykład Java, ale zazwyczaj nie 
 # Część techniczna: środowisko programistyczne C++
 
 Żeby stworzyć program w C++, potrzebujemy wykonać następujące kroki:
-Najpierw musimy napisać kod źródłowy programu w języku C++.
-Mając już kod źródłowy, można go *skompilować*, czyli sprowadzić go do pliku wykonywalnego (na systemie Windows taki plik ma rozszerzenie `.exe`).
-Plik wykonywalny można już po prostu wywołać.
+
+1. Najpierw musimy napisać kod źródłowy programu w języku C++.
+2. Mając już kod źródłowy, można go *skompilować*, czyli sprowadzić go do pliku wykonywalnego (na systemie Windows taki plik ma rozszerzenie `.exe`).
+3. Plik wykonywalny można już po prostu wywołać.
 Programy, które będziemy tworzyć w tym kursie, po uruchomieniu otworzą konsolę.
 W takiej konsoli można programowi podać dane, po czym program się wykona i wypisze obliczone dane.
 
@@ -35,10 +36,9 @@ Jak się niedługo okaże, kody źródłowe programów bywają na tyle skompliko
 Takie środowisko zazwyczaj jest edytorem tekstu, który pomaga pisać kody źródłowe, oraz umożliwia łatwe kompilowanie i uruchamianie programu.
 
 Istnieje wiele środowisk programistycznych, a żeby ułatwić wybór, pokażemy jak zainstalować dwa konkretne, zależnie od preferencji:
-Visual Studio Code - na tę chwilę najpopularniejsze środowisko programistyczne, które wspiera wiele języków programowania, w tym C++ oraz Python.
-Geany - bardzo lekki edytor tekstu z minimalnym interfejsem do skompilowania i uruchamiania kodu.
 
-TODO: dlaczego nie Code::Blocks
+- Visual Studio Code - na tę chwilę najpopularniejsze środowisko programistyczne, które wspiera wiele języków programowania, w tym C++ oraz Python.
+- Geany - bardzo lekki edytor tekstu z minimalnym interfejsem do skompilowania i uruchamiania kodu.
 
 # Krok 1: Instalacja WSL oraz g++
 
@@ -66,16 +66,16 @@ TODO: vscode-install.mp4
 
 # Krok 2b: Instalacja Geany
 
-Instalator `geany-2.0_setup.exe` można pobrać ze strony [geany.org](https://www.geany.org/download/releases/){:target="\_blank"}.
+Instalator `geany-2.0_setup.exe` można pobrać ze strony [geany.org](https://www.geany.org/download/releases/).
 Kroki instalacyjne są prostsze, niż te dla Visual Studio Code.
 
 TODO: geany-install.mp4
 
 # Krok 3: Napisanie programu
 
-Pod koniec filmików do instalacji środowisk graficznych pojawił się program, który wypisuje do konsoli napis [Hello world!](https://pl.wikipedia.org/wiki/Hello_world){:target="\_blank"}.
+Pod koniec filmików do instalacji środowisk graficznych pojawił się program, który wypisuje do konsoli napis [Hello world!](https://pl.wikipedia.org/wiki/Hello_world).
 Większość naszych programów będzie miała właśnie taką formę:
-```
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -94,7 +94,7 @@ Linijka `cin.tie(0)->sync_with_stdio(0);` przyśpiesza operacje wejścia-wyjści
 Nie wchodzimy w szczegóły działania tych linijek.
 
 Spróbujmy coś wypisać!
-```
+```cpp
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -109,11 +109,18 @@ Po skompilowaniu i uruchomieniu tego programu, w konsoli pojawi się taki napis:
 100 stopni w skali Celsjusza to 212 w skali Fahrenheita
 ```
 
-TODO wyjaśnienie co to `"text"`, co to `cout << a << b;`, co to `\n`.
+`"100 stopni w skali Celsjusza to "` to _napis_, który w C++ zapisuje się cudzysłowach (`""`).
+Napisy, jak i inne wartości (np. wyrażenie `100 * 9 / 5 + 32`), można wypisywać używając składni `cout << wartość`, gdzie `wartość` to rzecz, którą chcemy wypisać.
+Natomiast symbol `\n` występujący na końcu napisu `" w skali Fahrenheita\n"` to znak końca linii, który sprawia, że wyświetla się nowa linijka w jego miejscu.
 
 ## Zadania
 
-TODO: wyjaśnić że output musi być precyzyjny co do znaku, nie można wypisywać dodatkowych spacji, i że tak będzie w każdym zadaniu.
+Na końcu każdej lekcji kursu mamy dla Ciebie konkursowe zadania do samodzielnego rozwiązania.
+Rozwiązaniem każdego z zadań jest program (a dokładniej: kod źródłowy), który powinieneś zgłosić w serwisie [Szkopuł](https://szkopul.edu.pl/).
+Programy są oceniane w pełni automatycznie.
+
+Aby program został zaakceptowany w systemie, wynik działania programu powinien być idealnie zgodny z wymaganiami z treści zadania (tolerowane są jedynie dodatkowe spacje na końcach wierszy oraz dodatkowe puste wiersze na końcu programu).
+Jeśli Twój program nie zadziała za pierwszym razem – nie przejmuj się, możesz przesłać jego poprawioną wersję jeszcze raz! Jeśli chcesz uniknąć ciągłego wysyłania, najpierw sprawdź poprawność kompilacji i działania programu na swoim komputerze.
 
 ### Zadanie 1. Początek
 
@@ -129,3 +136,5 @@ Mont Blanc - 4810 m n.p.m.
 #### Wyjście
 
 Twój program powinien wypisać dokładnie podany wyżej komunikat.
+
+[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/mWDzXfWzEKAg_GshwIYWdbGG/site/?key=statement){ .md-button .md-button--primary }
