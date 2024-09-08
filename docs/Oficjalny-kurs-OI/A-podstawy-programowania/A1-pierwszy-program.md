@@ -1,6 +1,13 @@
 # Wstęp
 
-TODO
+W tej lekcji napiszemy i uruchomimy nasz pierwszy program komputerowy.
+W tym celu wykonamy następujące kroki:
+
+1. Wybierzemy język programowania, w którym napiszemy kod.
+2. Zainstalujemy oprogramowanie potrzebne do napisania i uruchomienia naszego programu.
+3. Napiszemy i uruchomimy pierwszy program wykonujący obliczenia.
+
+Zaczynajmy!
 
 # Dlaczego C++?
 
@@ -111,7 +118,7 @@ Po skompilowaniu i uruchomieniu tego programu, w konsoli pojawi się taki napis:
 
 `"100 stopni w skali Celsjusza to "` to _napis_, który w C++ zapisuje się cudzysłowach (`""`).
 Napisy, jak i inne wartości (np. wyrażenie `100 * 9 / 5 + 32`), można wypisywać używając składni `cout << wartość`, gdzie `wartość` to rzecz, którą chcemy wypisać.
-Natomiast symbol `\n` występujący na końcu napisu `" w skali Fahrenheita\n"` to znak końca linii, który sprawia, że wyświetla się nowa linijka w jego miejscu.
+Natomiast fragment `\n` występujący na końcu napisu `" w skali Fahrenheita\n"` to tzw. znak końca linii, który sprawia, że wyświetla się nowa linijka w jego miejscu.
 
 ## Zadania
 
@@ -119,7 +126,7 @@ Na końcu każdej lekcji kursu mamy dla Ciebie konkursowe zadania do samodzielne
 Rozwiązaniem każdego z zadań jest program (a dokładniej: kod źródłowy), który powinieneś zgłosić w serwisie [Szkopuł](https://szkopul.edu.pl/).
 Programy są oceniane w pełni automatycznie.
 
-Aby program został zaakceptowany w systemie, wynik działania programu powinien być idealnie zgodny z wymaganiami z treści zadania (tolerowane są jedynie dodatkowe spacje na końcach wierszy oraz dodatkowe puste wiersze na końcu programu).
+Aby program został zaakceptowany w systemie, wynik działania programu powinien być idealnie zgodny z wymaganiami z treści zadania.
 Jeśli Twój program nie zadziała za pierwszym razem – nie przejmuj się, możesz przesłać jego poprawioną wersję jeszcze raz! Jeśli chcesz uniknąć ciągłego wysyłania, najpierw sprawdź poprawność kompilacji i działania programu na swoim komputerze.
 
 ### Zadanie 1. Początek
@@ -132,6 +139,8 @@ Mount Everest - 8850 m n.p.m.
 McKinley - 6194 m n.p.m.
 Mont Blanc - 4810 m n.p.m.
 ````
+
+Pamiętaj, że aby twój program został zaakceptowany w systemie, należy wypisać **dokładnie** ten sam teskt co powyżej - bez żadnych dodatkowych znaków (w tym spacji).
 
 #### Wyjście
 
