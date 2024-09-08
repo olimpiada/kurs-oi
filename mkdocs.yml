@@ -22,7 +22,7 @@ extra_javascript:
 nav:
     - Start: 'index.md'
     - 'Początki programowania':
-#        - 'Pierwszy program w C++': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja1.md'
+      - 'Pierwszy program w C++': './Oficjalny-kurs-OI/A-podstawy-programowania/A1-pierwszy-program.md'
       - 'Wczytywanie, wypisywanie, zmienne': './Oficjalny-kurs-OI/A-podstawy-programowania/A2-zmienne.md'
       - 'Technikalia, pierwsze zadania': './Oficjalny-kurs-OI/A-podstawy-programowania/A3-technikalia-zadania.md'
       - 'Instrukcja warunkowa (if)': './Oficjalny-kurs-OI/A-podstawy-programowania/A4-warunki.md'
