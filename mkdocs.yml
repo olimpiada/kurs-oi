@@ -1,0 +1,68 @@
+site_name: Kursy OI
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - tables
+  - pymdownx.arithmatex:
+      generic: true
+  - md_in_html
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/preview-popup.js
+  - https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+    - Start: 'index.md'
+    - 'Początki programowania':
+#        - 'Pierwszy program w C++': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja1.md'
+      - 'Wczytywanie, wypisywanie, zmienne': './Oficjalny-kurs-OI/A-podstawy-programowania/A2-zmienne.md'
+      - 'Technikalia, pierwsze zadania': './Oficjalny-kurs-OI/A-podstawy-programowania/A3-technikalia-zadania.md'
+      - 'Instrukcja warunkowa (if)': './Oficjalny-kurs-OI/A-podstawy-programowania/A4-warunki.md'
+#        - 'Instrukcja przypisania i typ znakowy char': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja4.md'
+#        - 'Pętla while': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja5.md'
+#        - 'Pętla for i tablice': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja6.md'
+#        - 'Więcej o pętlach i tablicach': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja7.md'
+#        - 'Funkcje': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja8.md'
+#        - 'Efektywność programów': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja9.md'
+    - 'Prosta algorytmika':
+      - 'Maksima i podciągi w tablicach': './Oficjalny-kurs-OI/B-proste-algorytmy/B1-podtablice.md'
+      - 'Wyszukiwanie binarne, logarytm': './Oficjalny-kurs-OI/B-proste-algorytmy/B2-wyszukiwanie-binarne.md'
+      - 'Złożoność obliczeniowa': './Oficjalny-kurs-OI/B-proste-algorytmy/B3-zlozonosc-1.md'
+      - 'Systemy pozycyjne': './Oficjalny-kurs-OI/B-proste-algorytmy/B4-systemy-pozycyjne.md'
+      - 'Rekurencja, szybkie potęgowanie i algorytm Euklidesa': './Oficjalny-kurs-OI/B-proste-algorytmy/B5-rekurencja.md'
+      - 'Proste sortowanie': './Oficjalny-kurs-OI/B-proste-algorytmy/B6-sortowanie.md'
+      - 'Sumy w tablicach': './Oficjalny-kurs-OI/B-proste-algorytmy/B7-sumy-gasienica.md'
+
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  favicon: assets/favicon.ico
+  logo: assets/oi-logo.png
+  name: material
+  language: pl
+  features:
+    - toc.integrate
+    # - navigation.sections
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - primary: indigo
+      accent: grey
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode

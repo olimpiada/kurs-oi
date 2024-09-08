@@ -1,0 +1,55 @@
+:root {
+    --md-send-submission: #05149c;
+}
+
+/* Small hack to make table formating more compact */
+:root .md-typeset table:not([class]) td {
+    min-width: unset;
+}
+
+:root .md-typeset table:not([class]) th {
+    min-width: unset;
+}
+
+/**
+ * Styling for one-dimensional tables 
+ * usage example:
+ *
+ * <div class="oneline-table" markdown>
+ * | 1 | 4 | 5 | 9 | 12 | 18 | 20 | 21 | 27 | 32 | 35 | 48 | 49 | 51 | 54 |
+ * |:-:|:-:|:-:|:-:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+ * </div>
+ */
+.oneline-table th,
+td {
+    border-right: 0.05rem solid var(--md-typeset-table-color);
+}
+
+.oneline-table tbody {
+    display: none;
+}
+
+/**
+ * class for overriding color invert
+ * example use:
+ * ![image](gasienica1.png){class="image-color-invert"}
+ */
+body[data-md-color-scheme="slate"] .image-color-invert {
+    filter: invert(1) brightness(1.4);
+}
+
+/* smaller line-height */
+.md-typeset {
+    line-height: 1.45;
+}
+
+/* Move sidebar to the right */
+.md-sidebar--primary {
+    order: 2;
+}
+
+/* Less margin around code blocks */
+.md-typeset code:not(.focus-visible) {
+    margin-top: -0.5em;
+    margin-bottom: -0.5em;
+}
