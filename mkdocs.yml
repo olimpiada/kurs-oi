@@ -50,7 +50,7 @@ extra_css:
 
 theme:
   favicon: assets/favicon.ico
-  logo: assets/oi-logo.png
+  logo: assets/oi-logo-bg.png
   icon:
     repo: fontawesome/brands/github
   name: material
