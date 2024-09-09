@@ -54,29 +54,27 @@ To tak naprawdę sposób uruchomienia *Linux*a, w którym łatwo się instaluje 
 
 Alternatywnie, można zainstalować kompilator MinGW do C++, ale wymaga to więcej kroków instalacyjnych.
 
-<!--
-TODO
-<video width="600" controls>
-<source src="path_file.mp4" type="video/mp4">
-Twoja przeglądarka nie wspiera odtwarzania filmów.
-</video>
--->
+<style>
+iframe {
+width: 100%;
+aspect-ratio: 16 / 9;
+}
+</style>
 
-TODO: wsl-install.mp4
+<iframe src="https://www.youtube.com/embed/euA_T1Ll6ZM?si=hUyOGDeo274rVrLi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-TODO: gcc-install.mp4
-
+<iframe src="https://www.youtube.com/embed/ArDf2yqbVaw?si=R2TzQUWXvhL2V4Hc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Krok 2a: Instalacja Visual Studio Code
 
-TODO: vscode-install.mp4
+<iframe src="https://www.youtube.com/embed/maE3cigf1uA?si=Mva2LzQ4yROK3BlB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Krok 2b: Instalacja Geany
 
 Instalator `geany-2.0_setup.exe` można pobrać ze strony [geany.org](https://www.geany.org/download/releases/).
 Kroki instalacyjne są prostsze, niż te dla Visual Studio Code.
 
-TODO: geany-install.mp4
+<iframe src="https://www.youtube.com/embed/SnsaP3msEBQ?si=EcmGdGHOrwR6CZm_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Krok 3: Napisanie programu
 
