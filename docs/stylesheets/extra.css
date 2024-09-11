@@ -2,9 +2,10 @@
     --md-send-submission: #05149c;
 }
 
-/* Small hack to make table formating more compact */
+/* Make table formating more compact */
 :root .md-typeset table:not([class]) td {
     min-width: unset;
+    padding: 0.8em 1em;
 }
 
 :root .md-typeset table:not([class]) th {
@@ -30,12 +31,17 @@ td {
 }
 
 /**
- * class for overriding color invert
- * example use:
- * ![image](gasienica1.png){class="image-color-invert"}
+ * color invert & overriding color invert
+ * to not invert a specific image:
+ * ![image](gasienica1.png){class="no-invert"}
  */
-body[data-md-color-scheme="slate"] .image-color-invert {
+
+body[data-md-color-scheme="slate"] .md-typeset img {
     filter: invert(1) brightness(1.4);
+}
+
+body[data-md-color-scheme="slate"] .no-invert {
+    filter: none;
 }
 
 /* smaller line-height */
@@ -52,4 +58,39 @@ body[data-md-color-scheme="slate"] .image-color-invert {
 .md-typeset code:not(.focus-visible) {
     margin-top: -0.5em;
     margin-bottom: -0.5em;
+}
+
+/* Zoom out text overall (~90% original size) */
+.md-typeset {
+    font-size: 0.71rem;
+}
+
+/* Bigger header bar logo */
+.md-header__button.md-logo {
+    padding: 0;
+}
+
+.md-header__button.md-logo img {
+    height: 1.8rem;
+}
+
+/* Monospace tables (adapted from styling of `.md-typeset code`)*/
+.md-typeset table:not([class]) {
+    font-family: var(--md-code-font-family);
+    font-feature-settings: "kern";
+    font-variant-ligatures: none;
+}
+
+/* Darker background + other color tweaks */
+:root,
+[data-md-color-scheme="default"] {
+    --md-default-bg-color: #fafafa;
+}
+
+body[data-md-color-primary="blue"] {
+    --md-primary-fg-color: #0000008a !important;
+}
+
+.md-header {
+    background-color: #aaa;
 }

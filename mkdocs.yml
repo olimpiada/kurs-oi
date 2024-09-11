@@ -1,4 +1,7 @@
 site_name: Kursy OI
+repo_url: https://github.com/olimpiada/kurs-oi
+repo_name: olimpiada/kurs-oi
+edit_uri: edit/master/docs/
 
 markdown_extensions:
   - admonition
@@ -22,7 +25,7 @@ extra_javascript:
 nav:
     - Start: 'index.md'
     - 'Początki programowania':
-#        - 'Pierwszy program w C++': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja1.md'
+      - 'Pierwszy program w C++': './Oficjalny-kurs-OI/A-podstawy-programowania/A1-pierwszy-program.md'
       - 'Wczytywanie, wypisywanie, zmienne': './Oficjalny-kurs-OI/A-podstawy-programowania/A2-zmienne.md'
       - 'Technikalia, pierwsze zadania': './Oficjalny-kurs-OI/A-podstawy-programowania/A3-technikalia-zadania.md'
       - 'Instrukcja warunkowa (if)': './Oficjalny-kurs-OI/A-podstawy-programowania/A4-warunki.md'
@@ -47,11 +50,15 @@ extra_css:
 
 theme:
   favicon: assets/favicon.ico
-  logo: assets/oi-logo.png
+  logo: assets/oi-logo-bg.png
+  icon:
+    repo: fontawesome/brands/github
   name: material
   language: pl
   features:
     - toc.integrate
+    - content.action.edit
+    - content.action.view
     # - navigation.sections
   palette:
     - scheme: default
