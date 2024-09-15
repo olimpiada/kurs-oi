@@ -25,7 +25,7 @@ for (int i = 0; i < n; i++) {
     }
 }
 
-cout << licznik << endl;
+cout << licznik << "\n";
 ```
 
 Jeśli zastanowimy się trochę bardziej, zauważymy że wykonujemy tu bardzo dużo niepotrzebnych obliczeń. Na przykład liczymy sumę `A[1] + A[2] + A[3]`, a chwilę później `A[1] + A[2] + A[3] + A[4]`, sumując ją od nowa. Zróbmy zatem inaczej: ustalmy sobie na chwilę wartość $i$, dla której policzymy sumy `A[i]`, `A[i] + A[i + 1]`, `A[i] + A[i + 1] + A[i + 2]`, każdą następną licząc na podstawie poprzedniej:
@@ -45,7 +45,7 @@ for (int i = 0; i < n; i++) { // Dla ustalonego i:
     }
 }
 
-cout << licznik << endl;
+cout << licznik << "\n";
 ```
 
 Jaka jest w praktyce różnica między tymi dwoma algorytmami? Na potrzeby kursu użyjemy do ich przetestowania poleceń systemu Linux -- powiemy o nich więcej w jednym z kolejnych rozdziałów. Na razie wystarczy wiedzieć tylko, że pliki `100.in`, `1000.in` i `5000.in` zawierają odpowiednio 100, 1000 i 5000 liczb całkowitych, zaś poniższe polecenia uruchamiają nasze algorytmy (pod nazwami `program1` i `program2`) na danych z tych plików, oraz mierzą czas potrzebny na działanie programów.

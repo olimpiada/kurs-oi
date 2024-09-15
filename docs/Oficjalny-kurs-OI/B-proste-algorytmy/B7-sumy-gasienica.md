@@ -8,14 +8,13 @@ W jaki sposób zrobić to najszybciej?
 Bardzo prosto – obliczmy sobie najpierw pomocnicze sumy:
 
 ```
-S[0] = 0
-S[1] = A[0]
-S[2] = A[0] + A[1]
+S[0] = A[0]
+S[1] = A[0] + A[1]
 ...
-S[n] = A[0] + A[1] + ... + A[n - 1]
+S[n - 1] = A[0] + A[1] + ... + A[n - 1]
 ```
 
-Teraz widać, że `A[p] + A[p+1] + ... + A[q]` to `S[q] - S[p-1]`.
+Teraz widać, że `A[p] + A[p + 1] + ... + A[q]` to `S[q] - S[p - 1]`.
 Takie pomocnicze sumy nazywają się **sumami prefiksowymi**.
 W zadaniach, w których musimy odpowiadać na pewne zapytania (tak jak tutaj o sumy na fragmentach ciągu)
 często będziemy używać techniki polegającej na uprzednim

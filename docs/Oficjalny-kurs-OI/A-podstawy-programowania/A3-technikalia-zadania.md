@@ -4,7 +4,7 @@
 
 Wiemy już, że kompilator języka C++ jest pod wieloma względami dosyć restrykcyjny: instrukcje muszą być napisane zawsze tak samo. Nie możemy użyć np. wielkiej litery zamiast małej, zapomnieć o średniku na końcu instrukcji, ani też napisać ``cot`` zamiast ``cout``. Na większość takich błędów kompilator reaguje zgłaszając błąd i zatrzymując próbę kompilowania programu. Taką sytuację określamy mianem **błędu kompilacji**.
 Radzenie sobie z takimi błędami często jest całkiem proste – trzeba przeczytać treść błędu zgłoszonego przez
-kompilator i poprawić odpowiedni fragment kodu. [TODO: uaktualnić]Jeśli kompilacja nie udała się, Code Blocks zaznacza wiersz, który spowodował błąd kompilacji, a na dole ekranu wyświetla opis błędu.
+kompilator i poprawić odpowiedni fragment kodu. Jeśli kompilacja nie udała się, środowisko programistyczne wypisze komunikat z opisem błędu, który zazwyczaj też zawiera numer wiersza, który spowodował błąd.
 
 Dla przykładu, przepiszemy nasz wcześniejszy program obliczający pole i obwód prostokąta, umieszczając w nim pewne usterki, które najczęściej przydarzają się początkującym programistom, i przyjrzymy się występującym błędom kompilacji. Oto pierwsza błędna wersja:
 
@@ -16,7 +16,7 @@ int main() {
     int a, b;
     cin << a << b;
     cout << "Pole: " << a * b
-         << " obwod: " << 2 * (a + b) << endl;
+         << " obwod: " << 2 * (a + b) << "\n";
 }
 ```
 
@@ -37,7 +37,7 @@ int main() {
     int a, b;
     cin >> a >> b
     cout << "Pole: " << a * b
-         << " obwod: " << 2 * (a + b) << endl;
+         << " obwod: " << 2 * (a + b) << "\n";
 }
 ```
 
@@ -58,7 +58,7 @@ int main() {
     int a;
     cin >> a >> b;
     cout << "Pole: " << a * b
-         << " obwod: " << 2 * (a + b) << endl;
+         << " obwod: " << 2 * (a + b) << "\n";
 }
 ```
 
@@ -76,17 +76,16 @@ int main() {
     int a, b;
     cin >> a >> b;
     cout << "Pole: " << a * b
-         << " obwod: " << 2 * (a + b) << endl;
+         << " obwod: " << 2 * (a + b) << "\n";
 }
 ```
 
-Błąd kompilacji, tym razem dość obszerny, wskazuje, że kompilator nie rozpoznał żadnego ze słówek ```cin, cout, endl```, służących do wczytywania i wypisywania danych.
+Błąd kompilacji, tym razem dość obszerny, wskazuje, że kompilator nie rozpoznał żadnego ze słówek ```cin, cout```, służących do wczytywania i wypisywania danych.
 
 ```
 prog.cpp: In function 'int main()':
 Wiersz 3: error: 'cin' was not declared in this scope
 Wiersz 4: error: 'cout' was not declared in this scope
-Wiersz 5: error: 'endl' was not declared in this scope
 ```
 
 Możliwych jest wiele innych typów drobnych usterek. Bywa też tak, że trzeba wczytać się dokładnie w komunikat kompilatora, gdyż czasem kompilator może nam sugerować inne źródło problemu niż to, co było nim w istocie (np. musimy spojrzeć na jeden z wcześniejszych wierszy).
@@ -102,7 +101,7 @@ using namespace std;
 int main() {
     int a, b;
     cin >> a >> b;
-    cout << a << " / " << b << " = " << a / b << " r. " << a % b << endl;
+    cout << a << " / " << b << " = " << a / b << " r. " << a % b << "\n";
 }
 ```
 

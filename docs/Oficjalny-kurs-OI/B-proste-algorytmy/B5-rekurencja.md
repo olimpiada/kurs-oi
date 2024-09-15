@@ -6,11 +6,11 @@ Znając konstrukcję pętli, łatwo jest napisać funkcję w C++,
 która mając dane liczby naturalne $a$ oraz $n$ obliczy $a^n$:
 
 ```cpp
-int potega(int a, int n)
-{
+int potega(int a, int n) {
     int wynik = 1;
-    for (int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++) {
         wynik = wynik * a;
+    }
     return wynik;
 }
 ```
@@ -18,10 +18,10 @@ int potega(int a, int n)
 Zobaczmy jednak, co by się stało, gdyby napisać ją w zupełnie inny sposób:
 
 ```cpp
-int potega(int a, int n)
-{
-    if (n == 1)
+int potega(int a, int n) {
+    if (n == 1) {
         return a;
+    }
     int s = potega(a, n - 1);
     return a * s;
 }
@@ -56,11 +56,11 @@ $n! = 1 \cdot 2 \cdot \ldots \cdot n$.
 Na przykład $3! = 1 \cdot 2 \cdot 3 = 6$. Silnię można oczywiście obliczyć prostą pętlą, można jednak też zauważyć, że zawsze zachodzi $n! = 1 \cdot 2 \cdot \ldots \cdot (n-1) \cdot n = (n-1)! \cdot n$. To pozwala napisać taką funkcję:
 
 ```cpp
-int silnia(int n)
-{
-   if (n == 1)
-       return 1;
-   return silnia(n - 1) * n;
+int silnia(int n) {
+    if (n == 1) {
+        return 1;
+    }
+    return silnia(n - 1) * n;
 }
 ```
 
@@ -69,16 +69,16 @@ int silnia(int n)
 Wróćmy na chwilę do potęgowania. W rekurencyjnej wersji skorzystaliśmy z faktu, że aby obliczyć $a^n$, wystarczy mieć $a^{n-1}$, a następnie domnożyć je przez $a$. Można w tej obserwacji pójść dalej – dla parzystych $n$, liczba $a^n$ jest kwadratem $a^{n/2}$, na przykład liczbę $2^{12}$ można otrzymać, podnosząc do kwadratu liczbę $2^6$. Zmieńmy zatem trochę zachowanie programu programu w przypadku parzystego wykładnika:
 
 ```cpp
-int potega(int a, int n)
-{
-    if (n == 1)
+int potega(int a, int n) {
+    if (n == 1) {
         return a;
-    if (n % 2 == 0)
-    {
+    }
+
+    if (n % 2 == 0) {
         int s = potega(a, n / 2);
         return s * s;
-    } else
-    {
+    }
+    else {
         int s = potega(a, n - 1);
         return a * s;
     }
@@ -104,24 +104,25 @@ Bardzo znanym problemem algorytmicznym jest obliczenie największego wspólnego 
 Algorytm Euklidesa opiera się na bardzo prostej obserwacji: jeśli jakaś liczba $d$ dzieli dwie liczby  $a$ i $b$, dzieli też ich różnicę $a - b$. Jest też w pewnym sensie odwrotnie – jeśli wspólny dzielnik mają $b$ oraz $a - b$, posiada go z całą pewnością także $a$. To oznacza, że zamiast liczb $a$ i $b$ możemy równie dobrze wziąć $a - b$ oraz $b$. Na przykład, jeśli szukamy wspólnego dzielnika dla pary (39,65) możemy zamiast tych dwóch liczb wziąć 65-39 = 26 oraz mniejszą z dwóch liczb 39. Parę (39,26) w ten sam sposób sprowadzamy do (26,13), potem do (13,13) i ewentualnie do (13,0). Największy wspólny dzielnik liczby i zera to zawsze ta sama liczba – wiemy zatem, że wynik wynosi 13. Ten sposób postępowania można oczywiście zaprogramować za pomocą pętli. Zwróćmy jednak uwagę, że  rekursja pasuje tu wręcz idealnie: potrafimy sprowadzić zadanie do prostszego (parę $(a,b)$ do pary $(b,a-b)$), wiemy jak z "pośredniego" wyniku otrzymać "końcowy" (największy wspólny dzielnik jest po prostu taki sam), oraz wiemy, jak obsłużyć przypadek końcowy (dla pary $(a,0)$ wynikiem jest $a$). Implementacja rekurencyjna okazuje się zatem bardzo prosta:
 
 ```cpp
-int nwd(int a, int b)
-{
+int nwd(int a, int b) {
     ...  // tu jeszcze czegoś brakuje!
-    if (b == 0)
-        return a;                 // jeśli jedną z liczb jest zero, wynik to druga liczba
-    return nwd(b, a - b);         // wynik dla (a, b) jest taki sam, jak dla (a - b, b)!
+    if (b == 0) {
+        return a;                 // Jeśli jedną z liczb jest zero, wynik to druga liczba.
+    }
+    return nwd(b, a - b);         // Wynik dla (a, b) jest taki sam, jak dla (a - b, b)!
 }
 ```
 
 Niestety, program w tej wersji nie zadziała jeszcze poprawnie – tak naprawdę nie chcemy odejmować $b$ od $a$, tylko _mniejszą_ z liczb od _większej_. Bardzo łatwo jednak poprawić algorytm, aby upewnić się, że zawsze a jest większe, zaś b mniejsze, po prostu zamieniając liczby miejscami w razie potrzeby:
 
 ```cpp
-int nwd(int a, int b)
-{
-    if (a < b)
+int nwd(int a, int b) {
+    if (a < b) {
         swap(a, b);
-    if (b == 0)
+    }
+    if (b == 0) {
         return a;
+    }
     return nwd(b, a - b);
 }
 ```
@@ -129,12 +130,13 @@ int nwd(int a, int b)
 Algorytm daje już dobre wyniki, ale może się zdarzyć, że będzie działał powoli: na przykład dla pary (10003, 4) będzie 2500 razy odejmował mniejszą liczbę od większej. Aby tego uniknąć, zauważmy, że wynikiem wielokrotnego odejmowania mniejszej liczby  $b$ od większej  $a$, jest ostatecznie reszta z dzielenia  $a$ przez  $b$ (w wyżej wymienionym przykładzie widzimy, że po odjęciu 4 odpowiednią liczbę razy od 10003 otrzymamy 3 – taki sam wynik, jak gdybyśmy od razu podzielili z resztą 10003 przez 4). Zamiast więc liczyć kilka razy różnicę  $a-b$, można od razu przeskoczyć parę kroków zastępując różnicę przez wspomnianą resztę:
 
 ```cpp
-int nwd(int a, int b)
-{
-    if (a < b)
+int nwd(int a, int b) {
+    if (a < b) {
         swap(a, b);
-    if (b == 0)
+    }
+    if (b == 0) {
         return a;
+    }
     return nwd(b, a % b);
 }
 ```
