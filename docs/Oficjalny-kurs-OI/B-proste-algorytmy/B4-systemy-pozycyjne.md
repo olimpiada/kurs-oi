@@ -90,7 +90,6 @@ $c_0 + 8 \cdot (c_1 + 8 \cdot (c_2 + \ldots + 8 \cdot c_{k-1}))\ldots)$.
 Na przykład $1452_8 = 2 + 8 \cdot (5 + 8 \cdot (4 + 8 \cdot 1)) = 810_{10}$. Zauważmy, że jeśli popatrzymy na to ostatnie wyrażenie od prawej do lewej, powstaje ono przez naprzemienne dodawanie kolejnej cyfry $c_i$, po czym mnożenie całości przez $8$. Daje to bardzo prosty algorytm:
 
 ```cpp
-
 // Pominiemy wczytywanie danych i inne chwilowo nieistotne fragmenty.
 
 vector<int> C(k); 
@@ -105,8 +104,7 @@ for (int i = k - 1; i >= 0; i--) {
     wynik = wynik + C[k - 1];
 }
 
-cout << wynik << endl;
-
+cout << wynik << "\n";
 ```
 
 Ten algorytm nazywa się czasem *schematem Hornera* (chociaż należy uważać: ta sama nazwa używana jest też w innych kontekstach). Bez trudu można go zmodyfikować tak, aby przeliczał z systemu piątkowego, siódemkowego lub o innej podstawie $a$: wystarczy wpisać $a$ w miejsce $8$ w powyższym kodzie. Zwróćmy też uwagę na fakt, że w zmiennej `wynik` tak naprawdę znajdują się wartości dla ,,kawałków'' naszej liczby: na przykład wywołany dla liczby $1452_8$ algorytm w pierwszym kroku przypisuje `wynik = 1` (czyli $1_8$) w drugim $1 \cdot 8 + 4 = 12$, czyli $14_8$, w trzecim $12 \cdot 8 + 5 = 101$, czyli $145_8$, w czwartym − $101 \cdot 8 + 2 = 810_{10}$, czyli $1452_8$. Dopisanie kolejnej cyfry $c$ do liczby ósemkowej $s$ to po prostu pomnożenie $s$ przez $8$ i dodanie $c$ − podobnie jak w systemie dziesiętnym dopisanie cyfry $c$ na koniec liczby $s$ to pomnożenie jej przez $10$ i dodanie $c$.
@@ -118,29 +116,24 @@ Zauważmy teraz, że wynik dzielenia $s/8$ zaokrąglony w dół (czyli w C++ wyn
 Podany schemat bardzo łatwo zapisać w postaci pętli. W C++ będzie to wyglądało jak poniżej. Aby poradzić sobie z faktem, że cyfry otrzymujemy od ostatniej do pierwszej, będziemy dodawać je do pomocniczego wektora `L`, który następnie wypiszemy w odwrotnej kolejności.
 
 ```cpp
-
 int s; 
 cin >> s;
-
 // Liczba s jest tą, którą chcemy zamienić na system ósemkowy.
 
 vector<int> L;
-
 // W wektorze L będziemy zapisywać kolejne cyfry wyniku, od ostatniej do pierwszej.
 
 while (s > 0) {
     int c = s % 8; // Wyznaczamy ostatnią cyfrę...
-    L.push_back(c); 
+    L.emplace_back(c);
     s = s / 8; // ... po czym "skreślamy" ją z liczby s.
 }
 
 // Jeśli chcemy, możemy teraz wypisać wynik.
-
-int d = L.size(); // Długość wektora L to liczba cyfr wyniku, będziemy ją potrzebować za chwilę.
+int d = int(L.size()); // Długość wektora L to liczba cyfr wyniku, będziemy ją potrzebować za chwilę.
 
 for (int i = d - 1; i >= 0; i--) {
     cout << L[i];
 }
-cout << endl;
-
+cout << "\n";
 ```

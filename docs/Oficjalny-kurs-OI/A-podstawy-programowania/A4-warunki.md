@@ -5,10 +5,12 @@ Jak dotychczas programy, które pisaliśmy, wypisywały jedynie proste komunikat
 Schemat instrukcji `if` jest następujący:
 
 ```cpp
-if (warunek)
-	instrukcja1;
-else
-	instrukcja2;
+if (warunek) {
+    instrukcja1;
+}
+else {
+    instrukcja2;
+}
 ```
 
 Jako *warunek* musimy podać coś, co ma wartość logiczną – można to ocenić jako prawdziwe lub fałszywe. Jeśli warunek jest prawdziwy, zostanie wykonana instrukcja _instrukcja1_, a w przeciwnym razie _instrukcja2_. Przykładowy program z warunkiem logicznym może wyglądać tak:
@@ -21,14 +23,16 @@ using namespace std;
 int main() {
     int a;
     cin >> a;
-    if (a>10)
-		cout << "Liczba jest wieksza niz 10!";
-	else
-		cout << "Liczba nie jest wieksza niz 10.".
+    if (a > 10) {
+        cout << "Liczba jest wieksza niz 10!";
+    }
+    else {
+        cout << "Liczba nie jest wieksza niz 10.".
+    }
 }
 ```
 
-Widzimy, że napis ``(a>10)`` w czasie wykonania programu – kiedy już znana jest wartość ``a`` – zawsze jest albo prawdziwy, albo fałszywy, więc program wie, którą z dwóch instrukcji wykonać. Takie napisy nazywamy **warunkami logicznymi**. Najprostsze warunki to takie, które używają operatorów znanych z podstawowej matematyki:
+Widzimy, że napis ``(a > 10)`` w czasie wykonania programu – kiedy już znana jest wartość ``a`` – zawsze jest albo prawdziwy, albo fałszywy, więc program wie, którą z dwóch instrukcji wykonać. Takie napisy nazywamy **warunkami logicznymi**. Najprostsze warunki to takie, które używają operatorów znanych z podstawowej matematyki:
 
 
 - $<$ (w C++: <)
@@ -41,10 +45,12 @@ Widzimy, że napis ``(a>10)`` w czasie wykonania programu – kiedy już znana j
 Ale są jeszcze prostsze: słowo ``true`` w języku C++ oznacza warunek, który jest po prostu prawdziwy -- czyli jeśli napiszemy:
 
 ```cpp
-if (true)
-	instrukcja1;
-else
-	instrukcja2;
+if (true) {
+    instrukcja1;
+}
+else {
+    instrukcja2;
+}
 ```
 to zawsze wykona się ``instrukcja1``. Podobnie ``false`` oznacza warunek, który jest zawsze fałszywy. (Nie jest w tym momencie jasne, do czego mielibyśmy użyć takich trywialnych warunków, ale później zobaczymy, do czego nam się mogą przydać.)
 
@@ -55,19 +61,21 @@ Zobaczmy teraz program, który oblicza wartość bezwzględną z liczby całkowi
 using namespace std;
 
 int main() {
-	int x;
-	cin >> x;
-	if (x >= 0)
-		cout << x << endl;
-	else
-		cout << -x << endl;
+    int x;
+    cin >> x;
+    if (x >= 0) {
+        cout << x << "\n";
+    }
+    else {
+        cout << -x << "\n";
+    }
 }
 ```
 
 Jeśli liczba $x$ jest nieujemna, wypisujemy nią samą, a w przeciwnym razie wypisujemy minus tę liczbę (czyli to samo co $x$ przemnożone przez -1). Gdyby w programie użyć warunku:
 
 ```cpp
-	if (x > 0)
+    if (x > 0)
 ```
 
 program wciąż działałby poprawnie, gdyż nie ma liczby minus zero (jest to po prostu 0).
@@ -75,21 +83,26 @@ program wciąż działałby poprawnie, gdyż nie ma liczby minus zero (jest to p
 Instrukcja warunkowa `if` może także składać się z większej liczby warunków, np.:
 
 ```cpp
-if (warunek1)
-	instrukcja1;
-else if (warunek2)
-	instrukcja2;
-else if (warunek3)
-	instrukcja3;
-else
-	instrukcja4;
+if (warunek1) {
+    instrukcja1;
+}
+else if (warunek2) {
+    instrukcja2;
+}
+else if (warunek3) {
+    instrukcja3;
+}
+else {
+    instrukcja4;
+}
 ```
 
 Oznacza to, że jeśli _warunek1_ jest spełniony, to wykonywana jest _instrukcja1_. W przeciwnym razie, jeśli _warunek2_ jest spełniony, wykonywana jest _instrukcja2_, podobnie z _warunkiem3_ i _instrukcją3_. Jeśli żaden z warunków nie był spełniony, wykonywana jest _instrukcja4_. Można także pominąć końcowy `else` w tej instrukcji. Wówczas jeśli żaden z warunków nie jest spełniony, nie jest wykonywana żadna instrukcja. W szczególności, instrukcja if może mieć następującą, najbardziej uproszczoną postać:
 
 ```cpp
-if (warunek)
-	instrukcja;
+if (warunek) {
+    instrukcja;
+}
 ```
 
 Wtedy jeśli _warunek_ nie jest spełniony, żadna instrukcja nie jest wykonywana, czyli po prostu nic się nie dzieje.
@@ -101,14 +114,17 @@ Jako kolejny przykład napiszmy program, który wczytuje liczbę całkowitą i w
 using namespace std;
 
 int main() {
-	int x;
-	cin >> x;
-	if (x > 0)
-		cout << "+" << endl;
-	else if (x < 0)
-		cout << "-" << endl;
-	else
-		cout << 0 << endl;
+    int x;
+    cin >> x;
+    if (x > 0) {
+        cout << "+" << "\n";
+    }
+    else if (x < 0) {
+        cout << "-" << "\n";
+    }
+    else {
+        cout << 0 << "\n";
+    }
 }
 ```
 
@@ -126,15 +142,19 @@ Napiszmy teraz program, który sprawdzi, czy trójkąt o danych trzech bokach je
 using namespace std;
 
 int main() {
-	int a, b, c;
-	cin >> a >> b >> c;
-	if (a == b && b == c)
-		/* jezeli a==b i b==c, to c==a */
-		cout << "rownoboczny" << endl;
-	else if (a == b || b == c || c == a)
-		cout << "rownoramienny" << endl;
-	else /* boki sa parami rozne */
-		cout << "roznoboczny" << endl;
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (a == b && b == c) {
+        // Jezeli a == b oraz b == c, to tez c == a.
+        cout << "rownoboczny" << "\n";
+    }
+    else if (a == b || b == c || c == a) {
+        cout << "rownoramienny" << "\n";
+    }
+    else {
+        // Boki sa parami rozne.
+        cout << "roznoboczny" << "\n";
+    }
 }
 ```
 
@@ -149,18 +169,20 @@ Aby zilustrować łączenie warunków, napiszmy program, który wczyta rok i wyp
 using namespace std;
 
 int main() {
-	/*
-	2012 - przestepny
-	2014 - nieprzestepny
-	2100, 2200 - nieprzestepne
-	2000, 2400 - przestepne
-	*/
-	int rok;
-	cin >> rok;
-	if ((rok % 4 == 0 && !(rok % 100 == 0)) || rok % 400 == 0)
-		cout << 366 << endl;
-	else
-		cout << 365 << endl;
+    /*
+    2012 - przestepny
+    2014 - nieprzestepny
+    2100, 2200 - nieprzestepne
+    2000, 2400 - przestepne
+    */
+    int rok;
+    cin >> rok;
+    if ((rok % 4 == 0 && !(rok % 100 == 0)) || rok % 400 == 0) {
+        cout << 366 << "\n";
+    }
+    else {
+        cout << 365 << "\n";
+    }
 }
 ```
 
@@ -174,8 +196,9 @@ if (warunek1) {
     instrukcja2;
     ...
     instrukcja7;
-} else
+} else {
     instrukcja8;
+}
 ```
 
 **Uwaga:** Niektórzy programiści piszą obie klamry w instrukcji złożonej na tej samej wysokości w kodzie źródłowym, żeby zachować pewną symetrię:
@@ -288,15 +311,18 @@ Poniżej znajduje się program służący do klasyfikacji trójkątów na równo
 using namespace std;
 
 int main() {
-int a, b, c;
-cin >> a >> b >> c;
-if (a == b && b == c)
-	/* jezeli a==b i b==c, to c==a */
-	cout << "rownoboczny" << endl;
-else if (a == b || b == c || c == b)
-	cout << "rownoramienny" << endl;
-else /* boki sa parami rozne */
-	cout << "roznoboczny" << endl;
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (a == b && b == c) {
+        // Jezeli a == b oraz b == c, to tez c == a.
+        cout << "rownoboczny" << "\n";
+    }
+    else if (a == b || b == c || c == b)
+        cout << "rownoramienny" << "\n";
+    else {
+        // Boki sa parami rozne.
+        cout << "roznoboczny" << "\n";
+    }
 }
 ```
 
@@ -337,15 +363,17 @@ roznoboczny
 Aha, znaleźliśmy błąd! Teraz musimy "tylko" wykryć, jaka usterka w kodzie źródłowym ją spowodowała. Wiemy już, że problem dotyczy trójkątów równoramiennych. Przyjrzyjmy się więc odpowiednim wierszom kodu:
 
 ```cpp
-else if (a == b || b == c || c == b)
-	cout << "rownoramienny" << endl;
+else if (a == b || b == c || c == b) {
+    cout << "rownoramienny" << "\n";
+}
 ```
 
 Gdy wczytamy się dokładnie w warunek w instrukcji `if`, zobaczymy, że wbrew naszym intencjom drugi i trzeci fragment warunku są identyczne! Teraz już z łatwością poprawiamy błąd:
 
 ```cpp
-else if (a == b || b == c || c == a)
-	cout << "rownoramienny" << endl;
+else if (a == b || b == c || c == a) {
+    cout << "rownoramienny" << "\n";
+}
 ```
 
 Ogólnie problem błędnych odpowiedzi jest jednym z najczęstszych zagadnień, z jakimi musi mierzyć się programista. Wykrywanie usterek w programach bywa bardzo czasochłonne i warto znać różne metody radzenia sobie z błędnymi odpowiedziami naszych programów. Dlatego temu zagadnieniu będą poświęcone części techniczne kilku następnych lekcji.

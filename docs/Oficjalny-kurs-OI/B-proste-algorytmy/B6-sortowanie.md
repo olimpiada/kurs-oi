@@ -84,14 +84,14 @@ Tutaj idea jest bardzo prosta i opiera się na tym, już potrafimy zrobić: algo
 
 ```cpp
 
-// To oczywiście tylko fragment algorytmu, zaraz będziemy musieli dopisać jeszcze jedną pętlę
-int k = 0;						// k - kandydat na największy element
+// To oczywiście tylko fragment algorytmu, zaraz będziemy musieli dopisać jeszcze jedną pętlę.
+int k = 0;						// k - kandydat na największy element.
 for(int i = 0; i < n; i++) {
-	if (A[i] > A[k]) {			// sprawdzamy wszystkie elementy, jeśli i-ty jest lepszy, poprawiamy k
+	if (A[i] > A[k]) {			// Sprawdzamy wszystkie elementy, jeśli i-ty jest lepszy, poprawiamy k.
 		k = i;
 	}
 }
-swap(A[k],A[n-1]);				// element k-ty wstawiamy na koniec tablicy
+swap(A[k],A[n-1]);				// Element k-ty wstawiamy na koniec tablicy.
 
 ```
 
@@ -100,16 +100,16 @@ Teraz ostatni element jest największy, więc stoi na swoim miejscu. Możemy zat
 
 ```cpp
 
-// Zewnętrzna pętla odpowiada za powtarzanie algorytmu - ma to zrobić n-1 razy
-// Zmienna j również to liczba ignorowanych elementów - na początku 0, a w każdej iteracji o 1 więcej
+// Zewnętrzna pętla odpowiada za powtarzanie algorytmu - ma to zrobić n-1 razy.
+// Zmienna j również to liczba ignorowanych elementów - na początku 0, a w każdej iteracji o 1 więcej.
 for (int j = 0; j < n-1; j++) {
 	int k = 0;
-	for(int i = 1; i < n-j; i++) {	// Ta pętla musi pominąć ostatnich j elementów, stąd "n-j" zamiast "n"
+	for(int i = 1; i < n-j; i++) {	// Ta pętla musi pominąć ostatnich j elementów, stąd "n-j" zamiast "n".
 		if (A[i] > A[k]) {
 			k = i;
 		}
 	}
-	swap(A[k],A[n-j]);				// Znaleziony element k-ty wstawiamy na koniec tablicy, ale pomijając ostatnie j elementów
+	swap(A[k],A[n-j]);				// Znaleziony element k-ty wstawiamy na koniec tablicy, ale pomijając ostatnie j elementów.
 }
 ```
 
@@ -125,7 +125,7 @@ Wyobraźmy sobie, że początkowa część tablicy – pierwsze $k$ elementów �
 
 ```cpp
 
-// Zakładamy, że w tablicy A[0..n-1] pierwsze k elementów - czyli A[0..k-1] - jest już posortowane
+// Zakładamy, że w tablicy A[0..n-1] pierwsze k elementów - czyli A[0..k-1] - jest już posortowane.
 // Próbujemy wstawić element A[k] na swoje miejsce:
 
 int j = k;
@@ -172,7 +172,7 @@ Cały kod programu wygląda następująco:
 
 
 for(int k = 1; k < n; k++) {			// Ten sam algorytm, co powyżej...
-	int j = k;							// ...ale powtarzamy go kolejno dla coraz większych wartości k
+	int j = k;							// ... ale powtarzamy go kolejno dla coraz większych wartości k.
 	while (j >= 0 && A[j] < A[j-1]) {
 		swap(A[j],A[j-1]);
 		j--;

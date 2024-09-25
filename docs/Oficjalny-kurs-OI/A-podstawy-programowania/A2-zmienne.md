@@ -15,10 +15,10 @@ int nazwa_zmiennej;
 Słowo ```int``` informuje kompilator, że zmienna jest właśnie typu całkowitego (ang. **integer**), zaś wybór nazwy należy do nas. Na przykład ```int moja_liczba;``` oznacza, że od tej pory w komórce o nazwie ```moja_liczba``` będzie przechowywana liczba całkowita. Możemy od momentu deklaracji użyć nazwy ```moja_liczba``` wszędzie tam, gdzie w programie mogłaby stać liczba. Na przykład:
 
 ```C++
-cout << moja_liczba;
+cout << moja_liczba << "\n";
 ``` 
 
-to polecenie wypisania na ekran tego, co aktualnie jest w tej komórce. Z kolei:
+to polecenie wypisania na ekran tego, co aktualnie jest w tej komórce, po czym przechodzi do nowego wiersza konsoli. Z kolei:
 
 ```C++
 moja_liczba = 7;
@@ -27,7 +27,7 @@ oznacza "do komórki o nazwie ```moja_liczba``` wpisz liczbę ``7``". Zatem:
 
 ```C++
 moja_liczba = 7;
-cout << moja_liczba;
+cout << moja_liczba << "\n";
 ``` 
 po prostu wypisze na ekran liczbę ``7`` (czyli zadziała dokładnie tak, jak ```cout << 7```).
 
@@ -46,7 +46,7 @@ using namespace std;
 int main() {
     int a;
     cin >> a;
-    cout << "Wczytana liczba to: " << a << endl;
+    cout << "Wczytana liczba to: " << a << "\n";
 }
 ```
 
@@ -55,7 +55,7 @@ jakąś liczbę całkowitą, np. 123. Kiedy wpiszesz liczbę i naciśniesz ```En
 komunikatem i zakończy działanie.
 Zauważ, że w przeciwieństwie do napisów-komunikatów, nazwy zmiennej nie umieszczamy w cudzysłowach: gdybyśmy napisali instrukcję ```cout << "moja_liczba"```, kompilator wypisałby na ekran po prostu napis ```moja_liczba``` (sprawdź!). Z kolei ```cin >> "moja_liczba"``` zakończyłoby się błędem kompilacji: kompilator nie rozumie, czemu wczytujemy dane do czegoś, co jego zdaniem nie jest zmienną.
 
-W kolejnym programie wczytujemy i wypisujemy dwie liczby. Zauważ, że przy wypisywaniu musimy je jakoś rozdzielić, np. poprzez spację lub ```endl```. Natomiast program da sobie radę z ich wczytaniem niezależnie od tego, czy zostaną podane w tym samym wierszu czy w różnych wierszach, a także niezależnie od dodatkowych spacji wprowadzonych przez użytkownika.
+W kolejnym programie wczytujemy i wypisujemy dwie liczby. Zauważ, że przy wypisywaniu musimy je jakoś rozdzielić, np. poprzez spację lub ```"\n"```. Natomiast program da sobie radę z ich wczytaniem niezależnie od tego, czy zostaną podane w tym samym wierszu czy w różnych wierszach, a także niezależnie od dodatkowych spacji wprowadzonych przez użytkownika.
 
 ```C++
 #include <iostream>
@@ -65,7 +65,7 @@ int main() {
     int a;
     int b;
     cin >> a >> b;
-    cout << "Wczytane liczby to: " << a << " " << b << endl;
+    cout << "Wczytane liczby to: " << a << " " << b << "\n";
 }
 ```
 
@@ -79,7 +79,7 @@ int main() {
     int a, b;
     cin >> a >> b;
     cout << "Pole: " << a * b
-         << " obwod: " << 2 * (a + b) << endl;
+         << " obwod: " << 2 * (a + b) << "\n";
 }
 ```
 
@@ -101,7 +101,7 @@ using namespace std;
 int main() {
     int a, b;
     cin >> a >> b;
-    cout << a << " / " << b << " = " << a / b << " r. " << a % b << endl;
+    cout << a << " / " << b << " = " << a / b << " r. " << a % b << "\n";
 }
 ```
 
@@ -112,7 +112,7 @@ Wynikiem tego programu dla ```a=14, b=5``` jest:
 ```
 
 *Uwaga*: podobnie jak w życiu, w C++ nie można dzielić przez 0. Próba wykonania takiego dzielenia (czy to za pomocą /, czy %) zakończy się tzw.
-błędem wykonania. Więcej o takich błędach dowiesz się w kolejnych kelcjach. Kolejność wykonywania działań w C++ jest taka sama jak w matematyce.
+błędem wykonania. Więcej o takich błędach dowiesz się w kolejnych lekcjach. Kolejność wykonywania działań w C++ jest taka sama jak w matematyce.
 Dodawanie i odejmowanie mają taką samą ważność, tak więc działania te są wykonywane od lewej do prawej.
 Mnożenie i oba typy dzielenia również mają taką samą ważność, więc także są wykonywane od lewej do prawej.
 Natomiast mnożenie i oba typy dzielenia są wykonywane przed dodawaniem i odejmowaniem.
@@ -124,8 +124,8 @@ Przykładowo, program:
 using namespace std;
 
 int main() {
-    cout << 1 + 2 * 3 << endl;
-    cout << (1 + 2) * 3 << endl;
+    cout << 1 + 2 * 3 << "\n";
+    cout << (1 + 2) * 3 << "\n";
 }
 ```
 
@@ -145,7 +145,7 @@ int main() {
     int pierwszy_bok,Boknr2;
 cin >> pierwszy_bok >> Boknr2;
   cout << "Pole: " << pierwszy_bok*Boknr2
-<< " obwod: " << 2*(pierwszy_bok+Boknr2) << endl;
+<< " obwod: " << 2*(pierwszy_bok+Boknr2) << "\n";
 }
 ```
 
@@ -154,7 +154,7 @@ Dobrze jednak dbać o to, by Twoje programy wyglądały jednolicie – wtedy za 
 * każdy operator matematyczny (dodawanie, odejmowanie itp.) jest otoczony z obu stron pojedynczymi spacjami,
 * po każdym przecinku jest spacja,
 * na końcach wierszy nie ma dodatkowych spacji,
-* każdy wiersz funkcji main() jest wcięty w prawo na taki sam odstęp (to pozwala wyróżnić w kodzie zawartość tej głównej funkcji).
+* każdy wiersz funkcji `main()` jest wcięty w prawo na taki sam odstęp (to pozwala wyróżnić w kodzie zawartość tej głównej funkcji).
 
 Więcej tego typu konwencji pojawi się przy poznawaniu kolejnych elementów języka C++, jednak zazwyczaj nie będziemy o nich mówić wprost – po prostu będziemy je konsekwentnie stosować.
 
@@ -169,7 +169,7 @@ int main() {
     cin >> a >> b; /* a taki komentarz ...
     moze zajmowac wiele wierszy, pod warunkiem, ze
     zamknie sie znakami: */
-    cout << "Iloraz: " << a / b << " reszta: " << a % b << endl;
+    cout << "Iloraz: " << a / b << " reszta: " << a % b << "\n";
 } //tu nie musi byc spacji, ale ze spacja ladnie wyglada
 ```
 

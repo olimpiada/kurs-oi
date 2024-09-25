@@ -7,23 +7,27 @@ Czas wykorzystać umiejętności programowania do rozwiązywania zadań algorytm
 
 Zaczniemy od zadania o jedną z najbardziej typowych rzeczy możliwych do zrobienia w tablicy:
 
-*Dana jest tablica $n$ liczb naturalnych. Naszym zadaniem jest znaleźć wśród nich największą.* 
+*Dana jest tablica $n$ liczb naturalnych. Naszym zadaniem jest znaleźć wśród nich największą.*
 
 Jako zadanie w stylu ,,olimpijskim'' wyglądałoby to tak: [TODO: zrobić paczkę do zadania]
 
 
-Wczytywanie danych znamy już z rozdziału o pętlach i tablicach: kiedy już będziemy wiedzieć, ile jest liczb (czyli wartość $n$), zadeklarujemy tablicę/wektor o długości $n$. Następnie użyjemy pętli, która przebiegnie od 
+Wczytywanie danych znamy już z rozdziału o pętlach i tablicach: kiedy już będziemy wiedzieć, ile jest liczb (czyli wartość $n$), zadeklarujemy tablicę/wektor o długości $n$. Następnie użyjemy pętli, która przebiegnie od
 $0$ do $n-1$, a w kroku numer $i$ wczyta wartość do komórki `A[i]`:
 
 ```cpp
+#include <iostream>
+#include <vector>
+using namespace std;
+
 int main() {
-	cin >> n;
-	vector<int> A(n);
-	for (int i = 0; i < n; i++) {
-		cin >> A[i];
-	}
-	// (...tutaj zaraz będzie reszta programu)
-	
+    cin >> n;
+    vector<int> A(n);
+    for (int i = 0; i < n; i++) {
+        cin >> A[i];
+    }
+
+    // (...tutaj zaraz będzie reszta programu)
 }
 ```
 
@@ -31,21 +35,22 @@ Teraz potrzebujemy głównej pętli, która wykona nasze zadanie i znajdzie najw
 
 ```cpp
 int main() {
-	// znane już wczytywanie danych
-	int n;
-	cin >> n;
-	vector<int> A(n);
-	for (int i = 0; i < n; i++) {
-		cin >> A[i];
-	}
-	// teraz następuje główna pętla
-	int kandydat = 0;
-	for (int i = 0; i < n; i++) {
-		if (A[i] > kandydat) {
-			kandydat = A[i];
-		}
-	}
-	cout << kandydat << '\n';
+    // Znane już wczytywanie danych.
+    int n;
+    cin >> n;
+    vector<int> A(n);
+    for (int i = 0; i < n; i++) {
+        cin >> A[i];
+    }
+
+    // Teraz następuje główna pętla.
+    int kandydat = 0;
+    for (int i = 0; i < n; i++) {
+        if (A[i] > kandydat) {
+            kandydat = A[i];
+        }
+    }
+    cout << kandydat << "\n";
 }
 ```
 
@@ -53,18 +58,18 @@ Zauważmy, że nie musimy przechowywać wszystkich elementów w tablicy (wektorz
 
 ```cpp
 int main() {
-	int n;
-	cin >> n;
+    int n;
+    cin >> n;
 
-	int kandydat = 0;
-	for(int i = 0; i < n; i++) {
-		int aktualny;
-		cin >> aktualny;
-		if (aktualny > kandydat) {
-			kandydat = aktualny;
-		}
-	}
-	cout << kandydat << '\n';
+    int kandydat = 0;
+    for(int i = 0; i < n; i++) {
+        int aktualny;
+        cin >> aktualny;
+        if (aktualny > kandydat) {
+            kandydat = aktualny;
+        }
+    }
+    cout << kandydat << "\n";
 }
 ```
 
@@ -78,29 +83,30 @@ Użyjemy bardzo podobnego pomysłu, co w poprzednim zadaniu, z przejściem pętl
 
 ```cpp
 int main() {
-	// znane już wczytywanie danych
-	int n;
-	cin >> n;
-	vector<int> A(n);
-	for (int i = 0; i < n; i++) {
-		cin >> A[i];
-	}
-	// teraz następuje główna pętla
-	int najwiecej = 0;
-	int biezace = 1;  // zaczniemy od drugiego elementu, z informacją, że pierwszy element widzieliśmy już raz
-	for(int i = 1; i < n; i++) {
-		if (A[i] == A[i-1]) { 	// jeśli element jest taki sam, jak poprzedni...
-			biezace++;			// to zwiększamy liczbę wystąpień ostatniego elementu o 1
-		}
-		else {
-			biezace = 1;		// ale jeśli zmienił się na inny, to liczba wystąpień ustawia się z powrotem na 1 
-		}
+    // Znane już wczytywanie danych.
+    int n;
+    cin >> n;
+    vector<int> A(n);
+    for (int i = 0; i < n; i++) {
+        cin >> A[i];
+    }
 
-		if (biezace > najwiecej) {
-			najwiecej = biezace;
-		}
-	}
-	cout << najwiecej << '\n';
+    // Teraz następuje główna pętla.
+    int najwiecej = 0;
+    int biezace = 1;  // Zaczniemy od drugiego elementu, z informacją, że pierwszy element widzieliśmy już raz.
+    for(int i = 1; i < n; i++) {
+        if (A[i] == A[i-1]) {     // Jeśli element jest taki sam, jak poprzedni...
+            biezace++;            // To zwiększamy liczbę wystąpień ostatniego elementu o 1.
+        }
+        else {
+            biezace = 1;        // Ale jeśli zmienił się na inny, to liczba wystąpień ustawia się z powrotem na 1.
+        }
+
+        if (biezace > najwiecej) {
+            najwiecej = biezace;
+        }
+    }
+    cout << najwiecej << "\n";
 }
 ```
 
@@ -108,31 +114,32 @@ A co, gdybyśmy musieli dodatkowo podać, który element wystąpił najwięcej r
 
 ```cpp
 int main() {
-	// znane już wczytywanie danych
-	int n;
-	cin >> n;
-	vector<int> A(n);
-	for(int i = 0; i < n; i++) {
-		cin >> A[i];
-	}
-	// teraz następuje główna pętla
-	int najwiecej = 1;
-	int biezace = 1;  // zaczniemy od drugiego elementu, z informacją, że pierwszy element widzieliśmy już raz
-	int kandydat = A[0];
-	for(int i = 1; i < n; i++) {
-		if (A[i] == A[i-1]) { 	// jeśli element jest taki sam, jak poprzedni...
-			biezace++;			// to zwiększamy liczbę wystąpień ostatniego elementu o 1
-		}
-		else {
-			biezace = 1			// ale jeśli zmienił się na inny, to liczba wystąpień ustawia się z powrotem na 1 
-		}
+    // Znane już wczytywanie danych.
+    int n;
+    cin >> n;
+    vector<int> A(n);
+    for(int i = 0; i < n; i++) {
+        cin >> A[i];
+    }
 
-		if (biezace > najwiecej) {
-			biezace = najwiecej;
-			kandydat = A[i];
-		}
-	}
-	cout << najwiecej << '\n';
+    // Teraz następuje główna pętla.
+    int najwiecej = 1;
+    int biezace = 1;  // zaczniemy od drugiego elementu, z informacją, że pierwszy element widzieliśmy już raz.
+    int kandydat = A[0];
+    for(int i = 1; i < n; i++) {
+        if (A[i] == A[i-1]) {     // jeśli element jest taki sam, jak poprzedni...
+            biezace++;            // to zwiększamy liczbę wystąpień ostatniego elementu o 1.
+        }
+        else {
+            biezace = 1            // Ale jeśli zmienił się na inny, to liczba wystąpień ustawia się z powrotem na 1.
+        }
+
+        if (biezace > najwiecej) {
+            biezace = najwiecej;
+            kandydat = A[i];
+        }
+    }
+    cout << najwiecej << "\n";
 }
 ```
 
@@ -145,20 +152,21 @@ W kolejnym zadaniu znowu będziemy rozważali ciąg elementów, ale tym razem ws
 
 ```cpp
 int main() {
-	// znane już wczytywanie danych
-	int n;
-	cin >> n;
-	
-	vector<L> (101);
-	// musimy mieć komórki L[1],.., L[100], stąd rozmiar 101
-	// wektor liczb automatycznie ustawia wszystkie wartości na 0, tak jak chcieliśmy
-	int aktualny;
-	for(int i = 0; i < n; i++) {
-		cin >> aktualny;
-		L[aktualny]++;
-	}
-	
-	// (...tutaj zaraz będzie reszta programu)
+    // Znane już wczytywanie danych.
+    int n;
+    cin >> n;
+
+    int maksymalna_wartosc = 100;
+    vector<int> (maksymalna_wartosc + 1);
+    // Musimy mieć komórki L[1],.., L[100], stąd rozmiar 101.
+    // Wektor liczb automatycznie ustawia wszystkie wartości na 0, tak jak chcieliśmy.
+    int aktualny;
+    for (int i = 0; i < n; i++) {
+        cin >> aktualny;
+        L[aktualny]++;
+    }
+
+    // (...tutaj zaraz będzie reszta programu)
 }
 ```
 
@@ -166,28 +174,28 @@ Teraz musimy znaleźć największą wartość w tablicy `L`, a dokładniej: taki
 
 ```cpp
 int main() {
-	// znane już wczytywanie danych
-	int n;
-	cin >> n;
+    // Znane już wczytywanie danych.
+    int n;
+    cin >> n;
 
-	vector<L> (101);
-	
-	int aktualny;
-	for (int i = 0; i < n; i++) {
-		cin >> aktualny;
-		L[aktualny]++;
-	}
-	
+    int maksymalna_wartosc = 100;
+    vector<int> (maksymalna_wartosc + 1);
 
-	int kandydat = 1;	// kandydat na najczęstszy element
-	int najwiecej = 0;	// ile wystąpień miał kandydat
-	
-	for (int j = 1; j <= 100 ; j++) {
-		if (L[j] > najwiecej) {
-			najwiecej = L[j];
-			kandydat = j;
-		}
-	}
-	cout << kandydat << '\n';
+    int aktualny;
+    for (int i = 0; i < n; i++) {
+        cin >> aktualny;
+        L[aktualny]++;
+    }
+
+    int kandydat = 1;    // Kandydat na najczęstszy element.
+    int najwiecej = 0;    // Ile wystąpień miał kandydat.
+
+    for (int j = 1; j <= maksymalna_wartosc ; j++) {
+        if (L[j] > najwiecej) {
+            najwiecej = L[j];
+            kandydat = j;
+        }
+    }
+    cout << kandydat << "\n";
 }
 ```
