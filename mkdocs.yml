@@ -31,7 +31,7 @@ nav:
       - 'Instrukcja warunkowa (if)': './Oficjalny-kurs-OI/A-podstawy-programowania/A4-warunki.md'
       - 'Instrukcja przypisania i typ znakowy char': './Oficjalny-kurs-OI/A-podstawy-programowania/A5-przypisanie.md'
       - 'Pętla while': './Oficjalny-kurs-OI/A-podstawy-programowania/A6-while.md'
-      - 'Pętla for i tablice': './Oficjalny-kurs-OI/A-podstawy-programowania/A7-for-tablice'
+      - 'Pętla for i tablice': './Oficjalny-kurs-OI/A-podstawy-programowania/A7-for-tablice.md'
 #        - 'Więcej o pętlach i tablicach': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja7.md'
 #        - 'Funkcje': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja8.md'
 #        - 'Efektywność programów': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja9.md'
