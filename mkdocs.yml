@@ -32,8 +32,8 @@ nav:
       - 'Instrukcja przypisania i typ znakowy char': './Oficjalny-kurs-OI/A-podstawy-programowania/A5-przypisanie.md'
       - 'Pętla while': './Oficjalny-kurs-OI/A-podstawy-programowania/A6-while.md'
       - 'Pętla for i tablice': './Oficjalny-kurs-OI/A-podstawy-programowania/A7-for-tablice.md'
+      - 'Funkcje': './Oficjalny-kurs-OI/A-podstawy-programowania/A8-funkcje.md'
 #        - 'Więcej o pętlach i tablicach': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja7.md'
-#        - 'Funkcje': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja8.md'
 #        - 'Efektywność programów': './Oficjalny-kurs-OI/A-podstawy-programowania/Lekcja9.md'
     - 'Prosta algorytmika':
       - 'Maksima i podciągi w tablicach': './Oficjalny-kurs-OI/B-proste-algorytmy/B1-podtablice.md'

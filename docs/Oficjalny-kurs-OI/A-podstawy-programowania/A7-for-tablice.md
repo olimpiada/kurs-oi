@@ -65,30 +65,9 @@ To jednak nie wyczerpuje możliwości pętli `for`, a tylko te najczęściej uż
 
 ## Tablice
 
-Tablice pozwalają przechowywać wiele danych naraz. Świetnie współgrają z pętlą `for`.
+Zapewne nie jest tajemnicą, że nasze programy docelowo powinny obsługiwać również duże dane. Na razie jednak nie jest jasne, jak chcemy w ogóle przechowywać w pamięci wiele liczb czy znaków. Dotychczas, jeśli chcieliśmy w programie wczytać 3 liczby, musieliśmy zadeklarować 3 zmienne (``int a, b, c;``). Ten sposób nie prowadzi daleko – już 100 liczb byłoby absurdalnie trudne.
 
-W poprzedniej lekcji napisaliśmy program, który najpierw wczytuje liczbę $n$, następnie $n$ liczb całkowitych, po czym wypisuje sumę tych $n$ liczb. Zróbmy to samo, tylko z użyciem pętli `for`:
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-	int n;
-	cin >> n;
-	int suma = 0;
-	for (int i = 1; i <= n; i++) {
-		int a;
-		cin >> a;
-		suma += a;
-	}
-	cout << suma << endl;
-}
-```
-
-W ten sposób każdą z $n$ liczb na wejściu wczytaliśmy do tej samej zmiennej $a$. Teraz opowiemy o innej konstrukcji programistycznej, który pozwoli przechowywać wszystkie wczytane liczby naraz. Są to **tablice**.
-
-Tablicę liczb całkowitych deklarujemy w języku C++ tak:
+Z pomocą przychodzą **tablice**. Tablica efektywnie odpowiada kilku (-nastu, -dziesięciu, ... a nawet kilku milionom) zmiennych. Deklarujemy ją w języku C++ w następujący sposób:
 
 ```cpp
 int tablica[dlugosc];
@@ -96,17 +75,30 @@ int tablica[dlugosc];
 
 W ten sposób zadeklarowaliśmy tablicę o nazwie _tablica_, która składa się z elementów będących liczbami całkowitymi. Liczbę tych elementów określa _długość_ ( _rozmiar_) tablicy.
 
+Na przykład:
+
+```cpp
+int A[4];
+```
+
+deklaruje tablicę o nazwie ``A``, w której będą przechowywane 4 liczby całkowite. W praktyce jest to zadeklarowanie $4$ zmiennych, które będą nazywać się ``A[0]``, ``A[1]``, ``A[2]`` oraz ``A[3]``. Możemy od tej pory używać każdej z nich oddzielnie, tak jak dotychczas korzystaliśmy ze zmiennych:
+
+```cpp
+cin >> A[0];	
+cin >> A[1]; // do zmiennych A[0] i A[1] wczytujemy po jednej liczbie całkowitej
+A[2] = A[0] + A[1];		// teraz A[2] będzie sumą wczytanych liczb
+A[3] = A[0] - A[1];		// zaś A[3] ich różnicą
+
 Nazwy tablic możemy dobierać dowolnie, tak jak nazwy zmiennych. Długość tablicy jest najczęściej jedną liczbą, pojedynczą zmienną (odpowiadającą np. długości ciągu liczb) albo prostym wyrażeniem arytmetycznym. Przykładowo:
 
 ```cpp
 int t[n];
 ```
 
-to tablica o nazwie $t$ zawierająca $n$ elementów.
+to tablica o nazwie $t$ zawierająca $n$ elementów. Widzimy, że numerujemy je zawsze od zera: $t[0],t[1],\ldots,t[n-1]$.
 
-Elementy takiej tablicy to: $t[0],t[1],\ldots,t[n-1]$. Widzimy, że numerujemy je począwszy od zera. Każdy z elementów odpowiada osobnemu miejscu w pamięci komputera, w którym jest zapamiętana jedna liczba – jest to to samo, co $n$ zmiennych całkowitych naraz!
 
-Przepiszemy nasz poprzedni program z użyciem tablicy. Ponieważ elementy tablicy numerujemy od zera, więc zmienna sterująca $i$ będzie tym razem przyjmować wartości $0,1,\ldots,n-1$:
+Przypomnijmy sobie nasz poprzedni program, który sumował liczby podane przez użytkownika, i przepiszmy nasz poprzedni program z użyciem tablicy. Zmienna sterująca pętli będzie, jak poprzednio nazywać się $i$, przy czym w $i$-tym okrążeniu chcemy wpisać wartość do $i$-tej komórki tablicy -- innymi słowy, w $i$-tym okrążeniu użyjemy instrukcji ``cin >> t[i]``. Ponieważ elementy tablicy numerujemy od zera, więc zmienna sterująca $i$ będzie tym razem przyjmować wartości $0,1,\ldots,n-1$:
 
 ```cpp
 #include <iostream>
@@ -125,34 +117,7 @@ int main() {
 }
 ```
 
-W tym przykładzie nie było żadnej potrzeby, żeby przechowywać wczytane liczby w tablicy. Dzięki niej możemy jednak najpierw wczytać wszystkie dane, a dopiero potem wykonać żądane obliczenia – a tak się po prostu łatwiej myśli. Możemy też obliczyć coś jeszcze dla tych samych danych, np. minimum w tablicy:
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-	int n;
-	cin >> n;
-	int t[n];
-	int suma = 0;
-	for (int i = 0; i < n; i++)
-		cin >> t[i];
-
-	int suma = 0;
-	for (int i = 0; i < n; i++)
-		suma += t[i];
-	cout << suma << endl;
-
-	int min = t[0];
-	for (int i = 1; i < n; i++)
-		if (t[i] < min)
-			min = t[i];
-	cout << min << endl;
-}
-```
-
-Inny przykład to program, w którym wczytujemy ciąg liczb o długości $n$ i chcemy go wypisać od ostatniej liczby do pierwszej. Tego zadania nie da się już łatwo rozwiązać bez użycia tablic:
+Kolejny przykład to wczytanie ciągu liczb o długości $n$ i wypisanie go w odwrotnej kolejności – od ostatniej liczby do pierwszej. W odróżnieniu od poprzedniego, tego zadania nie da się już łatwo rozwiązać bez użycia tablic:
 
 ```cpp
 #include <iostream>
