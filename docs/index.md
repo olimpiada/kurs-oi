@@ -1,75 +1,31 @@
-# Start
+# Wstęp
 
-Lorem ipsum odor amet, **consectetuer adipiscing elit**. Molestie convallis aenean purus ipsum duis. Nulla praesent dolor ligula augue sem condimentum mus potenti finibus. Mauris arcu hendrerit justo massa lectus quis torquent ut finibus. __Libero mauris urna dolor laoreet phasellus mauris tempor__. Senectus maecenas non curae venenatis pellentesque cursus libero. ~~Congue ac lectus erat ullamcorper taciti nulla blandit.~~ Sem maecenas dictumst nec eros eget volutpat eu. At ridiculus fringilla libero lacus lobortis felis!    
-Senectus maecenas non curae venenatis pellentesque cursus libero. <s>Congue ac lectus erat ullamcorper taciti nulla blandit.</s> Sem maecenas dictumst nec eros eget volutpat eu. At ridiculus fringilla libero lacus lobortis felis!
+## Co to za kurs i jaki jest jego materiał?
 
-## Header2
-Lacinia nam donec felis dui fringilla. Integer semper augue et magnis nisi condimentum. Morbi potenti torquent phasellus mi porttitor. Gravida natoque rhoncus donec libero curae. Eget sodales natoque faucibus lacus platea tempus rutrum.
+To jest "oficjalny" kurs prowadzony przez Olimpiadę Informatyczną. Poświęcony jest w części nauce podstaw programowania w języku C++, przede wszystkim jednak ma służyć nauce algorytmiki. Chcielibyśmy, aby kurs pomagał w przygotowaniu się, między innymi, do:
 
-Etiam eget habitant dis turpis curabitur. Vehicula congue lacinia rutrum natoque consectetur porta. Dis magnis class maecenas penatibus magna hac ullamcorper euismod. Congue lectus amet nulla elit ultrices, ex ac sem. Ut eros dictumst aenean eros adipiscing eleifend.
+ * egzaminu maturalnego z informatyki,
+ * Olimpiady Informatycznej,
+ * Olimpiady Informatycznej Juniorów
 
-### Header3
-Netus venenatis nibh vitae velit finibus efficitur ridiculus nec. Sit adipiscing suspendisse ultricies ac ac erat habitasse. Potenti tellus id placerat habitant feugiat curabitur litora. Tempus a maximus gravida et orci placerat iaculis.
+a także zapewniał dobre podstawy potrzebne do tego, aby móc dalej zgłębiać profesjonalne ("komercyjne") programowanie, albo inne ciekawe i potrzebne gałęzie informatyki.
 
-Faucibus parturient imperdiet fames consequat, himenaeos taciti. Turpis curae odio blandit nulla, sagittis nostra nascetur. Risus scelerisque ex tellus euismod amet et massa. Magnis aliquam sem eu sem praesent vulputate vivamus semper.
+Na razie startujemy skromnie, z dwoma pierwszymi rozdziałami: o podstawowym programowaniu i początkach algorytmiki, w dużej części opartych na zaadaptowanym materiale "dawnego kursu" z witryny MAIN2. Nowe rozdziały i lekcje będą pojawiać się sukcesywnie, docelowo chcielibyśmy tutaj cały materiał, który można spotkać na zawodach informatycznych w szkołach podstawowych i średnich.
 
-```cpp
-int main() {
-	cin >> n;
-	vector<int> A(n);
-	for (int i = 0; i < n; i++) {
-		cin >> A[i];
-	}
-	// (...tutaj zaraz będzie reszta programu)
-	
-}
-```
+## Dlaczego właśnie C++?
 
-#### Header4
-Tempor ad nulla nibh felis adipiscing. Metus amet montes vel torquent aliquet varius ipsum. Tortor lacinia nullam aliquet ipsum sollicitudin facilisi. Eleifend turpis adipiscing fringilla arcu quisque vestibulum eu lacinia. Placerat ad mauris bibendum turpis quisque. Platea nunc tortor volutpat lectus consectetur mauris eleifend vehicula.
+Na świecie istnieje wiele języków programistycznych różniących się m.in. trudnością nauki, wygodą używania i efektywnością wytwarzanego kodu. Na tym kursie, przynajmniej na początku, musimy zdecydować się na jeden z nich. Wybraliśmy C++ dlatego, że z jednej strony jest rozsądnie łatwy do nauki, a przede wszystkim dlatego, że programy napisane w nim działają znacznie szybciej. To pozwala "rozwinąć skrzydła" programom, które są napisane elegancko i efektywnie obliczeniowo, czyli takim, jakie trzeba pisać na Olimpiadzie. Dzięki użyciu C++ będzie Ci łatwiej zrozumieć, jak działają programy, a szczególnie pojęcie złożoności obliczeniowej .
 
-Tabelka!
+Oczywistym "rywalem" C++ w nauce dla początkujących jest język Python. To też doskonały język programowania – łatwy do pojęcia dla początkujących, o prostej strukturze, uniwersalny i popularny w wielu profesjonalnych zastosowaniach. Nie martw się jednak, jeśli nie poznasz go teraz: kiedy już zna się jeden język programowania, znacznie łatwiej uczyć się kolejnych. Jeśli będziesz sprawnie posługiwać się C++, opanujesz Pythona błyskawicznie.
 
-| Wejście     | Wyjście                              |
-| :---------- | :----------------------------------- |
-| 7 3 5       | 7 3 5 <br> 5 3 7                     |
+## Kto jest odpowiedzialny za ten kurs?
 
-| typ                                                          | zakres                            |
-| ----                                                         | -----                             |
-| short (pełna nazwa: short int)                               | $[−32768,32767]$                  |
-| int, long (pełna nazwa: long int)                            | $[−2147483648,2147483647]$        |
-| long long (pełna nazwa: long long int)                       | mniej więcej $[−10^{19},10^{19}]$ |
-| unsigned short (pełna nazwa: unsigned short int)             | $[0,65536]$                       |
-| unsigned int, unsigned long (pełna nazwa: unsigned long int) | $[0,4294967296]$                  |
-| unsigned long long (pełna nazwa: unsigned long long int)     | mniej więcej $[0,2\cdot10^{19}]$  |
+Aktualnie kursem opiekują się Lech Duraj oraz Tomasz Nowak. Autorami niektórych lekcji są również Jakub Radoszewski, Arkadiusz Czarkowski, Krzysztof Diks, Bartosz Szreder.
 
-| Strzał | Rezultat | Wniosek                       |
-| ---    | ---      | ----------------------        |
-| 500    | ZA MAŁO  | Kwota w przedziale [501,1000] |
-| 750    | ZA DUŻO  | Kwota w przedziale [501,749]  |
-| 625    | ZA DUŻO  | Kwota w przedziale [501,624]  |
-| 562    | ZA MAŁO  | Kwota w przedziale [563,624]  |
-| 594    | ZA MAŁO  | Kwota w przedziale [595,624]  |
-| 609    | ZA DUŻO  | Kwota w przedziale [595,608]  |
-| 601    | ZA DUŻO  | Kwota w przedziale [595,600]  |
-| 598    | ZA MAŁO  | Kwota w przedziale [599,600]  |
-| 599    | ZA MAŁO  | Kwota w przedziale [600,600]  |
-| 600    | WYGRANA! |                               |
+## Też chcę coś napisać! / mam pomysł, jak to zrobić lepiej!
 
-Lorem ipsum odor amet, **consectetuer adipiscing elit**. Molestie convallis aenean purus ipsum duis. Nulla praesent dolor ligula augue sem condimentum mus potenti finibus. Mauris arcu hendrerit justo massa lectus quis torquent ut finibus.
+Jest kilka możliwości:
 
-???+ note "A dlaczego nie język programowania Python?"
+ * Zgłoś nam uwagę przez formularz kontaktowy (link).
+ * Jeśli nie przeraża Cię GitHub i Markdown, możesz zaproponować edycję bezpośrednio: (link).
 
-    Język Python jest łatwiejszy do nauki niż C++, ale programy napisane w języku Python są na ogół wolniejsze i trudniej zrozumieć jak one dokładniej działają na komputerze.
-    Do nauki do matury zaleca się nauczyć się albo języka Python (prostszy do nauki), albo języka C++ (szybki, dokładniej się rozumie jak działają programy).
-    Do zawodów programistycznych (takich jak Olimpiada Informatyczna lub Olimpiada Informatyczna Juniorów) zaleca się użycie C++, ponieważ programy napisane w języku Python mogą być za wolne.
-    Istnieją też inne języki programowania, na przykład Java, ale zazwyczaj nie dorównują językom C++ oraz Python w aspektach prędkości lub początkowej nauki.
-
-
-Lorem ipsum odor amet, **consectetuer adipiscing elit**. Molestie convallis aenean purus ipsum duis. Nulla praesent dolor ligula augue sem condimentum mus potenti finibus. Mauris arcu hendrerit justo massa lectus quis torquent ut finibus.
-
-![image](./Oficjalny-kurs-OI/B-proste-algorytmy/bubblesort4.png)
-
-![image](./Oficjalny-kurs-OI/B-proste-algorytmy/bubblesort5.png)
-
-Inverted obrazki ^

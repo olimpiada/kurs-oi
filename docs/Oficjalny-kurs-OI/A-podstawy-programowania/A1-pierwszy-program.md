@@ -3,32 +3,13 @@
 W tej lekcji napiszemy i uruchomimy nasz pierwszy program komputerowy.
 W tym celu wykonamy następujące kroki:
 
-1. Wybierzemy język programowania, w którym napiszemy kod.
-2. Zainstalujemy oprogramowanie potrzebne do napisania i uruchomienia naszego programu.
-3. Napiszemy i uruchomimy pierwszy program wykonujący obliczenia.
+1. Zainstalujemy oprogramowanie potrzebne do napisania i uruchomienia naszego programu.
+2. Napiszemy i uruchomimy pierwszy program wykonujący obliczenia.
 
 Zaczynajmy!
 
-# Dlaczego C++?
 
-Na świecie istnieje wiele języków programistycznych różniących się m.in. trudnością nauki, wygodą używania i efektywnością wytwarzanego kodu.
-W tym kursie będziemy używać języka C++, który jest dobrym kompromisem pomiędzy tymi kryteria.
-Ponadto, nauka C++ daje także dogłębniejszy wgląd w działanie komputera i pozwala nam przez to lepiej go zrozumieć.
-
-
-<details>
-<summary>
-A dlaczego nie język programowania Python?
-</summary>
-
-Język Python jest łatwiejszy do nauki niż C++, ale programy napisane w języku Python są na ogół wolniejsze i trudniej zrozumieć jak one dokładniej działają na komputerze.
-Do nauki do matury zaleca się nauczyć się albo języka Python (prostszy do nauki), albo języka C++ (szybki, dokładniej się rozumie jak działają programy).
-Do zawodów programistycznych (takich jak Olimpiada Informatyczna lub Olimpiada Informatyczna Juniorów) zaleca się użycie C++, ponieważ programy napisane w języku Python mogą być za wolne.
-Istnieją też inne języki programowania, na przykład Java, ale zazwyczaj nie dorównują językom C++ oraz Python w aspektach prędkości lub początkowej nauki.
-
-</details>
-
-# Część techniczna: środowisko programistyczne C++
+# Środowisko programistyczne C++
 
 Żeby stworzyć program w C++, potrzebujemy wykonać następujące kroki:
 
