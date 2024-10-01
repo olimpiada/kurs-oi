@@ -18,7 +18,7 @@ Na razie startujemy skromnie, z dwoma pierwszymi rozdziałami: o podstawowym pro
 
 ## Dlaczego właśnie C++?
 
-Na świecie istnieje wiele języków programistycznych różniących się m.in. trudnością nauki, wygodą używania i efektywnością wytwarzanego kodu. Na tym kursie, przynajmniej na początku, musimy zdecydować się na jeden z nich. Wybraliśmy C++ dlatego, że z jednej strony jest rozsądnie łatwy do nauki, a przede wszystkim dlatego, że programy napisane w nim działają znacznie szybciej. To pozwala "rozwinąć skrzydła" programom, które są napisane elegancko i efektywnie obliczeniowo, czyli takim, jakie trzeba pisać na Olimpiadzie. Dzięki użyciu C++ będzie Ci łatwiej zrozumieć, jak działają programy, a szczególnie pojęcie złożoności obliczeniowej .
+Na świecie istnieje wiele języków programistycznych różniących się m.in. trudnością nauki, wygodą używania i efektywnością wytwarzanego kodu. Na tym kursie, przynajmniej na początku, musimy zdecydować się na jeden z nich. Wybraliśmy C++ dlatego, że z jednej strony jest rozsądnie łatwy do nauki, a przede wszystkim dlatego, że programy napisane w nim potrafią działać bardzo szybko. To pozwala "rozwinąć skrzydła" programom, które są napisane elegancko i efektywnie obliczeniowo, czyli takim, jakie trzeba pisać na Olimpiadzie. Dzięki użyciu C++ będzie Ci łatwiej zrozumieć, jak działają programy, a szczególnie pojęcie złożoności obliczeniowej.
 
 Oczywistym "rywalem" C++ w nauce dla początkujących jest język Python. To też doskonały język programowania – łatwy do pojęcia dla początkujących, o prostej strukturze, uniwersalny i popularny w wielu profesjonalnych zastosowaniach. Nie martw się jednak, jeśli nie poznasz go teraz: kiedy już zna się jeden język programowania, znacznie łatwiej uczyć się kolejnych. Jeśli będziesz sprawnie posługiwać się C++, opanujesz Pythona błyskawicznie.
 
@@ -31,5 +31,5 @@ Aktualnie kursem opiekują się Lech Duraj oraz Tomasz Nowak. Autorami niektór
 Jest kilka możliwości:
 
  * Zgłoś nam uwagę przez [formularz kontaktowy](https://forms.gle/Nj8oRMhaV7QxnFZLA).
- * Jeśli nie przeraża Cię GitHub i Markdown, możesz zaproponować edycję bezpośrednio poprzez Pull Request do [repozytorium kurs-oi](https://github.com/olimpiada/kurs-oi/) -- takie poprawki mogą zostać rozpatrzone szybciej.
+ * Jeśli nie przeraża Cię GitHub i Markdown, możesz zaproponować edycję bezpośrednio poprzez Pull Request do [repozytorium kurs-oi](https://github.com/olimpiada/kurs-oi/) – takie poprawki mogą zostać rozpatrzone szybciej.
 
