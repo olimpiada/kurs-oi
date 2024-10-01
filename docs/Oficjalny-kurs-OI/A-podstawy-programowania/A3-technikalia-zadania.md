@@ -20,7 +20,7 @@ int main() {
 }
 ```
 
-Treść błędu kompilacji pozwala nam zauważyć, że przy wczytywaniu pomyliliśmy znaki >> z <<.
+Treść błędu kompilacji sugeruje, że coś jest nie tak z ``<<`` zaraz po ``cin`` – istotnie, pomyliliśmy znaki >> z <<.
 
 ```
 In function 'int main()':

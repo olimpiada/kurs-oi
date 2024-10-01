@@ -10,7 +10,7 @@ Jeszcze większy problem pojawia się, jeśli trzeba często dodawać wiele licz
 
 ## Nie-dziesiętne systemy pozycyjne
 
-To jednak nie jest jedyny możliwy system pozycyjny! Wyobraźmy sobie inny system, w którym zamiast dziesięciu cyfr używamy ośmiu: $0_8, 1_8, 2_8, ..., 6_8, 7_8$. Dla czytelności zapisujemy $x_8$ jako liczbę w tym systemie. Zamiast liczby $8$ − jeśli chcemy trzymać się znanych reguł − musimy napisać $10_8$, zamiast $9$ − $11_8$, i tak dalej. Ostatnia cyfra w tym systemie będzie oznaczała tradycyjnie ,,jedności'', ale druga cyfra to teraz ,,ósemki'', a nie ,,dziesiątki''. Na przykład zapis $41_8$ w tym systemie oznacza $4 \cdot 8 + 1 = 33$. Największą możliwą liczbą do zapisania dwoma cyframi będzie $77_8$, czyli $7 \cdot 8 + 7 = 63$. Liczba 64, czyli $8 \cdot 8$, będzie już zapisywana jako $100_8$. Trzecia od końca cyfra, zamiast setek, będzie oznaczała ,,sześćdziesiątki czwórki'', czyli wielokrotności $8 \cdot 8$, czwarta od końca − wielokrotności $8 \cdot 8 \cdot 8 = 8^3 = 512$, i tak dalej. Taki system zapisu nazywa się *systemem ósemkowym*, lub *systemem o podstawie 8*, a ,,tradycyjny'' system − *dziesiętnym*. W systemie ósemkowym $k$-ta cyfra od końca, dla $k = 0, 1, 2, \ldots$ oznacza $8^k$, podczas gdy w systemie dziesiętnym jest to $10^k$.
+To jednak nie jest jedyny możliwy system pozycyjny! Wyobraźmy sobie inny system, w którym zamiast dziesięciu cyfr używamy ośmiu: $0_8, 1_8, 2_8, ..., 6_8, 7_8$ (dla jasności będziemy pisać małą ósemkę przy liczbie jako znak, że zapisana jest w tym nowym systemie). Zamiast liczby $8$ musimy teraz napisać $10_8$, zamiast $9$ − $11_8$, i tak dalej. Ostatnia cyfra w tym systemie będzie oznaczała tradycyjnie ,,jedności'', ale druga cyfra to teraz ,,ósemki'', a nie ,,dziesiątki''. Na przykład zapis $41_8$ w tym systemie oznacza $4 \cdot 8 + 1 = 33$. Największą możliwą liczbą do zapisania dwoma cyframi będzie $77_8$, czyli $7 \cdot 8 + 7 = 63$. Liczba 64, czyli $8 \cdot 8$, będzie już zapisywana jako $100_8$. Trzecia od końca cyfra, zamiast setek, będzie oznaczała ,,sześćdziesiątki czwórki'', czyli wielokrotności $8 \cdot 8$, czwarta od końca − wielokrotności $8 \cdot 8 \cdot 8 = 8^3 = 512$, i tak dalej. Taki system zapisu nazywa się *systemem ósemkowym*, lub *systemem o podstawie 8*, a ,,tradycyjny'' system − *dziesiętnym*. W systemie ósemkowym $k$-ta cyfra od końca, dla $k = 0, 1, 2, \ldots$ ma wagę $8^k$, podczas gdy w systemie dziesiętnym jest to $10^k$.
 
 Podobnie do systemu ósemkowego możemy wprowadzić inne systemy pozycyjne, na przykład piątkowy lub siódemkowy. W systemie piątkowym używa się cyfr $0_5, 1_5, 2_5, 3_5, 4_5$, ostatnia cyfra oznacza jedności, przedostania wielokrotności $5$, a kolejne wielokrotności $5 \cdot 5 = 25$, $5^3 = 125$, i tak dalej. Na przykład $1204_5 = 4 + 2 \cdot 25 + 1 \cdot 125 = 179$.
 
@@ -26,11 +26,11 @@ Pojedyncza cyfra dwójkowa zwana jest *bitem*. Na przykład wspomniana wyżej li
 Operacje +, −, ∗ i / na liczbach całkowitych zapisanych dwójkowo wykonuje się według prostych algorytmów działań pisemnych znanych ze szkoły (czasem trochę przyśpieszonych przez zastosowanie sprytnych pomysłów). Przykładowo, dodawanie 100+86
 zapisane dwójkowo wygląda tak (zauważ, że w przypadku dodawania dwóch jedynek powstaje cyfra – tj. bit – przeniesienia):
 
-|   | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | numer bitu           |
-| - | - | - | - | - | - | - | - | - | -                    |
-|   | 0 | 1 | 1 | 0 | 0 | 1 | 0 | 0 | (100=26+25+22)       |
-| + | 0 | 1 | 0 | 1 | 0 | 1 | 1 | 0 | (86=26+24+22+21)     |
-|   | 1 | 0 | 1 | 1 | 1 | 0 | 1 | 0 | (186=27+25+24+23+21) |
+|   | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 | numer bitu                   |
+| - | - | - | - | - | - | - | - | - | -                            |
+|   | 0 | 1 | 1 | 0 | 0 | 1 | 0 | 0 | ($100=2^6+2^5+2^2$)          |
+| + | 0 | 1 | 0 | 1 | 0 | 1 | 1 | 0 | ($86=2^6+2^4+2^2+2^1$)       |
+|   | 1 | 0 | 1 | 1 | 1 | 0 | 1 | 0 | ($186=2^7+2^5+2^4+2^3+2^1$)  |
 
 Należy jednak pamiętać, że wynik może być nieokreślony (np. jeśli ktoś spróbuje dzielić przez 0), ale może także wyjść poza zakres (wtedy też jest w pewnym sensie nieokreślony). Gdy w arytmetyce jednobajtowej wykonamy dodawanie 129+129, otrzymamy:
 
@@ -46,11 +46,13 @@ Komputer najczęściej radzi sobie z takimi sytuacjami po prostu tracąc bity, k
 
 ## Reprezentacja liczb ujemnych
 
-Aby móc reprezentować liczby zarówno dodatnie i ujemne, można na przykład umówić się, że jeden z bitów (tradycyjnie: pierwszy od lewej) odpowiada za znak liczby. Gdy bit ten równa się 0, liczba jest nieujemna, gdy równa się 1, liczba jest ujemna. Taki rodzaj reprezentacji nazywa się *znak-moduł*. To rozwiązanie jednak nie pozwala na łatwe operacje arytmetyczne, trzeba bowiem za każdym razem sprawdzać znak obu liczb i postępować dla każdego przypadku inaczej. Znacznie wygodniejszym i bardziej rozpowszechnioną metodą jest **reprezentacja uzupełnieniowa**: jeśli operujemy na liczbach $k$-bitowych, umawiamy się, że pierwszy bit, zamiast wartości $2^{k-1}$, oznacza $−2^{k-1}$. Tak więc zapis składający się z bitów $b_{k−1}b_{k−2}b_{k−3}\ldots b_3b_2b_1b_0$, reprezentuje liczbę całkowitą
+Aby móc reprezentować liczby zarówno dodatnie i ujemne, można na przykład umówić się, że jeden z bitów (tradycyjnie: pierwszy od lewej) odpowiada za znak liczby. Gdy bit ten równa się 0, liczba jest nieujemna, gdy równa się 1, liczba jest ujemna. Taki rodzaj reprezentacji nazywa się *znak-moduł*. To rozwiązanie jednak nie pozwala na łatwe operacje arytmetyczne, trzeba bowiem za każdym razem sprawdzać znak obu liczb i postępować dla każdego przypadku inaczej.
+
+Znacznie wygodniejszą i bardziej rozpowszechnioną metodą jest **reprezentacja uzupełnieniowa**: jeśli operujemy na liczbach $k$-bitowych, umawiamy się, że pierwszy bit, zamiast wartości $2^{k-1}$, oznacza $−2^{k-1}$. Tak więc zapis składający się z bitów $b_{k−1}b_{k−2}b_{k−3}\ldots b_3b_2b_1b_0$, reprezentuje liczbę całkowitą
 
 $b_0⋅2^0+b_1⋅2^1+b_2⋅2^2+…+b_{k−2}⋅2^{k−2}-b_{k−1}⋅2^{k−1}$.
 
-Na przykład dla $k=8$ zapis $00001101$ oznacza liczbę $13$, ale liczbę $-13$ musimy w reprezentacji uzupełnieniowej zapisać jako $11110011$, czyli $-256+128+64+32+16+2+1$. Na $k$ bitach w reprezentacji uzupełnieniowej można zapisać liczby z zakresu od $-2^{k−1}$ (zapis: jedynka i same zera) do $2^{k-1}-1$ (zapis: zero i same jedynki). Na przykład w języku C++ dla dla 32-bitowego typu `int` zakresem jest $[−2147483648,2147483647]$, a dla 16-bitowego typu `short` jest to [−32768,32767].
+Na przykład dla $k=8$ zapis $00001101$ oznacza liczbę $13$, ale liczbę $-13$ musimy w reprezentacji uzupełnieniowej zapisać jako $11110011$, czyli $-256+128+64+32+16+2+1$. Na $k$ bitach w reprezentacji uzupełnieniowej można zapisać liczby z zakresu od $-2^{k−1}$ (zapis: jedynka i same zera) do $2^{k-1}-1$ (zapis: zero i same jedynki). Na przykład w języku C++ dla dla 32-bitowego typu `int` zakresem jest $[−2147483648,2147483647]$, a dla 16-bitowego typu `short` jest to $[−32768,32767]$.
 
 W reprezentacji uzupełnieniowej dodawanie i odejmowanie wykonuje się tak jak dla liczb nieujemnych, tylko zapominamy o ostatnim przeniesieniu. Na przykład dla $k=8$ wykonajmy dodawanie $−64+64$:
 

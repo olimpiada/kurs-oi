@@ -13,7 +13,7 @@ int licznik = 0; // Tu będziemy zliczać fragmenty o sumie K.
 
 for (int i = 0; i < n; i++) {
     for (int j = i; j < n; j++) {
-        // Podwójna pętla - wykona się dla każdej pary (i, j) przy i < j.
+        // Podwójna pętla - wykona się dla każdej pary (i, j) przy i <= j.
         int suma = 0;
         for (int s = i; s <= j; s++) {
             suma += A[s];
@@ -28,7 +28,7 @@ for (int i = 0; i < n; i++) {
 cout << licznik << "\n";
 ```
 
-Jeśli zastanowimy się trochę bardziej, zauważymy że wykonujemy tu bardzo dużo niepotrzebnych obliczeń. Na przykład liczymy sumę `A[1] + A[2] + A[3]`, a chwilę później `A[1] + A[2] + A[3] + A[4]`, sumując ją od nowa. Zróbmy zatem inaczej: ustalmy sobie na chwilę wartość $i$, dla której policzymy sumy `A[i]`, `A[i] + A[i + 1]`, `A[i] + A[i + 1] + A[i + 2]`, każdą następną licząc na podstawie poprzedniej:
+Jeśli zastanowimy się trochę bardziej zauważymy, że wykonujemy tu bardzo dużo niepotrzebnych obliczeń. Na przykład liczymy sumę `A[1] + A[2] + A[3]`, a chwilę później `A[1] + A[2] + A[3] + A[4]`, sumując ją od nowa. Zróbmy zatem inaczej: ustalmy sobie na chwilę wartość $i$, dla której policzymy sumy `A[i]`, `A[i] + A[i + 1]`, `A[i] + A[i + 1] + A[i + 2]`, każdą następną licząc na podstawie poprzedniej:
 
 ```cpp
 int licznik = 0; // Tu będziemy zliczać fragmenty o sumie K.
@@ -103,7 +103,7 @@ user    0m0.052s
 sys     0m0.004s
 ```
 
-Szybszy program działa w 0.05s, wolniejszy – minutę i 18 sekund. Dla 20000 liczb nie doczekalibyśmy się wyniku w żadnym rozsądnym czasie.
+Szybszy program działa w 0.05s, wolniejszy – minutę i 18 sekund. Dla 20000 liczb nie doczekalibyśmy się wyniku ``program1`` w żadnym rozsądnym czasie.
 
 ## Złożoność obliczeniowa
 

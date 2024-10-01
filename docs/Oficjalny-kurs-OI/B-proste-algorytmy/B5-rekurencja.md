@@ -90,7 +90,7 @@ Ta wersja ma wprawdzie dłuższy kod, ale znacznie przewyższa poprzednią pod w
 Można pokusić się o dokładniejsze oszacowanie czasu działania algorytmu. Dla uproszczenia pozostańmy przy liczeniu wyłącznie tego, ile wykonaliśmy mnożeń, jako że innych operacji jest mniej–więcej tyle samo w programie. To z kolei zależy od tego, ile było wywołań rekurencyjnych – na każde wywołanie przypada jedna operacja mnożenia. Każde następne wywołanie ma wykładnik albo dwa razy mniejszy (jeśli $n$ było parzyste), albo o jeden mniejszy (dla $n$ nieparzystych) od poprzedniego, jednak ten drugi przypadek - przejście od  $n$ do  $n-1$ nie może zdarzyć się dwa razy z rzędu. Jeśli bowiem  $n$ było nieparzyste, to  $n-1$ będzie parzyste, i następne wywołanie podzieli wykładnik przez 2.
 
 Widać więc, że każde jedno lub dwa kolejne wywołania zmniejszają wykładnik  $n$ dwukrotnie.
-Wiemy z poprzedniej lekcji, że liczbę $n$ można dzielić przez 2 dokładnie $\lceil \log_2 n \rceil$ razy,
+Wiemy z poprzednich lekcji, że liczbę $n$ można dzielić przez 2 dokładnie $\lceil \log_2 n \rceil$ razy,
 zanim osiągniemy 1. A zatem w tym wypadku wywołań będzie co najmniej $\lceil \log_2 n \rceil$,
 a co najwyżej $2 \cdot \lceil \log_2 n \rceil$.
 Jako że logarytm jest bardzo wolno rosnącą funkcją – co omawialiśmy na poprzedniej lekcji –

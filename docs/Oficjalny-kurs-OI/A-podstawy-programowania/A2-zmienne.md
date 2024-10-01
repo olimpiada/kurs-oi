@@ -2,8 +2,6 @@
 
 ## Zmienne i wczytywanie
 
-W części programistycznej wprowadzimy do naszych programów elementy interaktywne.
-
 W poprzedniej lekcji nauczyliśmy się wypisywać proste komunikaty oraz, w ostatnim przykładzie, liczby całkowite. Aby jednak robić cokolwiek bardziej skomplikowanego – choćby przyjmować dane od użytkownika, albo prowadzić obliczenia – potrzebujemy sposobu, aby przechowywać dane w pamięci komputera. Do takich celów służą **zmienne**. Pojedyncza zmienna to komórka pamięci komputera, której na jakiś czas nadajemy nazwę, i która może przechowywać jeden obiekt – na przykład liczbę całkowitą, albo napis złożony z liter.
 
 Najprostszym typem zmiennych są zmienne całkowite, czyli takie, które przechowują jedną liczbę całkowitą. Aby móc korzystać z takiej zmiennej, musimy ją w programie **zadeklarować**, czyli poinformować kompilator o chęci jej użycia oraz nadać nazwę. Deklaracja zmiennej całkowitej wygląda tak:
@@ -84,7 +82,14 @@ int main() {
 ```
 
 
-Zauważ, że mogliśmy napisalić ```int a, b;``` zamiast dwóch osodnych deklaracji ```int a;```, ```int b;```.
+Zauważ, że mogliśmy napisać ```int a, b;``` zamiast dwóch osobnych deklaracji ```int a;```, ```int b;```. Zauważ też, że instrukcja:
+
+```C++
+cout << "Pole: " << a * b
+         << " obwod: " << 2 * (a + b) << "\n";
+```
+
+właściwie "powinna" być w jednym wierszu – na szczęście w C++ możemy dość dowolnie łamać wiersze, jako że dla kompilatora koniec instrukcji wyznacza znak średnika, nie koniec wiersza. Dzięki temu możemy w takich sytuacjach pisać czytelniej.
 
 Jeżeli uruchomimy nasz program i wpiszemy z klawiatury ``2 3`` – czyli ustalimy ```a=2, b=3``` – otrzymamy, zgodnie z oczekiwaniami, wynik:
 
@@ -116,7 +121,7 @@ błędem wykonania. Więcej o takich błędach dowiesz się w kolejnych lekcjach
 Dodawanie i odejmowanie mają taką samą ważność, tak więc działania te są wykonywane od lewej do prawej.
 Mnożenie i oba typy dzielenia również mają taką samą ważność, więc także są wykonywane od lewej do prawej.
 Natomiast mnożenie i oba typy dzielenia są wykonywane przed dodawaniem i odejmowaniem.
-Jeśli chcemy uzyskać inną kolejność wykonywania działań, możemy stosować nawiasy. C++ dopuszcza w wyrażeniach tylko nawiasy okrągłe.
+Jeśli chcemy uzyskać inną kolejność wykonywania działań, możemy stosować nawiasy ``(`` i ``)``.
 Przykładowo, program:
 
 ```C++
@@ -133,7 +138,9 @@ wypisuje liczby ```7``` i ```9```.
 
 ## Styl programów
 
-Należy wiedzieć o kilku ograniczeniach dotyczących nazw zmiennych. Nazwa zmiennej może składać się z małych i wielkich liter, cyfr oraz znaku podkreślenia _, przy czym nie może zaczynać się od cyfry. W przeciwieństwie do niektórych języków programowania, w nazwach zmiennych rozróżniane są małe i wielkie litery – właściwie w nazwach zmiennych polecamy w ogóle nie używać wielkich liter. Deklaracja zmiennej może zostać umieszczona w programie w dowolnym miejscu przed miejscem, w którym chcemy ze zmiennej skorzystać (czyli np. wczytać lub wypisać jej wartość). Nazwy zmiennych nie mogą się powtarzać (wyjątki od tego ostatniego stwierdzenia przedstawimy później).
+Należy wiedzieć o kilku ograniczeniach dotyczących nazw zmiennych. Nazwa zmiennej może składać się z małych i wielkich liter, cyfr oraz znaku podkreślenia _, przy czym nie może zaczynać się od cyfry. W przeciwieństwie do niektórych języków programowania, w C++ zawsze rozróżniane są małe i wielkie litery, czyli zmienna ``liczba`` to co innego niż zmienna ``Liczba``. (Nie możemy też np. pisać ``Cout`` zamiast ``cout``, kompilator nie rozpozna nazwy z wielką literą).
+
+Deklaracja zmiennej może zostać umieszczona w programie w dowolnym miejscu przed miejscem, w którym chcemy ze zmiennej skorzystać (czyli np. wczytać lub wypisać jej wartość). Nazwy zmiennych nie mogą się powtarzać (wyjątki od tego ostatniego stwierdzenia przedstawimy później).
 
 Poniższy program oblicza pole i obwód prostokąta dokładnie tak samo jak poprzedni. Jest on jednak istotnie mniej czytelny.
 
@@ -170,7 +177,7 @@ int main() {
     moze zajmowac wiele wierszy, pod warunkiem, ze
     zamknie sie znakami: */
     cout << "Iloraz: " << a / b << " reszta: " << a % b << "\n";
-} //tu nie musi byc spacji, ale ze spacja ladnie wyglada
+}
 ```
 
 Im dłuższe programy, tym częściej będziemy stosować komentarze.
@@ -191,16 +198,13 @@ Dla wygody programisty, w języku C++ wprowadzono kilka typów całkowitych, ró
 | typ                                                          | zakres                            |
 | ----                                                         | -----                             |
 | short (pełna nazwa: short int)                               | $[−32768,32767]$                  |
-| int, long (pełna nazwa: long int)                            | $[−2147483648,2147483647]$        |
+| int                                                          | $[−2147483648,2147483647]$        |
 | long long (pełna nazwa: long long int)                       | mniej więcej $[−10^{19},10^{19}]$ |
 | unsigned short (pełna nazwa: unsigned short int)             | $[0,65536]$                       |
-| unsigned int, unsigned long (pełna nazwa: unsigned long int) | $[0,4294967296]$                  |
+| unsigned int                                                 | $[0,4294967296]$                  |
 | unsigned long long (pełna nazwa: unsigned long long int)     | mniej więcej $[0,2\cdot10^{19}]$  |
 
 Więcej na temat tego, skąd się wzięły takie właśnie typy i ich zakresy, znajdziesz w komentarzu do lekcji.
-
-**Uwaga**: Są inne kompilatory języka C++ (z których w tym kursie nie będziemy korzystać), w których typ `int` ma tylko zakres typu `short int`.
-Aby mieć absolutną pewność co do zakresu typu, można zamiast typu int używać typu `long int`.
 
 
 
