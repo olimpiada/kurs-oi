@@ -8,9 +8,9 @@ System sprawdzający rozwiązania jest dostępny na [platformie Szkopuł](TODO L
 
 To jest "oficjalny" kurs prowadzony przez społeczność Olimpiady Informatycznej. Poświęcony jest w części nauce podstaw programowania w języku C++, ale przede wszystkim ma służyć nauce algorytmiki. Chcielibyśmy, aby kurs pomagał w przygotowaniu się, między innymi, do:
 
- * *egzaminu maturalnego z informatyki*,
- * *Olimpiady Informatycznej* [oi.edu.pl](https://oi.edu.pl/),
- * *Olimpiady Informatycznej Juniorów* [oij.edu.pl](https://oij.edu.pl/),
+ * **egzaminu maturalnego z informatyki**,
+ * **Olimpiady Informatycznej** [oi.edu.pl](https://oi.edu.pl/),
+ * **Olimpiady Informatycznej Juniorów** [oij.edu.pl](https://oij.edu.pl/),
 
 a także zapewniał dobre podstawy potrzebne do tego, aby móc dalej zgłębiać profesjonalne ("komercyjne") programowanie, albo inne ciekawe i potrzebne gałęzie informatyki.
 
