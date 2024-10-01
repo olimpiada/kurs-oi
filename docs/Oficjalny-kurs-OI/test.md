@@ -1,2 +1,0 @@
-# Strona
-Dzień dobry świecie

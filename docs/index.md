@@ -1,12 +1,16 @@
 # Wstęp
 
+Pierwsza lekcja: [Podstawy programowania / Pierwszy program](https://kurs.oi.edu.pl/Oficjalny-kurs-OI/A-podstawy-programowania/A1-pierwszy-program/). Pełna lista lekcji jest dostępna w menu po prawej stronie strony.
+
+System sprawdzający rozwiązania jest dostępny na [platformie Szkopuł](TODO LINK).
+
 ## Co to za kurs i jaki jest jego materiał?
 
-To jest "oficjalny" kurs prowadzony przez Olimpiadę Informatyczną. Poświęcony jest w części nauce podstaw programowania w języku C++, przede wszystkim jednak ma służyć nauce algorytmiki. Chcielibyśmy, aby kurs pomagał w przygotowaniu się, między innymi, do:
+To jest "oficjalny" kurs prowadzony przez społeczność Olimpiady Informatycznej. Poświęcony jest w części nauce podstaw programowania w języku C++, ale przede wszystkim ma służyć nauce algorytmiki. Chcielibyśmy, aby kurs pomagał w przygotowaniu się, między innymi, do:
 
- * egzaminu maturalnego z informatyki,
- * Olimpiady Informatycznej,
- * Olimpiady Informatycznej Juniorów
+ * *egzaminu maturalnego z informatyki*,
+ * *Olimpiady Informatycznej* [oi.edu.pl](https://oi.edu.pl/),
+ * *Olimpiady Informatycznej Juniorów* [oij.edu.pl](https://oij.edu.pl/),
 
 a także zapewniał dobre podstawy potrzebne do tego, aby móc dalej zgłębiać profesjonalne ("komercyjne") programowanie, albo inne ciekawe i potrzebne gałęzie informatyki.
 
@@ -26,6 +30,6 @@ Aktualnie kursem opiekują się Lech Duraj oraz Tomasz Nowak. Autorami niektór
 
 Jest kilka możliwości:
 
- * Zgłoś nam uwagę przez formularz kontaktowy (link).
- * Jeśli nie przeraża Cię GitHub i Markdown, możesz zaproponować edycję bezpośrednio: (link).
+ * Zgłoś nam uwagę przez [formularz kontaktowy](https://forms.gle/Nj8oRMhaV7QxnFZLA).
+ * Jeśli nie przeraża Cię GitHub i Markdown, możesz zaproponować edycję bezpośrednio poprzez Pull Request do [repozytorium kurs-oi](https://github.com/olimpiada/kurs-oi/) -- takie poprawki mogą zostać rozpatrzone szybciej.
 
