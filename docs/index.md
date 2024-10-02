@@ -2,7 +2,7 @@
 
 Pierwsza lekcja: [Podstawy programowania / Pierwszy program](https://kurs.oi.edu.pl/Oficjalny-kurs-OI/A-podstawy-programowania/A1-pierwszy-program/). Pełna lista lekcji jest dostępna w menu po prawej stronie strony.
 
-System sprawdzający rozwiązania jest dostępny na [platformie Szkopuł](TODO LINK).
+System sprawdzający rozwiązania jest dostępny na [platformie Szkopuł](https://szkopul.edu.pl/c/kurs-oi/).
 
 ## Co to za kurs i jaki jest jego materiał?
 
@@ -24,7 +24,7 @@ Oczywistym "rywalem" C++ w nauce dla początkujących jest język Python. To te�
 
 ## Kto jest odpowiedzialny za ten kurs?
 
-Aktualnie kursem opiekują się Lech Duraj oraz Tomasz Nowak. Autorami niektórych lekcji są również Jakub Radoszewski, Arkadiusz Czarkowski, Krzysztof Diks, Bartosz Szreder.
+Aktualnie kursem opiekują się Lech Duraj oraz Tomasz Nowak. Autorami niektórych lekcji są również Jakub Radoszewski, Arkadiusz Czarkowski, Krzysztof Diks, Bartosz Szreder. Za stronę techniczną odpowiadają Mateusz Masiarz oraz Maciej Dziurzyński.
 
 ## Też chcę coś napisać! / mam pomysł, jak to zrobić lepiej!
 

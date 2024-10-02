@@ -241,10 +241,10 @@ cout << (char)('a' + numer - 1);
 
 W tej lekcji, oprócz trzech "standardowych" zadań mamy również przygotowane jedno "z gwiazdką", nieco trudniejsze. Jeśli nie potrafisz go jeszcze rozwiązać, nie przejmuj się! 
 
-[Łańcuszek :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/hUcqXR0OLk19BnlAnRDjDUaT/site/?key=statement){ .md-button .md-button--primary }
+[Łańcuszek :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#lan){ .md-button .md-button--primary }
 
-[Kody szesnastkowe :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/wtpnikkaLSlQ8SCsgn3VU--p/site/?key=statement){ .md-button .md-button--primary }
+[Kody szesnastkowe :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#kod){ .md-button .md-button--primary }
 
-[Podzielne :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/Nl078AYDQCd4Fapd7uYDiXWL/site/?key=statement){ .md-button .md-button--primary }
+[Podzielne :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#pod){ .md-button .md-button--primary }
 
-[Wielkanoc (*) :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/Y4_Y8oL4vfFOMXUCyWzUz0TG/site/?key=statement){ .md-button .md-button--primary }
+[Wielkanoc (*) :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#wie){ .md-button .md-button--primary }

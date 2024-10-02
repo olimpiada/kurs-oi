@@ -351,10 +351,10 @@ W obu przypadkach proste wypisywanie pozwoliło nam szybko wykryć usterkę. Jes
 
 Oto trzy kolejne zadania do samodzielnego rozwiązania.
 
-[Potęgi dwójki :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/1l-DI3jS3o0VHQsuFbjDe33L/site/?key=statement){ .md-button .md-button--primary }
+[Potęgi dwójki :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#pot){ .md-button .md-button--primary }
 
-[Pomiary :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/LKmFLnLt8mgBYVobJK0dBdkO/site/?key=statement){ .md-button .md-button--primary }
+[Pomiary :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#pom){ .md-button .md-button--primary }
 
-[Lustro :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/PUCWJeQuB9k2TPEMs7LqBm1h/site/?key=statement){ .md-button .md-button--primary }
+[Lustro :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#lus){ .md-button .md-button--primary }
 
-[Czy się zatrzyma? (*)  :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/bsr68370O577L9wUaInXZ3rU/site/?key=statement){ .md-button .md-button--primary }
+[Czy się zatrzyma? (*)  :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#czy){ .md-button .md-button--primary }

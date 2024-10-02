@@ -339,10 +339,10 @@ Na koniec dwa pytania do przemyślenia:
 
 ## Zadania
 
-[Silnia :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/6Wd8QQm5HiYnljSy-C_cD52m/site/?key=statement){ .md-button .md-button--primary }
+[Silnia :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#sil){ .md-button .md-button--primary }
 
-[Na przemian :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/L7Ihr8hmU5XwCZ8p9jqJn-gC/site/?key=statement){ .md-button .md-button--primary }
+[Na przemian :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#nap){ .md-button .md-button--primary }
 
-[Pierwszy i ostatni :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/7m_N31q1e8WlV4RRVuSTg__p/site/?key=statement){ .md-button .md-button--primary }
+[Pierwszy i ostatni :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#pie){ .md-button .md-button--primary }
 
-[Papryczki logarytmiczne (*) :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/7l6Ql6Kep3DdfBKPwycfsHUg/site/?key=statement){ .md-button .md-button--primary }
+[Papryczki logarytmiczne (*) :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#pap){ .md-button .md-button--primary }

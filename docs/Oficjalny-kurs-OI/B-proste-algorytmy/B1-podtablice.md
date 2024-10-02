@@ -9,8 +9,9 @@ Zaczniemy od zadania o jedną z najbardziej typowych rzeczy możliwych do zrobie
 
 *Dana jest tablica $n$ liczb naturalnych. Naszym zadaniem jest znaleźć wśród nich największą.*
 
-Jako zadanie w stylu ,,olimpijskim'' wyglądałoby to tak: [TODO: zrobić paczkę do zadania]
+Jako zadanie w stylu ,,olimpijskim'' wyglądałoby to tak: 
 
+[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#max1){ .md-button .md-button--primary }
 
 Wczytywanie danych znamy już z rozdziału o pętlach i tablicach: kiedy już będziemy wiedzieć, ile jest liczb (czyli wartość $n$), zadeklarujemy tablicę/wektor o długości $n$. Następnie użyjemy pętli, która przebiegnie od
 $0$ do $n-1$, a w kroku numer $i$ wczyta wartość do komórki `A[i]`:
@@ -143,7 +144,10 @@ int main() {
 }
 ```
 
-Bardzo podobnie wygląda program, który szuka najdłuższego fragmentu tablicy, który jest rosnący. Zachęcamy do samodzielnego rozwiązania takiego zadania: [TODO: zrobić paczkę do zadania].
+Bardzo podobnie wygląda program, który szuka najdłuższego fragmentu tablicy, który jest rosnący. Zachęcamy do samodzielnego rozwiązania takiego zadania: 
+
+
+[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#sto1){ .md-button .md-button--primary }
 
 
 ## Zliczanie elementów

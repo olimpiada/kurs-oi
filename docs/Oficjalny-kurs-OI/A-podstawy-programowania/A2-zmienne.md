@@ -204,7 +204,6 @@ Dla wygody programisty, w języku C++ wprowadzono kilka typów całkowitych, ró
 | unsigned int                                                 | $[0,4294967296]$                  |
 | unsigned long long (pełna nazwa: unsigned long long int)     | mniej więcej $[0,2\cdot10^{19}]$  |
 
-Więcej na temat tego, skąd się wzięły takie właśnie typy i ich zakresy, znajdziesz w komentarzu do lekcji.
 
 
 

@@ -309,10 +309,10 @@ Ogólnie problem błędnych odpowiedzi jest jednym z najczęstszych zagadnień, 
 W tej lekcji mamy dla Ciebie do rozwiązania trzy zadania dotyczące instrukcji warunkowej `if`.
 Dodatkowo, dla uczestników lubiących wyzwania i zainteresowanych przygotowaniem do olimpiad mamy przygotowane nieco trudniejsze zadanie "z gwiazdką".
 
-[Maksimum :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/ZcwTPgWrwMlbFE_9V-RdZ73I/site/?key=statement){ .md-button .md-button--primary }
+[Maksimum :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#max){ .md-button .md-button--primary }
 
-[Ćwiartka :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/nbPTy9V8tDSUxU0BtkKSDiYe/site/?key=statement){ .md-button .md-button--primary }
+[Ćwiartka :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#cwi){ .md-button .md-button--primary }
 
-[Trójkąt :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/uH0rh2QP6A45kjcz9a_k-ayC/site/?key=statement){ .md-button .md-button--primary }
+[Trójkąt :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#tro){ .md-button .md-button--primary }
 
-[Stół (*) :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/lgSDtYv7H3UbdqLhPxRHTuXz/site/?key=statement){ .md-button .md-button--primary }
+[Stół (*) :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#sto){ .md-button .md-button--primary }

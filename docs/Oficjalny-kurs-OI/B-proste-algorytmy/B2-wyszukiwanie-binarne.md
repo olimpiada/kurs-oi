@@ -170,7 +170,7 @@ Teraz  `środek` może być równy  `koniec`, ale nigdy nie będzie równy `pocz
 
 ## Zadania
 
-[Zagadka Nicolo Tartaglii :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/3FnCQ9jeIAFGeDc8YgTQDqp2/site/?key=statement){ .md-button .md-button--primary }
+[Zagadka Nicolo Tartaglii :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#tar){ .md-button .md-button--primary }
 
-[Akcelerator :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/hUh1VsrdR1Vz75pGmzVLidI-/site/?key=statement){ .md-button .md-button--primary }
+[Akcelerator :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#akc){ .md-button .md-button--primary }
 

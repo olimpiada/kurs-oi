@@ -75,6 +75,6 @@ Technika ta zwana jest (nieformalnie) **gąsienicą** – fragment tablicy, któ
 
 ## Zadania
 
-[Mijanka :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/ZP0W8yq2dGPTMN8J785_CWSu/site/?key=statement){ .md-button .md-button--primary }
+[Mijanka :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#mij){ .md-button .md-button--primary }
 
-[Smakołyki :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/uRAmDV-LA0MuunIUGOXBVkur/site/?key=statement){ .md-button .md-button--primary }
+[Smakołyki :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#sma){ .md-button .md-button--primary }

@@ -139,3 +139,9 @@ for (int i = d - 1; i >= 0; i--) {
 }
 cout << "\n";
 ```
+
+## Zadania
+
+[System dwójkowy :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#dwo){ .md-button .md-button--primary }
+
+[Zamiana między systemami :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#zam){ .md-button .md-button--primary }

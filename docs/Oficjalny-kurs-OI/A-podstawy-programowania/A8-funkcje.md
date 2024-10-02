@@ -414,8 +414,7 @@ Po przeczytaniu tej sekcji możesz mieć poczucie, że wprowadzone tu elementy j
 
 # Zadania
 
-[Wicemistrz :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/Mfk2vmcxxXPReS34licKosLn/site/?key=statement){ .md-button .md-button--primary }
+[Wicemistrz :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#wic){ .md-button .md-button--primary }
 
-[Duże liczby :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/xfdCb1PY6WmXgd1QCeR_pCds/site/?key=statement){ .md-button .md-button--primary }
+[Duże liczby :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#duz){ .md-button .md-button--primary }
 
-[Wesoła małpka (*) :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/NJw-7zVrYMM4525BRI7emlMb/site/?key=statement){ .md-button .md-button--primary }

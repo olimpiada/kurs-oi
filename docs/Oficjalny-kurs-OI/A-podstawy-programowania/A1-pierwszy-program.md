@@ -99,11 +99,11 @@ Po skompilowaniu i uruchomieniu tego programu, w konsoli pojawi się taki napis:
 Napisy, jak i inne wartości (np. wyrażenie `100 * 9 / 5 + 32`), można wypisywać używając składni `cout << wartość`, gdzie `wartość` to rzecz, którą chcemy wypisać.
 Natomiast fragment `\n` występujący na końcu napisu `" w skali Fahrenheita\n"` to tzw. znak końca linii, który sprawia, że wyświetla się nowa linijka w jego miejscu.
 
-## Zadania
+## Zadania i system Szkopuł
 
-Na końcu każdej lekcji kursu mamy dla Ciebie konkursowe zadania do samodzielnego rozwiązania.
+Na końcu każdej lekcji kursu mamy dla Ciebie zadania do samodzielnego rozwiązania. Będą powiązane z treściami lekcji, na początku będą bardzo proste
 Rozwiązaniem każdego z zadań jest program (a dokładniej: kod źródłowy), który powinieneś zgłosić w serwisie [Szkopuł](https://szkopul.edu.pl/).
-Programy są oceniane w pełni automatycznie.
+Programy są oceniane w pełni automatycznie. **Zacznij zatem od założenia konta w tym systemie**.
 
 Aby program został zaakceptowany w systemie, wynik działania programu powinien być idealnie zgodny z wymaganiami z treści zadania.
 Jeśli Twój program nie zadziała za pierwszym razem – nie przejmuj się, możesz przesłać jego poprawioną wersję jeszcze raz! Jeśli chcesz uniknąć ciągłego wysyłania, najpierw sprawdź poprawność kompilacji i działania programu na swoim komputerze.
@@ -119,10 +119,12 @@ McKinley - 6194 m n.p.m.
 Mont Blanc - 4810 m n.p.m.
 ````
 
-Pamiętaj, że aby twój program został zaakceptowany w systemie, należy wypisać **dokładnie** ten sam teskt co powyżej - bez żadnych dodatkowych znaków (w tym spacji).
+Pamiętaj, że aby twój program został zaakceptowany w systemie, należy wypisać **dokładnie** ten sam tekst co powyżej - bez żadnych dodatkowych znaków (w tym spacji). Nasza automatyczna sprawdzarka jest bardzo rygorystyczna i niezbyt domyślna. Napiszemy o niej więcej w lekcji "Technikalia, pierwsze zadania", na razie musisz
 
 #### Wyjście
 
 Twój program powinien wypisać dokładnie podany wyżej komunikat.
 
-[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/mWDzXfWzEKAg_GshwIYWdbGG/site/?key=statement){ .md-button .md-button--primary }
+Kiedy Twój program będzie gotowy, zaloguj się na swoje konto w systemie Szkopuł, wybierz konkurs "Kurs OI", a następnie "Wyślij" i z listy zadań wybierz "Początek". Możesz też od razu (będąc zalogowanym w systemie Szkopuł) kliknąć w poniższy link:
+
+[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#poc){ .md-button .md-button--primary }

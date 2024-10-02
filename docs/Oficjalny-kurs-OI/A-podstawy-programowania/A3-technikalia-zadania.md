@@ -144,7 +144,7 @@ być rozdzielane pojedynczymi spacjami.
 | :---------- | :----------------------------------- |
 | 7 3 5       | 7 3 5 <br> 5 3 7                     |
 
-[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/T8qdFmNcJIl5o3yJedQJk1Bh/site/?key=statement){ .md-button .md-button--primary }
+[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#nao){ .md-button .md-button--primary }
 
 ### Zadanie 2. Prostopadłościan
 
@@ -168,7 +168,7 @@ jak i objętość nie przekroczy $2 000 000 000$.
 | :---------- | :----------------------------------- |
 | 1 1 2       | 2 <br> 10                            |
 
-[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/VK8v3juXpnadGvD7J6TiXQC_/site/?key=statement){ .md-button .md-button--primary }
+[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#pro){ .md-button .md-button--primary }
 
 ### Zadanie 3. Czas
 
@@ -192,4 +192,4 @@ nie należy wypisywać dodatkowych zer wiodących.
 | :---------- | :----------------------------------- |
 | 4000        | 1g6m40s                              |
 
-[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/cqNJjBtNa5xD63nnsPiH2igk/site/?key=statement){ .md-button .md-button--primary }
+[Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#cza){ .md-button .md-button--primary }

@@ -148,6 +148,6 @@ Nie może być zatem więcej niż $\log a + \log b$ wywołań
 Zatem odpowiedź poznamy po logarytmicznej (a więc bardzo niewielkiej) liczbie kroków.
 
 ## Zadania
-[Krokodyle :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/VtKRQ2vwWS2XiV4Ga-DVDDpc/site/?key=statement){ .md-button .md-button--primary }
+[Krokodyle :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#kro){ .md-button .md-button--primary }
 
-[Wesoła małpka :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/problemset/problem/NJw-7zVrYMM4525BRI7emlMb/site/?key=statement){ .md-button .md-button--primary }
+[Wesoła małpka :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#wes1){ .md-button .md-button--primary }
