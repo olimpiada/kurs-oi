@@ -1,0 +1,7 @@
+# Konfiguracja wygenerowana automatycznie na podstawie ustawien w serwisie main2
+memory_limits: {'0': 66000, '1': 66000, 2a: 66000, 2b: 66000, 3a: 66000, 3b: 66000,
+  4a: 66000, 4b: 66000, '5': 66000}
+scores: {1: 20, 2: 20, 3: 20, 4: 20, 5: 20}
+time_limits: {'0': 1000, '1': 1000, 2a: 1000, 2b: 1000, 3a: 1000, 3b: 1000, 4a: 1000,
+  4b: 1000, '5': 1000}
+title: Zera i jedynki (ale głównie zera)

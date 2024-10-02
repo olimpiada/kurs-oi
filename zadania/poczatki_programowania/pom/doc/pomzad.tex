@@ -1,0 +1,36 @@
+\documentclass{spiral-kurs}
+\def\title{Pomiary}
+\def\id{pom}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    Czujnik w muzeum w ciągu dnia wykonał serię regularnych pomiarów
+    poziomu zanieczyszczenia powietrza w pomieszczeniu.
+    Wiadomo, że wizyta każdego zwiedzającego powoduje wzrost zanieczyszczenia powietrza.
+    Dyrektor muzeum chciałby oszacować, ilu zwiedzających było tego dnia w muzeum.
+    Napisz program, który obliczy, ile istotnie różnych pomiarów o dodatnim poziomie
+    zanieczyszczenia zarejestrował czujnik.
+
+    \section{Wejście}
+    Wejście składa się z co najmniej dwóch wierszy.
+    Każdy wiersz zawiera jedną liczbę całkowitą.
+    Pierwszy wiersz zawiera liczbę 0 -- wynik pierwszego pomiaru czujnika.
+    Kolejne wiersze zawierają kolejne wyniki pomiarów, będące
+    nieujemnymi liczbami całkowitymi.
+    Wyniki pomiarów są podane w porządku niemalejącym.
+    Ostatni wiersz zawiera liczbę $-1$, oznaczającą koniec wejścia.
+
+    Wejście będzie zawierać co najwyżej $100\,000$ liczb.
+    Żadna liczba na wejściu nie przekroczy $1\,000\,000\,000$.
+      
+    \section{Wyjście}
+    Jedyny wiersz wyjścia powinien zawierać liczbę różnych liczb dodatnich
+    występujących na wejściu.
+    Jeśli wejście nie zawiera żadnej liczby dodatniej, poprawnym wynikiem jest 0.
+
+    \example{0}
+
+
+  \end{document}

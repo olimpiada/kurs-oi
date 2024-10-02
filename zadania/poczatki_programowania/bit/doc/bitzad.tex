@@ -1,0 +1,58 @@
+\documentclass{spiral-kurs}
+\def\title{Ciąg bitoniczny}
+\def\id{bit}
+\def\TL{2~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+Ciąg bitoniczny to ciąg, który najpierw rośnie, a potem maleje.
+Dokładniej, w ciągu bitonicznym $a_1,\ldots,a_n$ istnieje takie $i \in \{1,\ldots,n\}$,
+że ciąg $a_1,\ldots,a_i$ jest ściśle rosnący, a ciąg $a_i,\ldots,a_n$ jest ściśle malejący.
+Napisz program, który stwierdzi, czy ciąg podany na wejściu jest bitoniczny.
+Zauważ, że w szczególności ciąg (ściśle) rosnący oraz ciąg (ściśle) malejący są ciągami bitonicznymi.
+
+\section{Wejście}
+W pierwszym wierszu wejścia znajduje się jedna liczba naturalna $n$ ($1\le n\le 500\,000$),
+oznaczająca długość ciągu.
+W drugim wierszu znajduje się $n$ liczb całkowitych z zakresu od $1$ do $1\,000\,000$,
+oznaczających kolejne elementy ciągu.
+
+\section{Wyjście}
+Twój program powinien wypisać na wyjście jedno słowo \texttt{TAK} lub \texttt{NIE},
+oznaczające, czy ciąg podany na wejściu jest bitoniczny.
+
+  \example{0}
+
+  \noindent
+  i dla danych wejściowych:
+
+  \includefile{../in/\id0a.in}
+
+  \noindent
+  poprawnym wynikiem jest:
+
+  \includefile{../out/\id0a.out}
+
+  \noindent
+  natomiast dla danych wejściowych:
+
+  \includefile{../in/\id0b.in}
+
+  \noindent
+  poprawnym wynikiem jest:
+
+  \includefile{../out/\id0b.out}
+
+  \noindent
+  oraz dla danych wejściowych:
+
+  \includefile{../in/\id0c.in}
+
+  \noindent
+  poprawnym wynikiem jest:
+
+  \includefile{../out/\id0c.out}
+
+
+\end{document}

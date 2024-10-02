@@ -1,0 +1,39 @@
+\documentclass{spiral-kurs}
+\def\title{Król}
+\def\id{kro}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    Na pewnym polu na szachownicy $8 \times 8$ stoi król.
+    Chcielibyśmy dowiedzieć się, na ile różnych pól może przeskoczyć ta figura w jednym ruchu\footnote{
+      Ruchy króla szachowego są zilustrowane np. na stronie \texttt{http://pl.wikipedia.org/wiki/Król\_(szachy)}.
+    }.
+    Zakładamy, że na szachownicy nie ma w tym momencie żadnych innych figur.
+
+    \section{Wejście}
+    Pierwszy i jedyny wiersz wejścia zawiera jedną literę $k$ oraz jedną cyfrę $w$,
+    oddzielone spacją.
+    Litera $k$ oznacza kolumnę szachownicy ($k \in \{\mathtt{a},\ldots,\mathtt{h}\}$),
+    a cyfra $w$ oznacza wiersz szachownicy ($w \in \{1,\ldots,8\}$).
+      
+    \section{Wyjście}
+    W jedynym wierszu wyjścia Twój program powinien wypisać jedną liczbę całkowitą
+    -- liczbę pól szachownicy, na które może przeskoczyć król umieszczony na zadanym polu.
+
+    \example{0}
+
+    \noindent
+    natomiast dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0a.out}
+
+
+
+  \end{document}

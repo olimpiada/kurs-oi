@@ -1,0 +1,49 @@
+#include <cstdio>
+#include <cassert>
+#include <cstring>
+
+
+
+using namespace std;
+
+#define massert(x,y) { if (!(x)) { printf("WRONG\n%s\n",y); return 1; } }
+
+int main(int argc, char ** argv)
+{
+  //assert(argc>=4);
+  char A[25],B[25],P0[25],P1[25],p[25];
+  int L0,L1,n,s,x;
+  FILE* fin = fopen(argv[1],"r");
+  FILE* fsol = fopen(argv[3],"r");
+  FILE* fout = fopen(argv[2],"r");
+    fscanf(fin,"%d %d",&n,&s);
+    fgets(A,23,fsol);
+    fgets(B,23,fout);
+    if (strlen(A)==4 && strncmp(A,"NIE",3)==0)
+    {
+      massert(strlen(B)==4 && strncmp(B,"NIE",3)==0,"Oczekiwano NIE.\n");
+      for(int i=0; i<n; i++)
+        fscanf(fin,"%s %d",p,&x);
+      printf("OK\n");
+    }
+    else
+    {
+    sscanf(B,"%s %s",P0,P1);
+//    fprintf(stderr,"%s %s\n",P0,P1);
+    L0 = L1 = 0;
+    for(int i=0; i<n; i++)
+    {
+      fscanf(fin,"%s %d",p,&x);
+//      fprintf(stderr,"%s %d\n",p,x);
+      if (strcmp(p,P0)==0)
+        L0 = x;
+      if (strcmp(p,P1)==0)
+        L1 = x;
+    }
+//    fprintf(stderr,"%d %d\n",L0,L1);
+    
+    massert(L0+L1==s,"Suma podanych elementow niewlasciwa!");
+    printf("OK\n");
+    }
+    return 0;
+}

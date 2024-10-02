@@ -1,0 +1,46 @@
+\documentclass{spiral-kurs}
+\def\title{Papryczki logarytmiczne (*)}
+\def\id{pap}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+  Hitem sezonu w bajtockim warzywniaku są papryczki logarytmiczne.
+  Jak sama nazwa wskazuje, wagi papryczek, wyrażone w gramach, są wyłącznie
+  potęgami dwójki między $2^0$ a $2^k$.
+
+  Typowy przebieg transakcji w warzywniaku wygląda tak, że klient prosi
+  o $x$ gramów papryczek i sprzedawca wydaje mu dokładnie taką ich masę,
+  posługując się wyłącznie całymi papryczkami.
+  Może się niestety tak zdarzyć, że zamówienie klienta będzie niemożliwe
+  do spełnienia.
+  Pomóż sprzedawcy sprawdzić, na ile jest on zabezpieczony przed taką feralną
+  sytuacją, czyli wyznaczyć najmniejszą taką liczbę naturalną $x$ z zamówienia
+  nie do zrealizowania.
+
+\section{Wejście}
+  Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $k$
+  ($1\le k\le 10$), oznaczającą, że masy papryczek znajdujących się na stanie
+  warzywniaka to $2^0,2^1,\dots,2^k$.
+  Drugi wiersz zawiera $k+1$ liczb całkowitych dodatnich $p_0,p_1,\dots,p_k$
+  nie większych niż $1000$, pooddzielanych spacjami
+  i oznaczających dokładny stan sklepu: $p_0$ papryczek o wadze $1$, $p_1$ papryczek
+  o wadze $2$, \ldots, $p_k$ papryczek o wadze $2^k$.
+
+\section{Wyjście}
+   Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą
+   dodatnią $x$ -- najmniejszą wartość zamówienia, której sprzedawca nie
+   będzie w stanie zrealizować.
+
+   \example{0}
+
+   \medskip
+   \noindent
+   \textbf{Wyjaśnienie do przykładu:} Wszystkie wartości $x$ od $1$ do $8$
+   można osiągnąć przy aktualnym stanie sklepu; oto przykładowe takie
+   przedstawienia:
+   $1=1$, $2=1+1$, $3=1+2$, $4=4$, $5=1+4$, $6=1+1+4$, $7=1+2+4$, $8=1+1+2+4$.
+   Wartości $x=9$ oczywiście nie da się tak osiągnąć.
+
+ \end{document}

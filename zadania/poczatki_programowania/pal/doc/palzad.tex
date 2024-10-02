@@ -1,0 +1,38 @@
+\documentclass{spiral-kurs}
+\def\title{Palindrom}
+\def\id{pal}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+  Palindrom (gr.\ \emph{palindromeo} -- biec z powrotem) to słowo brzmiące tak samo czytane od lewej do prawej i~od prawej do lewej.
+  Przykładami palindromów w języku polskim są \texttt{anna} i \texttt{kajak}\footnote{
+    Ciekawe przykłady palindromów w różnych językach można znaleźć na stronie
+    \texttt{http://pl.wikipedia.org/wiki/Palindrom}
+  }.
+  W tym zadaniu chcemy sprawdzić, czy wczytane słowo jest palindromem.
+
+  \section{Wejście}
+  Na wejściu znajduje się jedno słowo złożone z małych liter alfabetu angielskiego.
+  Długość słowa jest dodatnia i nie przekracza $1\,000\,000$.
+
+  \section{Wyjście}
+  Pierwszy i jedyny wiersz wyjścia powinien zawierać jedno słowo
+  \texttt{TAK} lub \texttt{NIE}, stanowiące odpowiedź na pytanie,
+  czy słowo podane na wejściu jest palindromem.
+
+
+    \example{0}
+
+    \noindent
+    a dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0a.out}
+
+  \end{document}

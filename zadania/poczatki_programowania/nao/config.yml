@@ -1,0 +1,5 @@
+# Konfiguracja wygenerowana automatycznie na podstawie ustawien w serwisie main2
+memory_limits: {'0': 264000, 1a: 264000, 1b: 264000, 1c: 264000, 1d: 264000, 1e: 264000}
+scores: {1: 100}
+time_limits: {'0': 1000, 1a: 1000, 1b: 1000, 1c: 1000, 1d: 1000, 1e: 1000}
+title: Na odwrót

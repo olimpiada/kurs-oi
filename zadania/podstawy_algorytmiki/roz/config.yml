@@ -1,0 +1,5 @@
+# Konfiguracja wygenerowana automatycznie na podstawie ustawien w serwisie main2
+memory_limits: {'0': 264000, '1': 264000, '2': 264000, '3': 264000}
+scores: {1: 33, 2: 33, 3: 34}
+time_limits: {'0': 1000, '1': 1000, '2': 1000, '3': 2000}
+title: Rozkład na czynniki

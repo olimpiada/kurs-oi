@@ -1,0 +1,36 @@
+\documentclass{spiral-kurs}
+\def\title{Mijanka}
+\def\id{mij}
+\def\TL{5~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    Przemek obserwuje ruch samochodów na drodze. Droga jest dwukierunkowa i łączy
+    wschodnią część miasta z~zachodnią. Ponieważ Przemek stoi na wzgórzu,
+    to widzi dokładne położenie wszystkich samochodów.
+
+    Przemek zastanawia się, ile par samochodów się minie.
+    Dwa samochody się miną, jeśli jadą w przeciwnych kierunkach i znajdą się w tym samym punkcie.
+    Zakładamy, że samochody nie zawracają, nie wyprzedzają oraz wszystkie jadą prosto przed siebie.
+    Przemek kończy obserwację, jeśli wszystkie samochody dotrą na koniec drogi w który zmierzają.
+
+    \section{Wejście}
+    W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($1 \leq n \leq 1\,000\,000$),
+    oznaczająca liczbę wszystkich samochodów, które widzi Przemek.
+
+    W drugim wierszu wejścia znajduje się $n$ liczb całkowitych $s_0, s_1, \ldots, s_{n-1}$ ($s_i \in \{0, 1\}$),
+    oznaczających kierunki kolejnych samochodów, podawanych w kolejności z zachodu na wschód.
+    Liczba $s_i$ oznacza kierunek jazdy samochodu $i$: $0$ --- na wschód, $1$ --- na zachód.
+
+    \section{Wyjście}
+    Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą,
+    równą liczbie par samochodów, które będą się mijały.
+
+    \example{0}
+
+    \medskip
+    \noindent
+    \textbf{Wyjaśnienie do przykładu:} Mijające się pary: ($1, 2$), ($1, 4$), ($1, 5$), ($3, 4$), ($3, 5$).
+
+  \end{document}

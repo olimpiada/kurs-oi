@@ -1,0 +1,32 @@
+\documentclass{spiral-kurs}
+\def\title{Koło}
+\def\id{kol}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+  Zadaniem Twojego programu będzie obliczenie pola i obwodu
+  koła o zadanym promieniu.
+  Interesuje nas wynik zaokrąglony do trzech cyfr po kropce dziesiętnej.
+
+  \section{Wejście}
+  Na wejściu znajduje się jedna liczba rzeczywista $r$
+  ($0 < r \le 1000$), będąca długością promienia koła.
+
+  \section{Wyjście}
+  W pierwszym wierszu należy wypisać pole koła o promieniu 
+  $r$ z dokładnością do 3 miejsc po kropce dziesiętnej, a~w~drugim wierszu należy wypisać długość obwodu tego koła również 
+  z dokładnością do trzech miejsc po kropce.
+                  
+  \example{0}
+
+  \medskip
+  \noindent
+  \textbf{Wskazówka:} W pliku nagłówkowym \texttt{cmath} dostępne jest dobre przybliżenie
+  liczby $\pi$ (stała \texttt{M\_PI}).
+  Możesz też użyć własnego przybliżenia liczby $\pi$; pamiętaj jednak, że powinno być możliwie dokładne, tak
+  aby wynik dla koła o maksymalnym możliwym w tym zadaniu promieniu był poprawny z dokładnością do 3 cyfr po kropce.
+
+
+  \end{document}

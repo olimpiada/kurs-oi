@@ -1,0 +1,46 @@
+\documentclass{spiral-kurs}
+\def\title{Duże liczby}
+\def\id{duz}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    Wiemy już, że każdy typ całkowity w języku C++ ma pewien ograniczony zakres.
+    W tym zadaniu będziemy jednak operować na liczbach przekraczających
+    zakresy wszystkich typów!
+    Twoim zadaniem jest napisanie programu, który będzie porównywał takie bardzo duże liczby.
+    Jak sobie z tym poradzisz?\ldots
+
+    \section{Wejście}
+    Wejście składa się tylko z jednego wiersza, zawierającego kolejno:
+    liczbę naturalną $a$, odstęp, znaki porównania, odstęp i liczbę naturalną $b$
+    ($1 \le a, b \le 10^{1000}$).
+    Możliwe znaki porównania to:
+    \texttt{==}, \texttt{!=}, \texttt{<}, \texttt{>}, \texttt{<=} lub \texttt{>=}.
+
+    \section{Wyjście}
+    Twój program powinien wypisać jedno słowo \texttt{TAK} lub \texttt{NIE},
+    oznaczające, czy nierówność podana na wejściu jest prawdziwa, czy fałszywa.
+
+    \noindent
+    Wejście dla testu {\tt \id 0}:
+    \includefile{../in/\id 0.in}
+
+    \noindent
+    Wyjście dla testu {\tt \id 0}:
+    \includefile{../out/\id 0.out}
+
+    \noindent
+    natomiast dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+
+    \includefile{../out/\id 0a.out}
+
+
+
+  \end{document}

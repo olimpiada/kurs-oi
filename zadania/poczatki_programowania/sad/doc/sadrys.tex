@@ -1,0 +1,38 @@
+\documentclass[11pt]{article}
+\usepackage{tikz}
+\pagestyle{empty}
+\usepackage[T1]{fontenc}
+\usepackage[latin2]{inputenc}
+
+\begin{document}
+
+\begin{figure}[!ht]
+\begin{center}
+\begin{tikzpicture}[scale=0.8]
+  \draw[-latex] (0,0) -- (6,0);
+  \draw[-latex] (0,0) -- (0,5);
+  \draw[densely dotted] (0,0) grid (6,5);
+  \draw (1,0) node[below] {1};
+  \draw (2,0) node[below] {2};
+  \draw (3,0) node[below] {3};
+  \draw (4,0) node[below] {4};
+  \draw (5,0) node[below] {5};
+  
+  \draw (0,1) node[left] {1};
+  \draw (0,2) node[left] {2};
+  \draw (0,3) node[left] {3};
+  \draw (0,4) node[left] {4};
+  
+  \draw (0,0) node[below left=-0.02cm] {0};
+
+  \filldraw (2,1) circle (0.1cm);
+  \filldraw (4,3) circle (0.1cm);
+  \filldraw (5,4) circle (0.1cm);
+  \filldraw (1,4) circle (0.1cm);
+  \filldraw (4,2) circle (0.1cm);
+  \draw[thick] (1,1) rectangle (5,4);
+\end{tikzpicture}
+\end{center}
+\end{figure}
+
+\end{document}

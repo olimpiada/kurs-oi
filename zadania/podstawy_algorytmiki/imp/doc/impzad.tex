@@ -1,0 +1,36 @@
+\documentclass{spiral-kurs}
+\def\title{Impreza}
+\def\id{imp}
+\def\TL{1~s}
+\def\ML{64~MB}
+\begin{document}
+\makeheader
+%
+Chcesz zorganizować dużą imprezę dla swoich znajomych. Niestety niektórzy z
+nich się nie lubią --- zaproszenie nielubiącej się pary osób do wspólnej zabawy
+zakończy się popsuciem atmosfery na imprezie wszystkim gościom.
+
+Wiesz którzy znajomi się nie lubią. Chcesz wybrać taki podzbiór znajomych, aby
+był on jak największy (im huczniejsza impreza, tym lepiej!) oraz aby wszyscy
+znajomi w tym podzbiorze się lubili.
+
+\section{Wejście}
+W~pierwszym wierszu standardowego wejścia znajduje się liczba $N$ ($3 \leq
+N \leq 18$), oznaczająca liczbę znajomych.
+
+W~$i$-tym z~kolejnych $N$ wierszy znajduje się opis relacji $i$-tego
+znajomego w~postaci ciągu~$N$ znaków \texttt{0} i~\texttt{1}. $j$-ty z~tych
+znaków oznacza w~jakich stosunkach pozostają znajomi $i$, $j$ --- jeśli
+\texttt{0}, to się lubią, a~jeśli \texttt{1}, to się nie lubią. Można przyjąć,
+że każda osoba lubi samą siebie oraz że jeśli dana osoba lubi (lub nie) inną,
+to tamta odwzajemnia uczucie.
+
+\section{Wyjście}
+W~pierwszym wierszu standardowego wejścia wypisz jedną liczbę, oznaczającą ile
+najwięcej lubiących się znajomych można zaprosić na~imprezę. W~drugim wierszu
+wypisz listę tych znajomych w~postaci liczb z~przedziału od~$1$ do~$N$,
+oddzielonych pojedynczą spacją. Jeśli jest wiele poprawnych odpowiedzi, wypisz
+leksykograficznie minimalną.
+	\vspace{-4pt}
+	\example{0}
+\end{document}

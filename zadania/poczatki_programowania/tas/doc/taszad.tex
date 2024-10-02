@@ -1,0 +1,49 @@
+\documentclass{spiral-kurs}
+\def\title{Taśma (*)}
+\def\id{tas}
+\def\TL{3~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+      Jaś przypadkowo znalazł w domu bardzo długą taśmę.
+      Bez chwili namysłu napisał na taśmie pewien ciąg liczb całkowitych dodatnich.
+      Teraz chciałby znaleźć w tym ciągu dwie najdalej od siebie położone
+      różne liczby.
+      Zakładamy, że odległość między sąsiednimi liczbami to 1, między liczbami
+      posiadającymi wspólnego sąsiada to 2 itd.
+
+    \section{Wejście}
+      Pierwszy wiersz wejścia zawiera jedną liczbę całkowitą $n$
+      ($1\le n\le 500\,000$), oznaczającą długość sekwencji liczb
+      zapisanej przez Jasia na taśmie.
+      Drugi wiersz zawiera ciąg $n$ liczb całkowitych $a_i$
+      ($1\le a_i\le 1\,000\,000\,000$), oddzielonych spacjami.
+
+    \section{Wyjście}
+      Jeżeli w podanym na wejściu ciągu
+      nie ma żadnej pary różnych liczb, to $i$-ty wiersz powinien
+      zawierać jedno słowo ,,\texttt{BRAK}''.
+      W przeciwnym przypadku w $i$-tym wierszu powinna znajdować się
+      jedna liczba całkowita, równa odległości między najdalszą
+      parą różnych liczb w ciągu.
+
+    \example{0}
+
+    \medskip
+    \noindent
+    \textbf{Wyjaśnienie do przykładu:} najdalszymi różnymi
+    liczbami w sekwencji są m.in.\ pierwsza (czyli 2) i siódma (czyli 5).
+
+    \bigskip
+    \noindent
+    Natomiast dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0a.out}
+
+  \end{document}

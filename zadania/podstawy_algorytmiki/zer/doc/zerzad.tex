@@ -1,0 +1,38 @@
+\documentclass{spiral-kurs}
+\def\title{Zera i jedynki (ale głównie zera)}
+\def\id{zer}
+\def\TL{1~s}
+\def\ML{64~MB}
+\begin{document}
+\makeheader
+%
+	Wszystkie dane w pamięci komputera są na pewnym poziomie reprezentowane
+	przez ciąg zer i~jedynek. Błędy sprzętowe, skoki napięcia
+	i~wysokoenergetyczne cząstki kosmiczne mogą spowodować niespodziewane
+	zmiany w~stanie pamięci -- zera zmieniają się na jedynki, a jedynki
+	na zera. Twoim zadaniem jest obserwować takie zmiany w~podanym ciągu
+	zerojedynkowym i~po~każdej z~nich odpowiadać, jaka jest najdłuższa
+	nieprzerwana sekwencja samych zer w~całym ciągu.
+
+	\section{Wejście}
+	W~pierwszym wierszu wejścia znajdują się dwie liczby całkowite $n$
+	i~$k$ ($5 \leq n \leq 500\,000$, $1 \leq k \leq 200\,000$), oznaczające
+	odpowiednio długość ciągu zerojedynkowego i~liczbę zmian w~tym ciągu.
+	W~drugim wierszu wejścia znajduje się ciąg $n$ znaków \texttt{0}
+	i~\texttt{1}. W~każdym z~kolejnych $k$ wierszy znajduje się jedna liczba
+	całkowita z~zakresu od~$1$ do~$n$, oznaczająca pozycję w~podanym ciągu,
+	w~której dochodzi to zmiany stanu pamięci 
+
+	\section{Wyjście}
+	W~kolejnych $k$ wierszach wyjścia wypisz po jednej liczbie całkowitej.
+	W~$i$-tym wierszu wypisz długość najdłuższego nieprzerwanego ciągu zer
+	powstałego w ciągu wejściowym po~$i$-tej zamianie znaku.
+
+	\vspace{-4pt}
+	\example{0}
+
+	\noindent
+	\textbf{Podpowiedź:} dla określonego przedziału w ciągu zerojedynkowym
+	zapamiętuj jaki jest najdłuższy nieprzerwany ciąg zer od~lewej
+	i~od~prawej strony.
+\end{document}

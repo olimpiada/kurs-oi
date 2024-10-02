@@ -1,0 +1,35 @@
+\documentclass{spiral-kurs}
+\def\title{Liczby pierwsze}
+\def\id{lic}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+  \emph{Liczbą pierwszą} nazywamy liczbę naturalną, która ma dokładnie dwa dzielniki:
+  jedynkę i nią samą.
+  Liczby naturalne większe od 1, które nie są liczbami pierwszymi, nazywamy \emph{liczbami złożonymi}.
+
+  W tym zadaniu Twój program powinien stwierdzić, czy wczytana na wejściu liczba naturalna jest
+  pierwsza, czy złożona.
+    
+  \section{Wejście}
+  W jedynym wierszu wejścia znajduje się jedna liczba całkowita $n$ ($2 \le n \le 1\,000\,000$).
+    
+  \section{Wyjście}
+  Twój program powinien wypisać jedno słowo \texttt{pierwsza} lub \texttt{zlozona}, określające liczbę $n$.
+
+    \example{0}
+
+    \noindent
+    a dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0a.out}
+
+
+  \end{document}

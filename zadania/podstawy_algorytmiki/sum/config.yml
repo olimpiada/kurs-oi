@@ -1,0 +1,5 @@
+# Konfiguracja wygenerowana automatycznie na podstawie ustawien w serwisie main2
+memory_limits: {'0': 264000, '1': 264000, '2': 264000}
+scores: {1: 50, 2: 50}
+time_limits: {'0': 800, '1': 800, '2': 800}
+title: Suma liczb pierwszych

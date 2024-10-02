@@ -1,0 +1,27 @@
+\documentclass{spiral-kurs}
+\def\title{Suma liczb pierwszych}
+\def\id{sum}
+\def\TL{0.8~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+  
+    Aby udowodnić, że potrafisz szybko znajdować liczby pierwsze, oblicz sumę liczb pierwszych znajdujących się w przedziale $[a, b]$, dla różnych zadanych $a$ i $b$.
+
+    \section{Wejście}
+    W pierwszym wierszu wejścia znajduje się liczba naturalna $T \leq 100\,000$, ilość przedziałów, które musisz rozpatrzyć. W kolejnych $T$ liniach znajdują się
+    pary liczb naturalnych $(a_i, b_i)$ oddzielone spacją. Zawsze zachodzi $2 \leq a_i \leq b_i \leq 2\,000\,000$.
+      
+    \section{Wyjście}
+
+    Dla każdej pary $(a_i, b_i)$ z wejścia podaj odpowiedź: sumę liczb pierwszych, które są większe lub równe $a_i$, a mniejsze lub równe $b_i$.
+
+    
+    \section{Wskazówki}
+    Nie próbuj za każdym razem sprawdzać wszystkich liczb z każdego przedziału, ani sumować ich za pomocą pętli -- taki program działałby za wolno.
+    Istotna wiedza potrzebna do rozwiązania zadania znajduje się w lekcji {\it Złożoność obliczeniowa}. Zwróć też uwagę, że wynik sumowania może nie zmieścić się
+    w zakresie typu {\tt int} -- potrzebna będzie zmienna typu {\tt long long}.
+
+    \example{0}
+  \end{document}

@@ -1,0 +1,75 @@
+\documentclass{spiral-kurs}
+\def\title{Szyfr Cezara (*)}
+\def\id{szy}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+  W tym zadaniu Twój program będzie szyfrował i odszyfrowywał dane, używając algorytmu,
+  który był znany już w czasach Juliusza Cezara.
+  Szyfrowanie tekstu polega na szyfrowaniu kolejnych jego liter (pozostałe znaki pozostawiamy bez zmian).
+  Każda litera zostaje zamieniona w $k$-tą następną w alfabecie
+  ($k$ jest stałą szyfru), przy czym jeżeli taka nie istnieje (wychodzimy za \texttt{z}), to
+  odliczanie jest kontynuowane z powrotem od \texttt{a}.
+  Szyfrowanie zachowuje wielkość liter (tj.\ małe przechodzą na małe, a wielkie na wielkie).
+  Zakładamy, że w~tekście występują jedynie litery alfabetu angielskiego (małe i wielkie)
+  oraz znaki interpunkcyjne (bez spacji).
+
+  Dla przykładu, jeżeli $k=5$, to małe litery tekstu przechodzą na małe litery szyfru według poniższej tabelki:
+
+  \medskip
+  \noindent
+  {\small
+    \begin{center}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+    \hline
+    litera & 
+    \texttt{a} & \texttt{b} & \texttt{c} & \texttt{d} & \texttt{e} & \texttt{f} & \texttt{g} & \texttt{h} & \texttt{i} & \texttt{j} & \texttt{k} & \texttt{l} & \texttt{m} & \texttt{n} & \texttt{o} & \texttt{p} & \texttt{q} & \texttt{r} & \texttt{s} & \texttt{t} & \texttt{u} & \texttt{v} & \texttt{w} & \texttt{x} & \texttt{y} & \texttt{z} \\\hline 
+    szyfr &
+    \texttt{f} & \texttt{g} & \texttt{h} & \texttt{i} & \texttt{j} & \texttt{k} & \texttt{l} & \texttt{m} & \texttt{n} & \texttt{o} & \texttt{p} & \texttt{q} & \texttt{r} & \texttt{s} & \texttt{t} & \texttt{u} & \texttt{v} & \texttt{w} & \texttt{x} & \texttt{y} & \texttt{z} & \texttt{a} & \texttt{b} & \texttt{c} & \texttt{d} & \texttt{e} \\\hline
+  \end{tabular}
+\end{center}
+}
+
+  \medskip
+  \noindent
+  Wielkie litery tekstu przechodzą na wielkie litery szyfru zgodnie z tą samą regułą.
+
+  Napisz program, który wczyta tekst do zaszyfrowania lub odszyfrowania i stałą $k$
+  i zaszyfruje lub odszyfruje ten tekst, w zależności od polecenia.
+  
+  \section{Wejście}
+  Pierwszy wiersz wejścia zawiera jedną liczbę 1 lub 2.
+  Liczba 1 oznacza ,,szyfruj'', a liczba 2 -- ,,odszyfruj''.
+  Drugi wiersz wejścia zawiera stałą $k$ ($1\le k\le 25$).
+  Trzeci i ostatni wiersz wejścia zawiera tekst, złożony wyłącznie z liter (małych bądź dużych) i/lub znaków interpunkcyjnych (bez spacji).
+  Tekst będzie zawierał co najmniej jeden znak i co najwyżej $10\,000$ znaków.
+
+  \section{Wyjście}
+  Pierwszy i jedyny wiersz wyjścia powinien zawierać tekst po zaszyfrowaniu bądź odszyfrowaniu.
+
+    \example{0}
+
+    \noindent
+    a dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0a.out}
+
+    \noindent
+    natomiast dla danych wejściowych:
+
+    \includefile{../in/\id 0b.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0b.out}
+
+
+  \end{document}

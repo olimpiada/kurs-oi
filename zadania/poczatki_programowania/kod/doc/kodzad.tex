@@ -1,0 +1,33 @@
+\documentclass{spiral-kurs}
+\def\title{Kody szesnastkowe}
+\def\id{kod}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    Kody ASCII znaków reprezentuje się czasami w postaci \emph{szesnastkowej}.
+    Taka reprezentacja jest dwucyfrową liczbą zapisaną w układzie szesnastkowym.
+    W układzie szesnastkowym występują ,,cyfry'' od 0 do 15, przy czym pierwsze dziesięć
+    cyfr oznacza się normalnie, a cyfry od 10 do 15 oznacza się odpowiednio literami od A do F.
+    Aby przeliczyć kod szesnastkowy na kod ASCII znaku, mnożymy więc pierwszą cyfrę kodu
+    (cyfrę ,,dziesiątek'', a dokładniej, szesnastek) przez 16 i dodajemy drugą cyfrę, czyli
+    cyfrę jedności.
+    Twoim zadaniem jest napisanie programu, który pozwoli na automatyczne przeliczanie kodów
+    szesnastkowych na kody ASCII.
+
+    \section{Wejście}
+    Na wejściu znajdują się dwa znaki określające poprawny kod szesnastkowy
+    znaku z kodu ASCII.
+    Pierwszy znak jest cyfrą między \texttt{2} a \texttt{7}, a drugi -- cyfrą lub wielką literą
+    między \texttt{A} a \texttt{F}.
+      
+    \section{Wyjście}
+    W pierwszym wierszu Twój program powinien wypisać kod ASCII znaku,
+    a w drugim -- sam znak.
+    Możesz założyć, że kod szesnastkowy na wejściu nie będzie odpowiadał
+    żadnemu znakowi specjalnemu, czyli takiemu, którego nie da się ładnie wypisać.
+
+    \example{0}
+
+  \end{document}

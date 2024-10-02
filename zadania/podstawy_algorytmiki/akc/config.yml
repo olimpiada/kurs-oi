@@ -1,0 +1,8 @@
+# Konfiguracja wygenerowana automatycznie na podstawie ustawien w serwisie main2
+memory_limits: {'0': 264000, 1a: 264000, 1b: 264000, 1c: 264000, 1d: 264000, 1e: 264000,
+  1f: 264000, 1g: 264000, 1h: 264000, 1i: 264000, 1j: 264000, 1k: 264000, 1l: 264000,
+  1m: 264000, 1n: 264000}
+scores: {1: 100}
+time_limits: {'0': 2000, 1a: 2000, 1b: 2000, 1c: 2000, 1d: 2000, 1e: 2000, 1f: 2000,
+  1g: 2000, 1h: 2000, 1i: 2000, 1j: 2000, 1k: 2000, 1l: 2000, 1m: 2000, 1n: 2000}
+title: Akcelerator

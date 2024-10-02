@@ -1,0 +1,33 @@
+\documentclass{spiral-kurs}
+\def\title{Podzielne}
+\def\id{pod}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+  W tym zadaniu Twój program powinien obliczyć, ile liczb z przedziału od $a$ do $b$
+  jest podzielnych przez $k$.
+
+  \section{Wejście}
+  Pierwszy i jedyny wiersz wejścia zawiera trzy liczby całkowite $a$, $b$, $k$
+  ($1 \leq a \leq b \leq 2 \cdot 10^9$, $1 \leq k \leq 2 \cdot 10^9$), oddzielone spacjami,
+  oznaczające odpowiednio początek i koniec przedziału oraz liczbę, przez którą dzielimy.
+
+  \section{Wyjście}
+  Wyjście powinno zawierać jedną liczbę całkowitą, równą liczbie liczb z przedziału $[a,b]$,
+  które dzielą się przez $k$.
+
+    \example{0}
+
+    \noindent
+    a dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0a.out}
+
+  \end{document}

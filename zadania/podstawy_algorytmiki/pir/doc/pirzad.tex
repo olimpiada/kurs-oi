@@ -1,0 +1,37 @@
+\documentclass{spiral-kurs}
+\def\title{Piramida}
+\def\id{pir}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+  
+I oto nadszedł jakże smutny dzień, w którym faraon (oby żył wiecznie!) odszedł z tego świata. Dla uczczenia jego pamięci wybudowano, a jakże, wielką piramidę, gdzie złożono jego mumię, a także -- jak powiadają -- nieprzebrane skarby. 
+Nowy faraon (oby żył wiecznie!) poprowadził uroczystości żałobne i~życie potoczyło się dalej\ldots
+
+W jakiś czas później Pteppic, najzdolniejszy z miejscowych złodziei, postanowił na własne oczy przekonać się, ile jest prawdy w legendzie o~skarbach faraona. Wziął więc swój ulubiony plecak (o~którym jeszcze usłyszymy), wierny komplet wytrychów i~ruszył na podbój świata w ogólności, a piramidy w konkretach. Po pokonaniu wielu zabezpieczeń i pułapek dotarł do ostatniego korytarza, wyłożonego kamiennymi płytami. W tym miejscu architekt piramidy sięgnął granic geniuszu -- żadna z płyt (których jest $n$, numerowanych od $1$ do $n$) nie zdradzała nawet najdrobniejszym szczegółem, że mogłaby kryć śmiercionośną pułapkę. Pteppic postanowił jednak, że nie wycofa się tak blisko celu. 
+Powierzając swój los egipskim bogom wyciągnął ulubioną kostkę\ldots
+
+Pteppic stoi na płycie numer $1$ (na której, jak już wie, pułapki nie ma). Rzuca kością sześcienną, po czym przeskakuje o tyle płyt do przodu, ile oczek wypadło na kości. Jeśli trafi na pułapkę, jego przygoda kończy się w sposób szybki, acz bezbolesny (architekt był wprawdzie geniuszem, ale humanitarnym). Jeśli trafi na pole numer $n$, skarb jest jego. Jeśli zaś przeskoczy za daleko, pozna ukrytą w przeciwległej ścianie jeszcze jedną niespodziankę architekta, równie skuteczną jak poprzednie.
+
+Na ile różnych sposobów Pteppic może dostać się z pola $1$ na pole $n$? Tak się składa, że architekt jest Twoim znajomym i znasz dobrze położenie pułapek. Odpowiedź może być dużą liczbą, wystarczy zatem, jeśli podasz resztę z dzielenia modulo $k$.
+
+    \section{Wejście}
+
+W pierwszym wierszu wejścia znajdują się liczby naturalne $n$, $k$
+($2 \leq n \leq 1\,000\,000$, $2 \leq k \leq 1\,000\,000$), oddzielone pojedynczym
+odstępem.
+Drugi wiersz zawiera ciąg $n$ znaków \texttt{'0'} i \texttt{'1'}, bez odstępów między nimi.
+$0$ na $i$-tej pozycji oznacza, że na $i$-tym polu jest pułapka.
+Możesz założyć, że pola $1$ i $n$ są bezpieczne.
+
+      
+    \section{Wyjście}
+
+Na wyjście należy wypisać jeden wiersz zawierający liczbę całkowitą -- liczbę
+sposobów (modulo $k$), na jaką można dojść z pola $1$ do pola $n$ pozostając żywym.
+
+
+    \example{0}
+  \end{document}

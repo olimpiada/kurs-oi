@@ -1,0 +1,26 @@
+\documentclass{spiral-kurs}
+\def\title{Smakołyki}
+\def\id{sma}
+\def\TL{10~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    Natalia ustawiła w rzędzie $n$ smakołyków. Każdy smakołyk ma przypisany pewien rodzaj.
+    Natalia może teraz wybrać pewną liczbę (od $1$ do $n$) sąsiednich smakołyków, a następnie je wszystkie zjeść.
+    Jedynym warunkiem jest to, aby żadne dwa smakołyki nie były tego samego rodzaju.
+    Pomóż Natalii i znajdź liczbę sposobów, na które może wybrać sąsiednie smakołyki.
+
+    \section{Wejście}
+    Pierwszy wiersz wejścia zawiera dwie liczby całkowite $n, m$ ($1 \leq n, m \leq 1\,000\,000$),
+    oznaczające odpowiednio liczbę smakołyków oraz liczbę dostępnych ich rodzajów.
+    Drugi wiersz zawiera $n$ liczb całkowitych $c_0, c_1, \ldots, c_{n-1}$ ($1 \leq c_i \leq m$),
+    gdzie $c_i$ oznacza rodzaj $i$-tego smakołyka.
+
+    \section{Wyjście}
+    Pierwszy i jedyny wiersz wyjścia powinien zawierać jedną liczbę całkowitą,
+    równą liczbie sposobów, na które Natalia może wybrać sąsiednie smakołyki.
+
+    \example{0}
+
+  \end{document}

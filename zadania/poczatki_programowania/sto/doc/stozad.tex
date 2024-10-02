@@ -1,0 +1,66 @@
+\documentclass{spiral-kurs}
+\def\title{Stół (*)}
+\def\id{sto}
+\def\TL{1~s}
+\def\ML{128~MB}
+\begin{document}
+\makeheader
+%
+Bajtazar kupuje meble przez Internet.
+Znalazł już ładny stół i zestaw krzeseł.
+Teraz zastanawia się, ile krzeseł może kupić, tak aby wszystkie zmieściły się przy stole.
+
+Stół ma prostokątny blat o wymiarach $A \times B$ centymetrów.
+Z kolei siedzisko krzesła, patrząc z góry, to kwadrat o wymiarach $K \times K$ centymetrów.
+Dalej będziemy traktować stół jako prostokąt, a krzesła -- jako kwadraty.
+
+Nad jednym z brzegów siedziska (kwadratu) znajduje się oparcie.
+Każde krzesło należy ustawić oparciem przy stole, tzn.\ brzeg z oparciem powinien pokrywać się z pewnym brzegiem stołu.
+Ponadto siedzisko powinno \textbf{w całości} znajdować się pod blatem.
+Oczywiście żadne dwa krzesła nie mogą na siebie nachodzić.
+W naszych rozważaniach pomijamy nogi od stołu (możemy założyć, że są nieskończenie cienkie i znajdują się w rogach blatu).
+Ile krzeseł zmieści się pod stołem?
+
+\section{Wejście}
+W jedynym wierszu wejścia znajdują się trzy liczby całkowite $A$, $B$ i $K$ ($1 \leq A,B,K \leq 500\,000\,000$)
+oddzielone pojedynczymi odstępami,
+oznaczające, odpowiednio, wymiary blatu stołu oraz wymiar siedziska krzesła.
+
+\section{Wyjście}
+Twój program powinien wypisać na wyjście maksymalną liczbę krzeseł, które zmieszczą się przy stole.
+
+\section{Przykłady}
+    \twocol{
+      Dla danych wejściowych:
+
+      \includefile{../in/\id0.in}
+
+      poprawnym wynikiem jest:
+
+      \includefile{../out/\id0.out}
+    }{
+      \includegraphics{\id rys}
+    }
+
+
+\medskip
+\noindent
+\textbf{Wyjaśnienie:}
+Rysunek pokazuje przykładowe rozmieszczenie krzeseł przy stole.
+Oparcia zostały zaznaczone pogrubionymi odcinkami.
+Nie jest możliwe ustawienie jedenastu krzeseł.
+
+      \bigskip
+      \medskip
+      \noindent
+      Natomiast dla danych wejściowych:
+
+      \includefile{../in/\id0a.in}
+
+      \noindent
+      poprawnym wynikiem jest:
+
+      \includefile{../out/\id0a.out}
+
+
+\end{document}

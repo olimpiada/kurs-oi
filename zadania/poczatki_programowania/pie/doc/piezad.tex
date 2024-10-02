@@ -1,0 +1,54 @@
+\documentclass{spiral-kurs}
+\def\title{Pierwszy i ostatni}
+\def\id{pie}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+  Dany jest ciąg liczb całkowitych dodatnich określający ceny akcji danej spółki na giełdzie
+  w kolejnych dniach (na koniec każdego dnia).
+  Chcemy stwierdzić, czy któregoś dnia cena akcji wynosiła dokładnie $x$.
+  Jeśli był więcej niż jeden taki dzień, Twój program powinien wyznaczyć
+  pierwszy i ostatni taki dzień.
+
+  \section{Wejście}
+  Pierwszy wiersz wejścia zawiera dwie liczby całkowite $n$ oraz $x$ ($1 \le n \le 100\,000$, $1 \le x \le 10^9$),
+  oddzielone spacją i oznaczające liczbę kolejnych dni, przez które notowano ceny akcji danej spółki,
+  oraz interesującą nas cenę akcji.
+  Drugi wiersz zawiera $n$ liczb całkowitych z zakresu od $1$ do $10^9$, oddzielonych spacjami,
+  oznaczających ceny akcji spółki w kolejnych dniach.
+
+  \section{Wyjście}
+  Twój program powinien wypisać dwie liczby oddzielone spacją.
+  Pierwszą z nich powinien być numer pierwszego dnia (będący liczbą między 1 a $n$),
+  którego cena akcji wynosiła dokładnie $x$.
+  Drugą natomiast powinien być numer ostatniego takiego dnia.
+
+  Jeśli był tylko jeden dzień, gdy cena akcji wynosiła $x$, obie liczby na wyjściu powinny być takie same.
+  Jeśli cena $x$ w ogóle nie wystąpiła, obie liczby powinny być równe $-1$.
+
+    \example{0}
+
+    \noindent
+    a dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0a.out}
+
+    \noindent
+    natomiast dla danych wejściowych:
+
+    \includefile{../in/\id 0b.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0b.out}
+
+
+  \end{document}

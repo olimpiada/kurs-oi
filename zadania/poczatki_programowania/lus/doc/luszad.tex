@@ -1,0 +1,38 @@
+\documentclass{spiral-kurs}
+\def\title{Lustro}
+\def\id{lus}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    Zapisem lustrzanym liczby naturalnej $n$ nazywamy liczbę złożoną
+    z tych samych cyfr co $n$, tylko w odwrotnej kolejności.
+    Oto kilka przykładów liczb oraz ich zapisów lustrzanych.
+    Zauważ, że jeśli liczba $n$ ma na końcu zera, to w jej zapisie
+    lustrzanym te zera nie występują:
+
+    \begin{center}
+      \begin{tabular}{|r|r|}
+        \hline
+        liczba & zapis lustrzany\\\hline
+           123 & 321\\\hline
+         55600 & 655\\\hline
+             7 & 7 \\\hline
+      \end{tabular}
+    \end{center}
+
+    \noindent
+    Napisz program, który wyznaczy zapis lustrzany danej liczby $n$.
+
+    \section{Wejście}
+    Wejście zawiera jedną liczbę naturalną $n$
+    ($1 \le n \le 1\,000\,000\,000$).
+      
+    \section{Wyjście}
+    Jedyny wiersz wyjścia powinien zawierać zapis lustrzany liczby $n$.
+
+    \example{0}
+
+
+  \end{document}

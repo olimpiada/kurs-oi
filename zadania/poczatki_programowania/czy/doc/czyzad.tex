@@ -1,0 +1,49 @@
+\documentclass{spiral-kurs}
+\usepackage[noend]{algorithmic}
+\renewcommand\algorithmicthen{}
+\renewcommand\algorithmicdo{}
+\def\title{Czy się zatrzyma? (*)}
+\def\id{czy}
+\def\TL{1~s}
+\def\ML{128~MB}
+\begin{document}
+\makeheader
+%
+Bajtazar przechadzał się koło Biblioteki Uniwersyteckiej w Warszawie i na jednej z fasad zobaczył
+fragment programu opatrzony pytaniem ,,Czy się zatrzyma?''.
+Problem wyglądał intrygująco, dlatego Bajtazar postanowił zająć się nim po powrocie do domu.
+Niestety, gdy zapisywał kod na kartce (od razu zamieniając go na język C++), popełnił błąd i zanotował:
+
+\smallskip
+\begin{center}
+\begin{minipage}{5cm}
+\begin{algorithmic}
+\WHILE {($i\ != 1$)}
+ \IF{($i\ \%\ 2 == 0$)}
+
+    \STATE $i\,=\,i\,/\,2$;
+ \ELSE
+    \STATE $i\,=\,3\,*\,i\,+\,3$;
+  \ENDIF
+
+\ENDWHILE
+\end{algorithmic}
+\end{minipage}
+\end{center}
+    \smallskip
+
+\noindent
+Bajtazar próbuje teraz ustalić, dla jakich wartości początkowych zmiennej $i$ zapisany przez niego program zatrzyma się.
+Zakładamy przy tym, że zmienna $i$ ma nieograniczony rozmiar, tj.\ może przyjmować dowolnie duże wartości.
+
+    \section{Wejście}
+Pierwszy i jedyny wiersz wejścia zawiera jedną liczbę całkowitą $i$ ($2 \leq i \leq 10^{14}$), dla której
+należy sprawdzić, czy podany program zatrzyma się.
+
+    \section{Wyjście}
+W pierwszym i jedynym wierszu wyjścia Twój program powinien wypisać jedno słowo \texttt{TAK}, jeśli
+program zatrzyma się dla podanej wartości $i$, lub \texttt{NIE} w przeciwnym przypadku.
+
+    \example{0}
+
+  \end{document}

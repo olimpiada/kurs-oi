@@ -1,0 +1,68 @@
+\documentclass{spiral-kurs}
+\def\title{Kulki}
+\def\id{kul}
+\def\TL{20~s}
+\def\ML{64~MB}
+\begin{document}
+\makeheader
+%
+	Kulki to gra rozgrywana na~planszy rozmiaru $8 \times 8$. Każde pole
+	może być puste albo~zajmowane przez kulkę pewnego rodzaju. Jeśli
+	trzy lub~więcej kulek utworzy spójny wiersz lub kolumnę, kulki te
+	znikają, a~na~ich miejsce spadają ewentualne kulki znajdujące~się
+	powyżej.
+
+	Dozwolony ruch w~grze w~Kulki polega na~zamianie miejscami zawartości
+	dwóch sąsiadujących krawędzią pól w~taki sposób, aby w~nowym układzie
+	na~planszy liczba kulek była mniejsza (innymi słowy każdy ruch w~grze
+	musi spowodować zniknięcie kulek). Jeden ruch może spowodować
+	zniknięcie wielu kulek: \newline
+
+	\begin{center}
+	\begin{tabular}{c|c|c}
+		\begin{tabular}{c}
+		\texttt{.344}\\
+		\texttt{.433}\\
+		\texttt{.312}\\
+		\texttt{.321}\\
+		\end{tabular}
+	&
+		\begin{tabular}{c}
+		\texttt{.444}\\
+		\texttt{.333}\\
+		\texttt{.312}\\
+		\texttt{.321}\\
+		\end{tabular}
+	&
+		\begin{tabular}{c}
+		\texttt{....}\\
+		\texttt{....}\\
+		\texttt{..12}\\
+		\texttt{..21}\\
+		\end{tabular}
+	\\
+	& &
+	\\
+	1. Stan początkowy.
+	&
+	2. Zamiana skrajnie lewej kulki \texttt{4} z kulką \texttt{3} powyżej.
+	&
+	3. Stan końcowy.
+	\\
+	\end{tabular}
+	\end{center}
+	\vspace{5pt}
+	Kulki można również eliminować przy pomocy grawitacji --- zakładamy, że w~razie powstania ``dziury'' wszystkie kulki powyżej natychmiast ją zapełniają. Jeśli wtedy istnieją kolejne grupy przynajmniej trzech kulek w~wierszu lub~kolumnie, także one znikają itd.
+
+	Twoim zadaniem jest napisać program, który dla podanego układu początkowego planszy wyznaczy najkrótszą sekwencję ruchów, która eliminuje wszystkie kulki. Możesz założyć, że taka sekwencja zawsze istnieje i~jej długość wynosi co~najwyżej 8.
+	
+	\section{Wejście}
+	W~kolejnych ośmiu wierszach standardowego wejścia znajduje~się po osiem znaków, opisujących planszę do~gry w~Kulki. Kulki tego samego rodzaju oznaczone~są przez ten sam znak ze zbioru cyfr oraz~wielkich i~małych liter alfabetu angielskiego. Kropka oznacza pole niezajęte przez żadną kulkę.
+
+	\section{Wyjście}
+	W~pierwszym wierszu standardowego wyjścia wypisz długość $D$ najkrótszej sekwencji ruchów potrzebnej do~usunięcia wszystkich kulek. W~kolejnych $D$~wierszach wypisz po~cztery liczby całkowite $w_1, \, k_1, \, w_2, \, k_2$, oznaczające ruch polegający na~zamianie zawartości pól $(w_1, \, k_1)$, $(w_2, k_2)$. Pierwsza współrzędna oznacza wiersz, druga kolumnę. Lewy górny róg planszy ma współrzędną $(1, \, 1)$.
+	Jeśli istnieje kilka najkrótszych sekwencji ruchów, wypisz leksykograficznie najmniejszą.
+
+	\vspace{-4pt}
+	\example{0}
+\end{document}

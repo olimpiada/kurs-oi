@@ -1,0 +1,7 @@
+# Konfiguracja wygenerowana automatycznie na podstawie ustawien w serwisie main2
+memory_limits: {'0': 264000, '1': 264000, '2': 264000, '3': 264000, '4': 264000, '5': 264000,
+  '6': 264000, '7': 264000}
+scores: {1: 14, 2: 14, 3: 14, 4: 14, 5: 14, 6: 15, 7: 15}
+time_limits: {'0': 1000, '1': 1000, '2': 1000, '3': 1000, '4': 1000, '5': 1000, '6': 1000,
+  '7': 1000}
+title: Koło

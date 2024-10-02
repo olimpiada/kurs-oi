@@ -1,0 +1,5 @@
+# Konfiguracja wygenerowana automatycznie na podstawie ustawien w serwisie main2
+memory_limits: {'0': 264000, '1': 264000}
+scores: {1: 100}
+time_limits: {'0': 10000, '1': 10000}
+title: Początek

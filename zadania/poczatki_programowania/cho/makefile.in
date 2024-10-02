@@ -1,0 +1,12 @@
+MODE = wer
+ID = cho
+SIG = sinolmake
+
+TIMELIMIT = 1000
+SLOW_TIMELIMIT = 4000
+MEMLIMIT = 264000
+
+OI_TIME = oiejq
+
+CXXFLAGS += -std=c++20
+CFLAGS += -std=gnu99

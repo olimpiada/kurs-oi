@@ -1,0 +1,52 @@
+\documentclass{spiral-kurs}
+\def\title{Ćwiartka}
+\def\id{cwi}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+  Napisz program, który dla danego punktu na płaszczyźnie sprawdzi,
+  w której ćwiartce układu współrzędnych się on znajduje.
+  Może jednak być tak, że punkt nie znajduje się w żadnej ćwiartce --
+  leży na jednej z osi lub w~środku układu współrzędnych.
+  Wówczas program powinien to stwierdzić.
+
+  \section{Wejście}
+  Na wejściu znajdują się dwie liczby całkowite oddzielone spacją,
+  $x$ i $y$ ($-1\,000\,000\,000 \le x,y \le 1\,000\,000\,000$), oznaczające
+  współrzędne danego punktu.
+
+  \section{Wyjście}
+  Jeżeli podany punkt nie leży na żadnej z osi, Twój program powinien wypisać:
+  \texttt{I}, \texttt{II}, \texttt{III} lub \texttt{IV},
+  w przypadku gdy punkt należy do, odpowiednio, pierwszej, drugiej, trzeciej lub czwartej ćwiartki
+  układu współrzędnych.
+  Jeżeli punkt leży w środku układu współrzędnych, program powinien wypisać liczbę \texttt{0}.
+  W przeciwnym razie, program powinien wypisać \texttt{OX} (duże \texttt{O} i duże \texttt{X}),
+  jeśli punkt leży na osi X, a \texttt{OY} -- jeśli punkt leży na osi Y.
+
+  \example{0}
+
+  \noindent
+  a dla danych wejściowych:
+
+  \includefile{../in/\id0a.in}
+
+  \noindent
+  poprawnym wynikiem jest:
+
+  \includefile{../out/\id0a.out}
+
+  \noindent
+  natomiast dla danych wejściowych:
+
+  \includefile{../in/\id0b.in}
+
+  \noindent
+  poprawnym wynikiem jest:
+
+  \includefile{../out/\id0b.out}
+
+
+\end{document}

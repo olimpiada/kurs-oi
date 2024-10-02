@@ -1,0 +1,30 @@
+\documentclass[opr]{sinol}
+\begin{document}
+  \signature{jlac021}
+  \id{noz}
+  \title{No¿yczki}
+  \author{Jakub £±cki} %% autor opracowania
+ \history{}{J£, opis rozwi±zania}{1.00}
+
+  
+  \begin{tasktext}
+
+\section{Opis rozwi±zania}
+Wielok±t o pionowych i poziomych bokach jest prostok±tem wtedy i tylko wtedy, gdy nie posiada k±tów wewnêtrznych o mierze $270^\circ$.
+Oznaczmy przez $W$ zbiór wierzcho³ków, które s± wierzcho³kami k±tów o mierze $270^\circ$.
+
+Dla ka¿dego wierzcho³ka z $W$ musi istnieæ ciêcie, które siê w nim zaczyna/koñczy.
+Co wiêcej, je¶li przy ka¿dym wierzcho³ku z $W$ wykonamy jakiekolwiek ciêcie, to pokroimy wielok±t na prostok±ty.
+Najlepiej bêdzie oczywi¶cie ci±æ tak, aby ka¿dym ciêciem za³atwiæ dwa wierzcho³ki z $W$.
+
+Zbudujmy graf, w którym zbiór wierzcho³ków to w³a¶nie $W$, a krawêd¼ miêdzy dwoma wierzcho³kami jest wtedy, gdy mo¿na zrobiæ ciêcie przez te dwa wierzcho³ki.
+Innymi s³owy, wierzcho³ki te le¿± na jednej prostej poziomej lub pionowej i siê widz±.
+
+W tym grafie chcemy znale¼æ maksymalne skojarzenie.
+Pierwsze radosne odkrycie jest takie, ¿e ten graf jest dwudzielny.
+Ale okazuje siê, ¿e jest jeszcze lepiej: wszystkie wierzcho³ki maj± stopieñ $\leq 2$, czyli graf sk³ada siê tylko z cykli parzystej d³ugo¶ci i ¶cie¿ek.
+
+Wystarczy wiêc policzyæ ¶cie¿ki parzystej d³ugo¶ci (na ka¿dej takiej ¶cie¿ce ,,tracimy'' jedn± krawêd¼).
+Konstruujemy graf w $O(n \log n)$ i liczymy.
+  \end{tasktext}
+\end{document}

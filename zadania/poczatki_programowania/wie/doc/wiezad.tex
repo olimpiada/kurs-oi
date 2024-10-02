@@ -1,0 +1,38 @@
+\documentclass{spiral-kurs}
+\def\title{Wielkanoc (*)}
+\def\id{wie}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    Zadaniem Twojego programu jest wyznaczyć datę Wielkanocy w danym roku kalendarzowym.
+    Interesuje nas tylko XIX, XX, XXI i XXII wiek i kalendarz gregoriański.
+    W kościołach zachodnich Wielkanoc przypada w~pierwszą niedzielę po pierwszej wiosennej pełni Księżyca, przypadającej po 21 marca.
+
+    Metody wyznaczania daty Wielkanocy podali m.in.\ Gauss\footnote{\texttt{http://pl.wikipedia.org/wiki/Wielkanoc\#Dla\_kalendarza\_gregoria.C5.84skiego}}
+    i Meeus\footnote{\texttt{http://pl.wikipedia.org/wiki/Wielkanoc\#Dla\_kalendarza\_gregoria.C5.84skiego\_2}}.
+
+    \section{Wejście}
+    Na wejściu znajduje się jedna liczba całkowita $r$
+    ($1800 \le r < 2200$), oznaczająca rok.
+      
+    \section{Wyjście}
+    Twój program powinien wypisać na wyjście dwie liczby całkowite
+    $d$ i $m$, oddzielone spacją, oznaczające dzień (liczba między 1 a 31)
+    i miesiąc (liczba między 1 a 12), w którym w roku $r$ obchodzona jest Wielkanoc.
+
+    \example{0}
+
+    \noindent
+    natomiast dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0a.out}
+
+
+  \end{document}

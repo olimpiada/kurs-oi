@@ -1,0 +1,33 @@
+\documentclass{spiral-kurs}
+\def\title{Wicemistrz}
+\def\id{wic}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    W turnieju podwórkowym w pewną grę zespołową wzięło udział $n$ drużyn.
+    Każda z drużyn zdobyła łącznie inną liczbę punktów.
+    Dzieci cały czas śledziły, która drużyna prowadziła w turnieju, więc
+    wiedzą już, która drużyna wygrała cały turniej.
+    Teraz dzieci postanowiły sprawdzić, która drużyna zajęła drugie miejsce
+    w~turnieju.
+    Napisz program, który pomoże im to określić.
+
+    \section{Wejście}
+    W pierwszym wierszu wejścia znajduje się jedna liczba całkowita $n$
+    ($2 \le n \le 1000$), oznaczająca liczbę dzieci.
+    W drugim wierszu znajduje się $n$ liczb całkowitych $p_1,\ldots,p_n$
+    ($1 \le p_i \le 1\,000\,000$), oddzielonych spacjami.
+    Liczby te oznaczają liczby punktów zdobyte przez poszczególne drużyny w turnieju.
+    Liczby $p_i$ będą parami różne.
+      
+    \section{Wyjście}
+    Twój program powinien wypisać jedną liczbę całkowitą: liczbę punktów zdobytą
+    przez drużynę, która została wicemistrzem turnieju, czyli drugą od góry wartość
+    w ciągu $p_1,\ldots,p_n$.
+
+    \example{0}
+
+
+  \end{document}

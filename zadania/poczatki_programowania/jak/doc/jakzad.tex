@@ -1,0 +1,52 @@
+\documentclass{spiral-kurs}
+\def\title{Jakie to działanie?}
+\def\id{jak}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    W tym zadaniu Twój program powinien rozwiązać łamigłówkę postaci:
+    $$a\ \mathtt{?}\ b\ \mathtt{==}\ c$$
+    W tej łamigłówce $a$, $b$ i $c$ będą danymi liczbami całkowitymi nieujemnymi,
+    a Twoim zadaniem jest powiedzieć, jakie działanie należy wstawić zamiast znaku zapytania,
+    aby zachodziła równość.
+    Masz do dyspozycji standardowe działania arytmetyczne dostępne w języku C++:
+    \begin{itemize}
+      \item \texttt{+} (dodawanie),
+      \item \texttt{-} (odejmowanie),
+      \item \texttt{*} (mnożenie),
+      \item \texttt{/} (dzielenie z resztą),
+      \item \texttt{\%} (reszta z dzielenia).
+    \end{itemize}
+
+    \section{Wejście}
+    Pierwszy i jedyny wiersz wejścia zawiera trzy liczby całkowite $a$, $b$, $c$
+    ($0 \le a, b, c \le 1000$), oddzielone spacjami.
+
+    \section{Wyjście}
+    Twój program powinien wypisać wiersz z rozwiązaniem łamigłówki, zastępując
+    znak zapytania odpowiednim działaniem.
+    Znak działania i znaki równości powinny być otoczone spacjami.
+
+    Gwarantujemy, że dla każdej łamigłówki będzie co najmniej jedno rozwiązanie.
+    Jeśli łamigłówka ma więcej niż jedno rozwiązanie, Twój program powinien
+    wypisać \textbf{wszystkie} z nich, w osobnych wierszach, \textbf{według kolejności
+    działań wypisanej powyżej}.
+
+    \example{0}
+
+    \noindent
+    a dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0a.out}
+    
+    \noindent
+    \textbf{Uwaga:} Pamiętaj, że nie wolno dzielić przez zero!
+
+  \end{document}

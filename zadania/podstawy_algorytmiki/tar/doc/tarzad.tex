@@ -1,0 +1,36 @@
+\documentclass{spiral-kurs}
+\def\title{Zagadka Nicolo Tartaglii}
+\def\id{tar}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+   W XVI wieku dwóch utalentowanych matematyków -- Gerolamo Cardano i Nicolo Tartaglia -- prowadziło spór o to, kto pierwszy z nich nauczył się rozwiązywać równania trzeciego stopnia (takie jak $x^3 + 3x = 14$).
+   Chociaż prawdopodobnie rację miał Tartaglia, w publicznym sporze jednak zwyciężył Cardano, którego nazwiskiem nazwano odpowiednie wzory. Pewne znaczenie miał tu fakt, że Tartaglia przegrał (modny w owych czasach) 
+pojedynek na zadania matematyczne, który prowadził z uczniem Cardana, Lodovico Ferrarim.
+   W tym pojedynku -- jak sądzimy -- obaj zadawali sobie nawzajem równania do rozwiązania, lecz Ferrari opanował tę sztukę znacznie sprawniej, a ponadto umiał rozwiązywać nawet trudniejsze równania, czwartego stopnia.
+
+   Jak Ty sprawiłbyś się w pojedynku z Tartaglią? Jego zagadki -- ze względu na niechęć do używania w owych czasach liczb ujemnych -- sformułowane są następująco: \\\
+
+   { \it
+   Mając dane liczby naturalne $p$ i $q$, znajdź taką liczbę naturalną $x$, dla której
+
+	$$x^3 + px = q$$
+
+   lub ustal, że taka liczba nie istnieje.
+   }
+
+   \section{Wejście}
+   W pierwszym wierszu wejścia znajduje się liczba zagadek $z$, nie większa niż $10\,000$. W kolejnych wierszach podane są zagadki, z których każda to dwie liczby naturalne $p$ i $q$. Obie liczby są dodatnie, liczba $p$ nie przekracza $10^{12}$, zaś $q$ -- $10^{18}$.
+Liczby są oddzielone pojedynczym odstępem, każda zagadka podana jest w~osobnym wierszu.
+  \section{Wyjście}
+  Wypisz odpowiedzi na wszystkie zagadki, w tej kolejności, w jakiej były podane na wejściu. Odpowiedź powinna być liczbą naturalną spełniającą podane równanie. Jeśli taka liczba nie istnieje, zamiast liczby wypisz słowo {\tt NIE}.
+
+  \section{Wskazówki}
+  Chociaż istnieją wzory na rozwiązanie takiego równania (zwane {\it wzorami Cardana}) użycie ich w programie może okazać się kłopotliwe. Prościej jest użyć wyszukiwania binarnego. 
+Zauważ też, że podane na wejściu liczby są za duże dla zmiennych typu {\tt int} -- użyj typu {\tt long long}.
+
+  \example{0}
+
+  \end{document}

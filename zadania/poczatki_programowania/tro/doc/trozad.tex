@@ -1,0 +1,45 @@
+\documentclass{spiral-kurs}
+\def\title{Trójkąt}
+\def\id{tro}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+    Twoim zadaniem jest stwierdzić, czy z trzech odcinków o podanych długościach
+    można zbudować trójkąt o~dodatnim polu.
+
+    \section{Wejście}
+    Pierwszy i jedyny wiersz wejścia zawiera trzy liczby naturalne $a$, $b$, $c$
+    ($1 \le a, b, c \le 1\,000\,000\,000$), oddzielone spacjami.
+    Liczby te oznaczają długości trzech odcinków.
+
+    \section{Wyjście}
+    Twój program powinien wypisać jedno słowo \texttt{TAK} lub \texttt{NIE},
+    w zależności od tego, czy z odcinków o długościach takich jak na wejściu
+    można zbudować niezdegenerowany trójkąt, czyli trójkąt o dodatnim polu.
+
+    \example{0}
+
+    \noindent
+    a dla danych wejściowych:
+
+    \includefile{../in/\id 0a.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0a.out}
+
+    \noindent
+    oraz dla danych wejściowych:
+
+    \includefile{../in/\id 0b.in}
+
+    \noindent
+    poprawnym wynikiem jest:
+    
+    \includefile{../out/\id 0b.out}
+
+
+  \end{document}

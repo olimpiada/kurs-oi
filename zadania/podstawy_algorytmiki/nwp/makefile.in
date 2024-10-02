@@ -1,0 +1,12 @@
+MODE = wer
+ID = nwp
+SIG = sinolmake
+
+TIMELIMIT = 500
+SLOW_TIMELIMIT = 2000
+MEMLIMIT = 264000
+
+OI_TIME = oiejq
+
+CXXFLAGS += -std=c++20
+CFLAGS += -std=gnu99

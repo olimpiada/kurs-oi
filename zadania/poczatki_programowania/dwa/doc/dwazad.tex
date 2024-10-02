@@ -1,0 +1,40 @@
+\documentclass{spiral-kurs}
+\def\title{Dwa markety}
+\def\id{dwa}
+\def\TL{1~s}
+\def\ML{256~MB}
+\begin{document}
+\makeheader
+%
+     Chcesz zrobić zakupy.
+     Wiesz dokładnie, jakie produkty chcesz kupić.
+     Sprawdziłeś już w Internecie ceny każdego z produktów we wszystkich
+     okolicznych marketach.
+     Masz czas pojechać do co najwyżej dwóch marketów i~łącznie chcesz
+     w nich kupić po jednym egzemplarzu każdego produktu.
+     Jak to zrobić najtaniej?
+
+    \section{Wejście}
+      Pierwszy wiersz wejścia zawiera dwie liczby całkowite $n$ oraz $m$
+      ($2\le n,m\le 100$) oddzielone spacją, oznaczające liczbę marketów
+      oraz liczbę produktów, które chcesz kupić.
+      Każdy z kolejnych $n$ wierszy zawiera po $m$ liczb całkowitych
+      z zakresu od 1 do $1000$.
+      Pierwszy wiersz zawiera ceny kolejnych produktów w pierwszym markecie,
+      drugi -- ceny kolejnych produktów w drugim markecie itd.
+
+    \section{Wyjście}
+      Twój program powinien wypisać jedną liczbę całkowitą: minimalny koszt
+      zakupu wszystkich potrzebnych produktów w co najwyżej dwóch marketach.
+
+    \example{0}
+
+    \medskip
+    \noindent
+    \textbf{Wyjaśnienie do przykładu:}
+    Najlepiej pojechać do pierwszego i drugiego marketu.
+    W pierwszym kupujemy drugi i trzeci produkt (koszt $3+7$),
+    a w drugim pierwszy i czwarty (koszt $2+6$).
+
+
+  \end{document}
