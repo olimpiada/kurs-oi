@@ -1,0 +1,143 @@
+image:
+  name: python:3.11
+
+variables:
+  TESTS:
+    value: "false"
+    description: "Reupload to SIO2 only after passing CI tests (true/false)."
+
+default:
+  before_script:
+    - echo -e "\e[0Ksection_start:`date +%s`:sinol_make_install\r\e[0KInstalling \`sinol-make\`"
+    - pip install sinol-make
+    - if [ "$NO_OIEJQ" != "true" ]; then sysctl kernel.perf_event_paranoid=-1; fi
+    - echo -e "\e[0Ksection_end:`date +%s`:sinol_make_install\r\e[0K"
+
+stages:
+  - preparation
+  - build
+  - final
+  - upload
+
+oi_h_tests:
+  stage: preparation
+  tags: [oiejq]
+  rules:
+    - if: $TESTS == "true" || $CI_PIPELINE_SOURCE == "push"
+      when: always
+    - when: never
+  script:
+    - tmp=$(mktemp -d)
+    - git clone https://oi_h_tests:glpat-dRVkPJoa-f2Aby8Z6bem@sinol3.dasie.mimuw.edu.pl/sinol3/template-package.git -b oi_h_tests $tmp
+    - cp $tmp/prog/oi_tests.cpp prog/
+    - (cd prog/ && g++ -Werror -Wall -Wextra -Wshadow -Wconversion -fsanitize=address,undefined -std=c++20 oi_tests.cpp -o oi_tests)
+    - prog/oi_tests
+
+tests_generation:
+  stage: preparation
+  tags: [oiejq]
+  rules:
+    - if: $TESTS == "true" || $CI_PIPELINE_SOURCE == "push"
+      when: always
+    - when: never
+  script: sinol-make gen
+  artifacts:
+    paths:
+      - in/*.in
+      - out/*.out
+
+compile_latex:
+  stage: build
+  image: blang/latex
+  before_script: []
+  script: make -C doc
+  artifacts:
+    paths:
+      - doc/*.pdf
+      - doc/*.ps
+  dependencies:
+    - tests_generation
+
+input_verification:
+  stage: build
+  tags: [oiejq]
+  rules:
+    - if: $TESTS == "true" || $CI_PIPELINE_SOURCE == "push"
+      when: always
+    - when: never
+  script: sinol-make inwer
+  dependencies:
+    - tests_generation
+
+run:
+  stage: final
+  tags: [oiejq]
+  rules:
+    - if: $TESTS == "true" || $CI_PIPELINE_SOURCE == "push"
+      when: always
+    - when: never
+  script: sinol-make run
+  dependencies:
+    - tests_generation
+
+export:
+  stage: final
+  variables:
+    NO_OIEJQ: "true"
+  only:
+    - master
+  script: sinol-make export
+  artifacts:
+    paths:
+        - ./*.tgz
+
+  dependencies: ["compile_latex"]
+
+upload:
+  stage: upload
+  variables:
+    NO_OIEJQ: "true"
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "web"
+      when: always
+    - when: never
+  dependencies: ["export"]
+  script:
+    - if [ -z "$SIO_URL" ]; then echo "URL sio2 nie jest ustawiony."; exit 1; fi
+    - if [ -z "$SIO_API_TOKEN" ]; then echo "Token sio2 nie jest ustawiony. Można go znaleźć tu $SIO_URL/api/token/"; exit 1; fi
+    - if [ -z "$CONTEST_ID" ]; then echo "Id konkursu nie jest ustawione."; exit 1; fi
+    - if [ -z "$ROUND_NAME" ]; then echo "Nazwa rundy nie jest ustawiona."; exit 1; fi
+    - if [ -z "$SHORT_NAME" ]; then echo "Nazwa zadania nie jest ustawiona."; exit 1; fi
+    - apt update && apt install -y jq
+    - |
+      curl -s -H "Authorization: Token $SIO_API_TOKEN" $SIO_URL/api/c/$CONTEST_ID/problems/$SHORT_NAME?format=json | jq -r '.problem_id' > problem_id
+    - export PROBLEM_ID=$(cat problem_id)
+    - export PROBLEM_PACKAGE=$SHORT_NAME.tgz
+    - |
+      if [ "$PROBLEM_ID" == "null" ]; then
+        # First upload of the package
+        curl -s -H "Authorization: Token $SIO_API_TOKEN" -F package_file=@$PROBLEM_PACKAGE -F contest_id="$CONTEST_ID" -F round_name="$ROUND_NAME" $SIO_URL/api/problems/package_upload/ | jq -r '.package_id' > package_id
+      else
+        curl -s -H "Authorization: Token $SIO_API_TOKEN" -F package_file=@$PROBLEM_PACKAGE -F contest_id="$CONTEST_ID" -F round_name="$ROUND_NAME" -F problem_id="$PROBLEM_ID" $SIO_URL/api/problems/package_reupload/ | jq -r '.package_id' > package_id
+      fi
+    - export PACKAGE_ID=$(cat package_id)
+    - |
+      while true
+      do
+        echo "Sprawdzanie statusu przesłanego zadania..."
+        curl -s -H "Authorization: Token $SIO_API_TOKEN" $SIO_URL/api/problems/package_upload/$PACKAGE_ID/?format=json | jq -r '.package_status' > package_status
+        export PACKAGE_STATUS=$(cat package_status)
+        if [ "$PACKAGE_STATUS" != "?" ]; then
+          break
+        fi
+        sleep 5
+      done
+    - |
+      if [ "$PACKAGE_STATUS" == "OK" ]; then
+        echo "Pomyślnie przesłano zadanie"
+      else
+        echo "Nie udało się przesłać zadania"
+        curl -s -H "Authorization: Token $SIO_API_TOKEN" $SIO_URL/api/problems/package_upload/$PACKAGE_ID/?format=json | jq -r '.info' > info
+        cat info
+        exit 1
+      fi

@@ -1,0 +1,19 @@
+18
+code 0 8
+code 0 16
+decode 0 13
+decode 0 3
+code 10 16
+code 1000 7
+code 10000 11
+code 100000 9
+code 1000000 16
+code 1000000000 2
+code 1000000000 16
+decode A 16
+decode 2626 7
+decode 7571 11
+decode 162151 9
+decode F4240 16
+decode 111011100110101100101000000000 2
+decode 3B9ACA00 16

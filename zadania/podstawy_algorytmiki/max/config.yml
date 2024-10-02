@@ -1,0 +1,22 @@
+title: Maksymilian i górskie szczyty
+memory_limit: 131072 # in kB
+time_limit: 5000 # in milliseconds
+
+scores:
+    1 : 25
+    2 : 25
+    3 : 50
+
+# See https://github.com/sio2project/sinol-make/blob/main/example_package/config.yml for more options
+sinol_task_id: max
+sinol_contest_type: oi
+sinol_expected_scores:
+  max.cpp:
+    expected:
+      0: {points: 0, status: OK}
+      1: {points: 25, status: OK}
+      2: {points: 25, status: OK}
+      3: {points: 50, status: OK}
+    points: 100
+
+sinol_static_tests: ["max0.in"]

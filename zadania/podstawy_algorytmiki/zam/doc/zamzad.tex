@@ -1,0 +1,29 @@
+\documentclass{spiral-kurs}
+
+  \def\title{Zamiana między systemami}
+  \def\id{zam}
+  %\def\contest{}
+%  \def\desc{Prosta algorytmika / Maksima i podciągi w tablicach}
+  \def\TL{5~s}
+  \def\ML{256 MB}
+
+\begin{document}
+  \makeheader
+
+  Zamień podane liczby z systemu dziesiętnego na inne systemy pozycyjne, lub z innych systemów na dziesiętny.
+      
+  \section{Wejście}
+Pierwszy wiersz wejścia zawiera liczbę naturalną $Z$ -- liczbę liczb do zamiany. W kolejnych $Z$ wierszach znajdują się kolejno: słowo \texttt{code} lub \texttt{decode}, liczba $x$ do zamiany oraz liczba $b$.
+
+Jeśli słowem jest \texttt{code}, to liczba $x$ jest podana w systemie dziesiętnym i należy ją zapisać w systemie o podstawie $b$.
+Jeśli słowem jest \texttt{decode}, to liczba $x$ jest podana w systemie o podstawie $b$ i należy ją zapisać w systemie dziesiętnym.
+
+Liczba $x$ jest zawsze całkowita, nieujemna, a jej wartość nie przekracza $10^9$ w systemie dziesiętnym. Liczba $b$ jest liczbą całkowitą między $2$ a $16$. W systemach o podstawie większej niż $10$ cyfry większe niż $9$ zapisujemy za pomocą kolejnych liter alfabetu: \texttt{A} to $10$, \texttt{B} to $11$,..., \texttt{F} to $16$.
+
+  \section{Wyjście}
+Na wyjście Twój program powinien wypisać $Z$ wierszy z odpowiedziami dla kolejnych poleceń. Każda odpowiedź to liczba zamieniona na odpowiedni system pozycyjny.
+
+  \example{0}
+  
+
+\end{document}

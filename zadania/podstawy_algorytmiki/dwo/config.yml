@@ -1,0 +1,33 @@
+title: System dwójkowy
+memory_limit: 262144 # in kB
+time_limit: 5000 # in milliseconds
+
+scores:
+    1 : 10
+    2 : 30
+    3 : 40
+    4 : 20
+
+# See https://github.com/sio2project/sinol-make/blob/main/example_package/config.yml for more options
+sinol_task_id: dwo
+sinol_contest_type: oi
+sinol_expected_scores:
+  dwo.cpp:
+    expected:
+      0: {points: 0, status: OK}
+      1: {points: 10, status: OK}
+      2: {points: 30, status: OK}
+      3: {points: 40, status: OK}
+      4: {points: 20, status: OK}
+    points: 100
+  dwob1.cpp:
+    expected:
+      0: {points: 0, status: OK}
+      1: {points: 0, status: WA}
+      2: {points: 30, status: OK}
+      3: {points: 40, status: OK}
+      4: {points: 20, status: OK}
+    points: 90
+
+
+sinol_static_tests: ["dwo0.in", "dwo1.in", "dwo2.in", "dwo3.in", "dwo4.in"]
