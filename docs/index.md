@@ -14,7 +14,7 @@ To jest "oficjalny" kurs prowadzony przez społeczność Olimpiady Informatyczne
 
 a także zapewniał dobre podstawy potrzebne do tego, aby móc dalej zgłębiać profesjonalne ("komercyjne") programowanie, albo inne ciekawe i potrzebne gałęzie informatyki.
 
-Na razie startujemy skromnie, z dwoma pierwszymi rozdziałami: o podstawowym programowaniu i początkach algorytmiki, w dużej części opartych na zaadaptowanym materiale "dawnego kursu" z witryny MAIN2. Nowe rozdziały i lekcje będą pojawiać się sukcesywnie, docelowo chcielibyśmy tutaj cały materiał, który można spotkać na zawodach informatycznych w szkołach podstawowych i średnich. Jeżeli kurs się dostatecznie rozwinie, to będzie także zawierał materiał potrzebny do zrozumienia trudniejszych zadań z zawodów takich jak Olimpiada Informatyczna.
+Na razie startujemy skromnie, z dwoma pierwszymi rozdziałami: o podstawowym programowaniu i początkach algorytmiki, w dużej części opartych na zaadaptowanym materiale "dawnego kursu" z witryny MAIN2. Nowe rozdziały i lekcje będą pojawiać się sukcesywnie, docelowo chcielibyśmy tutaj pokryć cały materiał, który można spotkać na zawodach informatycznych w szkołach podstawowych i średnich. Jeżeli kurs się dostatecznie rozwinie, to będzie także zawierał materiał potrzebny do zrozumienia trudniejszych zadań z zawodów takich jak Olimpiada Informatyczna.
 
 ## Dlaczego właśnie C++?
 
