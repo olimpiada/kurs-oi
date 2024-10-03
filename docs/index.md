@@ -1,6 +1,6 @@
 # Wstęp
 
-Pierwsza lekcja: [Podstawy programowania / Pierwszy program](https://kurs.oi.edu.pl/Oficjalny-kurs-OI/A-podstawy-programowania/A1-pierwszy-program/). Pełna lista lekcji jest dostępna w menu po prawej stronie strony.
+Pierwsza lekcja: [Podstawy programowania / Pierwszy program](https://kurs.oi.edu.pl/A-podstawy-programowania/A1-pierwszy-program/). Pełna lista lekcji jest dostępna w menu po prawej stronie strony.
 
 System sprawdzający rozwiązania jest dostępny na [platformie Szkopuł](https://szkopul.edu.pl/c/kurs-oi/).
 
