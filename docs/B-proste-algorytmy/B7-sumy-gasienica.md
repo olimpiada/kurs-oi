@@ -31,7 +31,7 @@ Oznacza to, że nasza tablica będzie składała się z $5$ liczb i będzie wygl
 
 Program musi wypisać odpowiedzi na $3$ zapytania: najpierw dla $a = 1$ i $b = 4$, czyli sumę od pierwszego do czwartego elementu. Jest to $3 + 1 + 4 + 2 = 10$. Potem z kolei trzeba znaleźć sumę od elementu trzeciego do trzeciego (czyli po prostu $4$), a na końcu sumę od trzeciego do piątego ($4 + 2 + 3 = 9$).
 
-Sytuacja, w której mamy pewien zbiór danych i musimy udzielać o nim informacji – czyli odpowiadać na zapytania odpowiadać – jest bardzo częsta w informatyce. Na podobnej zasadzie działają bazy danych, dyski twarde w naszych komputerach, wyszukiwarki internetowe, i tak dalej. Może się nawet zdarzyć (choć akurat nie w tym wypadku), że pomiędzy zapytaniami nasze dane zmieniają się, i musimy takie zmiany uwzględniać w kolejnych odpowiedziach.
+Sytuacja, w której mamy pewien zbiór danych i musimy udzielać o nim informacji – czyli odpowiadać na zapytania – jest bardzo częsta w informatyce. Na podobnej zasadzie działają bazy danych, dyski twarde w naszych komputerach, wyszukiwarki internetowe, i tak dalej. Może się nawet zdarzyć (choć akurat nie w tym wypadku), że pomiędzy zapytaniami nasze dane zmieniają się, i musimy takie zmiany uwzględniać w kolejnych odpowiedziach.
 
 ## Sumy prefiksowe
 
@@ -45,9 +45,9 @@ S[2] = A[1] + A[2]
 S[n] = A[1] + A[2] + ... + A[n]
 ```
 
-Możemy to łatwo zrobić jedną pętlą typu ```for```. Co jest najważniejsze, możemy teraz zauważyć,że każda suma `A[p] + A[p + 1] + ... + A[q]` daje się wyrazić jako `S[q] - S[p - 1]`. Takie pomocnicze sumy nazywają się **sumami prefiksowymi** i pozwalają zastąpić dużą liczbę dodawań zaledwie jednym odejmowaniem.
+Możemy to łatwo zrobić jedną pętlą typu `for`. Co jest najważniejsze, możemy teraz zauważyć, że każda suma `A[p] + A[p + 1] + ... + A[q]` daje się wyrazić jako `S[q] - S[p - 1]`. Takie pomocnicze sumy nazywają się **sumami prefiksowymi** i pozwalają zastąpić dużą liczbę dodawań zaledwie jednym odejmowaniem.
 
-W zadaniach, w których musimy odpowiadać na pewne zapytania często będziemy używać podobnej techniki: zamiast wykonwać pętlę przy każdym zapytaniu, przygotowujemy sobie na samym początku pewne pomocnicze wartości, tablice, a czasem bardziej skomplikowane struktury. One pozwalają potem na bardzo szybkie odpowiadanie na zapytania. Technika ta zwana jest z angielska **preprocessingiem**.
+W zadaniach, w których musimy odpowiadać na pewne zapytania, często będziemy używać podobnej techniki: zamiast wykonywać pętlę przy każdym zapytaniu, przygotowujemy sobie na samym początku pewne pomocnicze wartości, tablice, a czasem bardziej skomplikowane struktury. One pozwalają potem na bardzo szybkie odpowiadanie na zapytania. Technika ta zwana jest z angielska **preprocessingiem**.
 
 ## Gąsienica
 
@@ -55,7 +55,7 @@ Wróćmy do zadania z rozdziału "Złożoność obliczeniowa", o liczeniu fragme
 
 *"Dany jest ciąg złożony z $n$ liczb całkowitych dodatnich. Rozstrzygnąć, ile jest jego fragmentów o sumie równej dokładnie $K$."*
 
-W tamtym rozdziale doszliśmy do algorytmu, który wykonywał około $\frac{1}{2}n^2$ operacji dodawania. Okazuje się, że możemy znaleźć algorytm jeszcze szybszy! Zaczynamy podobnie jak w tamtej wersji: dla każdego dla każdego `i` będziemy chcieli znaleźć takie `j > i`, dla których `A[i] + ... + A[j] = K`. 
+W tamtym rozdziale doszliśmy do algorytmu, który wykonywał około $\frac{1}{2}n^2$ operacji dodawania. Okazuje się, że możemy znaleźć algorytm jeszcze szybszy! Zaczynamy podobnie jak w tamtej wersji: dla każdego `i` będziemy chcieli znaleźć takie `j > i`, że `A[i] + ... + A[j] = K`.
 
 Zacznijmy od `i = 0` i zwiększajmy `j`, aż suma `A[0] + A[1] + ... + A[j]` będzie równa `K`:
 
@@ -68,7 +68,7 @@ Wszystkie większe `j` dałyby już sumę większą niż `K`, nie ma więc sensu
 
 ![image](gasienica1.png){class="image-color-invert"}
 
-Znowu zwiększamy `j`, aż suma osiągnie `K`: 
+Znowu zwiększamy `j`, aż suma osiągnie `K`:
 
 ![image](gasienica2.png){class="image-color-invert"}
 
