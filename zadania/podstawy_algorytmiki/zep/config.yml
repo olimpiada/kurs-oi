@@ -1,0 +1,24 @@
+title: Zeznania podatkowe
+memory_limit: 262144 # in kB
+time_limit: 10000 # in milliseconds
+
+scores:
+    1 : 10
+    2 : 15
+    3 : 20
+    4 : 55
+
+# See https://github.com/sio2project/sinol-make/blob/main/example_package/config.yml for more options
+sinol_task_id: zep
+sinol_contest_type: oi
+sinol_expected_scores:
+  zep.cpp:
+    expected:
+      0: {points: 0, status: OK}
+      1: {points: 10, status: OK}
+      2: {points: 15, status: OK}
+      3: {points: 20, status: OK}
+      4: {points: 55, status: OK}
+    points: 100
+
+sinol_static_tests: ["zep0.in","zep1.in"]
