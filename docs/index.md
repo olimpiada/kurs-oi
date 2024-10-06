@@ -31,5 +31,5 @@ Aktualnie kursem opiekują się Lech Duraj oraz Tomasz Nowak. Autorami niektór
 Jest kilka możliwości:
 
  * Zgłoś nam uwagę przez [formularz kontaktowy](https://forms.gle/Nj8oRMhaV7QxnFZLA).
- * Jeśli nie przeraża Cię GitHub i Markdown, możesz zaproponować edycję bezpośrednio poprzez Pull Request do [repozytorium kurs-oi](https://github.com/olimpiada/kurs-oi/) – takie poprawki mogą zostać rozpatrzone szybciej.
+ * Jeśli nie przeraża Cię GitHub i Markdown, możesz zaproponować edycję bezpośrednio poprzez Fork, a następnie Pull Request do [repozytorium kurs-oi](https://github.com/olimpiada/kurs-oi/) – takie poprawki mogą zostać rozpatrzone szybciej.
 
