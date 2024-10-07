@@ -101,7 +101,8 @@ Widzimy (i bardzo łatwo jest pokazać), że dla $n=2^k$ wykonamy dokładnie $k$
 Taka liczba $k$ zwana jest **logarytmem dwójkowym** z liczby $n$.
 
 Definiując precyzyjnie, logarytm dwójkowy z dowolnej liczby dodatniej $a$ to taka liczba $x$,
-dla której $2^x=a$. Oznaczamy ją przez $\log_2 a$, przy czym często piszemy po prostu $\log a$.
+dla której $2^x=a$. Taką liczbę oznaczamy przez $\log_2 a$, gdzie 2 nazywamy *podstawą logarytmu*.
+W informatyce, gdy pomijamy podstawę (pisząc $\log a$) chodzi nam właśnie o logarytm dwójkowy.
 Dla "większości" możliwych argumentów $a$, nawet całkowitych, liczba $\log a$ nie jest całkowita,
 a nawet wymierna (na przykład $\log 12 = 3,5849\ldots$).
 Nam będzie na ogół przydatne jej zaokrąglenie do liczby całkowitej – w szczególności,
