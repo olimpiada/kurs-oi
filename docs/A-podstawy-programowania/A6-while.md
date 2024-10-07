@@ -2,7 +2,7 @@
 
 ## Część programistyczna: Pętla while
 
-Jak wiadomo, komputery potrafią wykonywać miliony instrukcji w ułamku sekundy. Ale jak je do tego zmusić? Gdybyśmy chcieli używać tylko dotychczas poznanych instrukcji, musielibyśmy fizycznie zapisać je milion razy. Jest zatem oczywiste, że potrzebujemy czegoś, co pozwoli nam na wprowadzenie do programu jakiegoś rodzaju powtarzania instrukcji. Takie konstrukcje nazywają się *pętlami* (ang. *loop*), a na tej lekcji poznamy pierwszą z nich – pętlę `while`, zwaną po polsku czasem (*pętlą "dopóki"*).
+Jak wiadomo, komputery potrafią wykonywać miliony instrukcji w ułamku sekundy, ale jak je do tego zmusić? Gdybyśmy chcieli używać tylko dotychczas poznanych instrukcji, musielibyśmy fizycznie zapisać je milion razy. Jest zatem oczywiste, że potrzebujemy czegoś, co pozwoli nam na wprowadzenie do programu jakiegoś rodzaju powtarzania instrukcji. Takie konstrukcje nazywają się *pętlami* (ang. *loop*), a na tej lekcji poznamy pierwszą z nich – pętlę `while`, zwaną po polsku czasem (*pętlą "dopóki"*).
 
 
 Pętla `while` w języku C++ wygląda następująco:
@@ -15,7 +15,7 @@ while (warunek)
 
 Jest ona z wyglądu dosyć podobna do instrukcji `if`. _Warunek_ jest warunkiem logicznym (czyli przyjmującym wartość `true` lub `false`), natomiast _instrukcja_ jest pojedynczą instrukcją lub (częściej) instrukcją złożoną, czyli grupą kilku instrukcji umieszczonych w nawiasach klamrowych ``{ ... }``. Pętla `while` wykonuje kolejne _obroty_. W każdym obrocie najpierw jest sprawdzany _warunek_. Jeśli jest on prawdziwy, wykonywana jest _instrukcja_, a w przeciwnym razie pętla kończy się. Czyli jeśli _warunek_ jest prawdziwy, wykonujemy _instrukcję_, po czym znów sprawdzamy _warunek_ – jeśli jest spełniony, znów wykonujemy _instrukcję_ i tak dalej – aż do chwili, gdy po wykonaniu _instrukcji_ _warunek_ nie będzie już spełniony. 
 
-Można zatem pętlę `while` odczytać tak: "dopóki jest spełniony _warunek_, wykonuj _instrukcję_". Trzeba jednak zawsze pamiętać o krokowym charakterze tej pętli: sprawdzenie warunku - wykonanie instrukcji - sprawdzenie warunku - wykonanie instrukcji - ...
+Można zatem pętlę `while` odczytać tak: "dopóki jest spełniony _warunek_, wykonuj _instrukcję_". Trzeba jednak zawsze pamiętać o krokowym charakterze tej pętli: sprawdzenie warunku – wykonanie instrukcji – sprawdzenie warunku – wykonanie instrukcji – ...
 
 Za pomocą pętli `while` możemy np. wypisać dowolnie wiele liczb. Na przykład wszystkie liczby od 1 do 10:
 
@@ -49,7 +49,7 @@ while (i <= 10) {
 Jeśli zaś _warunek_ jest zawsze prawdziwy, pętla obraca się w nieskończoność (o tym drugim przypadku więcej opowiemy w komentarzu).
 
 
-Na naszą przykładową pętlę można spojrzeć jako na ciąg złożony z wielu przypisań. Zmienna $i$ zmienia się w każdym obrocie pętli -- taką zmienną nazywamy   **zmienną sterująca** pętli, jako że od niej zależy liczba obrotów pętli. Bez problemu napiszemy teraz program, który wypisze wyłącznie liczby parzyste z zakresu od 0 do 20 włącznie, od największej do najmniejszej:
+Na naszą przykładową pętlę można spojrzeć jako na ciąg złożony z wielu przypisań. Zmienna $i$ zmienia się w każdym obrocie pętli – taką zmienną nazywamy **zmienną sterująca** pętli, jako że od niej zależy liczba obrotów pętli. Bez problemu napiszemy teraz program, który wypisze wyłącznie liczby parzyste z zakresu od 0 do 20 włącznie, od największej do najmniejszej:
 
 ```cpp
 #include <iostream>
@@ -80,9 +80,9 @@ int main() {
 }
 ```
 
-Jako kolejny przykład użyjemy teraz pętli `while`, aby wczytać z klawiatury wiele liczb, a następnie wszystkie je zsumować. Musimy w tym celu wiedzieć, kiedy wpisywanie liczb z klawiatury się zakończy – załóżmy tutaj, że sumowane liczby będą dodatnie, a liczba 0 oznacza koniec wpisywania. To będzie warunek zakończenia naszej pętli. 
+Jako kolejny przykład użyjemy teraz pętli `while`, aby wczytać z klawiatury wiele liczb, a następnie wszystkie je zsumować. Musimy w tym celu wiedzieć, kiedy wpisywanie liczb z klawiatury się zakończy – załóżmy tutaj, że sumowane liczby będą dodatnie, a liczba 0 oznacza koniec wpisywania. To będzie warunek zakończenia naszej pętli.
 
-Użyjemy jednej, zawsze tej samej zmiennej $a$, aby wczytywać kolejne liczby, zaś zaraz po wczytaniu wartość $a$ będziemy dodawać do sumy:
+Użyjemy jednej, zawsze tej samej zmiennej $a$, aby wczytywać kolejne liczby, zaraz po wczytaniu zaś wartość $a$ będziemy dodawać do sumy:
 
 ```cpp
 #include <iostream>
@@ -169,13 +169,13 @@ int main() {
 }
 ```
 
-Dodamy jeszcze, że w niektórych z powyższych przykładów pętla `while` wcale nie była najwygodniejszym rozwiązaniem! W kolejnych lekcjach poznamy inny rodzaj pętli, który pozwala wczytywać i wypisywać zadaną liczbę zmiennych w nieco wygodniejszy sposób (pętlę `for`), a także metodę przechowywania wielu zmiennych naraz (**tablice**). Ale nie warto robić wszystkiego naraz! Dobre zrozumienie pętli `while` jest już i tak nie lada wyzwaniem.
+Dodamy jeszcze, że w niektórych z powyższych przykładów pętla `while` wcale nie była najwygodniejszym rozwiązaniem! W kolejnych lekcjach poznamy inny rodzaj pętli, który pozwala wczytywać i wypisywać zadaną liczbę zmiennych w nieco wygodniejszy sposób (pętlę `for`), a także metodę przechowywania wielu zmiennych naraz (**tablice**). Jednak nie warto robić wszystkiego naraz! Dobre zrozumienie pętli `while` jest już i tak nie lada wyzwaniem.
 
 
 
 ## Część techniczna: Błędne odpowiedzi cz. 2
 
-W części technicznej kontynuujemy temat radzenia sobie z błędnymi odpowiedziami naszych programów. Tym razem założymy, że wiemy, dla jakich danych wejściowych program nie działa, i musimy zlokalizować usterkę w programie. Warto w tym celu przeczytać uważnie program, wiersz po wierszu - może w ten sposób uda się wykryć błąd. Czasem jednak to nie pomaga. Możemy wtedy próbować znaleźć usterkę, wypisując dodatkowe informacje w trakcie działania programu.
+W części technicznej kontynuujemy temat radzenia sobie z błędnymi odpowiedziami naszych programów. Tym razem założymy, że wiemy, dla jakich danych wejściowych program nie działa, i musimy zlokalizować usterkę w programie. Warto w tym celu przeczytać uważnie program, wiersz po wierszu – może w ten sposób uda się wykryć błąd. Czasem jednak to nie pomaga. Możemy wtedy próbować znaleźć usterkę, wypisując dodatkowe informacje w trakcie działania programu.
 
 Jako przykład rozważymy nasz wcześniejszy program służący do zliczania cyfr liczby z drobnym błędem:
 
@@ -198,7 +198,7 @@ int main() {
 }
 ```
 
-Jeśli uruchomimy ten program i podalimy na wejściu liczbę 1234, uzyskamy wynik:
+Jeśli uruchomimy ten program i podamy na wejściu liczbę 1234, uzyskamy wynik:
 
 ```
 1999525998
@@ -273,7 +273,7 @@ Oto wynik działania tego programu:
 1999525998
 ```
 
-Przed pętlą `while` nic się z tą zmienną nie dzieje. Wiemy już, czego nie zrobiliśmy - nie przypisaliśmy zmiennej $liczba\_cyfr$ początkowej wartości 0. Zmienna, której nie przypisaliśmy żadnej wartości i której wartości nie wczytaliśmy od użytkownika, może mieć w programie zupełnie dowolną wartość (w zakresie typu zmiennej). Co więcej, wartość ta może być różna, gdy uruchamiamy program na różnych komputerach, a nawet przy kolejnych uruchomieniach programu na tym samym komputerze! Czasem można mieć nawet takie "szczęście", że program zadziała poprawnie na naszym komputerze (gdyż zmienna będzie miała akurat wartość 0), ale wysłany np. do serwisu **Szkopuł** będzie działał błędnie. Jest to dość często popełniany błąd, nazywany popularnie _niezainicjowaniem_ lub _niewyzerowaniem_ zmiennej.
+Przed pętlą `while` nic się z tą zmienną nie dzieje. Wiemy już, czego nie zrobiliśmy – nie przypisaliśmy zmiennej $liczba\_cyfr$ początkowej wartości 0. Zmienna, której nie przypisaliśmy żadnej wartości i której wartości nie wczytaliśmy od użytkownika, może mieć w programie zupełnie dowolną wartość (w zakresie typu zmiennej). Co więcej, wartość ta może być różna, gdy uruchamiamy program na różnych komputerach, a nawet przy kolejnych uruchomieniach programu na tym samym komputerze! Czasem można mieć nawet takie "szczęście", że program zadziała poprawnie na naszym komputerze (gdyż zmienna będzie miała akurat wartość 0), ale wysłany np. do serwisu **Szkopuł** będzie działał błędnie. Jest to dość często popełniany błąd, nazywany popularnie _niezainicjowaniem_ lub _niewyzerowaniem_ zmiennej.
 
 I jeszcze druga błędna wersja naszego programu:
 

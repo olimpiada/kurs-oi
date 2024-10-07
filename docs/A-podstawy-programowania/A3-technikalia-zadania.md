@@ -6,7 +6,7 @@ Wiemy już, że kompilator języka C++ jest pod wieloma względami dosyć restry
 Radzenie sobie z takimi błędami często jest całkiem proste – trzeba przeczytać treść błędu zgłoszonego przez
 kompilator i poprawić odpowiedni fragment kodu. Jeśli kompilacja nie udała się, środowisko programistyczne wypisze komunikat z opisem błędu, który zazwyczaj też zawiera numer wiersza, który spowodował błąd.
 
-Dla przykładu, przepiszemy nasz wcześniejszy program obliczający pole i obwód prostokąta, umieszczając w nim pewne usterki, które najczęściej przydarzają się początkującym programistom, i przyjrzymy się występującym błędom kompilacji. Oto pierwsza błędna wersja:
+Dla przykładu przepiszemy nasz wcześniejszy program obliczający pole i obwód prostokąta, umieszczając w nim pewne usterki, które najczęściej przydarzają się początkującym programistom, i przyjrzymy się występującym błędom kompilacji. Oto pierwsza błędna wersja:
 
 ```C++
 #include <iostream>
@@ -111,13 +111,13 @@ Co się stanie, jeśli "złośliwy" użytkownik wpisze z klawiatury liczby ``10`
 
 Jest to tak zwany **błąd wykonania** programu – program wykonał operację, po której nie może już działać dalej. Dzielenie przez zero to tylko jeden z przykładów, znacznie częściej spotkasz się z błędem wykonania, kiedy zaczniesz działać na tablicach, wskaźnikach, lub innych bardziej skomplikowanych zmiennych.
 
-Oczywiście nawet jeśli nasz program poprawnie się skompiluje, są inne powody, dla których może nie działać tak, jak chcemy. Może dawać w wyniku niewłaściwe (błędne) odpowiedzi, może też działać w nieskończoność i się nie kończyć (co nazywamy *zapętleniem* lub *zawieszeniem*). Sposoby radzenia sobie z poszczególnymi typami błędów będziemy przedstawiać w częściach technicznych kolejnych lekcji.
+Oczywiście, nawet jeśli nasz program poprawnie się skompiluje, są inne powody, dla których może nie działać tak, jak chcemy. Może dawać w wyniku niewłaściwe (błędne) odpowiedzi, może też działać w nieskończoność i się nie kończyć (co nazywamy *zapętleniem* lub *zawieszeniem*). Sposoby radzenia sobie z poszczególnymi typami błędów będziemy przedstawiać w częściach technicznych kolejnych lekcji.
 
 ## Zadania
 
 W tej lekcji mamy dla Ciebie trzy zadania. W każdym zadaniu, w sekcji "Wejście" znajduje się opis danych, które program ma wczytać, natomiast w sekcji "Wyjście" podano wymagany sposób wypisania wyniku. Twoje rozwiązanie zostanie sprawdzone automatycznie z użyciem pewnej liczby **testów**, czyli różnych zestawów danych wejściowych (możesz to sobie wyobrazić tak, że nasz automat uruchamia Twój program, "wpisuje" odpowiednie dane i sprawdza wynik jego działania). W każdym teście dane wejściowe są idealnie zgodne z opisem podanym w sekcji "Wejście", a wynik Twojego programu musi dokładnie odpowiadać temu, co jest opisane w sekcji "Wyjście". Jak wspominaliśmy poprzednio, dopuszczalne są nadmiarowe spacje na końcach wierszy i puste wiersze na końcu wyjścia. Program nie może wypisywać **żadnych** dodatkowych komunikatów, o które nie jest proszony w treści zadania. Twój program zostanie uznany za poprawny, jeśli zadziała poprawnie na **wszystkich** naszych testach.
 
-Zalacamy, żeby wszystkie zadania rozwiązywać samodzielnie. Jeśli chcesz, możesz przy rozwiązywaniu wyszukiwać dodatkowe informacje w Internecie lub zasięgnąć pomocy u nauczyciela czy kolegów. Ważne jednak, aby cały kod był napisany przez Ciebie – tylko tak będziesz w stanie zdobyć umiejętności, dzięki którym będziesz się mógł zabrać za bardziej skomplikowane problemy.
+Zalecamy, żeby wszystkie zadania rozwiązywać samodzielnie. Jeśli chcesz, możesz przy rozwiązywaniu wyszukiwać dodatkowe informacje w Internecie lub zasięgnąć pomocy u nauczyciela czy kolegów. Ważne jednak, aby cały kod był napisany przez Ciebie – tylko tak będziesz w stanie zdobyć umiejętności, dzięki którym będziesz się mógł zabrać za bardziej skomplikowane problemy.
 
 A oto obiecane zadania – powodzenia!
 

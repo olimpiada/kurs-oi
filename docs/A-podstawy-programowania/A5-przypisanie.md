@@ -2,7 +2,7 @@
 
 # Część programistyczna: Instrukcja przypisania
 
-W tej lekcji opowiemy o podstawowej metodzie nadawania wartości zmiennym -- instrukcji **przypisania**. W najprostszej wersji już ją widzieliśmy: aby nadać zmiennej $a$ typu `int` wartość (na przykład) 5, możemy użyć następującej instrukcji:
+W tej lekcji opowiemy o podstawowej metodzie nadawania wartości zmiennym – instrukcji **przypisania**. W najprostszej wersji już ją widzieliśmy: aby nadać zmiennej $a$ typu `int` wartość (na przykład) 5, możemy użyć następującej instrukcji:
 
 ```cpp
 a = 5;
@@ -14,7 +14,7 @@ Przypisania tego typu stosuje się w szczególności do ustawienia początkowej 
 int a = 5;
 ```
 
-Zamiast pojedynczej liczby w przypisaniu może także wystąpić dowolne wyrażenie matematyczne. Na przykład: 
+Zamiast pojedynczej liczby w przypisaniu może także wystąpić dowolne wyrażenie matematyczne. Na przykład:
 
 ```cpp
 int a, x, y;
@@ -22,13 +22,13 @@ cin >> x >> y;
 a = 2 * x * y + 1;
 ```
 
-Zmiennym możemy (oczywiście) wielokrotnie przypisywać różne wartości. To uzasadnia, dlaczego nazywamy je właśnie _zmiennymi_. Co ciekawe, zmienna, której przypisujemy nową wartość, może wystąpić także w wyrażeniu po prawej stronie instrukcji przypisania! Oto (bardzo typowa) przykładowa instrukcja: 
+Zmiennym możemy (oczywiście) wielokrotnie przypisywać różne wartości. To uzasadnia, dlaczego nazywamy je właśnie _zmiennymi_. Co ciekawe, zmienna, której przypisujemy nową wartość, może wystąpić także w wyrażeniu po prawej stronie instrukcji przypisania! Oto (bardzo typowa) przykładowa instrukcja:
 
 ```cpp
 a = a + 3;
 ```
 
-Jesteśmy przyzwyczajeni do tego, że znak ``=`` oznacza równość dwóch wartości, więc na pierwszy rzut oka taki zapis wydaje się nie mieć sensu -- żadna liczba nie może być równa sobie samej zwiększonej o $3$! Ale w C++, jak również w wielu innych językach programowania znak ``=`` **nie jest równością, a poleceniem wstawienia wartości do odpowiedniej komórki**. Instrukcja ``a = a + 3`` jest interpretowana następująco: weź aktualną wartość zmiennej ``a``, dodaj do niej 3, a potem otrzymany wynik wpisz z powrotem do komórki oznaczonej ``a``. Innymi słowym, będzie to zwiększenie wartości zmiennej $a$ o 3.
+Jesteśmy przyzwyczajeni do tego, że znak ``=`` oznacza równość dwóch wartości, więc na pierwszy rzut oka taki zapis wydaje się nie mieć sensu – żadna liczba nie może być równa sobie samej zwiększonej o $3$! Ale w C++, jak również w wielu innych językach programowania znak ``=`` **nie jest równością, a poleceniem wstawienia wartości do odpowiedniej komórki**. Instrukcja ``a = a + 3`` jest interpretowana następująco: weź aktualną wartość zmiennej ``a``, dodaj do niej 3, a potem otrzymany wynik wpisz z powrotem do komórki oznaczonej ``a``. Innymi słowy, będzie to zwiększenie wartości zmiennej $a$ o 3.
 
 Załóżmy na przykład, że chcemy wczytać pewną liczbę, dodać do niej 3, pomnożyć przez 2, a następnie dodać jeszcze 1, po każdej operacji wypisując aktualną wartość. Prosty program realizujący te zadania wyglądać może tak:
 
@@ -56,7 +56,7 @@ d = c + 1;
 cout << d;
 ```
 
-Na ogół jest to spowodowane "nieufnością" do instrukcji postaci ``a = a+3``. Postaraj się jak najszybciej pozbyć wątpliwości -- wkrótce przekonasz się, że deklarowanie wielu dodatkowych, niepotrzebnych zmiennych na dłuższą metę przeszkadza znacznie bardziej.
+Na ogół jest to spowodowane "nieufnością" do instrukcji postaci ``a = a+3``. Postaraj się jak najszybciej pozbyć wątpliwości – wkrótce przekonasz się, że deklarowanie wielu dodatkowych, niepotrzebnych zmiennych na dłuższą metę przeszkadza znacznie bardziej.
 
 
 ## Skrócone instrukcje przypisania
@@ -101,7 +101,7 @@ a++; // to samo co: a += 1;
 a--; // to samo co: a -= 1;
 ```
 
-Do pierwszej z tych instrukcji nawiązuje sama nazwa języka [C++](http://pl.wikipedia.org/wiki/C%2B%2B "C++"), który został zaprojektowany jako rozszerzenie starszego języka programowania [C](http://pl.wikipedia.org/wiki/C_%28j%C4%99zyk_programowania%29 "C"). Co ciekawe, poprzednikiem języka C był język [B](http://pl.wikipedia.org/wiki/B_%28j%C4%99zyk_programowania%29 "B"). 
+Do pierwszej z tych instrukcji nawiązuje sama nazwa języka [C++](http://pl.wikipedia.org/wiki/C%2B%2B "C++"), który został zaprojektowany jako rozszerzenie starszego języka programowania [C](http://pl.wikipedia.org/wiki/C_%28j%C4%99zyk_programowania%29 "C"). Co ciekawe, poprzednikiem języka C był język [B](http://pl.wikipedia.org/wiki/B_%28j%C4%99zyk_programowania%29 "B").
 
 A oto inny przykład. Zobaczymy, jak zastosowanie instrukcji przypisania może uprościć rozwiązanie zadania _Czas_ z lekcji "Błędy w programach, pierwsze zadania". Przypomnijmy, że należało w nim przeliczyć czas $t$ sekund na zapis w godzinach, minutach i sekundach.
 
@@ -172,7 +172,7 @@ Każdy ze znaków typu `char` ma przypisany numer będący liczbą całkowitą. 
 | 50   | 2               | 70   | F    | 90   | Z    | 110  | n    |      |                |
 
 
-Oczywiście nie trzeba pamiętać kodów ASCII poszczególnych znaków. Warto jedynie wiedzieć, że małe litery oraz wielkie litery alfabetu angielskiego (łacińskiego) są ustawione w kodzie kolejno w porządku alfabetycznym, a cyfry – od najmniejszej do największej. Porównywanie znaków typu `char` za pomocą operatorów <, <=, >, >= odbywa się według kodów ASCII, tak więc małe litery oraz wielkie litery są porównywane alfabetycznie, a cyfry od najmniejszej do największej. Znaki o kodach od 0 do 31 oraz znak o kodzie 127 to tzw. kody sterujące. Znajdują się wśród nich m.in. znaki końca wiersza i tabulacji; wiele z tych znaków wyszło już z użycia.
+Oczywiście nie trzeba pamiętać kodów ASCII poszczególnych znaków. Warto jedynie wiedzieć, że małe litery oraz wielkie litery alfabetu angielskiego (łacińskiego) są ustawione w kodzie kolejno w porządku alfabetycznym, a cyfry – od najmniejszej do największej. Porównywanie znaków typu `char` za pomocą operatorów `<`, `<=`, `>`, `>=` odbywa się według kodów ASCII, tak więc małe litery oraz wielkie litery są porównywane alfabetycznie, a cyfry od najmniejszej do największej. Znaki o kodach od 0 do 31 oraz znak o kodzie 127 to tzw. kody sterujące. Znajdują się wśród nich m.in. znaki końca wiersza i tabulacji; wiele z tych znaków wyszło już z użycia.
 
 Wartości zmiennych typu `char` możemy więc traktować jako niewielkie liczby całkowite. Dokładniej, zmienna typu `char` przyjmuje wartości od -128 do 127, przy czym wartości nieujemne odpowiadają znakom kodu ASCII, a pozostałe mogą służyć do reprezentowania innych symboli (np. polskich znaków ą, ę, ź, ć itp. w niektórych _kodowaniach_). Typ `char` jest więc typem całkowitym jednobajtowym, którego brakowało w komentarzu do lekcji 2. Odpowiadającym mu typem całkowitym nieujemnym (o wartościach od 0 do 255) jest typ `unsigned char`.
 
@@ -221,7 +221,7 @@ char znak;
 cout << (int)znak << endl;
 ```
 
-Trochę więcej o konwersjach opowiemy w następnych lekcjach. Tymczasem jeszcze jeden, "złośliwy" przykład. Powiedzmy, że chcielibyśmy napisać program, który wczyta liczbę $i$ i wypisze $i$-tą małą literę alfabetu angielskiego (a zatem $i \in \{1,\ldots,26\}$, bowiem alfabet angielski ma 26 liter). Moglibyśmy to próbować zrobić tak:
+Trochę więcej o konwersjach opowiemy w następnych lekcjach. Tymczasem jeszcze jeden, "złośliwy" przykład. Powiedzmy, że chcielibyśmy napisać program, który wczyta liczbę $i$ i wypisze $i$-tą małą literę alfabetu angielskiego (a zatem $i \in \{1,\ldots,26\}$, alfabet angielski ma bowiem 26 liter). Moglibyśmy to próbować zrobić tak:
 
 ```cpp
 int numer;
@@ -239,7 +239,7 @@ cout << (char)('a' + numer - 1);
 
 # Zadania
 
-W tej lekcji, oprócz trzech "standardowych" zadań mamy również przygotowane jedno "z gwiazdką", nieco trudniejsze. Jeśli nie potrafisz go jeszcze rozwiązać, nie przejmuj się! 
+W tej lekcji, oprócz trzech "standardowych" zadań mamy również przygotowane jedno "z gwiazdką", nieco trudniejsze. Jeśli nie potrafisz go jeszcze rozwiązać, nie przejmuj się!
 
 [Łańcuszek :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#lan){ .md-button .md-button--primary }
 
