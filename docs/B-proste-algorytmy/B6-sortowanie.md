@@ -41,7 +41,7 @@ for(int i = 0; i < n-1; i++) {
 Jak widać na powyższym przykładzie, nie wystarczy to do posortowania wszystkich elementów. Zauważmy jednak, że największy
 element tablicy musi po takiej pętli trafić na koniec – od miejsca, na którym stoi, będzie już za każdym razem zamieniany z następnym. Jeśli teraz
 powtórzymy procedurę, na przedostatnie miejsce w tablicy trafi drugi w kolejności element. Wystarczy zatem powtórzyć powyższą pętlę $n$ razy, aby mieć
-pewnośc, że na swoich miejscach znajdą się wszystkie elementy w tablicy:
+pewność, że na swoich miejscach znajdą się wszystkie elementy w tablicy:
 
 ```cpp
 for(int k = 0; k < n; k++) {
@@ -67,7 +67,7 @@ for(int k = 0; k < n-1; k++) {
 }
 ```
 
-Spróbujmy określić złożoność obliczeniową tego algorytmu. Aby to zrobić, musimy najpierw wybrać najczęściej występującą instrukcję: tradycyjnie przy algorytmach sortowania liczy się porówania, czyli instrukcje postaci `if (x > y) ...` – tak i my postąpimy tym razem, jako że w naszym algorytmie porównanie występuje w każdej iteracji pętli. Alternatywą byłoby np. liczenie przestawień elementów w tablicy – zauważmy, że w na każde porównanie (`if (A[i] > A[i + 1])`) przypada w pesymistycznym wypadku jedno przestawienie (`swap(A[i], A[i + 1])`), więc wynik byłby ten sam.
+Spróbujmy określić złożoność obliczeniową tego algorytmu. Aby to zrobić, musimy najpierw wybrać najczęściej występującą instrukcję: tradycyjnie przy algorytmach sortowania liczy się porówania, czyli instrukcje postaci `if (x > y) ...` – tak i my postąpimy tym razem, jako że w naszym algorytmie porównanie występuje w każdej iteracji pętli. Alternatywą byłoby np. liczenie przestawień elementów w tablicy – zauważmy, że na każde porównanie (`if (A[i] > A[i + 1])`) przypada w pesymistycznym wypadku jedno przestawienie (`swap(A[i], A[i + 1])`), więc wynik byłby ten sam.
 
 Dla tablicy o wielkości $n$ wykonujemy $n-1$ porównań w pierwszym obrocie pętli, $n-2$ w drugim, ..., aż do jednego porównania w ostatnim obrocie. Całkowita złożoność wynosi zatem:
 
@@ -113,7 +113,7 @@ for (int j = 0; j < n-1; j++) {
 }
 ```
 
-Jeśli tutaj policzymy instrukcje porównania `if (A[i] > A[k])`, złożoność wyjedzie identyczna jak w sortowaniu bąbelkowym:
+Jeśli tutaj policzymy instrukcje porównania `if (A[i] > A[k])`, złożoność wyjdzie identyczna jak w sortowaniu bąbelkowym:
 
 \[
   n-1 + n-2 + \ldots + 1 = \frac{n(n-1)}{2} = \frac{1}{2}n^2 - \frac{1}{2}n.
