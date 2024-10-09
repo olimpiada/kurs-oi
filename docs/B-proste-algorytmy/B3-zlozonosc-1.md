@@ -17,8 +17,8 @@ for (int i = 0; i < n; i++) {
         int suma = 0;
         for (int s = i; s <= j; s++) {
             suma += A[s];
-            // Teraz suma == A[i] + ... + A[j].
         }
+        // Teraz suma jest równa A[i] + A[i + 1] + ... + A[j].
         if (suma == K) {
             licznik++;
         }
@@ -37,7 +37,7 @@ for (int i = 0; i < n; i++) { // Dla ustalonego i:
     int suma = 0; // Zacznij od zera.
     for (int j = i; j < n; j++) {
         suma += A[j];
-        // W tej chwili suma równa jest A[i] + A[i + 1] + ... + A[j].
+        // Teraz suma jest równa A[i] + A[i + 1] + ... + A[j].
         if (suma == K) {
             // Więc można sprawdzić, czy jest równa K.
             licznik++;
