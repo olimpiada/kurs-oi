@@ -6,7 +6,7 @@ Wiemy już, że kompilator języka C++ jest pod wieloma względami dosyć restry
 Radzenie sobie z takimi błędami często jest całkiem proste – trzeba przeczytać treść błędu zgłoszonego przez
 kompilator i poprawić odpowiedni fragment kodu. Jeśli kompilacja nie udała się, środowisko programistyczne wypisze komunikat z opisem błędu, który zazwyczaj też zawiera numer wiersza, który spowodował błąd.
 
-Dla przykładu, przepiszemy nasz wcześniejszy program obliczający pole i obwód prostokąta, umieszczając w nim pewne usterki, które najczęściej przydarzają się początkującym programistom, i przyjrzymy się występującym błędom kompilacji. Oto pierwsza błędna wersja:
+Dla przykładu przepiszemy nasz wcześniejszy program obliczający pole i obwód prostokąta, umieszczając w nim pewne usterki, które najczęściej przydarzają się początkującym programistom, i przyjrzymy się występującym błędom kompilacji. Oto pierwsza błędna wersja:
 
 ```C++
 #include <iostream>
@@ -111,7 +111,7 @@ Co się stanie, jeśli "złośliwy" użytkownik wpisze z klawiatury liczby ``10`
 
 Jest to tak zwany **błąd wykonania** programu – program wykonał operację, po której nie może już działać dalej. Dzielenie przez zero to tylko jeden z przykładów, znacznie częściej spotkasz się z błędem wykonania, kiedy zaczniesz działać na tablicach, wskaźnikach, lub innych bardziej skomplikowanych zmiennych.
 
-Oczywiście nawet jeśli nasz program poprawnie się skompiluje, są inne powody, dla których może nie działać tak, jak chcemy. Może dawać w wyniku niewłaściwe (błędne) odpowiedzi, może też działać w nieskończoność i się nie kończyć (co nazywamy *zapętleniem* lub *zawieszeniem*). Sposoby radzenia sobie z poszczególnymi typami błędów będziemy przedstawiać w częściach technicznych kolejnych lekcji.
+Oczywiście, nawet jeśli nasz program poprawnie się skompiluje, są inne powody, dla których może nie działać tak, jak chcemy. Może dawać w wyniku niewłaściwe (błędne) odpowiedzi, może też działać w nieskończoność i się nie kończyć (co nazywamy *zapętleniem* lub *zawieszeniem*). Sposoby radzenia sobie z poszczególnymi typami błędów będziemy przedstawiać w częściach technicznych kolejnych lekcji.
 
 ## Zadania
 

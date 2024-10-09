@@ -97,7 +97,7 @@ else {
 }
 ```
 
-Oznacza to, że jeśli _warunek1_ jest spełniony, to wykonywana jest _instrukcja1_. W przeciwnym razie, jeśli _warunek2_ jest spełniony, wykonywana jest _instrukcja2_, podobnie z _warunkiem3_ i _instrukcją3_. Jeśli żaden z warunków nie był spełniony, wykonywana jest _instrukcja4_. Można także pominąć końcowy `else` w tej instrukcji. Wówczas jeśli żaden z warunków nie jest spełniony, nie jest wykonywana żadna instrukcja. W szczególności, instrukcja if może mieć następującą, najbardziej uproszczoną postać:
+Oznacza to, że jeśli _warunek1_ jest spełniony, to wykonywana jest _instrukcja1_. W przeciwnym razie, jeśli _warunek2_ jest spełniony, wykonywana jest _instrukcja2_, podobnie z _warunkiem3_ i _instrukcją3_. Jeśli żaden z warunków nie był spełniony, wykonywana jest _instrukcja4_. Można także pominąć końcowy `else` w tej instrukcji. Wówczas jeśli żaden z warunków nie jest spełniony, nie jest wykonywana żadna instrukcja. W szczególności instrukcja `if` może mieć następującą, najbardziej uproszczoną postać:
 
 ```cpp
 if (warunek) {
@@ -105,7 +105,7 @@ if (warunek) {
 }
 ```
 
-Wtedy jeśli _warunek_ nie jest spełniony, żadna instrukcja nie jest wykonywana, czyli po prostu nic się nie dzieje.
+Wtedy, jeśli _warunek_ nie jest spełniony, żadna instrukcja nie jest wykonywana, czyli po prostu nic się nie dzieje.
 
 Jako kolejny przykład napiszmy program, który wczytuje liczbę całkowitą i wypisuje jej znak: "+" jeśli jest dodatnia, "-" jeśli jest ujemna, a "0" jeśli jest zerem.
 
@@ -133,7 +133,7 @@ int main() {
 
 W opisie warunku możemy także używać tzw. spójników logicznych: **i**, **lub** oraz **nie**, zapisywanych w C++ jako `&&`, `||` oraz `!`. Za pomocą spójników `&&` oraz `||` możemy łączyć dwa warunki lub więcej. Znak `!` możemy postawić przed jakimś warunkiem, umieszczając ten warunek w nawiasach.
 
-**Uwaga:** Znak **&** (ang. _ampersand_) jest na tym samym klawiszu co siódemka. Natomiast znak I (kreska pionowa _, pałka_) jest na tym samym klawiszu co **\**.
+**Uwaga:** Znak **&** (ang. _ampersand_) jest na tym samym klawiszu co siódemka. Natomiast znak | (kreska pionowa _, pałka_) jest na tym samym klawiszu co **\**.
 
 Napiszmy teraz program, który sprawdzi, czy trójkąt o danych trzech bokach jest równoboczny, równoramienny czy różnoboczny:
 
@@ -160,9 +160,9 @@ int main() {
 
 **Uwaga:** Warto zwrócić szczególną uwagę na to, że w języku C++ do sprawdzania równości w warunkach używa się **dwuznaku `==`**. Pojedynczy znak równości oznacza operację _przypisania_, którą widzieliśmy już wcześniej, a której będzie poświęcona następna lekcja kursu. Jeśli w warunku napiszemy `=` zamiast `==`, program skompiluje się, ale nie będzie działał poprawnie!
 
-W jednym warunku możemy użyć różnych typów spójników logicznych. Jednak trzeba wiedzieć, że operatory `&&` i `||` nie są równoważne pod względem pierwszeństwa - operator `&&` ma wyższe pierwszeństwo niż `||`. Aby nie musieć o tym pamiętać i uniknąć zamieszania, poszczególne fragmenty wyrażenia najlepiej umieszczać w nawiasach.
+W jednym warunku możemy użyć różnych typów spójników logicznych. Jednak trzeba wiedzieć, że operatory `&&` i `||` nie są równoważne pod względem pierwszeństwa – operator `&&` ma wyższe pierwszeństwo niż `||`. Aby nie musieć o tym pamiętać i uniknąć zamieszania, poszczególne fragmenty wyrażenia najlepiej umieszczać w nawiasach.
 
-Aby zilustrować łączenie warunków, napiszmy program, który wczyta rok i wypisze liczbę dni w tym roku. Rok ma 365 dni, no może, że jest przestępny - wówczas ma 366 dni. Rok jest przestępny, jeśli dzieli się przez 4. Jeśli jednak dzieli się przez 100, to nie jest przestępny. Wyjątkiem jest sytuacja, gdy rok dzieli się przez 400 - wówczas mimo wszystko jest przestępny (patrz [Wikipedia](http://pl.wikipedia.org/wiki/Rok_przest%C4%99pny "Wikipedia")). Sprawdzanie podzielności w C++ możemy zrealizować za pomocą operatora reszty z dzielenia "%". Oto program:
+Aby zilustrować łączenie warunków, napiszmy program, który wczyta rok i wypisze liczbę dni w tym roku. Rok ma 365 dni, no może, że jest przestępny – wówczas ma 366 dni. Rok jest przestępny, jeśli dzieli się przez 4. Jeśli jednak dzieli się przez 100, to nie jest przestępny. Wyjątkiem jest sytuacja, gdy rok dzieli się przez 400 - wówczas mimo wszystko jest przestępny (patrz [Wikipedia](http://pl.wikipedia.org/wiki/Rok_przest%C4%99pny "Wikipedia")). Sprawdzanie podzielności w C++ możemy zrealizować za pomocą operatora reszty z dzielenia "%". Oto program:
 
 ```cpp
 #include <iostream>
@@ -188,7 +188,7 @@ int main() {
 
 ## Instrukcje złożone
 
-W ramach instrukcji `if` mogą występować także tzw. **instrukcje złożone**, czyli składające się z kilku pojedynczych instrukcji. Wśród tych pojedynczych instrukcji mogą występować np. wczytywania, wypisywania, kolejne instrukcje warunkowe `if`, a także instrukcje, które poznamy w kolejnych lekcjach. Instrukcję złożoną otacza się nawiasami klamrowymi { } i może ona występować w dowolnym bloku `if` czy w bloku `else` (może też być w kilku z nich - nie ma tu ograniczeń). W najprostszej postaci wygląda to tak:
+W ramach instrukcji `if` mogą występować także tzw. **instrukcje złożone**, czyli składające się z kilku pojedynczych instrukcji. Wśród tych pojedynczych instrukcji mogą występować np. wczytywania, wypisywania, kolejne instrukcje warunkowe `if`, a także instrukcje, które poznamy w kolejnych lekcjach. Instrukcję złożoną otacza się nawiasami klamrowymi { } i może ona występować w dowolnym bloku `if` czy w bloku `else` (może też być w kilku z nich – nie ma tu ograniczeń). W najprostszej postaci wygląda to tak:
 
 ```cpp
 if (warunek1) {
@@ -225,7 +225,7 @@ Tym razem zastanowimy się nad tym, co robić, kiedy napisany przez nas program 
 
 Gorszą sytuacją jest, gdy nasz program nie działa i **nie wiemy**, dla jakich danych się to dzieje. Ma to miejsce np. wówczas, gdy wysyłamy program do systemu sprawdzającego i dostajemy informację, że program dał błędną odpowiedź, ale nie widzimy konkretnych danych testowych. Warto na początku upewnić się, czy program wypisuje dane **dokładnie** tak, jak to zostało opisane w treści zadania. Np. jeśli program ma wypisać jakieś liczby w jednym wierszu, nie mogą one być umieszczone w różnych wierszach. Nie są też tolerowane żadne dodatkowe komunikaty na wyjściu. Jedyne dopuszczalne odstępstwo to dodatkowe spacje na samym końcu wiersza lub dodatkowe puste wiersze na końcu wyjścia.
 
-Jeśli upewniliśmy się, że nie popełniliśmy żadnego z tych podstawowych błędów, musimy znaleźć jakieś inne wyjście z sytuacji. Jak opisaliśmy wyżej, warto przeczytać kod źródłowy programu - a nuż uda nam się w tej sposób wychwycić usterkę. Jeśli nie, powinniśmy spróbować znaleźć jakieś dane testowe, dla których program nie działa poprawnie. Możemy spróbować wpisać _jakieś_ dane do programu i mieć nadzieję, że akurat uda się wychwycić usterkę. Dużo pewniejszą drogą jest próba _systematycznego_ przejrzenia różnych rodzajów danych wejściowych (zazwyczaj nie da się sprawdzić wszystkich możliwych danych wejściowych, gdyż jest ich zbyt dużo).
+Jeśli upewniliśmy się, że nie popełniliśmy żadnego z tych podstawowych błędów, musimy znaleźć jakieś inne wyjście z sytuacji. Jak opisaliśmy wyżej, warto przeczytać kod źródłowy programu – a nuż uda nam się w tej sposób wychwycić usterkę. Jeśli nie, powinniśmy spróbować znaleźć jakieś dane testowe, dla których program nie działa poprawnie. Możemy spróbować wpisać _jakieś_ dane do programu i mieć nadzieję, że akurat uda się wychwycić usterkę. Dużo pewniejszą drogą jest próba _systematycznego_ przejrzenia różnych rodzajów danych wejściowych (zazwyczaj nie da się sprawdzić wszystkich możliwych danych wejściowych, gdyż jest ich zbyt dużo).
 
 Prześledźmy to na przykładzie.
 
@@ -252,7 +252,7 @@ int main() {
 }
 ```
 
-**Uwaga:** Zakładamy, że w tym programie nie musimy przejmować się tym, czy istnieje trójkąt o podanych długościach boków. Sprawdzanie tego warunku pozostawiamy Tobie do samodzielnego rozwiązania w jednym z zadań domowych do lekcji.
+**Uwaga:** Zakładamy, że w tym programie nie musimy przejmować się tym, czy istnieje trójkąt o podanych długościach boków. Sprawdzanie tego warunku pozostawiamy Ci do samodzielnego rozwiązania w jednym z zadań domowych do lekcji.
 
 Spróbujmy podać programowi dane odpowiadające różnym typom trójkątów i sprawdźmy, czy wynik był poprawny. Widać, że konkretne liczby nie mają tu większego znaczenia. Wystarczy zatem sprawdzić wszystkie różne _typy_ trójkątów. Wpisujemy kolejno dane wejściowe:
 
@@ -307,7 +307,7 @@ Ogólnie problem błędnych odpowiedzi jest jednym z najczęstszych zagadnień, 
 ## Zadania
 
 W tej lekcji mamy dla Ciebie do rozwiązania trzy zadania dotyczące instrukcji warunkowej `if`.
-Dodatkowo, dla uczestników lubiących wyzwania i zainteresowanych przygotowaniem do olimpiad mamy przygotowane nieco trudniejsze zadanie "z gwiazdką".
+Co więcej, dla uczestników lubiących wyzwania i zainteresowanych przygotowaniem do olimpiad mamy przygotowane nieco trudniejsze zadanie "z gwiazdką".
 
 [Maksimum :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#max){ .md-button .md-button--primary }
 

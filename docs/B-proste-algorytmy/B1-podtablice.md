@@ -78,7 +78,7 @@ int main() {
 
 ## Ciąg identycznych/rosnących/malejących elementów
 
-W kolejnym zadaniu znowu dana jest tablica, ale tym razem naszym celem jest znalezienie najdłuższego fragmentu, w którym wszystkie elementy są takie same. Jako odpowiedź musimy podać długość tego fragmentu --  na przykład dla ciągu $(4, 4, 9, 2, 2, 6, 10, 7, 7, 7, 7, 1, 2, 2, 2, 5)$ odpowiedzią jest $4$, jako że element $7$ występuje właśnie $4$ razy z rzędu.
+W kolejnym zadaniu znowu dana jest tablica, ale tym razem naszym celem jest znalezienie najdłuższego fragmentu, w którym wszystkie elementy są takie same. Jako odpowiedź musimy podać długość tego fragmentu – na przykład dla ciągu $(4, 4, 9, 2, 2, 6, 10, 7, 7, 7, 7, 1, 2, 2, 2, 5)$ odpowiedzią jest $4$, jako że element $7$ występuje właśnie $4$ razy z rzędu.
 
 Użyjemy bardzo podobnego pomysłu, co w poprzednim zadaniu, z przejściem pętlą przez wszystkie elementy. Zamiast jednej dodatkowej zmiennej potrzebujemy tym razem jednak co najmniej dwóch. Pierwsza (`najwiecej`) będzie przechowywać (jak poprzednio) informację o najlepszym napotkanym dotychczas kandydacie. Druga (`ostatnie`) musi na bieżąco pamiętać, ile razy widzieliśmy ostatni napotkany element:
 

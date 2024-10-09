@@ -2,7 +2,7 @@
 
 ## "Za dużo, za mało"
 
-W dość dawnych czasach pewna stacja radiowa organizowała dla słuchaczy zabawę: przygotowywano pewną sumę pieniędzy do wygrania, na antenie ogłaszano jej orientacyjną wielkość (na przykład "do 20 000 zł"), a następnie słuchacze dzwonili do studia. Pierwsza osoba, która podała dokładną sumę ("dwanaście tysięcy sześcset dwadzieścia trzy złote i pięćdziesiąt siedem groszy"), wygrywała ją na własność. Po każdym telefonie słuchacza rozlegał się komunikat "ZA DUŻO", jeśli podana została zbyt wielka suma, lub "ZA MAŁO", jeśli zbyt skromna.
+W dość dawnych czasach pewna stacja radiowa organizowała dla słuchaczy zabawę: przygotowywano pewną sumę pieniędzy do wygrania, na antenie ogłaszano jej orientacyjną wielkość (na przykład "do 20 000 zł"), a następnie słuchacze dzwonili do studia. Pierwsza osoba, która podała dokładną sumę ("dwanaście tysięcy sześćset dwadzieścia trzy złote i pięćdziesiąt siedem groszy"), wygrywała ją na własność. Po każdym telefonie słuchacza rozlegał się komunikat "ZA DUŻO", jeśli podana została zbyt wielka suma, lub "ZA MAŁO", jeśli zbyt skromna.
 
 Załóżmy, że jesteśmy jedynym dzwoniącym do studia, a suma do rozdania to całkowita liczba między 1 a 1000 złotych. Ile telefonów potrzebujemy, aby zgadnąć właściwą liczbę?
 
@@ -27,7 +27,7 @@ Strategię tę można powtórzyć: jeśli wynik mieści się w przedziale [501,1
 | 599    | ZA MAŁO  | Kwota w przedziale [600,600]  |
 | 600    | WYGRANA! |                               |
 
-Do właściwej kwoty doszliśmy w dziesięciu telefonach. Przy kwocie 625 zł zgadlibyśmy już w trzeciej próbie. A czy jest możliwe, że wykonalibyśmy dużo więcej pracy? Nie jest! Popatrzmy na przedziały napisane w ostatniej kolumnie. Pierwszy z nich ma długość 500, drugi 249, kolejny 124... każdy następny jest około dwa razy krótszy od poprzedniego i jest tak bez względu na to, jakie otrzymywaliśmy odpowiedzi. Cokolwiek by się zatem nie działo, najpóźniej w dziesiątym kroku długość tego przedziału spadnie do 1, a więc będziemy znali właściwą liczbę.
+Do właściwej kwoty doszliśmy w dziesięciu telefonach. Przy kwocie 625 zł zgadlibyśmy już w trzeciej próbie. A czy jest możliwe, że wykonalibyśmy dużo więcej pracy? Nie jest! Popatrzmy na przedziały napisane w ostatniej kolumnie. Pierwszy z nich ma długość 500, drugi 249, kolejny 124... każdy następny jest około dwukrotnie krótszy od poprzedniego i jest tak bez względu na to, jakie otrzymywaliśmy odpowiedzi. Cokolwiek by się zatem nie działo, najpóźniej w dziesiątym kroku długość tego przedziału spadnie do 1, a więc będziemy znali właściwą liczbę.
 
 Algorytm, który szuka zadanej wielkości tą metodą – dzielenia na pół przedziału, w którym może się znajdować – zwany jest **wyszukiwaniem binarnym**.
 
@@ -47,7 +47,7 @@ Ciąg przechowujemy w tablicy `tablica[]`, indeksowanej od $0$ do $n-1$.
 Naszym zadaniem jest znaleźć pozycję (indeks tablicy), na którym jest liczba $12$ – załóżmy na chwilę, że mamy pewność, iż liczba w tablicy na pewno się znajduje. Najprostszym sposobem byłoby sprawdzenie wszystkich elementów tablicy za pomocą prostej pętli.
 Jak zrobić to tak, aby nie napracować się za bardzo? Identycznie jak w radiowej grze: sprawdźmy najpierw, jaka liczba jest w połowie tablicy (czyli w komórce `tablica[7]`). W tym wypadku – $21$, czyli za dużo, a to znaczy, że $12$ na pewno znajduje się pomiędzy `tablica[0]` a `tablica[6]`. Wystarczy teraz powtórzyć operację na mniejszym, początkowym fragmencie tablicy – od indeksu $0$ do $6$. W tym celu sprawdzamy środek tego fragmentu, czyli wartość `tablica[3]`...
 
-Bardziej formalnie: staramy się znaleźć pewną liczbę `x` w tablicy `tablica[0..n-1]`, czyli podać taki indeks `i`, dla którego `tablica[i] = x`. W tym celu weźmy dwie zmienne `początek` i `koniec`, ustawmy `początek` na $0$ i `koniec` na $n-1$. Będziemy starać się utrzymywać następujący fakt: element `x` znajduje się w tablicy pomiędzy indeksami `początek` i `koniec`. Patrzymy, co znajduje się dokładnie na środku pomiędzy tymi indeksami (czyli definiujemy zmienną  `środek` jako średnią `początek` i `koniec`) – jeśli w komórce `tablica[środek]` jest liczba większa od  `x`, wiemy że trzeba szukać dalej pomiędzy  `początek` a  `środek`. Jeśli zaś mniejsza od  `x`, szukamy między  `środek` a  `koniec`:
+Bardziej formalnie: staramy się znaleźć pewną liczbę `x` w tablicy `tablica[0..n-1]`, czyli podać taki indeks `i`, dla którego `tablica[i] = x`. W tym celu weźmy dwie zmienne `początek` i `koniec`, ustawmy `początek` na $0$ i `koniec` na $n-1$. Będziemy starać się utrzymywać następujący fakt: element `x` znajduje się w tablicy pomiędzy indeksami `początek` i `koniec`. Patrzymy, co znajduje się dokładnie na środku pomiędzy tymi indeksami (czyli definiujemy zmienną `środek` jako średnią `początek` i `koniec`) – jeśli w komórce `tablica[środek]` jest liczba większa od `x` wiemy, że trzeba szukać dalej pomiędzy `początek` a `środek`. Jeśli zaś mniejsza od  `x`, szukamy między `środek` a `koniec`:
 
 ```cpp
 int poczatek = 0;
@@ -101,7 +101,8 @@ Widzimy (i bardzo łatwo jest pokazać), że dla $n=2^k$ wykonamy dokładnie $k$
 Taka liczba $k$ zwana jest **logarytmem dwójkowym** z liczby $n$.
 
 Definiując precyzyjnie, logarytm dwójkowy z dowolnej liczby dodatniej $a$ to taka liczba $x$,
-dla której $2^x=a$. Oznaczamy ją przez $\log_2 a$, przy czym często piszemy po prostu $\log a$.
+dla której $2^x=a$. Taką liczbę oznaczamy przez $\log_2 a$, gdzie 2 nazywamy *podstawą logarytmu*.
+W informatyce, gdy pomijamy podstawę (pisząc $\log a$) chodzi nam właśnie o logarytm dwójkowy.
 Dla "większości" możliwych argumentów $a$, nawet całkowitych, liczba $\log a$ nie jest całkowita,
 a nawet wymierna (na przykład $\log 12 = 3,5849\ldots$).
 Nam będzie na ogół przydatne jej zaokrąglenie do liczby całkowitej – w szczególności,
@@ -166,7 +167,7 @@ while (poczatek < koniec) {
 }
 ```
 
-Teraz  `środek` może być równy  `koniec`, ale nigdy nie będzie równy `początek`. Algorytm nie może się zatem zapętlić.
+Teraz `środek` może być równy `koniec`, ale nigdy nie będzie równy `początek`. Algorytm nie może się zatem zapętlić.
 
 ## Zadania
 
