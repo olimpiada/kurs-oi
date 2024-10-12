@@ -4,7 +4,7 @@
 
 ## Prosta pętla for
 
-Wiemy już, że pętle pozwalają nam wielokrotnie wykonywać takie same lub podobne czynności. Jednym z najprostszych przypadków jest sytuacja, gdy chcemy powtórzyć daną czynność i wiemy dokładnie, ile razy chcemy to zrobić. Można do tego celu użyć poznanej już pętli `while`. Jednak lepiej nadaje się do tego pętla `for`. 
+Wiemy już, że pętle pozwalają nam wielokrotnie wykonywać takie same lub podobne czynności. Jednym z najprostszych przypadków jest sytuacja, gdy chcemy powtórzyć daną czynność i wiemy dokładnie, ile razy chcemy to zrobić. Można do tego celu użyć poznanej już pętli `while`. Jednak lepiej nadaje się do tego pętla `for`.
 
 W najprostszej postaci pętla `for` w języku C++ wygląda tak:
 
@@ -84,7 +84,7 @@ int A[4];
 deklaruje tablicę o nazwie ``A``, w której będą przechowywane 4 liczby całkowite. W praktyce jest to zadeklarowanie $4$ zmiennych, które będą nazywać się ``A[0]``, ``A[1]``, ``A[2]`` oraz ``A[3]``. Możemy od tej pory używać każdej z nich oddzielnie, tak jak dotychczas korzystaliśmy ze zmiennych:
 
 ```cpp
-cin >> A[0];	
+cin >> A[0];
 cin >> A[1]; // do zmiennych A[0] i A[1] wczytujemy po jednej liczbie całkowitej
 A[2] = A[0] + A[1];		// teraz A[2] będzie sumą wczytanych liczb
 A[3] = A[0] - A[1];		// zaś A[3] ich różnicą
@@ -98,7 +98,7 @@ int t[n];
 to tablica o nazwie $t$ zawierająca $n$ elementów. Widzimy, że numerujemy je zawsze od zera: $t[0],t[1],\ldots,t[n-1]$.
 
 
-Przypomnijmy sobie nasz poprzedni program, który sumował liczby podane przez użytkownika, i przepiszmy nasz poprzedni program z użyciem tablicy. Zmienna sterująca pętli będzie, jak poprzednio nazywać się $i$, przy czym w $i$-tym okrążeniu chcemy wpisać wartość do $i$-tej komórki tablicy -- innymi słowy, w $i$-tym okrążeniu użyjemy instrukcji ``cin >> t[i]``. Ponieważ elementy tablicy numerujemy od zera, więc zmienna sterująca $i$ będzie tym razem przyjmować wartości $0,1,\ldots,n-1$:
+Przypomnijmy sobie nasz poprzedni program, który sumował liczby podane przez użytkownika, i przepiszmy nasz poprzedni program z użyciem tablicy. Zmienna sterująca pętli będzie, jak poprzednio nazywać się $i$, przy czym w $i$-tym okrążeniu chcemy wpisać wartość do $i$-tej komórki tablicy – innymi słowy, w $i$-tym okrążeniu użyjemy instrukcji ``cin >> t[i]``. Ponieważ elementy tablicy numerujemy od zera, więc zmienna sterująca $i$ będzie tym razem przyjmować wartości $0,1,\ldots,n-1$:
 
 ```cpp
 #include <iostream>
@@ -154,10 +154,10 @@ A zatem pętla `for` działa w następującym cyklu:
 
 ```
 instrukcja_początkowa;
-sprawdź warunek_stopu - jeśli fałszywy, to koniec
+sprawdź warunek_stopu – jeśli fałszywy, to koniec
 instrukcja;
 krok_pętli;
-sprawdź warunek_stopu - jeśli fałszywy, to koniec
+sprawdź warunek_stopu – jeśli fałszywy, to koniec
 instrukcja;
 krok_pętli;
 ...
@@ -195,7 +195,7 @@ Część techniczną rozpoczniemy dosyć nietypowo. Wprowadzimy ciąg liczb, kt�
 
 Pierwsze dwie liczby Fibonacciego to 0 i 1, a każda kolejna liczba jest sumą dwóch poprzednich, np. $8 = 3 + 5$, $34 = 13 + 21$. Zazwyczaj $n$-tą liczbę Fibonacciego oznacza się jako $F_n$ lub $Fib_n$.
 
-Zainteresowanych Czytelników zachęcamy do poszukania w sieci więcej informacji o liczbach Fibonacciego. My tymczasem spróbujemy napisać program, który wyznaczy 50-tą liczbę Fibonacciego (zakładamy, że zerowa liczba Fibonacciego to 0).
+Zainteresowanych Czytelników zachęcamy do poszukania w sieci więcej informacji o liczbach Fibonacciego. My tymczasem spróbujemy napisać program, który wyznaczy 50. liczbę Fibonacciego (zakładamy, że zerowa liczba Fibonacciego to 0).
 
 
 Skorzystajmy z tablicy, w której będziemy przechowywać kolejne liczby Fibonacciego. Piszemy i uruchamiamy poniższy program:
@@ -262,7 +262,7 @@ int main()
 }
 ```
 
-Wyniki programu do pewnego momentu wyglądają rozsądnie, ale gdzieś między 40-tym a 50-tym elementem zaczynają pojawiać się liczby ujemne:
+Wyniki programu do pewnego momentu wyglądają rozsądnie, ale gdzieś między 40. a 50. elementem zaczynają pojawiać się liczby ujemne:
 
 ```
 2 1
@@ -292,7 +292,7 @@ Wyniki programu do pewnego momentu wyglądają rozsądnie, ale gdzieś między 4
 -298632863
 ```
 
-Zauważmy, że 46-ta liczba Fibonacciego jest równa prawie $2 \cdot 10^9$, czyli ledwie mieści się w zakresie typu `int`. Kolejne liczby po prostu wychodzą już poza zakres, co objawia się ujemnymi (oraz bezsensownymi dodatnimi) wartościami. W tym przypadku wystarczy zmienić typ elementów tablicy na jakiś 64-bitowy, np. `long long`:
+Zauważmy, że 46. liczba Fibonacciego jest równa prawie $2 \cdot 10^9$, czyli ledwie mieści się w zakresie typu `int`. Kolejne liczby po prostu wychodzą już poza zakres, co objawia się ujemnymi (oraz bezsensownymi dodatnimi) wartościami. W tym przypadku wystarczy zmienić typ elementów tablicy na jakiś 64-bitowy, np. `long long`:
 
 ```cpp
 #include <iostream>
@@ -312,7 +312,7 @@ int main()
 }
 ```
 
-Dzięki temu już wiemy, jaka jest 50-ta liczba Fibonacciego:
+Dzięki temu już wiemy, jaka jest 50. liczba Fibonacciego:
 
 ```
 ...

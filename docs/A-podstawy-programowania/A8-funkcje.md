@@ -39,7 +39,7 @@ cout << endl;
 
 ```
 
-Nie jest to jednak najszczęśliwszy pomysł: taki kod wydłuża się, jest mało czytelny, trudno się w nim szuka błędów, a na domiar pojawia się jeszcze dodatkowy problem z użyciem metody kopiuj-wklej – powielanie pomyłek. W powyższym kodzie brakuje średnika po ``cout << " ***"``, a ten błąd skopiował się trzy razy. Im więcej w kodzie kopiowania, tym bardziej poprawianie błędów będzie żmudne. Dlatego ważną zasadą jest, żeby **unikać kopiowania i powtarzania kodu**. Na szczęście języki programowania dają szeroki wachlarz możliwości radzenia sobie z tym problemem – czasem można zamiast powtórzenia użyć odpowiedniej pętli, tym razem jednak wygodniejsza będzie inna podstawowa konstrukcja: **funkcja**. Funkcja to – w dużym uproszczeniu – fragment kodu, który zapisujemy "na boku" i możemy wywoływać wielokrotnie wewnątrz programu. 
+Nie jest to jednak najszczęśliwszy pomysł: taki kod wydłuża się, jest mało czytelny, trudno się w nim szuka błędów, a na domiar pojawia się jeszcze dodatkowy problem z użyciem metody kopiuj-wklej – powielanie pomyłek. W powyższym kodzie brakuje średnika po ``cout << " ***"``, a ten błąd skopiował się trzy razy. Im więcej w kodzie kopiowania, tym bardziej poprawianie błędów będzie żmudne. Dlatego ważną zasadą jest, żeby **unikać kopiowania i powtarzania kodu**. Na szczęście języki programowania dają wiele możliwości radzenia sobie z tym problemem – czasem można, zamiast powtórzenia użyć odpowiedniej pętli, tym razem jednak wygodniejsza będzie inna podstawowa konstrukcja: **funkcja**. Funkcja to – w dużym uproszczeniu – fragment kodu, który zapisujemy "na boku" i możemy wywoływać wielokrotnie wewnątrz programu.
 
 ## Funkcje i ich argumenty
 
@@ -134,7 +134,7 @@ int min(int a, int b) {
 }
 ```
 
-Powyższa funkcja o nazwie _min_ przyjmuje dwa parametry, $a$ i $b$, oba typu `int`. Wynikiem funkcji jest również liczba typu `int`. Zaznaczymy tutaj, że obszar między nawiasami klamrowymi nazywamy **wnętrzem** albo **ciałem** funkcji. Fragment programu występujący we wnętrzu powyższej funkcji widzieliśmy już wielokrotnie, jest to rzeczywiście obliczanie minimum z dwóch liczb. Jak pamiętamy, wynik funkcji opatrzony jest słowem kluczowym `return`. Jeśli $a<b$, to wynikiem funkcji jest $a$, a w przeciwnym razie $b$. 
+Powyższa funkcja o nazwie _min_ przyjmuje dwa parametry, $a$ i $b$, oba typu `int`. Wynikiem funkcji jest również liczba typu `int`. Zaznaczymy tutaj, że obszar między nawiasami klamrowymi nazywamy **wnętrzem** albo **ciałem** funkcji. Fragment programu występujący we wnętrzu powyższej funkcji widzieliśmy już wielokrotnie, jest to rzeczywiście obliczanie minimum z dwóch liczb. Jak pamiętamy, wynik funkcji opatrzony jest słowem kluczowym `return`. Jeśli $a<b$, to wynikiem funkcji jest $a$, a w przeciwnym razie $b$.
 
 Jeśli zamiast wartości w parametrach funkcji umieścimy jakieś wyrażenia, funkcja również wykona się, ale najpierw obliczy wartości tych wyrażeń. Przykładowo w tym fragmencie programu:
 
@@ -352,7 +352,7 @@ int main() {
 
 # Część techniczna: C++ czy ++C, czyli sztuczki programistyczne
 
-W tej części technicznej opiszemy zagadnienie, którego znajomość nie jest konieczna przy pisaniu programów, jednak poszerza naszą wiedzę o języku C++. W odróżnieniu od poprzedniej części lekcji, potraktuj je jako ciekawostkę bardziej niż konieczną wiedzę.
+W tej części technicznej opiszemy zagadnienie, którego znajomość nie jest konieczna przy pisaniu programów, jednak poszerza naszą wiedzę o języku C++. W odróżnieniu od poprzedniej części lekcji potraktuj je jako ciekawostkę bardziej niż konieczną wiedzę.
 
 W większości pętli, które dotychczas pisaliśmy, pojawiały się instrukcje `i++` lub `i--`. W języku C++ dostępne są także instrukcje `++i` oraz `--i`. Czym one się różnią od tych wcześniejszych?
 
@@ -365,7 +365,7 @@ a = b = c = 1;
 
 wszystkie trzy zmienne uzyskują wartość $1$. Działa to tak, że najpierw zmiennej $c$ przypisujemy wartość 1. Wynikiem przypisania $c=1$ jest prawa strona, czyli $1$, i w przypisaniu $b=(c=1)$ zmienna $b$ uzyskuje wartość $1$ (w powyższym wyrażeniu mogliśmy pominąć nawiasy). Na końcu to samo dzieje się ze zmienną $a$.
 
-Tak samo jak zwykłe przypisanie, również przypisania skrócone zwracają pewną wartość. Jaka to wartość? Otóż taka sama, jak gdyby zamiast przypisania skróconego wpisać równoważne mu pełne przypisanie. Poniższy program:
+Tak samo, jak zwykłe przypisanie, również przypisania skrócone zwracają pewną wartość. Jaka to wartość? Otóż taka sama, jak gdyby zamiast przypisania skróconego wpisać równoważne mu pełne przypisanie. Poniższy program:
 
 ```cpp
 int a, b;

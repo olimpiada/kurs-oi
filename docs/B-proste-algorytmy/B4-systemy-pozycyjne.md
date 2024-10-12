@@ -2,11 +2,11 @@
 
 ## Skąd wziął się system dziesiętny
 
-Ludzkość długo doskonaliła umiejętność zapisywania liczb. Dopiero w późnym średniowieczu Europa odeszła od zapisu ,,odziedziczonego'' po Imperium Rzymskim, do dziś zwanego *liczbami rzymskimi*. W tym systemie litera `I` oznaczała 1, `V` to 5, a litery `X`, `L`, `C`, `D` i `M` odpowiadały kolejno wartościom 10, 50, 100, 500 i 1000 − na przykład 73 to `LXXIII`. Dodatkowo, by zapisać 4, zamiast `IIII` używa się `IV`. Liczba 9 to `IX`, 40 to `XL` i tak dalej. 12
+Ludzkość długo doskonaliła umiejętność zapisywania liczb. Dopiero w późnym średniowieczu Europa odeszła od zapisu ,,odziedziczonego'' po Imperium Rzymskim, do dziś zwanego *liczbami rzymskimi*. W tym systemie litera `I` oznaczała 1, `V` to 5, a litery `X`, `L`, `C`, `D` i `M` odpowiadały kolejno wartościom 10, 50, 100, 500 i 1000 − na przykład 73 to `LXXIII`. Co więcej, by zapisać 4, zamiast `IIII` używa się `IV`. Liczba 9 to `IX`, 40 to `XL` i tak dalej. 12
 
 Czemu odeszliśmy od zapisu rzymskiego? Nie jest trudny do opanowania, ale problemy zaczynają się przy liczbach większych niż 3000 − sami Rzymianie nie byli konsekwentni i mieli kilka różnych metod na większe liczby. Kłopot leży między innymi w tym, że dla każdej ,,nowej'' liczby (5000, 10000, 50000, ...) trzeba użyć nowej litery. Na Olimpiadzie Informatycznej, w której często trzeba wczytywać i wypisywać nawet dziewięciocyfrowe liczby (np. 267 142 129) litery szybko by się skończyły.
 
-Jeszcze większy problem pojawia się, jeśli trzeba często dodawać wiele liczb (*kto nie wierzy, niech spróbuje szybko odpowiedzieć na pytanie, ile to jest XCVII+CLXIX*). To prawdopodobnie względy praktyczne, takie jak księgi rachunkowe i rejestry kupieckie, wymusiły w końcu odejście od systemu rzymskiego. Nowy sposób zapisu został wynaleziony w Indiach, a do Europy dostał się za sprawą Arabów, którzy w średniowieczu panowali m.in. na Półwyspie Iberyjskim − stąd nazwa *cyfry arabskie*. Jak wiemy, w tym zapisie mamy dziesięć cyfr (0, 1, 2, 3, 4, 5, 6, 7, 8, 9), a wartość cyfry zależy od pozycji na której stoi: w liczbie 273 cyfra 3 oznacza jedności (czyli $3 \cdot 1$, cyfra 7 to dziesiątki ($7 \cdot 10$), a 2 to setki ($2 \cdot 100$). Taki system nazywa się *pozycyjnym*.
+Jeszcze większy problem pojawia się, jeśli trzeba często dodawać wiele liczb (*kto nie wierzy, niech spróbuje szybko odpowiedzieć na pytanie, ile to jest XCVII+CLXIX*). To prawdopodobnie względy praktyczne, takie jak księgi rachunkowe i rejestry kupieckie, wymusiły w końcu odejście od systemu rzymskiego. Nowy sposób zapisu został wynaleziony w Indiach, a do Europy dostał się za sprawą Arabów, którzy w średniowieczu panowali m.in. na Półwyspie Iberyjskim − stąd nazwa *cyfry arabskie*. Jak wiemy, w tym zapisie mamy dziesięć cyfr (0, 1, 2, 3, 4, 5, 6, 7, 8, 9), a wartość cyfry zależy od pozycji, na której stoi: w liczbie 273 cyfra 3 oznacza jedności (czyli $3 \cdot 1$, cyfra 7 to dziesiątki ($7 \cdot 10$), a 2 to setki ($2 \cdot 100$). Taki system nazywa się *pozycyjnym*.
 
 ## Nie-dziesiętne systemy pozycyjne
 
@@ -42,7 +42,7 @@ Należy jednak pamiętać, że wynik może być nieokreślony (np. jeśli ktoś 
 
 czyli wynik wychodzący poza zakres. Objawia się to bitem na pozycji 8 równym 1.
 
-Komputer najczęściej radzi sobie z takimi sytuacjami po prostu tracąc bity, które nie zmieszczą się w zakresie – czyli wynikiem powyższego działania w typie jednobajtowym byłoby po prostu $10_2 = 2$. Odpowiada to obliczeniu reszty z dzielenia wyniku przez $2^8$, a ogólniej przez $2^k$, gdzie $k$ jest liczbą bitów, które mamy do dyspozycji.
+Komputer najczęściej radzi sobie z takimi sytuacjami, po prostu tracąc bity, które nie zmieszczą się w zakresie – czyli wynikiem powyższego działania w typie jednobajtowym byłoby po prostu $10_2 = 2$. Odpowiada to obliczeniu reszty z dzielenia wyniku przez $2^8$, a ogólniej przez $2^k$, gdzie $k$ jest liczbą bitów, które mamy do dyspozycji.
 
 ## Reprezentacja liczb ujemnych
 
@@ -81,7 +81,7 @@ Dlaczego chcemy używać systemu szesnastkowego? Odpowiedź jest w poprzednim ro
 
 ## Zamiana między systemami
 
-Załóżmy, że chcemy przeliczyć liczbę zapisaną w systemie ósemkowym na system dziesiętny. Innymi słowy, dla liczby zapisanej ósemkowo za pomocą cyfr $c_{k-1} c_{k-2} \ldots c_1 c_0$ (gdzie $c_0$ to cyfra jedności, a cyfra $c_{k-1}$ jest najbardziej znacząca) chcemy obliczyć jej wartość. Na potrzeby tego kursu załóżmy, że obliczona wartość mieści się w zakresie typu którego chcemy użyć (np. `int` w C++). Jak już wiemy, w systemie ósemkowym wartość takiej liczby jest równa:
+Załóżmy, że chcemy przeliczyć liczbę zapisaną w systemie ósemkowym na system dziesiętny. Innymi słowy, dla liczby zapisanej ósemkowo za pomocą cyfr $c_{k-1} c_{k-2} \ldots c_1 c_0$ (gdzie $c_0$ to cyfra jedności, a cyfra $c_{k-1}$ jest najbardziej znacząca) chcemy obliczyć jej wartość. Na potrzeby tego kursu załóżmy, że obliczona wartość mieści się w zakresie typu, którego chcemy użyć (np. `int` w C++). Jak już wiemy, w systemie ósemkowym wartość takiej liczby jest równa:
 
 $c_0 + c_1 \cdot 8 + c_2 \cdot 8^2 + \ldots + c_{k-1} 8^{k-1}$
 
@@ -94,7 +94,7 @@ Na przykład $1452_8 = 2 + 8 \cdot (5 + 8 \cdot (4 + 8 \cdot 1)) = 810_{10}$. Za
 ```cpp
 // Pominiemy wczytywanie danych i inne chwilowo nieistotne fragmenty.
 
-vector<int> C(k); 
+vector<int> C(k);
 
 // Zmienna k to długość liczby ósemkowej .
 // Wektor C zawiera kolejne cyfry - C[0] to cyfra jedności, C[1] to cyfra "ósemek", i tak dalej.
@@ -111,14 +111,14 @@ cout << wynik << "\n";
 
 Ten algorytm nazywa się czasem *schematem Hornera* (chociaż należy uważać: ta sama nazwa używana jest też w innych kontekstach). Bez trudu można go zmodyfikować tak, aby przeliczał z systemu piątkowego, siódemkowego lub o innej podstawie $a$: wystarczy wpisać $a$ w miejsce $8$ w powyższym kodzie. Zwróćmy też uwagę na fakt, że w zmiennej `wynik` tak naprawdę znajdują się wartości dla ,,kawałków'' naszej liczby: na przykład wywołany dla liczby $1452_8$ algorytm w pierwszym kroku przypisuje `wynik = 1` (czyli $1_8$) w drugim $1 \cdot 8 + 4 = 12$, czyli $14_8$, w trzecim $12 \cdot 8 + 5 = 101$, czyli $145_8$, w czwartym − $101 \cdot 8 + 2 = 810_{10}$, czyli $1452_8$. Dopisanie kolejnej cyfry $c$ do liczby ósemkowej $s$ to po prostu pomnożenie $s$ przez $8$ i dodanie $c$ − podobnie jak w systemie dziesiętnym dopisanie cyfry $c$ na koniec liczby $s$ to pomnożenie jej przez $10$ i dodanie $c$.
 
-Wykorzystamy podobną obserwację, żeby rozwiązać problemem odwrotny: dana jest liczba dziesiętna $s$, a chcemy wyznaczyć jej zapis ósemkowy. Tak jak w zapisie dziesiętnym ostatnia cyfra jest zawsze resztą liczby z dzielenia przez $10$, tak w zapisie ósemkowym ostatnia cyfra będzie zawsze resztą liczby $s$ z dzielenia przez $8$ (w C++ to po prostu `s%8`). Formalnie, dzieje się tak dlatego, że w zapisie ósemkowym wszystkie pozostałe cyfry oznaczają wielokrotności $8$, $8^2$, $8^3$ itd., a zatem tylko ostatnia cyfra może wpływać na resztą z dzielenia. Weźmy dla przykładu liczbę $s = 791_{10}$ -- jej reszta z dzielenia przez $8$ będzie równa $7$, a zatem to będzie ostatnia cyfra w zapisie ósemkowym. 
+Wykorzystamy podobną obserwację, żeby rozwiązać problemem odwrotny: dana jest liczba dziesiętna $s$, a chcemy wyznaczyć jej zapis ósemkowy. Tak jak w zapisie dziesiętnym ostatnia cyfra jest zawsze resztą liczby z dzielenia przez $10$, tak w zapisie ósemkowym ostatnia cyfra będzie zawsze resztą liczby $s$ z dzielenia przez $8$ (w C++ to po prostu `s%8`). Formalnie, dzieje się tak dlatego, że w zapisie ósemkowym wszystkie pozostałe cyfry oznaczają wielokrotności $8$, $8^2$, $8^3$ itd., a zatem tylko ostatnia cyfra może wpływać na resztą z dzielenia. Weźmy dla przykładu liczbę $s = 791_{10}$ – jej reszta z dzielenia przez $8$ będzie równa $7$, a zatem to będzie ostatnia cyfra w zapisie ósemkowym.
 
-Zauważmy teraz, że wynik dzielenia $s/8$ zaokrąglony w dół (czyli w C++ wynik `s/8`) ma taki sam zapis w zapisie ósemkowym jak $s$, tyle że bez ostatniej cyfry. Znowu, identycznie jest w systemie dziesiętnym: skreślenie z liczby ostatniej cyfry to po prostu podzielenie jej przez $10$ z zaokrągleniem w dół. Zatem po wykonaniu dzielenia `s = s/8` możemy łatwo określić przedostatnią cyfrę, jako że będzie to reszta z dzielenia ,,nowej'' liczby $s$ przez $8$. W naszym przykładzie, dla $s = 791$ po wyznaczeniu ostatniej cyfry ($7$) dzielimy $791$ przez $8$, otrzymując $98$. Reszta z dzielenia $98$ przez $8$ to $2$ − to będzie przedostatnia cyfra. Kolejne cyfry wyznaczamy powtarzając ten sam schemat tak długo, aż po wyznaczeniu ostatniej cyfry wartość $s$ spadnie do $0$: $98 / 2 = 12$, więc kolejną cyfrą jest reszta z dzielenia $12$ przez $8$, czyli $4$. Wreszcie $12 / 8 = 1$, i to jest pierwsza cyfra liczby $s = 791$ w zapisie ósemkowym, a cały zapis to $1427$.
+Zauważmy teraz, że wynik dzielenia $s/8$ zaokrąglony w dół (czyli w C++ wynik `s/8`) ma taki sam zapis w zapisie ósemkowym jak $s$, tyle że bez ostatniej cyfry. Znowu, identycznie jest w systemie dziesiętnym: skreślenie z liczby ostatniej cyfry to po prostu podzielenie jej przez $10$ z zaokrągleniem w dół. Zatem po wykonaniu dzielenia `s = s/8` możemy łatwo określić przedostatnią cyfrę, jako że będzie to reszta z dzielenia ,,nowej'' liczby $s$ przez $8$. W naszym przykładzie, dla $s = 791$ po wyznaczeniu ostatniej cyfry ($7$) dzielimy $791$ przez $8$, otrzymując $98$. Reszta z dzielenia $98$ przez $8$ to $2$ − to będzie przedostatnia cyfra. Kolejne cyfry wyznaczamy, powtarzając ten sam schemat tak długo, aż po wyznaczeniu ostatniej cyfry wartość $s$ spadnie do $0$: $98 / 2 = 12$, więc kolejną cyfrą jest reszta z dzielenia $12$ przez $8$, czyli $4$. Wreszcie $12 / 8 = 1$, i to jest pierwsza cyfra liczby $s = 791$ w zapisie ósemkowym, a cały zapis to $1427$.
 
 Podany schemat bardzo łatwo zapisać w postaci pętli. W C++ będzie to wyglądało jak poniżej. Aby poradzić sobie z faktem, że cyfry otrzymujemy od ostatniej do pierwszej, będziemy dodawać je do pomocniczego wektora `L`, który następnie wypiszemy w odwrotnej kolejności.
 
 ```cpp
-int s; 
+int s;
 cin >> s;
 // Liczba s jest tą, którą chcemy zamienić na system ósemkowy.
 

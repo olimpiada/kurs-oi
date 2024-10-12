@@ -19,14 +19,14 @@ Zaczynajmy!
 Programy, które będziemy tworzyć w tym kursie, po uruchomieniu otworzą konsolę.
 W takiej konsoli można programowi podać dane, po czym program się wykona i wypisze obliczone dane.
 
-Żebyśmy mogli napisać sami kod źródłowy, teoretycznie "wystarczy" najzwyklejszy notatnik na komputerze, a do skompilowania "wystarczy" pobrać i użyć kompilatora do języka C++.
+Żebyśmy sami mogli napisać kod źródłowy, teoretycznie "wystarczy" najzwyklejszy notatnik na komputerze, a do skompilowania "wystarczy" pobrać i użyć kompilatora do języka C++.
 Jak się niedługo okaże, kody źródłowe programów bywają na tyle skomplikowane, że lepiej jest skorzystać ze *środowiska programistycznego*.
 Takie środowisko zazwyczaj jest edytorem tekstu, który pomaga pisać kody źródłowe, oraz umożliwia łatwe kompilowanie i uruchamianie programu.
 
 Istnieje wiele środowisk programistycznych, a żeby ułatwić wybór, pokażemy jak zainstalować dwa konkretne, zależnie od preferencji:
 
-- Visual Studio Code - na tę chwilę najpopularniejsze środowisko programistyczne, które wspiera wiele języków programowania, w tym C++ oraz Python.
-- Geany - bardzo lekki edytor tekstu z minimalnym interfejsem do skompilowania i uruchamiania kodu.
+- Visual Studio Code – na tę chwilę najpopularniejsze środowisko programistyczne, które wspiera wiele języków programowania, w tym C++ oraz Python.
+- Geany – bardzo lekki edytor tekstu z minimalnym interfejsem do skompilowania i uruchamiania kodu.
 
 # Krok 1: Instalacja WSL oraz g++
 
@@ -53,7 +53,7 @@ aspect-ratio: 16 / 9;
 # Krok 2b: Instalacja Geany
 
 Instalator `geany-2.0_setup.exe` można pobrać ze strony [geany.org](https://www.geany.org/download/releases/).
-Kroki instalacyjne są prostsze, niż te dla Visual Studio Code.
+Kroki instalacyjne są prostsze niż te dla Visual Studio Code.
 
 <iframe src="https://www.youtube.com/embed/SnsaP3msEBQ?si=EcmGdGHOrwR6CZm_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -101,7 +101,7 @@ Natomiast fragment `\n` występujący na końcu napisu `" w skali Fahrenheita\n"
 
 ## Zadania i system Szkopuł
 
-Na końcu każdej lekcji kursu mamy dla Ciebie zadania do samodzielnego rozwiązania. Będą powiązane z treściami lekcji, na początku będą bardzo proste
+Na końcu każdej lekcji kursu mamy dla Ciebie zadania do samodzielnego rozwiązania. Będą one powiązane z treściami lekcji i na początku bardzo proste.
 Rozwiązaniem każdego z zadań jest program (a dokładniej: kod źródłowy), który powinieneś zgłosić w serwisie [Szkopuł](https://szkopul.edu.pl/).
 Programy są oceniane w pełni automatycznie. **Zacznij zatem od założenia konta w tym systemie**.
 
@@ -119,12 +119,12 @@ McKinley - 6194 m n.p.m.
 Mont Blanc - 4810 m n.p.m.
 ````
 
-Pamiętaj, że aby twój program został zaakceptowany w systemie, należy wypisać **dokładnie** ten sam tekst co powyżej - bez żadnych dodatkowych znaków (w tym spacji). Nasza automatyczna sprawdzarka jest bardzo rygorystyczna i niezbyt domyślna. Napiszemy o niej więcej w lekcji "Technikalia, pierwsze zadania", na razie musisz
+Pamiętaj, że aby twój program został zaakceptowany w systemie, należy wypisać **dokładnie** ten sam tekst co powyżej – bez żadnych dodatkowych znaków (w tym spacji). Nasza automatyczna sprawdzarka jest bardzo rygorystyczna i niezbyt domyślna. Napiszemy o niej więcej w lekcji "Technikalia, pierwsze zadania", na razie musisz
 
 #### Wyjście
 
 Twój program powinien wypisać dokładnie podany wyżej komunikat.
 
-Kiedy Twój program będzie gotowy, zaloguj się na swoje konto w systemie Szkopuł, wybierz konkurs "Kurs OI", a następnie "Wyślij" i z listy zadań wybierz "Początek". Możesz też od razu (będąc zalogowanym w systemie Szkopuł) kliknąć w poniższy link:
+Kiedy Twój program będzie gotowy, zaloguj się na swoje konto w systemie Szkopuł, wybierz konkurs "Kurs OI", a następnie "Wyślij" i z listy zadań wybierz "Początek". Możesz też od razu (będąc zalogowanym w systemie Szkopuł) kliknąć poniższy link:
 
 [Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#poc){ .md-button .md-button--primary }
