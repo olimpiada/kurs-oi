@@ -2,7 +2,7 @@
 
 ## Zmienne i wczytywanie
 
-W poprzedniej lekcji nauczyliśmy się wypisywać proste komunikaty oraz, w ostatnim przykładzie, liczby całkowite. Aby jednak robić cokolwiek bardziej skomplikowanego – choćby przyjmować dane od użytkownika, albo prowadzić obliczenia – potrzebujemy sposobu, aby przechowywać dane w pamięci komputera. Do takich celów służą **zmienne**. Pojedyncza zmienna to komórka pamięci komputera, której na jakiś czas nadajemy nazwę, i która może przechowywać jeden obiekt – na przykład liczbę całkowitą, albo napis złożony z liter.
+W poprzedniej lekcji nauczyliśmy się wypisywać proste komunikaty oraz, w ostatnim przykładzie, liczby całkowite. Aby jednak robić cokolwiek bardziej skomplikowanego – choćby przyjmować dane od użytkownika albo prowadzić obliczenia – potrzebujemy sposobu, aby przechowywać dane w pamięci komputera. Do takich celów służą **zmienne**. Pojedyncza zmienna to komórka pamięci komputera, której na jakiś czas nadajemy nazwę, i która może przechowywać jeden obiekt – na przykład liczbę całkowitą, albo napis złożony z liter.
 
 Najprostszym typem zmiennych są zmienne całkowite, czyli takie, które przechowują jedną liczbę całkowitą. Aby móc korzystać z takiej zmiennej, musimy ją w programie **zadeklarować**, czyli poinformować kompilator o chęci jej użycia oraz nadać nazwę. Deklaracja zmiennej całkowitej wygląda tak:
 
@@ -10,23 +10,23 @@ Najprostszym typem zmiennych są zmienne całkowite, czyli takie, które przecho
 int nazwa_zmiennej;
 ```
 
-Słowo ```int``` informuje kompilator, że zmienna jest właśnie typu całkowitego (ang. **integer**), zaś wybór nazwy należy do nas. Na przykład ```int moja_liczba;``` oznacza, że od tej pory w komórce o nazwie ```moja_liczba``` będzie przechowywana liczba całkowita. Możemy od momentu deklaracji użyć nazwy ```moja_liczba``` wszędzie tam, gdzie w programie mogłaby stać liczba. Na przykład:
+Słowo ```int``` informuje kompilator, że zmienna jest właśnie typu całkowitego (ang. **integer**), wybór nazwy zaś należy do nas. Na przykład ```int moja_liczba;``` oznacza, że od tej pory w komórce o nazwie ```moja_liczba``` będzie przechowywana liczba całkowita. Możemy od momentu deklaracji użyć nazwy ```moja_liczba``` wszędzie tam, gdzie w programie mogłaby stać liczba. Na przykład:
 
 ```C++
 cout << moja_liczba << "\n";
-``` 
+```
 
 to polecenie wypisania na ekran tego, co aktualnie jest w tej komórce, po czym przechodzi do nowego wiersza konsoli. Z kolei:
 
 ```C++
 moja_liczba = 7;
-``` 
+```
 oznacza "do komórki o nazwie ```moja_liczba``` wpisz liczbę ``7``". Zatem:
 
 ```C++
 moja_liczba = 7;
 cout << moja_liczba << "\n";
-``` 
+```
 po prostu wypisze na ekran liczbę ``7`` (czyli zadziała dokładnie tak, jak ```cout << 7```).
 
 Spróbujmy teraz sprawić, aby do zmiennej trafiła liczba, którą użytkownik wpisze z klawiatury. Wczytywanie wykonujemy instrukcją:
@@ -51,9 +51,9 @@ int main() {
 Jeżeli skompilujesz i uruchomisz ten program, to "zatrzyma się" on, oczekując, aż podasz mu (wpiszesz na klawiaturze)
 jakąś liczbę całkowitą, np. 123. Kiedy wpiszesz liczbę i naciśniesz ```Enter```, program wypisze liczbę wraz z
 komunikatem i zakończy działanie.
-Zauważ, że w przeciwieństwie do napisów-komunikatów, nazwy zmiennej nie umieszczamy w cudzysłowach: gdybyśmy napisali instrukcję ```cout << "moja_liczba"```, kompilator wypisałby na ekran po prostu napis ```moja_liczba``` (sprawdź!). Z kolei ```cin >> "moja_liczba"``` zakończyłoby się błędem kompilacji: kompilator nie rozumie, czemu wczytujemy dane do czegoś, co jego zdaniem nie jest zmienną.
+Zauważ, że w przeciwieństwie do napisów-komunikatów, nazwy zmiennej nie umieszczamy w cudzysłowie: gdybyśmy napisali instrukcję ```cout << "moja_liczba"```, kompilator wypisałby na ekran po prostu napis ```moja_liczba``` (sprawdź!). Z kolei ```cin >> "moja_liczba"``` zakończyłoby się błędem kompilacji: kompilator nie rozumie, czemu wczytujemy dane do czegoś, co jego zdaniem nie jest zmienną.
 
-W kolejnym programie wczytujemy i wypisujemy dwie liczby. Zauważ, że przy wypisywaniu musimy je jakoś rozdzielić, np. poprzez spację lub ```"\n"```. Natomiast program da sobie radę z ich wczytaniem niezależnie od tego, czy zostaną podane w tym samym wierszu czy w różnych wierszach, a także niezależnie od dodatkowych spacji wprowadzonych przez użytkownika.
+W kolejnym programie wczytujemy i wypisujemy dwie liczby. Zauważ, że przy wypisywaniu musimy je jakoś rozdzielić, np. poprzez spację lub ```"\n"```. Natomiast program da sobie radę z ich wczytaniem niezależnie od tego, czy zostaną podane w tym samym wierszu, czy w różnych wierszach, a także niezależnie od dodatkowych spacji wprowadzonych przez użytkownika.
 
 ```C++
 #include <iostream>
@@ -67,7 +67,7 @@ int main() {
 }
 ```
 
-Jak już wspomnieliśmy, po wczytaniu zmiennych całkowitych możemy traktować je w programie dokładnie tak, jak same liczby, w szczególności wykonywać na nich działania. Poniższy program wczytuje długości boków prostokąta i oblicza pole i obwód tego prostokąta. 
+Jak już wspomnieliśmy, po wczytaniu zmiennych całkowitych możemy traktować je w programie dokładnie tak, jak same liczby, w szczególności wykonywać na nich działania. Poniższy program wczytuje długości boków prostokąta i oblicza pole i obwód tego prostokąta.
 
 ```C++
 #include <iostream>
@@ -142,7 +142,7 @@ Należy wiedzieć o kilku ograniczeniach dotyczących nazw zmiennych. Nazwa zmie
 
 Deklaracja zmiennej może zostać umieszczona w programie w dowolnym miejscu przed miejscem, w którym chcemy ze zmiennej skorzystać (czyli np. wczytać lub wypisać jej wartość). Nazwy zmiennych nie mogą się powtarzać (wyjątki od tego ostatniego stwierdzenia przedstawimy później).
 
-Poniższy program oblicza pole i obwód prostokąta dokładnie tak samo jak poprzedni. Jest on jednak istotnie mniej czytelny.
+Poniższy program oblicza pole i obwód prostokąta dokładnie tak samo, jak poprzedni. Jest on jednak istotnie mniej czytelny.
 
 ```C++
 #include <iostream>
