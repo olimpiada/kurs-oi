@@ -265,7 +265,7 @@ Struktur można używać do przechowywania kilku połączonych informacji w jedn
 #include <algorithm>
 ```
 
-Aby użyć funkcji `abs`, obliczającą wartość bezwzględną z liczby, trzeba przy początku programu umieścić:
+Aby użyć funkcji `abs`, obliczającej wartość bezwzględną z liczby, trzeba przy początku programu umieścić:
 
 ```cpp
 #include <cstdlib>
