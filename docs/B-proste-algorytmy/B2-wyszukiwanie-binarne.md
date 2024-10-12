@@ -101,23 +101,28 @@ Widzimy (i bardzo łatwo jest pokazać), że dla $n=2^k$ wykonamy dokładnie $k$
 Taka liczba $k$ zwana jest **logarytmem dwójkowym** z liczby $n$.
 
 Definiując precyzyjnie, logarytm dwójkowy z dowolnej liczby dodatniej $a$ to taka liczba $x$,
-dla której $2^x=a$. Oznaczamy ją przez $\log_2 a$, przy czym często piszemy po prostu $\log a$.
+dla której $2^x=a$. Oznaczamy ją przez $\log_2 a$, przy czym często będziemy pomijać dwójkę i pisać po prostu $\log a$.
+
 Dla "większości" możliwych argumentów $a$, nawet całkowitych, liczba $\log a$ nie jest całkowita,
 a nawet wymierna (na przykład $\log 12 = 3,5849\ldots$).
 Nam będzie na ogół przydatne jej zaokrąglenie do liczby całkowitej – w szczególności,
-algorytm wyszukiwania binarnego wykonuje zawsze
-$\lceil\log n \rceil$ (sufit z logarytmu z $n$) iteracji pętli.
+algorytm wyszukiwania binarnego wykonuje zawsze $\lceil\log n \rceil$ (sufit z logarytmu z $n$, czyli logarytm zaokrąglony w górę) iteracji pętli.
 
 Intuicyjnie, logarytm z liczby $n$ mówi, ile razy możemy podzielić $n$ przez 2,
 zanim spadnie poniżej jedności – liczbę 4 możemy podzielić dwa razy, zaś liczbę 32 – pięć razy.
-Jest to też "mniej więcej" liczba cyfr liczby w zapisie dwójkowym pomniejszona o jeden
-(na przykład $26 = (11010)_2$, czyli ma pięć cyfr dwójkowych, podczas gdy logarytm z 26 to około 4,7).
+Wybiegając w przyszłość (do rozdziału "Systemy pozycyjne"), możemy powiedzieć też, że jest to "mniej-więcej" liczba cyfr liczby w zapisie dwójkowym pomniejszona o jeden – na przykład liczba $26 = (11010)_2$ ma pięć cyfr dwójkowych, podczas gdy logarytm z 26 to około 4,7.
+
+???+ note "Inne logarytmy"
+
+	Można zdefiniować bardzo podobnie np. *logarytm dziesiętny* z liczby $a$: to taka liczba $x$, dla której $10^x = a$. Taki logarytm oznaczylibyśmy przez $\log_{10}{a}$. Na przykład $\log_{10}{10} = 1$, $\log_{10}{1000} = 3$, $\log_{10}{1\,000\,000} = 6$. Widzimy, że logarytm dziesiętny odpowiada mniej-więcej liczbie cyfr dziesiętnych. 
+	
+	Analogicznie możemy zdefiniować logarytm o dowolnej podstawie $b$, czyli $\log_b{a}$. Niestety nie ma na świecie pełnej zgody odnośnie tego, co oznacza $\log{a}$. Informatycy na ogół rozumieją przez to algorytm dwójkowy, ale np. inżynierowie i fizycy – dziesiętny, zaś dla matematyków czasem $\log$ oznacza jeszcze inny rodzaj logarytmu, tzw. logarytm naturalny. My będziemy trzymać się stylu "informatycznego" i zawsze używać logarytmu dwójkowego, ale uczulamy, że możesz spotkać się z inną konwencją. Na szczęście logarytmy można łatwo przeliczać między sobą – na przykład $\log_{2}{a} = \log_{10}{a} \cdot \log_2{10} \approx 3,322 \cdot \log_{10}{a}$, czyli logarytm dziesiętny jest około $3,3$ raza większy od dwójkowego.
+
 
 Logarytm jest bardzo wolno rosnącą funkcją – logarytm z 1 000 000 (miliona) to około 20,
 logarytm z $10^9$ (miliarda) – około 30.
 Dlatego algorytmy, które wykonują logarytmiczną liczbę kroków, uważane są za bardzo szybkie.
-Logarytm będzie pojawiał się na naszym kursie bardzo często,
-dlatego warto zapamiętać i dobrze zrozumieć to pojęcie.
+Logarytm będzie pojawiał się na naszym kursie bardzo często, dlatego warto zapamiętać i dobrze zrozumieć to pojęcie.
 
 ## Trochę kwestii technicznych
 
