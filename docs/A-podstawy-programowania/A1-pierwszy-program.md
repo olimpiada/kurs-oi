@@ -119,7 +119,7 @@ McKinley - 6194 m n.p.m.
 Mont Blanc - 4810 m n.p.m.
 ````
 
-Pamiętaj, że aby twój program został zaakceptowany w systemie, należy wypisać **dokładnie** ten sam tekst co powyżej – bez żadnych dodatkowych znaków (w tym spacji). Nasza automatyczna sprawdzarka jest bardzo rygorystyczna i niezbyt domyślna. Napiszemy o niej więcej w lekcji "Technikalia, pierwsze zadania", na razie musisz
+Pamiętaj, że aby twój program został zaakceptowany w systemie, należy wypisać **dokładnie** ten sam tekst co powyżej – bez żadnych dodatkowych znaków (w tym spacji). Nasza automatyczna sprawdzarka jest bardzo rygorystyczna i niezbyt domyślna. Napiszemy o niej więcej w lekcji "Technikalia, pierwsze zadania", na razie musisz tylko zwrócić na to uwagę.
 
 #### Wyjście
 
