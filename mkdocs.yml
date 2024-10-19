@@ -15,12 +15,14 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
   - md_in_html
+  - mkdocs_graphviz
 
 extra_javascript:
   - javascripts/mathjax.js
   - javascripts/preview-popup.js
   - https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/gh/rod2ik/cdn@main/mkdocs/javascripts/mkdocs-graphviz.js
 
 nav:
     - Start: 'index.md'
@@ -43,6 +45,9 @@ nav:
       - 'Rekurencja, szybkie potęgowanie i algorytm Euklidesa': './B-proste-algorytmy/B5-rekurencja.md'
       - 'Proste sortowanie': './B-proste-algorytmy/B6-sortowanie.md'
       - 'Sumy w tablicach': './B-proste-algorytmy/B7-sumy-gasienica.md'
+    - 'Grafy':
+      - 'DFS': './E-grafy/E2-dfs.md'
+      - 'Sortowanie topologiczne': './E-grafy/E2-sortowanie-topologiczne.md'
 
 
 extra_css:
