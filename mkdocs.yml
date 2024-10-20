@@ -43,6 +43,8 @@ nav:
       - 'Rekurencja, szybkie potęgowanie i algorytm Euklidesa': './B-proste-algorytmy/B5-rekurencja.md'
       - 'Proste sortowanie': './B-proste-algorytmy/B6-sortowanie.md'
       - 'Sumy w tablicach': './B-proste-algorytmy/B7-sumy-gasienica.md'
+    - 'Algorytmy kontratakują':
+      - 'Liczby pierwsze, dzielniki': './C-wiecej-algorytmiki/C5-pierwszosc-dzielniki.md'
 
 
 extra_css:
