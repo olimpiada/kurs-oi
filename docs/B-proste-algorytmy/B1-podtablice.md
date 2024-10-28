@@ -161,7 +161,7 @@ int main() {
     cin >> n;
 
     int maksymalna_wartosc = 100;
-    vector<int> (maksymalna_wartosc + 1);
+    vector<int> L(maksymalna_wartosc + 1);
     // Musimy mieć komórki L[1],.., L[100], stąd rozmiar 101.
     // Wektor liczb automatycznie ustawia wszystkie wartości na 0, tak jak chcieliśmy.
     int aktualny;
@@ -183,7 +183,7 @@ int main() {
     cin >> n;
 
     int maksymalna_wartosc = 100;
-    vector<int> (maksymalna_wartosc + 1);
+    vector<int> L(maksymalna_wartosc + 1);
 
     int aktualny;
     for (int i = 0; i < n; i++) {
