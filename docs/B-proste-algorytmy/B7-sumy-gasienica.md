@@ -79,14 +79,14 @@ Kiedy znajdziemy odpowiedni `j`, znowu zwiększamy `i` i powtarzamy całą proce
 Odpowiedni kod w C++ wygląda następująco:
 
 ```cpp
-int licznik = 0; // Tu będziemy zliczać fragmenty o sumie K.
-int suma = A[0]; // Aktualna suma.
+int licznik = 0;              // Tu będziemy zliczać fragmenty o sumie K.
+int suma = A[0];              // Aktualna suma.
 int j = 0;
 for (int i = 0; i < n; i++) { // Dla ustalonego i:
     while ((j < n - 1) && (suma < K)) {
-        j++; 			// Zwiększaj j, doliczając A[j] do sumy...
-        suma += A[j]; 	// ... dopóki suma nie przekroczy K.
-	}					// (...albo dopóki j nie osiągnie maksymalnej wartości n - 1.)
+        j++;                  // Zwiększaj j, doliczając A[j] do sumy...
+        suma += A[j];         // ... dopóki suma nie przekroczy K.
+    } // (...albo dopóki j nie osiągnie maksymalnej wartości n - 1.)
     if (suma == K) {
         licznik++;
     }

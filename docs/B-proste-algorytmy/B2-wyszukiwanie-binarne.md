@@ -54,19 +54,16 @@ int poczatek = 0;
 int koniec = n - 1;
 bool znalezione = false;
 do {
-	srodek = (poczatek + koniec) / 2;
-	if (tablica[srodek] == x) {            // trafiliśmy w x - nie będziemy już dalej szukać
-		znalezione = true;
-	}
-	else
-	{
- 		if (tablica[srodek] > x) {        // skoro na środku jest zbyt duży element
-			koniec = srodek - 1;    // to x jest w przedziale [poczatek, srodek-1]
-		}
-		else {                            // jeśli zaś na środku element jest zbyt mały
-			poczatek = srodek + 1;  // to szukamy x w przedziale [srodek+1, koniec]
-		}
-	}
+    srodek = (poczatek + koniec) / 2;
+    if (tablica[srodek] == x) { // trafiliśmy w x - nie będziemy już dalej szukać
+        znalezione = true;
+    } else {
+        if (tablica[srodek] > x) { // skoro na środku jest zbyt duży element
+            koniec = srodek - 1;   // to x jest w przedziale [poczatek, srodek-1]
+        } else {                   // jeśli zaś na środku element jest zbyt mały
+            poczatek = srodek + 1; // to szukamy x w przedziale [srodek+1, koniec]
+        }
+    }
 } while (!znalezione);
 ```
 
@@ -75,17 +72,14 @@ Ten kod zadziała jednak tylko przy założeniu, że element `x` znajduje się w
 ```cpp
 int poczatek = 0;
 int koniec = n - 1;
-while (poczatek < koniec)
-{
+while (poczatek < koniec) {
     srodek = (poczatek + koniec) / 2;
-    if (tablica[srodek] >= x) {           // na środku jest element większy lub równy x...
-        koniec = srodek;                  // zatem x jest w przedziale [poczatek, srodek]
-	}
-    else {                                // wiemy, że na środku jest element mniejszy od x...
-        poczatek = srodek + 1;            // zatem x jest w przedziale [srodek+1, koniec]
-	}
+    if (tablica[srodek] >= x) { // na środku jest element większy lub równy x...
+        koniec = srodek;        // zatem x jest w przedziale [poczatek, srodek]
+    } else {                    // wiemy, że na środku jest element mniejszy od x...
+        poczatek = srodek + 1;  // zatem x jest w przedziale [srodek+1, koniec]
+    }
 }
-
 ```
 
 Zauważmy, że w tej wersji nie sprawdzamy za każdym razem, czy nie trafiliśmy w komórkę zawierającą `x`,  zamiast tego zyskując na prostocie i zwięzłości algorytmu. Procedura działa do momentu, aż `początek` i `koniec` przybiorą tę samą wartość. Jeśli element `x` jest w tablicy, musi być dokładnie w komórce `tablica[początek]`. Jeśli zaś w tym miejscu znajduje się cokolwiek innego niż `x`, wiemy, że nie było go w tablicy.
@@ -141,13 +135,12 @@ int poczatek = 0;
 int koniec = n - 1;
 
 while (poczatek < koniec) {
-	srodek = (poczatek + koniec) / 2;
-	if (tablica[srodek] <= x) {
-		poczatek = srodek;
-	}
-	else {
-		koniec = srodek - 1;
-	}
+    srodek = (poczatek + koniec) / 2;
+    if (tablica[srodek] <= x) {
+        poczatek = srodek;
+    } else {
+        koniec = srodek - 1;
+    }
 }
 ```
 
@@ -159,13 +152,12 @@ Zobaczmy, dlaczego poprzednia wersja algorytmu była wolna od tego problemu: ot�
 int poczatek = 0;
 int koniec = n - 1;
 while (poczatek < koniec) {
-	srodek = (poczatek + koniec + 1) / 2;           // to jest dzielenie przez 2 z zaokrągleniem w górę
-	if (tablica[srodek] <= x) {
-		poczatek = srodek;
-	}
-	else {
-		koniec = srodek - 1;
-	}
+    srodek = (poczatek + koniec + 1) / 2; // to jest dzielenie przez 2 z zaokrągleniem w górę
+    if (tablica[srodek] <= x) {
+        poczatek = srodek;
+    } else {
+        koniec = srodek - 1;
+    }
 }
 ```
 

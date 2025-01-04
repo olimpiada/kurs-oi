@@ -10,7 +10,7 @@ W najprostszej postaci pętla `for` w języku C++ wygląda tak:
 
 ```cpp
 for (int i = początek; i <= koniec; i++)
-	instrukcja;
+    instrukcja;
 ```
 
 W pętli deklarujemy zmienną całkowitą, którą nazwaliśmy $i$. Jest ona **zmienną sterującą** pętli. Zmienna ta przemierza kolejno wszystkie wartości od _początek_ do _koniec_ (gdzie _początek_ i _koniec_ może być liczbą, zmienną lub ogólnie wyrażeniem arytmetycznym). Dla każdej z tych wartości po kolei wykonywana jest _instrukcja_ wewnątrz pętli. Podobnie jak poprzednio, może to być albo pojedyncza instrukcja, albo instrukcja złożona umieszczona w nawiasach klamrowych.
@@ -22,8 +22,8 @@ W poprzedniej lekcji napisaliśmy program, który wypisywał kolejno liczby od 1
 using namespace std;
 
 int main() {
-	for (int i = 1; i <= 10; i++)
-		cout << i << endl;
+    for (int i = 1; i <= 10; i++)
+        cout << i << endl;
 }
 ```
 
@@ -34,12 +34,12 @@ I jeszcze jeden przykład – program wczytujący liczbę całkowitą $n$ i wyzn
 using namespace std;
 
 int main() {
-	int n;
-	cin >> n;
-	int suma = 0;
-	for (int i = 1; i <= n; i++)
-		suma += i;
-	cout << suma << endl;
+    int n;
+    cin >> n;
+    int suma = 0;
+    for (int i = 1; i <= n; i++)
+        suma += i;
+    cout << suma << endl;
 }
 ```
 
@@ -48,8 +48,7 @@ Pętla w powyższym programie zastępuje więc serię instrukcji postaci:
 ```cpp
 suma += 1;
 suma += 2;
-...
-suma += n;
+... suma += n;
 ```
 
 Opowiedzmy jeszcze trochę o innych wariantach pętli `for`. Pętla ta składa się z trzech części, rozdzielonych średnikami. Najczęściej, w pierwszej podajemy początkową wartość zmiennej sterującej. W trzeciej znajduje się **krok** pętli, czyli informacja, jak ma się zmieniać wartość zmiennej sterującej. Zazwyczaj ma ona każdorazowo wzrastać lub maleć o 1 lub o jakąś większą wartość. Druga część wreszcie zawiera warunek logiczny, którego **niespełnienie** powoduje zakończenie pętli. Warunek ten sprawdzamy na początku – jeśli od początku nie jest spełniony, pętla nie wykona się ani razu – jak i po każdym wykonaniu kroku pętli. Zmienną sterującą pętli zwyczajowo nazwaliśmy $i$, ale ogólnie dobór nazwy tej zmiennej może być dowolny.
@@ -58,7 +57,7 @@ Przykładowo, gdybyśmy chcieli wypisać wszystkie liczby parzyste od 20 do 0, j
 
 ```cpp
 for (int i = 20; i >= 0; i -= 2)
-	cout << i << endl;
+    cout << i << endl;
 ```
 
 To jednak nie wyczerpuje możliwości pętli `for`, a tylko te najczęściej używane – za chwilę opowiemy o jej bardziej ogólnych wariantach.
@@ -85,9 +84,9 @@ deklaruje tablicę o nazwie ``A``, w której będą przechowywane 4 liczby całk
 
 ```cpp
 cin >> A[0];
-cin >> A[1]; // do zmiennych A[0] i A[1] wczytujemy po jednej liczbie całkowitej
-A[2] = A[0] + A[1];		// teraz A[2] będzie sumą wczytanych liczb
-A[3] = A[0] - A[1];		// zaś A[3] ich różnicą
+cin >> A[1];        // do zmiennych A[0] i A[1] wczytujemy po jednej liczbie całkowitej
+A[2] = A[0] + A[1]; // teraz A[2] będzie sumą wczytanych liczb
+A[3] = A[0] - A[1]; // zaś A[3] ich różnicą
 ```
 
 Nazwy tablic możemy dobierać dowolnie, tak jak nazwy zmiennych. Długość tablicy jest najczęściej jedną liczbą, pojedynczą zmienną (odpowiadającą np. długości ciągu liczb) albo prostym wyrażeniem arytmetycznym. Przykładowo:
@@ -106,15 +105,15 @@ Przypomnijmy sobie nasz poprzedni program, który sumował liczby podane przez u
 using namespace std;
 
 int main() {
-	int n;
-	cin >> n;
-	int t[n];
-	int suma = 0;
-	for (int i = 0; i < n; i++) {
-		cin >> t[i];
-		suma += t[i];
-	}
-	cout << suma << endl;
+    int n;
+    cin >> n;
+    int t[n];
+    int suma = 0;
+    for (int i = 0; i < n; i++) {
+        cin >> t[i];
+        suma += t[i];
+    }
+    cout << suma << endl;
 }
 ```
 
@@ -125,14 +124,14 @@ Kolejny przykład to wczytanie ciągu liczb o długości $n$ i wypisanie go w od
 using namespace std;
 
 int main() {
-	int n;
-	cin >> n;
-	int t[n];
-	for (int i = 0; i < n; i++)
-		cin >> t[i];
-	for (int i = n - 1; i >= 0; i--)
-		cout << t[i] << " ";
-	cout << endl;
+    int n;
+    cin >> n;
+    int t[n];
+    for (int i = 0; i < n; i++)
+        cin >> t[i];
+    for (int i = n - 1; i >= 0; i--)
+        cout << t[i] << " ";
+    cout << endl;
 }
 ```
 
@@ -206,14 +205,13 @@ Skorzystajmy z tablicy, w której będziemy przechowywać kolejne liczby Fibonac
 
 using namespace std;
 
-int main()
-{
-	int fib[50];
-	fib[0] = 0;
-	fib[1] = 1;
-	for (int i = 2; i <= 50; i++)
-		fib[i] = fib[i - 1] + fib[i - 2];
-	cout << fib[50] << endl;
+int main() {
+    int fib[50];
+    fib[0] = 0;
+    fib[1] = 1;
+    for (int i = 2; i <= 50; i++)
+        fib[i] = fib[i - 1] + fib[i - 2];
+    cout << fib[50] << endl;
 }
 ```
 
@@ -226,14 +224,13 @@ Wyjście indeksem poza tablicę (czy też w stronę ujemnych indeksów, czy też
 
 using namespace std;
 
-int main()
-{
-	int fib[51];
-	fib[0] = 0;
-	fib[1] = 1;
-	for (int i = 2; i <= 50; i++)
-		fib[i] = fib[i - 1] + fib[i - 2];
-	cout << fib[50] << endl;
+int main() {
+    int fib[51];
+    fib[0] = 0;
+    fib[1] = 1;
+    for (int i = 2; i <= 50; i++)
+        fib[i] = fib[i - 1] + fib[i - 2];
+    cout << fib[50] << endl;
 }
 ```
 
@@ -250,16 +247,15 @@ Jest to wynik ewidentnie błędny, gdyż wszystkie liczby Fibonacciego są nieuj
 
 using namespace std;
 
-int main()
-{
-	int fib[51];
-	fib[0] = 0;
-	fib[1] = 1;
-	for (int i = 2; i <= 50; i++) {
-		fib[i] = fib[i - 1] + fib[i - 2];
-		cout << i << " " << fib[i] << endl;
-	}
-	cout << fib[50] << endl;
+int main() {
+    int fib[51];
+    fib[0] = 0;
+    fib[1] = 1;
+    for (int i = 2; i <= 50; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+        cout << i << " " << fib[i] << endl;
+    }
+    cout << fib[50] << endl;
 }
 ```
 
@@ -300,16 +296,15 @@ Zauważmy, że 46. liczba Fibonacciego jest równa prawie $2 \cdot 10^9$, czyli 
 
 using namespace std;
 
-int main()
-{
-	long long fib[51];
-	fib[0] = 0;
-	fib[1] = 1;
-	for (int i = 2; i <= 50; i++) {
-		fib[i] = fib[i - 1] + fib[i - 2];
-		cout << i << " " << fib[i] << endl;
-	}
-	cout << fib[50] << endl;
+int main() {
+    long long fib[51];
+    fib[0] = 0;
+    fib[1] = 1;
+    for (int i = 2; i <= 50; i++) {
+        fib[i] = fib[i - 1] + fib[i - 2];
+        cout << i << " " << fib[i] << endl;
+    }
+    cout << fib[50] << endl;
 }
 ```
 

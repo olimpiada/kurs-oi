@@ -13,10 +13,10 @@ Algorytmów sortowania jest bardzo wiele, różnią się one szybkością dział
 Jest to jeden z najprostszych do napisania algorytmów, ale (niestety) również nie najszybszy w działaniu. Opiera się na prostej zasadzie: jeśli dwa elementy są ustawione w złej kolejności (większy przed mniejszym), należy je zamienić miejscami. Przejdźmy tak przez całą tablicę, za pomocą następującego fragmentu kodu:
 
 ```cpp
-for(int i = 0; i < n-1; i++) {
-    if (A[i] > A[i+1])	{
-        swap(A[i], A[i+1]);
-	}
+for (int i = 0; i < n - 1; i++) {
+    if (A[i] > A[i + 1]) {
+        swap(A[i], A[i + 1]);
+    }
 }
 ```
 
@@ -44,12 +44,12 @@ powtórzymy procedurę, na przedostatnie miejsce w tablicy trafi drugi w kolejno
 pewność, że na swoich miejscach znajdą się wszystkie elementy w tablicy:
 
 ```cpp
-for(int k = 0; k < n; k++) {
-    for(int i = 0; i < n - 1; i++) {
+for (int k = 0; k < n; k++) {
+    for (int i = 0; i < n - 1; i++) {
         if (A[i] > A[i + 1]) {
             swap(A[i], A[i + 1]);
-		}
-	}
+        }
+    }
 }
 ```
 
@@ -58,12 +58,12 @@ ma innej możliwości. Po drugie, skoro po pierwszym "przebiegu" na końcu jest 
 wystarczy wykonać do elementu $n-2$, trzecią do $n-3$, i tak dalej. Ostateczna wersja algorytmu wygląda zatem następująco:
 
 ```cpp
-for(int k = 0; k < n-1; k++) {
-    for(int i = 0; i < n - k - 1; i++) {
+for (int k = 0; k < n - 1; k++) {
+    for (int i = 0; i < n - k - 1; i++) {
         if (A[i] > A[i + 1]) {
             swap(A[i], A[i + 1]);
-		}
-	}
+        }
+    }
 }
 ```
 
@@ -85,14 +85,13 @@ Tutaj idea jest bardzo prosta i opiera się na tym, już potrafimy zrobić: algo
 ```cpp
 
 // To oczywiście tylko fragment algorytmu, zaraz będziemy musieli dopisać jeszcze jedną pętlę.
-int k = 0;						// k - kandydat na największy element.
-for(int i = 0; i < n; i++) {
-	if (A[i] > A[k]) {			// Sprawdzamy wszystkie elementy, jeśli i-ty jest lepszy, poprawiamy k.
-		k = i;
-	}
+int k = 0;             // k - kandydat na największy element.
+for (int i = 0; i < n; i++) {
+    if (A[i] > A[k]) { // Sprawdzamy wszystkie elementy, jeśli i-ty jest lepszy, poprawiamy k.
+        k = i;
+    }
 }
-swap(A[k],A[n-1]);				// Element k-ty wstawiamy na koniec tablicy.
-
+swap(A[k], A[n - 1]); // Element k-ty wstawiamy na koniec tablicy.
 ```
 
 Teraz ostatni element jest największy, więc stoi na swoim miejscu. Możemy zatem powtórzyć cały algorytm szukania największego elementu, ale ignorując element ostatni w tablicy. Znalezionego kandydata przestawimy na przedostatnią pozycję, po czym oczywiście powtórzymy całość jeszcze raz od początku, tym razem ignorując dwa ostatnie elementy. Postępując tak odpowiednio dużo ($n-1$) razy sprawimy, że tablica będzie posortowana:
@@ -102,14 +101,14 @@ Teraz ostatni element jest największy, więc stoi na swoim miejscu. Możemy zat
 
 // Zewnętrzna pętla odpowiada za powtarzanie algorytmu - ma to zrobić n-1 razy.
 // Zmienna j również to liczba ignorowanych elementów - na początku 0, a w każdej iteracji o 1 więcej.
-for (int j = 0; j < n-1; j++) {
-	int k = 0;
-	for(int i = 1; i < n-j; i++) {	// Ta pętla musi pominąć ostatnich j elementów, stąd "n-j" zamiast "n".
-		if (A[i] > A[k]) {
-			k = i;
-		}
-	}
-	swap(A[k],A[n-j]);				// Znaleziony element k-ty wstawiamy na koniec tablicy, ale pomijając ostatnie j elementów.
+for (int j = 0; j < n - 1; j++) {
+    int k = 0;
+    for (int i = 1; i < n - j; i++) { // Ta pętla musi pominąć ostatnich j elementów, stąd "n-j" zamiast "n".
+        if (A[i] > A[k]) {
+            k = i;
+        }
+    }
+    swap(A[k], A[n - j]); // Znaleziony element k-ty wstawiamy na koniec tablicy, ale pomijając ostatnie j elementów.
 }
 ```
 
@@ -129,12 +128,10 @@ Wyobraźmy sobie, że początkowa część tablicy – pierwsze $k$ elementów �
 // Próbujemy wstawić element A[k] na swoje miejsce:
 
 int j = k;
-while (j >= 0 && A[j] < A[j-1]) {
-	swap(A[j],A[j-1]);
-	j--;
+while (j >= 0 && A[j] < A[j - 1]) {
+    swap(A[j], A[j - 1]);
+    j--;
 }
-
-
 ```
 
 Przykład dla sześcioelementowej tablicy oraz `k = 4` pokazany jest poniżej:
@@ -171,14 +168,13 @@ Cały kod programu wygląda następująco:
 ```cpp
 
 
-for(int k = 1; k < n; k++) {			// Ten sam algorytm, co powyżej...
-	int j = k;							// ... ale powtarzamy go kolejno dla coraz większych wartości k.
-	while (j >= 0 && A[j] < A[j-1]) {
-		swap(A[j],A[j-1]);
-		j--;
-	}
+for (int k = 1; k < n; k++) { // Ten sam algorytm, co powyżej...
+    int j = k;                // ... ale powtarzamy go kolejno dla coraz większych wartości k.
+    while (j >= 0 && A[j] < A[j - 1]) {
+        swap(A[j], A[j - 1]);
+        j--;
+    }
 }
-
 ```
 
 Jak poprzednio, policzmy instrukcje porównania `A[j] < A[j+1]` w zależności od długości tablicy $n$. Najbardziej pesymistyczna sytuacja ma miejsce, kiedy każdy element musimy wstawiać na sam początek, zamieniając ze wszystkimi poprzednimi. Liczba operacji, liczona pesymistycznie, będzie wtedy taka sama, jak w dwóch poprzednich algorytmach ($\frac{n(n-1)}{2}$). Sortowanie przez wstawianie ma jednak dużą zaletę – działa znacznie szybciej, jeśli dane już są częściowo posortowane. O ile formalnie jest to również algorytm kwadratowy, jak poprzednie dwa, o tyle w praktyce stosowany jest częściej.
