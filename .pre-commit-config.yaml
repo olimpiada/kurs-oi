@@ -1,0 +1,11 @@
+repos:
+- repo: https://github.com/finsberg/clang-format-docs
+  rev: v0.3.0
+  hooks:
+  - id: clang-format-docs
+    additional_dependencies: [clang-format==19.1.6]
+    args: [--style=file:.clang-format]
+    files: ^docs/
+    types: [markdown]
+    # Ignorujemy lekcje A2, A3 i A8, w których specjalnie są błędy.
+    exclude: ^docs/A-podstawy-programowania/A[238]
