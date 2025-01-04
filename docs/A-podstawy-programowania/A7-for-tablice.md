@@ -88,6 +88,7 @@ cin >> A[0];
 cin >> A[1]; // do zmiennych A[0] i A[1] wczytujemy po jednej liczbie całkowitej
 A[2] = A[0] + A[1];		// teraz A[2] będzie sumą wczytanych liczb
 A[3] = A[0] - A[1];		// zaś A[3] ich różnicą
+```
 
 Nazwy tablic możemy dobierać dowolnie, tak jak nazwy zmiennych. Długość tablicy jest najczęściej jedną liczbą, pojedynczą zmienną (odpowiadającą np. długości ciągu liczb) albo prostym wyrażeniem arytmetycznym. Przykładowo:
 

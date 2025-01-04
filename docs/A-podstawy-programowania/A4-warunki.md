@@ -27,7 +27,7 @@ int main() {
         cout << "Liczba jest wieksza niz 10!";
     }
     else {
-        cout << "Liczba nie jest wieksza niz 10.".
+        cout << "Liczba nie jest wieksza niz 10.";
     }
 }
 ```
@@ -35,14 +35,14 @@ int main() {
 Widzimy, że napis ``(a > 10)`` w czasie wykonania programu – kiedy już znana jest wartość ``a`` – zawsze jest albo prawdziwy, albo fałszywy, więc program wie, którą z dwóch instrukcji wykonać. Takie napisy nazywamy **warunkami logicznymi**. Najprostsze warunki to takie, które używają operatorów znanych z podstawowej matematyki:
 
 
-- $<$ (w C++: <)
-- $\le$ (w C++: <=)
-- $>$ (w C++: >)
-- $\ge$ (w C++: >=)
-- $=$ (w C++: ==)
-- $\not=$ (w C++: !=).
+- $<$ (w C++: `<`)
+- $\le$ (w C++: `<=`)
+- $>$ (w C++: `>`)
+- $\ge$ (w C++: `>=`)
+- $=$ (w C++: `==`)
+- $\not=$ (w C++: `!=`).
 
-Ale są jeszcze prostsze: słowo ``true`` w języku C++ oznacza warunek, który jest po prostu prawdziwy -- czyli jeśli napiszemy:
+Są też jeszcze prostsze: słowo `true` w języku C++ oznacza warunek, który jest po prostu prawdziwy -- czyli jeśli napiszemy:
 
 ```cpp
 if (true) {
@@ -52,7 +52,7 @@ else {
     instrukcja2;
 }
 ```
-to zawsze wykona się ``instrukcja1``. Podobnie ``false`` oznacza warunek, który jest zawsze fałszywy. (Nie jest w tym momencie jasne, do czego mielibyśmy użyć takich trywialnych warunków, ale później zobaczymy, do czego nam się mogą przydać.)
+to zawsze wykona się `instrukcja1`. Podobnie `false` oznacza warunek, który jest zawsze fałszywy. (Nie jest w tym momencie jasne, do czego mielibyśmy użyć takich trywialnych warunków, ale później zobaczymy, do czego nam się mogą przydać.)
 
 Zobaczmy teraz program, który oblicza wartość bezwzględną z liczby całkowitej, tzn. wypisuje tę liczbę bez znaku.
 
@@ -194,7 +194,7 @@ W ramach instrukcji `if` mogą występować także tzw. **instrukcje złożone**
 if (warunek1) {
     instrukcja1;
     instrukcja2;
-    ...
+    // ...
     instrukcja7;
 } else {
     instrukcja8;
@@ -208,7 +208,7 @@ if (warunek1)
 {
     instrukcja1;
     instrukcja2;
-    ...
+    // ...
     instrukcja7;
 } else
     instrukcja8;
