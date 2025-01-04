@@ -1,0 +1,6 @@
+BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 120
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 1

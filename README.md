@@ -9,7 +9,8 @@ mkdocs serve
 ## Dependencies
 
 ```bash
-pip3 install mkdocs mkdocs-material
+pip3 install mkdocs mkdocs-material pre-commit
+pre-commit install
 ```
 
 ## Link
