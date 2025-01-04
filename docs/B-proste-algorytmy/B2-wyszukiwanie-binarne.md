@@ -101,14 +101,14 @@ Nam będzie na ogół przydatne jej zaokrąglenie do liczby całkowitej – w sz
 algorytm wyszukiwania binarnego wykonuje zawsze $\lceil\log n \rceil$ (sufit z logarytmu z $n$, czyli logarytm zaokrąglony w górę) iteracji pętli.
 
 Intuicyjnie, logarytm z liczby $n$ mówi, ile razy możemy podzielić $n$ przez 2,
-zanim spadnie poniżej jedności – liczbę 4 możemy podzielić dwa razy, zaś liczbę 32 – pięć razy.
-Wybiegając w przyszłość (do rozdziału "Systemy pozycyjne"), możemy powiedzieć też, że jest to "mniej-więcej" liczba cyfr liczby w zapisie dwójkowym pomniejszona o jeden – na przykład liczba $26 = (11010)_2$ ma pięć cyfr dwójkowych, podczas gdy logarytm z 26 to około 4,7.
+zanim spadnie poniżej jedności – liczbę 4 możemy podzielić dwa razy, natomiast liczbę 32 – pięć razy.
+Wybiegając w przyszłość (do rozdziału "Systemy pozycyjne"), możemy powiedzieć też, że jest to "mniej-więcej" liczba cyfr liczby w zapisie dwójkowym – na przykład liczba $26 = (11010)_2$ ma pięć cyfr dwójkowych, podczas gdy logarytm z 26 to około 4,7.
 
 ???+ note "Inne logarytmy"
 
-	Można zdefiniować bardzo podobnie np. *logarytm dziesiętny* z liczby $a$: to taka liczba $x$, dla której $10^x = a$. Taki logarytm oznaczylibyśmy przez $\log_{10}{a}$. Na przykład $\log_{10}{10} = 1$, $\log_{10}{1000} = 3$, $\log_{10}{1\,000\,000} = 6$. Widzimy, że logarytm dziesiętny odpowiada mniej-więcej liczbie cyfr dziesiętnych. 
-	
-	Analogicznie możemy zdefiniować logarytm o dowolnej podstawie $b$, czyli $\log_b{a}$. Niestety nie ma na świecie pełnej zgody odnośnie tego, co oznacza $\log{a}$. Informatycy na ogół rozumieją przez to algorytm dwójkowy, ale np. inżynierowie i fizycy – dziesiętny, zaś dla matematyków czasem $\log$ oznacza jeszcze inny rodzaj logarytmu, tzw. logarytm naturalny. My będziemy trzymać się stylu "informatycznego" i zawsze używać logarytmu dwójkowego, ale uczulamy, że możesz spotkać się z inną konwencją. Na szczęście logarytmy można łatwo przeliczać między sobą – na przykład $\log_{2}{a} = \log_{10}{a} \cdot \log_2{10} \approx 3,322 \cdot \log_{10}{a}$, czyli logarytm dziesiętny jest około $3,3$ raza większy od dwójkowego.
+	Można zdefiniować bardzo podobnie np. *logarytm dziesiętny* z liczby $a$: to taka liczba $x$, dla której $10^x = a$. Taki logarytm oznaczylibyśmy przez $\log_{10}{a}$. Na przykład $\log_{10}{10} = 1$, $\log_{10}{1000} = 3$, $\log_{10}{1\,000\,000} = 6$. Widzimy, że logarytm dziesiętny odpowiada mniej-więcej liczbie cyfr dziesiętnych.
+
+	Analogicznie możemy zdefiniować logarytm o dowolnej podstawie $b$, czyli $\log_b{a}$. Niestety nie ma na świecie pełnej zgody odnośnie do tego, co oznacza $\log{a}$. Informatycy na ogół rozumieją przez to algorytm dwójkowy, ale np. inżynierowie i fizycy – dziesiętny, natomiast dla matematyków czasem $\log$ oznacza logarytm o jeszcze innej podstawie, tzw. logarytm naturalny. My będziemy trzymać się stylu "informatycznego" i zawsze używać logarytmu dwójkowego. Na szczęście logarytmy można łatwo przeliczać między sobą – na przykład $\log_{2}{a} = \log_{10}{a} \cdot \log_2{10} \approx 3,322 \cdot \log_{10}{a}$, czyli logarytm dziesiętny jest około $3,3$ raza większy od dwójkowego.
 
 
 Logarytm jest bardzo wolno rosnącą funkcją – logarytm z 1 000 000 (miliona) to około 20,
