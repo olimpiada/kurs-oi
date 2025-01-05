@@ -28,12 +28,24 @@ Istnieje wiele środowisk programistycznych, a żeby ułatwić wybór, pokażemy
 - Visual Studio Code – na tę chwilę najpopularniejsze środowisko programistyczne, które wspiera wiele języków programowania, w tym C++ oraz Python.
 - Geany – bardzo lekki edytor tekstu z minimalnym interfejsem do skompilowania i uruchamiania kodu.
 
-# Krok 1: Instalacja WSL oraz g++
+# Krok 1: Instalacja WSL
 
-Na tę chwilę, najłatwiej jest zainstalować kompilator C++ na systemach Windows poprzez *Windows Subsystem for Linux (WSL)*.
-To tak naprawdę sposób uruchomienia *Linux*a, w którym łatwo się instaluje narzędzia dla programistów (z tego też powodu wiele zaawansowanych programistów korzysta z Linuxa zamiast Windowsa).
+Na moment powstawania kursu, najprostszym sposobem instalacji kompilatora C++ na systemach Windows jest skorzystanie z *Windows Subsystem for Linux (WSL)*.
+Jest to tak naprawdę *maszyna wirtualna* z Linuxem, uruchomiona wewnątrz Windowsa, i dobrze zintegrowana z Windowsowym systemem plików i wyświetlaniem okienek. Dzięki temu rozwiązaniu mamy wygodny dostęp do pełnoprawnego Linuxa, jednocześnie nadal używając Windowsa jako głównego systemu operacyjnego. Wielu programistów korzysta w ten lub inny sposób z Linuxa, między innymi właśnie dlatego, że łatwo instaluje się w nim narzędzia programistyczne.
 
-Alternatywnie, można zainstalować kompilator MinGW do C++, ale wymaga to więcej kroków instalacyjnych.
+WSL jest oficjalnym oprogramowaniem od Microsoftu. Jego instalacja na nowszych komputerach jest bardzo prosta:
+
+1. Uruchamiamy wiersz poleceń (`cmd`) lub `PowerShell` jako administrator, klikając prawym przyciskiem myszy -> "Uruchom jako Administrator".
+
+2. Wpisujemy polecenie `wsl --install` i zatwierdzamy enterem.
+
+Po zainstalowaniu powinniśmy zostać zapytani o utworzenie nazwy użytkownika i hasła - należy je zapamiętać, bo będą potrzebne do instalowania dodatkowych programów wewnątrz Linuxa.
+
+Z WSLa korzystamy najpierw uruchamiając go skrótem `WSL` lub `Ubuntu`. Zadziała także polecenie `wsl` w oknie `cmd` lub `PowerShell`. Powinien uruchomić się *terminal* Linuxa, którego poprawne działanie można potwierdzić poleceniem `uname` - powinno ono wypisać `Linux`.
+
+Bardziej szczegółową instrukcję instalacji można znaleźć na stronie [learn.microsoft.com/windows/wsl/install](https://learn.microsoft.com/windows/wsl/install).
+Jeśli powyższa metoda nie powiedzie się, należy spróbować starszego sposobu instalacji krok po kroku opisanego na stronie [learn.microsoft.com/windows/wsl/install-manual](https://learn.microsoft.com/en-us/windows/wsl/install-manual).
+Pomocna może być także sekcja o rozwiązywaniu błędów na stronie [learn.microsoft/com/windows/wsl/troubleshooting#installation-issues](https://learn.microsoft.com/en-us/windows/wsl/troubleshooting#installation-issues), lub samodzielne wyszukanie problemu w internecie.
 
 <style>
 iframe {
@@ -42,11 +54,36 @@ aspect-ratio: 16 / 9;
 }
 </style>
 
-<iframe src="https://www.youtube.com/embed/euA_T1Ll6ZM?si=hUyOGDeo274rVrLi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<!-- TODO: należy te materiały dostosować do oficjalnej metody instalacji
 
+<iframe src="https://www.youtube.com/embed/euA_T1Ll6ZM?si=hUyOGDeo274rVrLi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+-->
+
+## Alternatywy
+
+Jeśli instalacja WSL nie powiedzie się, alternatywnie można zainstalować kompilator GCC w wersji Windowsowej, na przykład dostarczony przez projekt [MinGW-w64](https://www.mingw-w64.org/). Nie istnieje jednak jedna poprawna, sugerowana metoda instalacji, zatem wymaga to wiedzy co dokładnie jest nam potrzebne. Można także skorzystać z darmowej wersji [kompilatora MSVC od Microsoftu](https://code.visualstudio.com/docs/cpp/config-msvc), dostępnego tylko na Windowsie.
+
+W ostateczności jeśli zawiodą wszystkie inne opcje, można skorzystać ze środowiska online, na przykład [ide.usaco.guide](https://ide.usaco.guide/). Zalecamy jednak unikanie tej opcji o ile jest to możliwe, ponieważ oczywiście nie jest ona dostępna na egzaminach ani olimpiadach, a także będzie później niewystarczająca - na przykład do testowania losowego rozwiązań.
+
+# Krok 2: Instalacja kompilatora GCC w WSL
+
+W uruchomionym terminalu WSL wpisujemy kolejno polecenia, potwierdzone enterem.
+
+1. `sudo apt update`
+2. `sudo apt install g++`
+
+instalację trzeba dodatkowo zatwierdzić wpisując `yes` lub `y` i wciskając enter.
+
+Program `g++` jest wersją kompilatora [GCC](https://gcc.gnu.org/) używającą C++ jako domyślny język.
+Programy skompilowane przez `g++` zainstalowane wewnątrz Linuxa będą możliwe do uruchomienia tylko w Linuxie, jednak skonfigurujemy nasze środowisko programistyczne żeby zarówno kompilowało, jak i uruchamiało je za pomocą WSL.
+
+<!-- TODO: poprawić na uruchamianie przez skrót, lub polecenie `wsl`
 <iframe src="https://www.youtube.com/embed/ArDf2yqbVaw?si=R2TzQUWXvhL2V4Hc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+-->
 
 # Krok 2a: Instalacja Visual Studio Code
+
+VSCode należy skonfigurować tak, żeby [połączył się z WSLem i używał go do kompilowania i uruchamiania programów w C++](https://code.visualstudio.com/docs/remote/wsl).
 
 <iframe src="https://www.youtube.com/embed/maE3cigf1uA?si=Mva2LzQ4yROK3BlB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
@@ -54,6 +91,8 @@ aspect-ratio: 16 / 9;
 
 Instalator `geany-2.0_setup.exe` można pobrać ze strony [geany.org](https://www.geany.org/download/releases/).
 Kroki instalacyjne są prostsze niż te dla Visual Studio Code.
+
+Geany należy skonfigurować tak, by kompilował i uruchamiał programy poprzez wywołanie polecenia `wsl`.
 
 <iframe src="https://www.youtube.com/embed/SnsaP3msEBQ?si=EcmGdGHOrwR6CZm_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
