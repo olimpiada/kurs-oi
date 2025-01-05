@@ -10,4 +10,4 @@ IncludeBlocks: Merge
 IndentWidth: 4
 LineEnding: LF
 RemoveSemicolon: true
-TabWidth: 8
+TabWidth: 4
