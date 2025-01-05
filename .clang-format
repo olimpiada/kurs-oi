@@ -1,6 +1,13 @@
 BasedOnStyle: LLVM
-IndentWidth: 4
-ColumnLimit: 120
+AccessModifierOffset: -4
+AlignAfterOpenBracket: BlockIndent
 AlignTrailingComments:
   Kind: Always
   OverEmptyLines: 1
+BreakArrays: false
+ColumnLimit: 120
+IncludeBlocks: Merge
+IndentWidth: 4
+LineEnding: LF
+RemoveSemicolon: true
+TabWidth: 8
