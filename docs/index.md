@@ -1,6 +1,4 @@
-# Wstęp
-
-## Co to za kurs i jaki jest jego materiał?
+# Co to za kurs i jaki jest jego materiał?
 
 To jest "oficjalny" kurs prowadzony przez społeczność Olimpiady Informatycznej. Poświęcony jest w części nauce podstaw programowania w języku C++, ale przede wszystkim ma służyć nauce algorytmiki. Chcielibyśmy, aby kurs pomagał w przygotowaniu się, między innymi, do:
 
