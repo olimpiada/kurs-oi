@@ -69,7 +69,7 @@ for (int i = 2; i <= N; i++)
 
 for(int i = 2; i <= N; i++)  // bierzemy kolejną liczbę i
     if (tablica[i])          // jeśli nie jest wykreślona
-        for(int j = 2 * i; j <= N; j = j + i)   // iterujemy się po wszystkich wielokrotnościach i
+        for (int j = 2 * i; j <= N; j = j + i) // iterujemy się po wszystkich wielokrotnościach i
             tablica[j] = false;
 
 ```
