@@ -34,4 +34,3 @@ Jest kilka możliwości:
    następnie Pull Request – takie poprawki zostaną rozpatrzone najszybciej.
  * Możesz również zgłosić nam uwagę przez
    [formularz kontaktowy](https://forms.gle/Nj8oRMhaV7QxnFZLA).
-

@@ -7,8 +7,7 @@ Schemat instrukcji `if` jest następujący:
 ```cpp
 if (warunek) {
     instrukcja1;
-}
-else {
+} else {
     instrukcja2;
 }
 ```
@@ -25,9 +24,8 @@ int main() {
     cin >> a;
     if (a > 10) {
         cout << "Liczba jest wieksza niz 10!";
-    }
-    else {
-        cout << "Liczba nie jest wieksza niz 10.".
+    } else {
+        cout << "Liczba nie jest wieksza niz 10.";
     }
 }
 ```
@@ -35,24 +33,23 @@ int main() {
 Widzimy, że napis ``(a > 10)`` w czasie wykonania programu – kiedy już znana jest wartość ``a`` – zawsze jest albo prawdziwy, albo fałszywy, więc program wie, którą z dwóch instrukcji wykonać. Takie napisy nazywamy **warunkami logicznymi**. Najprostsze warunki to takie, które używają operatorów znanych z podstawowej matematyki:
 
 
-- $<$ (w C++: <)
-- $\le$ (w C++: <=)
-- $>$ (w C++: >)
-- $\ge$ (w C++: >=)
-- $=$ (w C++: ==)
-- $\not=$ (w C++: !=).
+- $<$ (w C++: `<`)
+- $\le$ (w C++: `<=`)
+- $>$ (w C++: `>`)
+- $\ge$ (w C++: `>=`)
+- $=$ (w C++: `==`)
+- $\not=$ (w C++: `!=`).
 
-Ale są jeszcze prostsze: słowo ``true`` w języku C++ oznacza warunek, który jest po prostu prawdziwy -- czyli jeśli napiszemy:
+Są też jeszcze prostsze: słowo `true` w języku C++ oznacza warunek, który jest po prostu prawdziwy -- czyli jeśli napiszemy:
 
 ```cpp
 if (true) {
     instrukcja1;
-}
-else {
+} else {
     instrukcja2;
 }
 ```
-to zawsze wykona się ``instrukcja1``. Podobnie ``false`` oznacza warunek, który jest zawsze fałszywy. (Nie jest w tym momencie jasne, do czego mielibyśmy użyć takich trywialnych warunków, ale później zobaczymy, do czego nam się mogą przydać.)
+to zawsze wykona się `instrukcja1`. Podobnie `false` oznacza warunek, który jest zawsze fałszywy. (Nie jest w tym momencie jasne, do czego mielibyśmy użyć takich trywialnych warunków, ale później zobaczymy, do czego nam się mogą przydać.)
 
 Zobaczmy teraz program, który oblicza wartość bezwzględną z liczby całkowitej, tzn. wypisuje tę liczbę bez znaku.
 
@@ -65,8 +62,7 @@ int main() {
     cin >> x;
     if (x >= 0) {
         cout << x << "\n";
-    }
-    else {
+    } else {
         cout << -x << "\n";
     }
 }
@@ -75,7 +71,7 @@ int main() {
 Jeśli liczba $x$ jest nieujemna, wypisujemy nią samą, a w przeciwnym razie wypisujemy minus tę liczbę (czyli to samo co $x$ przemnożone przez -1). Gdyby w programie użyć warunku:
 
 ```cpp
-    if (x > 0)
+if (x > 0)
 ```
 
 program wciąż działałby poprawnie, gdyż nie ma liczby minus zero (jest to po prostu 0).
@@ -85,14 +81,11 @@ Instrukcja warunkowa `if` może także składać się z większej liczby warunk�
 ```cpp
 if (warunek1) {
     instrukcja1;
-}
-else if (warunek2) {
+} else if (warunek2) {
     instrukcja2;
-}
-else if (warunek3) {
+} else if (warunek3) {
     instrukcja3;
-}
-else {
+} else {
     instrukcja4;
 }
 ```
@@ -118,11 +111,9 @@ int main() {
     cin >> x;
     if (x > 0) {
         cout << "+" << "\n";
-    }
-    else if (x < 0) {
+    } else if (x < 0) {
         cout << "-" << "\n";
-    }
-    else {
+    } else {
         cout << 0 << "\n";
     }
 }
@@ -147,11 +138,9 @@ int main() {
     if (a == b && b == c) {
         // Jezeli a == b oraz b == c, to tez c == a.
         cout << "rownoboczny" << "\n";
-    }
-    else if (a == b || b == c || c == a) {
+    } else if (a == b || b == c || c == a) {
         cout << "rownoramienny" << "\n";
-    }
-    else {
+    } else {
         // Boki sa parami rozne.
         cout << "roznoboczny" << "\n";
     }
@@ -179,8 +168,7 @@ int main() {
     cin >> rok;
     if ((rok % 4 == 0 && !(rok % 100 == 0)) || rok % 400 == 0) {
         cout << 366 << "\n";
-    }
-    else {
+    } else {
         cout << 365 << "\n";
     }
 }
@@ -194,7 +182,7 @@ W ramach instrukcji `if` mogą występować także tzw. **instrukcje złożone**
 if (warunek1) {
     instrukcja1;
     instrukcja2;
-    ...
+    // ...
     instrukcja7;
 } else {
     instrukcja8;
@@ -204,11 +192,10 @@ if (warunek1) {
 **Uwaga:** Niektórzy programiści piszą obie klamry w instrukcji złożonej na tej samej wysokości w kodzie źródłowym, żeby zachować pewną symetrię:
 
 ```cpp
-if (warunek1)
-{
+if (warunek1) {
     instrukcja1;
     instrukcja2;
-    ...
+    // ...
     instrukcja7;
 } else
     instrukcja8;
@@ -242,8 +229,7 @@ int main() {
     if (a == b && b == c) {
         // Jezeli a == b oraz b == c, to tez c == a.
         cout << "rownoboczny" << "\n";
-    }
-    else if (a == b || b == c || c == b)
+    } else if (a == b || b == c || c == b)
         cout << "rownoramienny" << "\n";
     else {
         // Boki sa parami rozne.

@@ -9,11 +9,10 @@ Pętla `while` w języku C++ wygląda następująco:
 
 ```cpp
 while (warunek)
-	instrukcja;
-
+    instrukcja;
 ```
 
-Jest ona z wyglądu dosyć podobna do instrukcji `if`. _Warunek_ jest warunkiem logicznym (czyli przyjmującym wartość `true` lub `false`), natomiast _instrukcja_ jest pojedynczą instrukcją lub (częściej) instrukcją złożoną, czyli grupą kilku instrukcji umieszczonych w nawiasach klamrowych ``{ ... }``. Pętla `while` wykonuje kolejne _obroty_. W każdym obrocie najpierw jest sprawdzany _warunek_. Jeśli jest on prawdziwy, wykonywana jest _instrukcja_, a w przeciwnym razie pętla kończy się. Czyli jeśli _warunek_ jest prawdziwy, wykonujemy _instrukcję_, po czym znów sprawdzamy _warunek_ – jeśli jest spełniony, znów wykonujemy _instrukcję_ i tak dalej – aż do chwili, gdy po wykonaniu _instrukcji_ _warunek_ nie będzie już spełniony. 
+Jest ona z wyglądu dosyć podobna do instrukcji `if`. _Warunek_ jest warunkiem logicznym (czyli przyjmującym wartość `true` lub `false`), natomiast _instrukcja_ jest pojedynczą instrukcją lub (częściej) instrukcją złożoną, czyli grupą kilku instrukcji umieszczonych w nawiasach klamrowych ``{ ... }``. Pętla `while` wykonuje kolejne _obroty_. W każdym obrocie najpierw jest sprawdzany _warunek_. Jeśli jest on prawdziwy, wykonywana jest _instrukcja_, a w przeciwnym razie pętla kończy się. Czyli jeśli _warunek_ jest prawdziwy, wykonujemy _instrukcję_, po czym znów sprawdzamy _warunek_ – jeśli jest spełniony, znów wykonujemy _instrukcję_ i tak dalej – aż do chwili, gdy po wykonaniu _instrukcji_ _warunek_ nie będzie już spełniony.
 
 Można zatem pętlę `while` odczytać tak: "dopóki jest spełniony _warunek_, wykonuj _instrukcję_". Trzeba jednak zawsze pamiętać o krokowym charakterze tej pętli: sprawdzenie warunku – wykonanie instrukcji – sprawdzenie warunku – wykonanie instrukcji – ...
 
@@ -24,11 +23,11 @@ Za pomocą pętli `while` możemy np. wypisać dowolnie wiele liczb. Na przykła
 using namespace std;
 
 int main() {
-	int i = 1;
-	while (i <= 10) {
-		cout << i << endl;
-		i++;
-	}
+    int i = 1;
+    while (i <= 10) {
+        cout << i << endl;
+        i++;
+    }
 }
 ```
 
@@ -42,7 +41,7 @@ Warto zwrócić uwagę na dwa szczególne przypadki. Jeśli warunek od razu na p
 int i = 999;
 
 while (i <= 10) {
-	cout << i << endl;
+    cout << i << endl;
 }
 ```
 
@@ -56,12 +55,12 @@ Na naszą przykładową pętlę można spojrzeć jako na ciąg złożony z wielu
 using namespace std;
 
 int main() {
-	int i = 20;
-	while (i >= 0) {
-		if (i % 2 == 0)
-			cout << i << endl;
-		i--;
-	}
+    int i = 20;
+    while (i >= 0) {
+        if (i % 2 == 0)
+            cout << i << endl;
+        i--;
+    }
 }
 ```
 
@@ -72,11 +71,11 @@ Lub nieco sprytniej – tak, aby nie "oglądać" po drodze także liczb nieparzy
 using namespace std;
 
 int main() {
-	int i = 20;
-	while (i >= 0) {
-		cout << i << endl;
-		i -= 2;
-	}
+    int i = 20;
+    while (i >= 0) {
+        cout << i << endl;
+        i -= 2;
+    }
 }
 ```
 
@@ -89,14 +88,14 @@ Użyjemy jednej, zawsze tej samej zmiennej $a$, aby wczytywać kolejne liczby, z
 using namespace std;
 
 int main() {
-	int a;
-	cin >> a;
-	int suma = a;
-	while (a != 0) {
-		cin >> a;
-		suma += a;
-	}
-	cout << suma << endl;
+    int a;
+    cin >> a;
+    int suma = a;
+    while (a != 0) {
+        cin >> a;
+        suma += a;
+    }
+    cout << suma << endl;
 }
 ```
 
@@ -109,16 +108,16 @@ Często w podobnych programach (szczególnie na Olimpiadzie Informatycznej) stos
 using namespace std;
 
 int main() {
-	int i = 1, n;
-	cin >> n;
-	int suma = 0;
-	while (i <= n) {
-		int a;
-		cin >> a;
-		suma += a;
-		i++;
-	}
-	cout << suma << endl;
+    int i = 1, n;
+    cin >> n;
+    int suma = 0;
+    while (i <= n) {
+        int a;
+        cin >> a;
+        suma += a;
+        i++;
+    }
+    cout << suma << endl;
 }
 ```
 
@@ -133,14 +132,14 @@ Naszym następnym celem jest napisanie programu, który sprawdza, ile cyfr ma da
 using namespace std;
 
 int main() {
-	int n;
-	cin >> n;
-	int liczba_cyfr = 0, pot10 = 1;
-	while (pot10 <= n) {
-		pot10 *= 10;
-		liczba_cyfr++;
-	}
-	cout << liczba_cyfr << endl;
+    int n;
+    cin >> n;
+    int liczba_cyfr = 0, pot10 = 1;
+    while (pot10 <= n) {
+        pot10 *= 10;
+        liczba_cyfr++;
+    }
+    cout << liczba_cyfr << endl;
 }
 ```
 
@@ -155,17 +154,17 @@ Istnieje jednak sprytniejsze rozwiązanie, które nie ma wyżej opisanego mankam
 using namespace std;
 
 int main() {
-	int n;
-	cin >> n;
-	int liczba_cyfr = 0;
-	if (n == 0)
-		liczba_cyfr = 1;
-	else
-		while (n > 0) {
-			liczba_cyfr++;
-			n /= 10;
-		}
-	cout << liczba_cyfr << endl;
+    int n;
+    cin >> n;
+    int liczba_cyfr = 0;
+    if (n == 0)
+        liczba_cyfr = 1;
+    else
+        while (n > 0) {
+            liczba_cyfr++;
+            n /= 10;
+        }
+    cout << liczba_cyfr << endl;
 }
 ```
 
@@ -184,17 +183,17 @@ Jako przykład rozważymy nasz wcześniejszy program służący do zliczania cyf
 using namespace std;
 
 int main() {
-	int n;
-	cin >> n;
-	int liczba_cyfr;
-	if (n == 0)
-		liczba_cyfr = 1;
-	else
-		while (n > 0) {
-			liczba_cyfr++;
-			n /= 10;
-		}
-	cout << liczba_cyfr << endl;
+    int n;
+    cin >> n;
+    int liczba_cyfr;
+    if (n == 0)
+        liczba_cyfr = 1;
+    else
+        while (n > 0) {
+            liczba_cyfr++;
+            n /= 10;
+        }
+    cout << liczba_cyfr << endl;
 }
 ```
 
@@ -213,18 +212,18 @@ Aby spróbować znaleźć błąd, spróbujmy wypisać wartości zmiennych $n$ or
 using namespace std;
 
 int main() {
-	int n;
-	cin >> n;
-	int liczba_cyfr;
-	if (n == 0)
-		liczba_cyfr = 1;
-	else
-		while (n > 0) {
-			liczba_cyfr++;
-			n /= 10;
-			cout << n << " " << liczba_cyfr << endl;
-		}
-	cout << liczba_cyfr << endl;
+    int n;
+    cin >> n;
+    int liczba_cyfr;
+    if (n == 0)
+        liczba_cyfr = 1;
+    else
+        while (n > 0) {
+            liczba_cyfr++;
+            n /= 10;
+            cout << n << " " << liczba_cyfr << endl;
+        }
+    cout << liczba_cyfr << endl;
 }
 ```
 
@@ -245,20 +244,20 @@ Aby rozjaśnić jeszcze sytuację, możemy dodać takie samo wypisanie także pr
 using namespace std;
 
 int main() {
-	int n;
-	cin >> n;
-	int liczba_cyfr;
-	if (n == 0)
-		liczba_cyfr = 1;
-	else {
-		cout << n << " " << liczba_cyfr << endl;
-		while (n > 0) {
-			liczba_cyfr++;
-			n /= 10;
-			cout << n << " " << liczba_cyfr << endl;
-		}
-	}
-	cout << liczba_cyfr << endl;
+    int n;
+    cin >> n;
+    int liczba_cyfr;
+    if (n == 0)
+        liczba_cyfr = 1;
+    else {
+        cout << n << " " << liczba_cyfr << endl;
+        while (n > 0) {
+            liczba_cyfr++;
+            n /= 10;
+            cout << n << " " << liczba_cyfr << endl;
+        }
+    }
+    cout << liczba_cyfr << endl;
 }
 ```
 
@@ -282,17 +281,17 @@ I jeszcze druga błędna wersja naszego programu:
 using namespace std;
 
 int main() {
-	int n;
-	cin >> n;
-	int liczba_cyfr = 0;
-	if (n == 0)
-		liczba_cyfr = 1;
-	else
-		while (n >= 0) {
-			liczba_cyfr++;
-			n /= 10;
-		}
-	cout << liczba_cyfr << endl;
+    int n;
+    cin >> n;
+    int liczba_cyfr = 0;
+    if (n == 0)
+        liczba_cyfr = 1;
+    else
+        while (n >= 0) {
+            liczba_cyfr++;
+            n /= 10;
+        }
+    cout << liczba_cyfr << endl;
 }
 ```
 
@@ -303,18 +302,18 @@ Gdy uruchomimy nasz program dla liczby 1234, wygląda na to, że działa w niesk
 using namespace std;
 
 int main() {
-	int n;
-	cin >> n;
-	int liczba_cyfr = 0;
-	if (n == 0)
-		liczba_cyfr = 1;
-	else
-		while (n >= 0) {
-			liczba_cyfr++;
-			n /= 10;
-			cout << n << " " << liczba_cyfr << endl;
-		}
-	cout << liczba_cyfr << endl;
+    int n;
+    cin >> n;
+    int liczba_cyfr = 0;
+    if (n == 0)
+        liczba_cyfr = 1;
+    else
+        while (n >= 0) {
+            liczba_cyfr++;
+            n /= 10;
+            cout << n << " " << liczba_cyfr << endl;
+        }
+    cout << liczba_cyfr << endl;
 }
 ```
 
@@ -334,13 +333,13 @@ Wynikiem programu jest "ściana" liczb wyglądających mniej więcej tak:
 Najwyraźniej w programie od pewnego momentu zachodzi $n=0$, a tylko zwiększa się $liczba\_cyfr$. Tym razem wszystkiemu winny jest warunek w pętli `while`:
 
 ```cpp
-		while (n >= 0) {
+while (n >= 0) {
 ```
 
 Dla $n=0$ pętla wykonuje się, ale instrukcja:
 
 ```cpp
-			n /= 10;
+n /= 10;
 ```
 
 nie zmienia wartości $n$, więc pętla działa w nieskończoność. Taki błąd nazywamy **zapętleniem**.

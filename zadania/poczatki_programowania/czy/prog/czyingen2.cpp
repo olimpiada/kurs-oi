@@ -17,13 +17,13 @@ void generuj(string test, long long n)
 {
     FILE* plik;
     string nazwa_pliku;
-    
+
     nazwa_pliku = string(ID) + test + ".in";
     fprintf(stderr, "%s...\n", nazwa_pliku.c_str());
     plik = fopen(nazwa_pliku.c_str(), "w");
 
     fprintf(plik, "%lld\n", n);
-	
+
     fclose(plik);
 }
 
@@ -45,13 +45,13 @@ int main()
 	generuj("13", 1LL<<32);
 	generuj("14", 1LL<<36);
 	generuj("15", 1LL<<39);
-	
+
 	generuj("16", 859133039546LL); // ubija symulacje na long long
 	generuj("17", 366713142269LL); // ubija symulacje na long long
 
 	generuj("18", 1LL<<42);
 	generuj("19", 1LL<<46);
-	
+
 	generuj("20", (1LL<<42) - (1LL << 39));
 	generuj("21", (1LL<<41) + (1LL << 35));
 	generuj("22", (1LL<<46)-1);

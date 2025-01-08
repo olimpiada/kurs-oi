@@ -7,12 +7,12 @@ const char code[4] = "pir";
 
 const int BBN = 1000*1000;
 
-int get_rand(int lo, int hi) 
+int get_rand(int lo, int hi)
 {
   return (RG.rand() % (hi - lo + 1)) + lo;
 }
 
-void gen(int fn, int min_len, int max_len, int max_mod, double prob) 
+void gen(int fn, int min_len, int max_len, int max_mod, double prob)
 {
   char filename[30];
   sprintf(filename,"%s%d.in",code,fn);
@@ -22,8 +22,8 @@ void gen(int fn, int min_len, int max_len, int max_mod, double prob)
 
   fprintf(f,"%d %d\n", len, mod);
   fprintf(f,"1");
-  
-  for (int i = 1; i < len - 1; ++i) 
+
+  for (int i = 1; i < len - 1; ++i)
     fprintf(f,(RG.rand()%BBN < (int)(prob*BBN)) ? "1" : "0");
 
   fprintf(f,"1\n");
@@ -54,4 +54,3 @@ int main()
     gen(i,500*1000,1000*1000,1000*1000,0.899+i*0.01);
   gen_max(11,1000*1000,999997);
 }
-

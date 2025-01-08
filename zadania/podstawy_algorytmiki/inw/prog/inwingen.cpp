@@ -24,7 +24,7 @@ void gen_random(int filenumber, const char* filesuffix, int n, int range)
     A[i] = RG.rand()%(range-1)+1;
   sort(A,A+2*n);
   int m = unique(A,A+2*n) - A;
-  
+
   assert(m>=n);
   RG.randomShuffle(A,A+m);
   fprintf(out,"%d",A[0]);

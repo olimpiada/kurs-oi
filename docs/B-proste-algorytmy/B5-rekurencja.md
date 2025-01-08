@@ -77,8 +77,7 @@ int potega(int a, int n) {
     if (n % 2 == 0) {
         int s = potega(a, n / 2);
         return s * s;
-    }
-    else {
+    } else {
         int s = potega(a, n - 1);
         return a * s;
     }
@@ -105,11 +104,11 @@ Algorytm Euklidesa opiera się na bardzo prostej obserwacji: jeśli jakaś liczb
 
 ```cpp
 int nwd(int a, int b) {
-    ...  // tu jeszcze czegoś brakuje!
-    if (b == 0) {
-        return a;                 // Jeśli jedną z liczb jest zero, wynik to druga liczba.
+    ...                   // tu jeszcze czegoś brakuje!
+        if (b == 0) {
+        return a;         // Jeśli jedną z liczb jest zero, wynik to druga liczba.
     }
-    return nwd(b, a - b);         // Wynik dla (a, b) jest taki sam, jak dla (a - b, b)!
+    return nwd(b, a - b); // Wynik dla (a, b) jest taki sam, jak dla (a - b, b)!
 }
 ```
 

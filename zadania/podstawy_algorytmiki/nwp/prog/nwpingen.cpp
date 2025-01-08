@@ -5,7 +5,7 @@ oi::Random RG;
 
 const char code[4] = "nwp";
 
-int get_rand(int lo, int hi) 
+int get_rand(int lo, int hi)
 {
   return (RG.rand() % (hi - lo + 1)) + lo;
 }
@@ -70,4 +70,3 @@ int main()
   gen(10,"c",2000,2000,1982,26);
   gen(10,"d",2000,2000,0,2);
 }
-

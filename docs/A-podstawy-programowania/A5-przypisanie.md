@@ -112,15 +112,15 @@ To zadanie można oczywiście rozwiązać bez użycia instrukcji przypisania, je
 using namespace std;
 
 int main() {
-	int t;
-	cin >> t;
-	int g, m, s;
-	s = t % 60;
-	t /= 60;
-	m = t % 60;
-	t /= 60;
-	g = t;
-	cout << g << "g" << m << "m" << s << "s" << endl;
+    int t;
+    cin >> t;
+    int g, m, s;
+    s = t % 60;
+    t /= 60;
+    m = t % 60;
+    t /= 60;
+    g = t;
+    cout << g << "g" << m << "m" << s << "s" << endl;
 }
 ```
 
@@ -136,14 +136,13 @@ Jako pierwszy przykład napiszmy program, który wczytuje dany znak, o którym w
 using namespace std;
 
 int main() {
-  char c;
-  cin >> c;
-  if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y')
-    cout << "samogloska" << endl;
-  else
-    cout << "spolgloska" << endl;
+    char c;
+    cin >> c;
+    if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'y')
+        cout << "samogloska" << endl;
+    else
+        cout << "spolgloska" << endl;
 }
-
 ```
 
 Każdy ze znaków typu `char` ma przypisany numer będący liczbą całkowitą. To przyporządkowanie, używane powszechnie w komputerach do reprezentowania znaków, nazywa się [kodem ASCII](http://pl.wikipedia.org/wiki/ASCII "kodem ASCII"). Wygląda ono tak:

@@ -34,7 +34,7 @@ int query(int p, int q)
     res = max(res,A[q]);
     q--;
   }
-  res = max(res,query(p/2,q/2));  
+  res = max(res,query(p/2,q/2));
   return res;
 }
 

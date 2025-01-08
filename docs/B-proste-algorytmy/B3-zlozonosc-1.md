@@ -31,10 +31,10 @@ cout << licznik << "\n";
 Jeśli zastanowimy się trochę bardziej, zauważymy że wykonujemy tu bardzo dużo niepotrzebnych obliczeń. Na przykład liczymy sumę `A[1] + A[2] + A[3]`, a chwilę później `A[1] + A[2] + A[3] + A[4]`, sumując ją od nowa. Zróbmy zatem inaczej: ustalmy sobie na chwilę wartość $i$, dla której policzymy sumy `A[i]`, `A[i] + A[i + 1]`, `A[i] + A[i + 1] + A[i + 2]`, każdą następną licząc na podstawie poprzedniej:
 
 ```cpp
-int licznik = 0; // Tu będziemy zliczać fragmenty o sumie K.
+int licznik = 0;              // Tu będziemy zliczać fragmenty o sumie K.
 
 for (int i = 0; i < n; i++) { // Dla ustalonego i:
-    int suma = 0; // Zacznij od zera.
+    int suma = 0;             // Zacznij od zera.
     for (int j = i; j < n; j++) {
         suma += A[j];
         // Teraz suma jest równa A[i] + A[i + 1] + ... + A[j].
@@ -135,5 +135,3 @@ Oszacujmy jeszcze pierwszy (wolniejszy) z naszych algorytmów. Jest to odrobinę
 
 Teraz można powiedzieć, skąd bierze się różnica w działaniu, wstawiając do tych wzorów wartości $n$. Dla $n \approx 1000$ wartości tych wyrażeń to około pół miliona w pierwszym wypadku i około 160 milionów w drugim. Im większe $n$, tym te różnice stają się bardziej znaczące.
 Przy odpowiednio dużych (a wciąż ,,życiowych'') danych wolniejszy algorytm przestaje mieć praktyczny sens: nawet zatrudnienie do obliczeń bardzo mocnego komputera nie sprawiłoby, że mógłby rywalizować z szybszym algorytmem. Kluczowy tutaj jest wyraz $n^3$ w pierwszym algorytmie i $n^2$ w drugim. Dlatego pierwszy algorytm (i inne, które wykonują około $n^3$ operacji dla danych wielkości $n$) nazywa się **sześciennymi**, a algorytmy wykonujące $n^2$ operacji – **kwadratowymi**; dlatego też różnica między algorytmem sześciennym i kwadratowym będzie dla nas kluczowa. Z kolei algorytmy takie jak szukanie maksimum/minimum w tablicy (rozdział "Poruszanie się po tablicach"), dla tablicy wielkości $n$ wykonują około $n$ operacji i nazywamy je **liniowymi**.
-
-

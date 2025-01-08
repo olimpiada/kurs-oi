@@ -128,7 +128,7 @@ vector<int> L;
 while (s > 0) {
     int c = s % 8; // Wyznaczamy ostatnią cyfrę...
     L.emplace_back(c);
-    s = s / 8; // ... po czym "skreślamy" ją z liczby s.
+    s = s / 8;     // ... po czym "skreślamy" ją z liczby s.
 }
 
 // Jeśli chcemy, możemy teraz wypisać wynik.

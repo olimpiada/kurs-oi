@@ -417,4 +417,3 @@ Po przeczytaniu tej sekcji możesz mieć poczucie, że wprowadzone tu elementy j
 [Wicemistrz :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#wic){ .md-button .md-button--primary }
 
 [Duże liczby :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#duz){ .md-button .md-button--primary }
-

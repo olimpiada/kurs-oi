@@ -46,7 +46,7 @@ typedef long double LD;
 
 
 // Implementacja struktury BigNum, realizujacej arytmetykê wielkich liczb
-		
+
 struct BigNum {
    // Redukowanie wiodacych zera
    #define REDUCE() while (len>1 && !cyf[len-1]) len--;
@@ -144,7 +144,7 @@ struct BigNum {
 
 
    // OPERATORY DLA LICZB TYPU INT
-   
+
 
    BigNum &operator=(int a) {
       REP(x,len) cyf[x]=0;
@@ -255,7 +255,7 @@ struct BigNum {
 
 
    // WCZYTYWANIE I WYPISYWANIE
-   
+
    // operator wymaga implementacji +=(int), *=(int);
    // przypisuje liczbie BigNum warto?æ liczby z przekazanego wektora
    // zapisanej przy podstawie p
@@ -289,7 +289,7 @@ struct BigNum {
       int p=sprintf(buf,"%d",int(cyf[len-1]));
       FORD(x,len-2,0) p+=sprintf(buf+p,"%0*d",BD,int(cyf[x]));
    }
-   
+
    // operator wymaga implementacji /=(int), =(BigNum)
    // zwraca wektor cyfr liczby zapisanej przy podstawie pod
    VI write(int pod) const {
@@ -400,4 +400,3 @@ int main() {
   }
   return 0;
 }
-

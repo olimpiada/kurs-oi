@@ -15,13 +15,13 @@ int main() {
         cin >> A[i];
     }
     int najwiecej = 0;
-    int biezace = 1;  
+    int biezace = 1;
     for(int i = 1; i < n; i++) {
-        if (A[i] > A[i-1]) {   
-            biezace++;                  
+        if (A[i] > A[i-1]) {
+            biezace++;
         }
         else {
-            biezace = 1;                
+            biezace = 1;
         }
 
         if (biezace > najwiecej) {

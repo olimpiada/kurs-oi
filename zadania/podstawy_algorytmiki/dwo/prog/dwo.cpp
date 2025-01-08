@@ -7,7 +7,7 @@ using namespace std;
 
 void one()
 {
-    int s; 
+    int s;
     cin >> s;
 
     // Liczba s jest tą, którą chcemy zamienić na system ósemkowy.
@@ -20,10 +20,10 @@ void one()
         cout << 0 << endl;
         return;
     }
-    
+
     while (s > 0) {
         int c = s % 2; // Wyznaczamy ostatnią cyfrę...
-        L.push_back(c); 
+        L.push_back(c);
         s = s / 2; // ... po czym "skreślamy" ją z liczby s.
     }
 

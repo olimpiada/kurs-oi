@@ -139,7 +139,7 @@ int main()
   przeskaluj(malejacy(3),1000);
 
   przeskaluj(losowy(10),1000);
-  
+
   VI t=rosnacy(10);
   swap(t[0],t[8]);
   przeskaluj(t,10);

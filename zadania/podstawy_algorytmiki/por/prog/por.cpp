@@ -62,7 +62,7 @@ int main()
       {
         r++;
 	BFS(i);
-      }	
+      }
     printf("Grup znajomych jest %d.\n",r);
     for(int i=1; i<=n; i++)
       G[i].clear();

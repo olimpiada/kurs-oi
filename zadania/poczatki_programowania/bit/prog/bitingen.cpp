@@ -202,14 +202,14 @@ int main()
   t.clear(); t.PB(1); t.PB(1); t.PB(2); all_perm(t);
   t.clear(); t.PB(1); t.PB(2); t.PB(2); all_perm(t);
   // test 3, 3, 3 jest w ocen
-  
+
   // tak
   bitoniczny(10,20,2);
 
   // nie
   antybitoniczny(10,20,2);
   FOR(i,1,4) bitoniczny(10,20,4,i, i<=2 ? 0 : 10-1);
-  
+
   staly(MAX_N,MAX_M);
   rosnacy(MAX_N,MAX_M);
   malejacy(MAX_N,MAX_M);

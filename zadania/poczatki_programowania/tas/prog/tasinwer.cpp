@@ -31,10 +31,10 @@ class TextFile {
     int init(const char *filename);
     int compare(TextFile *t);
     int getToken(char *token, int max_len);
-    int eof();  
+    int eof();
     int readInt(int min,int max);
     int readEof();
-    int readSpace();  
+    int readSpace();
     int readEoln();
     int readEolnOrEof();
     int error(const char *message);
@@ -74,7 +74,7 @@ int main(int argc, char *argv[]) {
     }
   } else {
     if (ic->init("")) {
-      fprintf(stderr,"can't open: stdin\n");	
+      fprintf(stderr,"can't open: stdin\n");
     }
   }
 
@@ -155,7 +155,7 @@ int TextFile::getToken(char *token,int max_len) {
 }
 
 int TextFile::readInt(int min,int max) {
-  char buf[11];  
+  char buf[11];
   int token=getToken(buf,sizeof(buf));
   if (token!=TOKEN_STD) {
     err("Int",token2str(token,buf));
@@ -180,7 +180,7 @@ int TextFile::readInt(int min,int max) {
   return value;
 }
 
-int TextFile::readEoln() {  
+int TextFile::readEoln() {
   char buf[100];
   int token=getToken(buf,sizeof(buf));
   if (token!=TOKEN_EOLN) err("EOLN",token2str(token,buf));
@@ -188,14 +188,14 @@ int TextFile::readEoln() {
   return 0;
 }
 
-int TextFile::readEof() {  
+int TextFile::readEof() {
   char buf[100];
   int token=getToken(buf,sizeof(buf));
   if (token!=TOKEN_EOF) err("EOF",token2str(token,buf));
   return 0;
 }
 
-int TextFile::readSpace() {  
+int TextFile::readSpace() {
   char buf[100];
   int token=getToken(buf,sizeof(buf));
   if (token!=TOKEN_SPACE) err("SPACE",token2str(token,buf));
@@ -205,7 +205,7 @@ int TextFile::readSpace() {
 int TextFile::readEolnOrEof() {
   char buf[100];
   int token=getToken(buf,sizeof(buf));
-  if (token!=TOKEN_EOLN && token!=TOKEN_EOF) 
+  if (token!=TOKEN_EOLN && token!=TOKEN_EOF)
     err("EOLN_OR_EOF",token2str(token,buf));
   if (token==TOKEN_EOLN) {
     line++;tno=0;
@@ -236,13 +236,13 @@ char *TextFile::token2str(int token, char *t_str) {
   return (char *)&buf;
 }
 
-int TextFile::err(const char *expectedtoken, char *readtoken) {  
+int TextFile::err(const char *expectedtoken, char *readtoken) {
   fprintf(stdout,"ERROR[line:%d,token:%d] expected: %s, read: %s\n",
       line,tno,expectedtoken,readtoken);
   exit(1);
 }
 
-int TextFile::error(const char *message) 
+int TextFile::error(const char *message)
 {
 
   fprintf(stdout,"ERROR[line:%d] %s\n",

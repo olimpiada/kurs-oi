@@ -22,7 +22,7 @@ long long mergesort(int p, int q)
     else
     {
       B[c] = A[j++];
-      inv += s+1-i; 
+      inv += s+1-i;
     }
   }
   for(int c=p; c<=q; c++)

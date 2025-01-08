@@ -126,7 +126,7 @@ void same_brzegi_z_rogami(int nr,int n,int min_x,int max_x,int min_y,int max_y)
 {
   RG.setSeed(nr);
   assert(n>=4);
-    
+
   set<PII> zb;
   zb.insert(MP(min_x,min_y));
   zb.insert(MP(min_x,max_y));
@@ -213,7 +213,7 @@ void cztery_brzegi_i_nic(int nr,int n,int min_x,int max_x,int min_y,int max_y)
 {
   RG.setSeed(nr);
   assert(n>=4);
-    
+
   set<PII> zb;
   REP(opcja,4)
   {

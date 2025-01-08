@@ -76,6 +76,5 @@ int main()
 	    printf("%d\n",dist[i][j]);
 	}
     assert(isFinish==1);
-  }  
+  }
 }
-

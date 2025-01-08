@@ -22,9 +22,9 @@ int main()
 	{
 	  s++;
 	  n/=p;
-	}  
+	}
 	printf("%d",p);
-	if (s>1) 
+	if (s>1)
 	  printf("^%d",s);
       }
     }

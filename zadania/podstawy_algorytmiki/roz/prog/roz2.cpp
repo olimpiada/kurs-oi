@@ -5,7 +5,7 @@ int main()
    int P[100000];
    P[0] = 2;
    int primes = 1;
-   for(int k=3; k<100000; k++)  
+   for(int k=3; k<100000; k++)
    {
      bool ok = true;
      for(int i=0; P[i]*P[i]<=k; i++)
@@ -37,9 +37,9 @@ int main()
 	{
 	  s++;
 	  n/=P[i];
-	}  
+	}
 	printf("%d",P[i]);
-	if (s>1) 
+	if (s>1)
 	  printf("^%d",s);
       }
     }

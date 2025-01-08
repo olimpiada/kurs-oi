@@ -28,5 +28,3 @@ int main()
   fprintf(f,"%d %d\n",maxa-1,maxb);
   fclose(f);
 }
-
-

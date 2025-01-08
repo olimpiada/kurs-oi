@@ -8,7 +8,7 @@ int main()
 {
     ios_base::sync_with_stdio(false);
     int n,q;
-    cin >> n; 
+    cin >> n;
     vector<int> A(n);
     vector<long long> S(n+1,0);
     for(int i=0; i<n; i++)

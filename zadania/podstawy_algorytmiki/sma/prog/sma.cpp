@@ -13,7 +13,7 @@ int main()
   for(int i=0; i<n; i++)
     scanf("%d", &t[i]);
   int pocz=-1, kon=-1;
-  while(kon<n-1) 
+  while(kon<n-1)
   {
     while(used[t[kon+1]])
       used[t[++pocz]]=0;

@@ -25,7 +25,7 @@ int main()
 			{
 				if (a!=pierwszy)
 				{
-					if (kolejnego_numer<0) 
+					if (kolejnego_numer<0)
 					{
 						kolejny=a;
 						kolejnego_numer=i;

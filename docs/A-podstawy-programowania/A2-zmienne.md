@@ -203,7 +203,3 @@ Dla wygody programisty, w języku C++ wprowadzono kilka typów całkowitych, ró
 | unsigned short (pełna nazwa: unsigned short int)             | $[0,65536]$                       |
 | unsigned int                                                 | $[0,4294967296]$                  |
 | unsigned long long (pełna nazwa: unsigned long long int)     | mniej więcej $[0,2\cdot10^{19}]$  |
-
-
-
-

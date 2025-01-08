@@ -35,7 +35,7 @@ void try_change(int x, int y, int p, int d)
 {
   if (x>=m || y>=n || x<0 || y<0 || A[x][y]!='%' || dist[x][y][!p]<infty)
     return;
-//  printf("%d %d %d %d\n",x,y,!p,d+1);    
+//  printf("%d %d %d %d\n",x,y,!p,d+1);
   dist[x][y][!p] = d+1;
   Q1.push(x);
   Q2.push(y);
@@ -102,6 +102,5 @@ int main()
         printf("%4d",dist[i][j][0]);
       printf("\n");
     } */
-  }  
+  }
 }
-

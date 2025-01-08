@@ -9,7 +9,7 @@ Zaczniemy od zadania o jedną z najbardziej typowych rzeczy możliwych do zrobie
 
 *Dana jest tablica $n$ liczb naturalnych. Naszym zadaniem jest znaleźć wśród nich największą.*
 
-Jako zadanie w stylu ,,olimpijskim'' wyglądałoby to tak: 
+Jako zadanie w stylu ,,olimpijskim'' wyglądałoby to tak:
 
 [Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#max1){ .md-button .md-button--primary }
 
@@ -63,7 +63,7 @@ int main() {
     cin >> n;
 
     int kandydat = 0;
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         int aktualny;
         cin >> aktualny;
         if (aktualny > kandydat) {
@@ -94,12 +94,11 @@ int main() {
 
     // Teraz następuje główna pętla.
     int najwiecej = 0;
-    int biezace = 1;  // Zaczniemy od drugiego elementu, z informacją, że pierwszy element widzieliśmy już raz.
-    for(int i = 1; i < n; i++) {
-        if (A[i] == A[i-1]) {     // Jeśli element jest taki sam, jak poprzedni...
-            biezace++;            // To zwiększamy liczbę wystąpień ostatniego elementu o 1.
-        }
-        else {
+    int biezace = 1; // Zaczniemy od drugiego elementu, z informacją, że pierwszy element widzieliśmy już raz.
+    for (int i = 1; i < n; i++) {
+        if (A[i] == A[i - 1]) { // Jeśli element jest taki sam, jak poprzedni...
+            biezace++;          // To zwiększamy liczbę wystąpień ostatniego elementu o 1.
+        } else {
             biezace = 1;        // Ale jeśli zmienił się na inny, to liczba wystąpień ustawia się z powrotem na 1.
         }
 
@@ -119,20 +118,19 @@ int main() {
     int n;
     cin >> n;
     vector<int> A(n);
-    for(int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++) {
         cin >> A[i];
     }
 
     // Teraz następuje główna pętla.
     int najwiecej = 1;
-    int biezace = 1;  // zaczniemy od drugiego elementu, z informacją, że pierwszy element widzieliśmy już raz.
+    int biezace = 1; // zaczniemy od drugiego elementu, z informacją, że pierwszy element widzieliśmy już raz.
     int kandydat = A[0];
-    for(int i = 1; i < n; i++) {
-        if (A[i] == A[i-1]) {     // jeśli element jest taki sam, jak poprzedni...
-            biezace++;            // to zwiększamy liczbę wystąpień ostatniego elementu o 1.
-        }
-        else {
-            biezace = 1            // Ale jeśli zmienił się na inny, to liczba wystąpień ustawia się z powrotem na 1.
+    for (int i = 1; i < n; i++) {
+        if (A[i] == A[i - 1]) { // jeśli element jest taki sam, jak poprzedni...
+            biezace++;          // to zwiększamy liczbę wystąpień ostatniego elementu o 1.
+        } else {
+            biezace = 1         // Ale jeśli zmienił się na inny, to liczba wystąpień ustawia się z powrotem na 1.
         }
 
         if (biezace > najwiecej) {
@@ -144,7 +142,7 @@ int main() {
 }
 ```
 
-Bardzo podobnie wygląda program, który szuka najdłuższego fragmentu tablicy, który jest rosnący. Zachęcamy do samodzielnego rozwiązania takiego zadania: 
+Bardzo podobnie wygląda program, który szuka najdłuższego fragmentu tablicy, który jest rosnący. Zachęcamy do samodzielnego rozwiązania takiego zadania:
 
 
 [Sprawdź kod na Szkopule :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#sto1){ .md-button .md-button--primary }
@@ -191,10 +189,10 @@ int main() {
         L[aktualny]++;
     }
 
-    int kandydat = 1;    // Kandydat na najczęstszy element.
-    int najwiecej = 0;    // Ile wystąpień miał kandydat.
+    int kandydat = 1;  // Kandydat na najczęstszy element.
+    int najwiecej = 0; // Ile wystąpień miał kandydat.
 
-    for (int j = 1; j <= maksymalna_wartosc ; j++) {
+    for (int j = 1; j <= maksymalna_wartosc; j++) {
         if (L[j] > najwiecej) {
             najwiecej = L[j];
             kandydat = j;

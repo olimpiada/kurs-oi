@@ -7,13 +7,13 @@
   \title{Stó³}
   \author{Jakub £±cki} %% autor opracowania
   \history{12.11.2012}{J£, opracowanie}{1.00}
-  
+
   \begin{tasktext} %% pocz±tek dokumentu
 
   \section{Rozwi±zanie wzorcowe}
   Za³ó¿my, ¿e $A \leq B$.
   Wówczas mamy trzy przypadki.
-  
+
   Je¶li $K > A$, to ¿adne krzes³o siê pod sto³em nie zmie¶ci i od razu znamy wynik.
   Zatem teraz mamy, ¿e $K \leq A \leq B$.
   Je¶li $2K > A$, to krzes³a mo¿na ustawiæ tylko w jednym rzêdzie.
@@ -21,7 +21,7 @@
   (bo pozostaje tak w±ski pasek, ¿e nie da siê go nijak wykorzystaæ).
   W tym przypadku wynik to $\left\lfloor \frac{B}{K} \right\rfloor$.
   Pozostaje ostatni przypadek, gdy $2K \leq A \leq B$.
-  
+
   Zauwa¿my, ¿e bez straty ogólno¶ci mo¿emy za³o¿yæ, ¿e w ka¿dy róg jest wci¶niête jedno krzes³o (dok³adnie pokrywaj±ce ten róg).
   Skoro tak, to dalsze krzes³a mo¿emy ustawiaæ zach³annie i ustawimy ich:
   \[
@@ -30,27 +30,27 @@
 
   \section{Rozwi±zanie alternatywne}
   Rozwi±zanie w Pascalu ustawia jedno krzes³o w rogu i nastêpnie upycha krzes³a, id±c dooko³a sto³u. Oczywi¶cie dostajemy równowa¿ny wzór.
-  
+
   \section{Rozwi±zania niepoprawne}
   Rozwi±zania \solution{b1.cpp}, \solution{b2.cpp} i \solution{b3.cpp} b³êdnie rozpatruj± jeden z przypadków.
   Rozwi±zania \solution{b4.cpp} i \solution{b5.cpp} maj± b³êdne wzory w trzecim przypadku
   (przekszta³caj± powy¿szy wzór tak, jakby pod³oga mia³a w³asno¶ci podobne do dzielenia).
   Rozwi±zanie \solution{b6.cpp} zawsze wypisuje 0 (tj. zak³ada, ¿e jeste¶my w pierwszym przypadku).
   Rozwi±zanie \solution{b7.cpp} dzieli pole sto³u przez pole kwadratu.
-  
+
   Rozwi±zanie \solution{s1.cpp} robi dzielenie przez iteracyjne odejmowanie dzielnika.
   Wbrew pozorom, to dzia³a szybko, pewnie dlatego, ¿e w ca³o¶ci liczy siê na rejestrach procesora.
   Ale przy limicie czasu rzêdu $0\mbox{,}1$ sekundy, powinno siê udaæ parê punktów uci±æ.
-  
+
   \section{Testy}
   Uzna³em, ¿e skoro zadanie ma byæ proste, postaram siê rozró¿niaæ mniej i bardziej poprawne rozwi±zania.
   W szczególno¶ci 2 punkty dostaæ mo¿na za rozpatrzenie dwóch pierwszych przypadków.
   Przy ma³ych b³êdach we wzorach (np. co¶ typu $\left\lfloor \frac{B-1}{K} \right\rfloor$ zamiast $\left\lfloor \frac{B}{K} \right\rfloor$)
   powinno siê dostaæ sporo punktów (np. 7).
   Testowa³em trochê takich usterek i wydaje siê, ¿e rozwi±zania z bugami dostaj± od $0$ do $7$ punktów, przy czym im powa¿niejszy b³±d, tym mniej punktów.
-  
+
   \section{Ograniczenia}
   Limit czasu nale¿y ustawiæ na $0.1$ sekundy. Wszystkie sensowne rozwi±zania dzia³aj± w czasie sta³ym. Ograniczenie pamiêci to $128$MB.
-  
+
   \end{tasktext}
 \end{document}

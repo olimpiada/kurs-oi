@@ -65,4 +65,3 @@ int main()
     gen_random(j,"b",t,r,!(j%2));
   }
 }
-

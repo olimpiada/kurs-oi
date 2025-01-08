@@ -16,7 +16,7 @@ int main()
 
   bool tablica[N+1];           // tablica[j] == false, jeśli liczba jest wykreślona, true jeśli nie jest
   long long prefix[N+1];
-  
+
   for(int i = 2; i <= N; i++)
      tablica[i] = isprime(i);
 
@@ -33,5 +33,5 @@ int main()
     scanf("%d%d",&a,&b);
     printf("%Ld\n",prefix[b] - prefix[a-1]);
   }
-  
+
 }
