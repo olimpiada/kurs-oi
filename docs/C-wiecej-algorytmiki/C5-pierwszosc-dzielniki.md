@@ -92,7 +92,7 @@ Algorytm ten jest więc w praktyce nie do odróżnienia od algorytmów liniowych
 
 Jednym z zadań dołączonych do niniejszej lekcji jest rozkład danej liczby $N$ na czynniki pierwsze.
 Co więcej, należy tego rozkładu dokonać w czasie $O(\sqrt{N})$, inaczej (prawdopodobnie) program przekroczy limity czasowe.
-Zalecamy w tym zadaniu pamiętac o dwóch rzeczach:
+Zalecamy w tym zadaniu pamiętać o dwóch rzeczach:
 
 - Okazuje się, że wystarczy znaleźć czynniki pierwsze mniejsze od $\sqrt{N}$ i
   podzielić $N$ przez nie – na przykład rozkładając $N = 110$,
