@@ -126,7 +126,7 @@ Ciekawostką jest fakt, że bardzo podobny problem sprawdzania pierwszości licz
 
 W zadaniu o szybkim potęgowaniu na lekcji 2 należało obliczyć wynik pewnego działania, ale wystarczyło podać jego cztery ostatnie cyfry, czyli resztę z
 dzielenia przez 10000. W rozwiązaniu korzystaliśmy z faktu, że reszta z dzielenia zachowuje się "dobrze" przy mnożeniu i dodawaniu (a także odejmowaniu,
-ale tej własności nie używaliśmy): jeśli na przykład chcemy pomnożyć przez siebie wiele liczb i znaleźć resztę z dzielenia iloczynu przez jakieś $M$,
+ale tej własności nie używaliśmy): jeśli na przykład chcemy pomnożyć przez siebie wiele liczb i znaleźć resztę z dzielenia iloczynu przez $M$,
 możemy zamiast tego domnażać do wyniku po kolei każdą liczbę oddzielnie, i po każdej operacji brać resztę z dzielenia. Innymi słowy, możemy wyobrażać sobie,
 że cały czas działamy na liczbach między 0 a $M-1$, a wynikami dodawania, mnożenia, a także odejmowania, również są takie liczby. Mówimy wtedy
 o *działaniach modulo* $M$, a ogólniej o *arytmetyce modulo* $M$.
