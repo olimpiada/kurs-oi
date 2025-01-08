@@ -30,4 +30,3 @@ int main()
 		if (wynik>0) printf("%d\n",wynik);
 		else printf("BRAK\n");
 }
-

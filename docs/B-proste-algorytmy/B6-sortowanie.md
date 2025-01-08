@@ -178,5 +178,3 @@ for (int k = 1; k < n; k++) { // Ten sam algorytm, co powyżej...
 ```
 
 Jak poprzednio, policzmy instrukcje porównania `A[j] < A[j+1]` w zależności od długości tablicy $n$. Najbardziej pesymistyczna sytuacja ma miejsce, kiedy każdy element musimy wstawiać na sam początek, zamieniając ze wszystkimi poprzednimi. Liczba operacji, liczona pesymistycznie, będzie wtedy taka sama, jak w dwóch poprzednich algorytmach ($\frac{n(n-1)}{2}$). Sortowanie przez wstawianie ma jednak dużą zaletę – działa znacznie szybciej, jeśli dane już są częściowo posortowane. O ile formalnie jest to również algorytm kwadratowy, jak poprzednie dwa, o tyle w praktyce stosowany jest częściej.
-
-

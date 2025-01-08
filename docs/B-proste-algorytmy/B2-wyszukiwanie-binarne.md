@@ -168,4 +168,3 @@ Teraz `środek` może być równy `koniec`, ale nigdy nie będzie równy `począ
 [Zagadka Nicolo Tartaglii :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#tar){ .md-button .md-button--primary }
 
 [Akcelerator :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#akc){ .md-button .md-button--primary }
-

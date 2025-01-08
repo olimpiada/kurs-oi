@@ -78,4 +78,3 @@ int main()
     assert(isFinish==1);
   }
 }
-
