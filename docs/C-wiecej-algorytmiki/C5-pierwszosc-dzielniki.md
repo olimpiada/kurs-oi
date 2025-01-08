@@ -82,7 +82,7 @@ To daje $N$ operacji. Oprócz nich pozostały właściwie tylko operacje wykreś
 
 Podczas rozpatrywania liczby 2 wykonamy $\frac{N}{2}$ operacji – tyle jest wielokrotności do wykreślenia. Podczas rozpatrywania liczby 3 wykonamy z kolei $\frac{N}{3}$ operacji, potem $\frac{N}{5}$, $\frac{N}{7}$, i tak dalej. Całkowita liczba wykreśleń wynosi $\frac{N}{2} + \frac{N}{3} + \frac{N}{5} + \frac{N}{7} + \ldots = N \cdot (\frac{1}{2} + \frac{1}{3} + \frac{1}{5} + \frac{1}{7} + \ldots)$, gdzie w
 nawiasie sumowane są wszystkie odwrotności liczb pierwszych, nie większych od $N$. Dokładne oszacowanie sumy wykraczałoby daleko poza ramy tego wykładu,
-wystarczy nam zatem wiedzieć, że suma jest równa jest $\log \log N$ (logarytmowi z logarytmu z $N$), pomnożonemu przez pewną stałą.
+wystarczy nam zatem wiedzieć, że suma jest równa $\log \log N$ (logarytmowi z logarytmu z $N$), pomnożonemu przez pewną stałą.
 
 Całkowita złożoność algorytmu wynosi zatem $O(N \log \log N)$. Należy zauważyć, że $\log \log N$ jest dla wszystkich praktycznych
 danych bardzo małą liczbą (na przykład dla $N = 10^{82}$, szacowanej liczby cząstek we Wszechświecie, $\log \log N$ wciąż jest mniejszy od 9).
