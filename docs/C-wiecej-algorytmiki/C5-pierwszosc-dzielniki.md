@@ -108,7 +108,7 @@ Zalecamy w tym zadaniu pamiętać o dwóch rzeczach:
 ## Znaczenie praktyczne, czyli algorytm RSA
 
 Jeden z najpopularniejszych, najczęściej stosowanych algorytmów szyfrowania, zwany (od nazwisk twórców)
-[algorytmem RSA](http://pl.wikipedia.org/wiki/RSA_(kryptografia) "Algorytm RSA - Wikipedia"), opiera się bardzo istotnie na
+[algorytmem RSA](http://pl.wikipedia.org/wiki/RSA_(kryptografia) "Algorytm RSA - Wikipedia"), bardzo mocno opiera się na
 problemie rozkładu na czynniki.
 W algorytmie tym wybiera się bardzo duże (na przykład mające po kilka setek _cyfr_) liczby pierwsze $p$ oraz
 $q$ i oblicza się ich iloczyn $pq$, który można podać do publicznej wiadomości. Algorytm RSA pozwala zaszyfrować wiadomość, znając wyłącznie
