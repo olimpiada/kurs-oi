@@ -12,7 +12,7 @@ Bardzo łatwo napisać program znajdujący (i, na przykład, wypisujący na wyj�
 ```cpp
 for (int i = 1; i <= n; i++)
     if (n % i == 0)
-        cout << i;
+        cout << i << '\n';
 ```
 
 Program ten ma w oczywisty sposób złożoność $O(n)$: wykona $n$ okrążeń pętli (i tyle samo operacji dzielenia i wypisywania).
