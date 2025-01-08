@@ -64,7 +64,7 @@ Teraz bierzemy najmniejszą liczbę, której (3), wykreślamy wszystkie jej wiel
 ```cpp
 bool tablica[N+1];           // tablica[j] == false, jeśli liczba jest wykreślona, true jeśli nie jest
 
-for(int i = 2; i <= N; i++)
+for (int i = 2; i <= N; i++)
     tablica[i] = true;
 
 for(int i = 2; i <= N; i++)  // bierzemy kolejną liczbę i
