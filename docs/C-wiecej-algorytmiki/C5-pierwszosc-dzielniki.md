@@ -13,7 +13,6 @@ Bardzo łatwo napisać program znajdujący (i, na przykład, wypisujący na wyj�
 for(int i = 1; i <= n; i++)
     if (n % i == 0)
         cout << i;
-
 ```
 
 Program ten ma w oczywisty sposób złożoność $O(n)$: wykona $n$ okrążeń pętli (i tyle samo operacji dzielenia i wypisywania).
