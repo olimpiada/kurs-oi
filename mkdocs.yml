@@ -45,6 +45,9 @@ nav:
       - 'Sumy w tablicach': './B-proste-algorytmy/B7-sumy-gasienica.md'
     - 'Algorytmy kontratakują':
       - 'Liczby pierwsze, dzielniki': './C-wiecej-algorytmiki/C5-pierwszosc-dzielniki.md'
+    - 'Grafy':
+      - 'DFS': './E-grafy/E2-dfs.md'
+      - 'Sortowanie topologiczne': './E-grafy/E2-sortowanie-topologiczne.md'
 
 
 extra_css:
