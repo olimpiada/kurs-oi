@@ -151,7 +151,7 @@ Odwrotności można szukać na różne sposoby. My zademonstrujemy w tym celu pe
 resztę 1 z dzielenia przez $M$. A zatem można przyjąć po prostu $b' = b^{M-2}$ i obliczyć tę ostatnią potęgę za pomocą znanego z
 poprzednich lekcji szybkiego potęgowania.
 
-Warto wspomnieć jeszcze, że istnieje algorytm, oparty na algorytmie Euklidesa, który pozwala szukać odwrotności również wtedy, jeśli $M$ nie jest liczbą pierwszą – wystarczy, aby odwracana reszta $b$ nie miała wspólnego dzielnika z $M$. Zwany jest _rozszerzonym algorytmem Euklidesa_.
+Warto wspomnieć jeszcze, że istnieje algorytm, oparty na algorytmie Euklidesa (zwany _rozszerzonym algorytmem Euklidesa_), który pozwala szukać odwrotności również wtedy, jeśli $M$ nie jest liczbą pierwszą – wystarczy, aby odwracana reszta $b$ nie miała wspólnego dzielnika z $M$.
 
 ## Zadania
 [Rozkład na czynniki :fontawesome-solid-paper-plane:](https://szkopul.edu.pl/c/kurs-oi/p/#roz){ .md-button .md-button--primary }
