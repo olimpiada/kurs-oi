@@ -10,7 +10,7 @@ Małe liczby potrafimy jednak rozkładać dość skutecznie. Zacznijmy od proble
 Bardzo łatwo napisać program znajdujący (i, na przykład, wypisujący na wyjście) wszystkie dzielniki zadanej liczby `n`:
 
 ```cpp
-for(int i = 1; i <= n; i++)
+for (int i = 1; i <= n; i++)
     if (n % i == 0)
         cout << i;
 ```
