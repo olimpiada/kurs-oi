@@ -118,7 +118,7 @@ rozłożyć $pq$ na czynniki.
 
 Zauważmy, że nasze algorytmy są tu bezużyteczne – liczba o 100 cyfrach miałaby wielkość około $10^{100}$, więc algorytm sprawdzania dzielników
 potrzebowałby aż $10^{50}$ operacji – na każdym komputerze trwałoby to o wiele dłużej, niż wynosi wiek Wszechświata. Jeśli ktoś zatem nie
-znajdzie pewnego dnia istotnie szybszych algorytmów rozkładu na czynniki, można przyjąć, że szyfrowanie tą metoda jest bezpieczne. Ze względu na to, jak
+znajdzie pewnego dnia istotnie szybszych algorytmów rozkładu na czynniki, można przyjąć, że szyfrowanie tą metodą jest bezpieczne. Ze względu na to, jak
 szeroko ten algorytm jest stosowany, dobrze byłoby, gdyby rzeczywiście problem rozkładu na czynniki okazał się niemożliwy do szybkiego pokonania. Jak dotąd, nie mamy jednak takiej pewności.
 
 Ciekawostką jest fakt, że bardzo podobny problem sprawdzania pierwszości liczby, który dla nas był równie trudny, daje się rozwiązać znacznie bardziej efektywnie. Od dawna znane były algorytmy probabilistyczne (takie, które dawały dobry wynik z bardzo dużą szansą, tym większą, im dłużej działały), a w 2002 roku trzech naukowców z Indii podało pierwszy deterministyczny (czyli "klasyczny") algorytm, który szybko sprawdza pierwszość.
