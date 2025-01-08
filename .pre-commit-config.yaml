@@ -5,8 +5,6 @@ repos:
   - id: trailing-whitespace
     args: [--markdown-linebreak-ext=md]
     exclude: .(in|out)$
-  - id: check-yaml
-    args: [--unsafe]
   - id: end-of-file-fixer
 - repo: https://github.com/finsberg/clang-format-docs
   rev: v0.3.0
