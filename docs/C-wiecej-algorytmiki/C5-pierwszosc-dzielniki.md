@@ -49,7 +49,7 @@ bool czy_pierwsza(int n)
         if (n % i == 0)                // jeśli n ma mały dzielnik większy od 1
             return false;              // to nie jest pierwsza
 
-     return true;                      // jeśli nie ma małych dzielników, to nie ma żadnych
+    return true;                       // jeśli nie ma małych dzielników, to nie ma żadnych
 }
 ```
 
