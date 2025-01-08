@@ -67,7 +67,7 @@ bool tablica[N+1];           // tablica[j] == false, jeśli liczba jest wykreśl
 for (int i = 2; i <= N; i++)
     tablica[i] = true;
 
-for(int i = 2; i <= N; i++)  // bierzemy kolejną liczbę i
+for (int i = 2; i <= N; i++) // bierzemy kolejną liczbę i
     if (tablica[i])          // jeśli nie jest wykreślona
         for (int j = 2 * i; j <= N; j = j + i) // iterujemy się po wszystkich wielokrotnościach i
             tablica[j] = false;
