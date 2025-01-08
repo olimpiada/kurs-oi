@@ -7,7 +7,7 @@ Małe liczby potrafimy jednak rozkładać dość skutecznie. Zacznijmy od proble
 
 ## Dzielniki i pierwszość
 
-Bardzo łatwo napisać program znajdujący (i, na przykład, wypisujący na wyjście) wszystkie dzielniki zadanej liczby `n`:
+Bardzo łatwo napisać kod znajdujący wszystkie dzielniki zadanej liczby `n`:
 
 ```cpp
 for (int i = 1; i <= n; i++)
