@@ -29,12 +29,12 @@ Istnieje łatwy sposób przyśpieszenia tego algorytmu – popatrzmy, jakie dzie
 Dzielniki można pogrupować w pary: jeden czynnik z pary jest zawsze mniejszy lub równy 6, drugi zawsze większy lub równy 6. W ogólnym wypadku jeden czynnik będzie mniejszy lub równy $\sqrt{n}$, drugi większy lub równy $\sqrt{n}$. Będziemy więc szukać tylko mniejszych dzielników, większe wyliczając na ich podstawie:
 
 ```cpp
-for (int i = 1; i * i <= n; i++)
-    if (n % i == 0)
-    {
+for (int i = 1; i * i <= n; i++) {
+    if (n % i == 0) {
         cout << i;
         cout << n / i;
     }
+}
 ```
 
 Teraz mamy w algorytmie tylko jedną pętlę, wykonującą $\sqrt{n}$ iteracji – złożoność algorytmu jest więc $O(\sqrt{n})$.
@@ -43,8 +43,7 @@ Zauważmy, że przy okazji rozwiązaliśmy inny problem: potrafimy w złożonoś
 pierwszą. Wystarczy w tym celu przekonać się, że nie ma żadnego dzielnika "małego" (mniejszego lub równego $\sqrt{n}$):
 
 ```cpp
-bool czy_pierwsza(int n)
-{
+bool czy_pierwsza(int n) {
     for (int i = 2; i * i <= n; i++)
         if (n % i == 0)                // jeśli n ma mały dzielnik większy od 1
             return false;              // to nie jest pierwsza
@@ -58,8 +57,8 @@ bool czy_pierwsza(int n)
 Powyższy algorytm ma niezłą skuteczność, jeśli musimy sprawdzić pierwszość jednej, zadanej liczby. Gdybyśmy jednak musieli znaleźć wszystkie liczby pierwsze mniejsze od pewnego $N$, lepiej użyć znacznie szybszego (a przy tym znanego już starożytnym) sposobu, zwanego **sitem Eratostenesa**.
 
 Najpierw piszemy w rzędzie wszystkie liczby $2, 3, ..., N$, po czym bierzemy najmniejszą liczbę – w tej chwili jest to 2 – i wykreślamy wszystkie jej
-wielokrotności (które oczywiście nie mogą być liczbami pierwszymi).
-Teraz bierzemy najmniejszą liczbę, której (3), wykreślamy wszystkie jej wielokrotności, i powtarzamy operację, dopóki to możliwe. Niewykreślone liczby, które rozpatrywaliśmy po drodze (2, 3, 5, ...) to liczby pierwsze, co łatwo udowodnić: o każdej z nich wiemy, że nie mogła być wielokrotnością żadnej mniejszej liczby, skoro nie została wcześniej wykreślona.
+wielokrotności, czyli 4, 6, 8. Oczywiście wykreślone liczby nie mogą być liczbami pierwszymi, jako że są wielokrotnościami 2.
+Teraz bierzemy najmniejszą liczbę, której jeszcze nie wykreśliliśmy (czyli 3), i wykreślamy wszystkie jej wielokrotności. Dalej powtarzamy operację: kolejną liczbą jest 4, ale jest już wykreślona, więc następnym krokiem będzie wykreślenie wielokrotności 5. Wszystkie niewykreślone liczby, które rozpatrywaliśmy po drodze (2, 3, 5, ...) to liczby pierwsze, co łatwo udowodnić: każda taka liczba była niewykreślona, kiedy do niej dotarliśmy, więc nie może być wielokrotnością żadnej z mniejszych liczb. Kontynuujemy tę procedurę tak długo, aż dotrzemy do końca tablicy i rozpatrzymy wszystkie liczby.
 
 ```cpp
 bool tablica[N+1];           // tablica[j] == false, jeśli liczba jest wykreślona, true jeśli nie jest
@@ -118,7 +117,7 @@ rozłożyć $pq$ na czynniki.
 Zauważmy, że nasze algorytmy są tu bezużyteczne – liczba o 100 cyfrach miałaby wielkość około $10^{100}$, więc algorytm sprawdzania dzielników
 potrzebowałby aż $10^{50}$ operacji – na każdym komputerze trwałoby to o wiele dłużej, niż wynosi wiek Wszechświata. Jeśli ktoś zatem nie
 znajdzie pewnego dnia istotnie szybszych algorytmów rozkładu na czynniki, można przyjąć, że szyfrowanie tą metodą jest bezpieczne. Ze względu na to, jak
-szeroko ten algorytm jest stosowany, dobrze byłoby, gdyby rzeczywiście problem rozkładu na czynniki okazał się niemożliwy do szybkiego pokonania. Jak dotąd, nie mamy jednak takiej pewności.
+szeroko ten algorytm jest stosowany, dobrze byłoby, gdyby rzeczywiście problem rozkładu na czynniki okazał się niemożliwy do szybkiego pokonania. Jak dotąd, nie mamy jednak takiej pewności. Wiemy, że komputer kwantowy – gdyby został skonstruowany i miał pełne możliwości przewidziane przez teorię – potrafiłby bardzo szybko rozkładać liczby na czynniki. Dotychczasowe próby z obliczeniami kwantowymi są jednak na razie dość odległe od tego celu.
 
 Ciekawostką jest fakt, że bardzo podobny problem sprawdzania pierwszości liczby, który był tu dla nas równie trudny, daje się rozwiązać znacznie bardziej efektywnie. Od dawna znane były algorytmy probabilistyczne (takie, które dawały dobry wynik z bardzo dużą szansą, tym większą, im dłużej działały), a w 2002 roku trzech naukowców z Indii podało pierwszy deterministyczny (czyli "klasyczny") algorytm, który szybko sprawdza pierwszość.
 
@@ -148,8 +147,7 @@ niemożliwe, na przykład w modulo 9:
 
 Okazuje się, że jeśli $M$ jest liczbą pierwszą, to dla każdej wartości z przedziału $1\ldots M-1$ istnieje jej odwrotność w arytmetyce modulo $M$.
 Odwrotności można szukać na różne sposoby. My zademonstrujemy w tym celu pewną sztuczkę matematyczną: wiadomo (z tzw. [małego twierdzenia Fermata](http://pl.wikipedia.org/wiki/Ma%C5%82e_twierdzenie_Fermata "Małe twierdzenie Fermata - Wikipedia")), że $b^{M-1}$ daje
-resztę 1 z dzielenia przez $M$. A zatem można przyjąć po prostu $b' = b^{M-2}$ i obliczyć tę ostatnią potęgę za pomocą znanego z
-poprzednich lekcji szybkiego potęgowania.
+resztę 1 z dzielenia przez $M$. A zatem $b \cdot b^{M-2} equiv 1 \pmod{M}$, więc mamy po prostu $b^{-1} = b^{M-2}$. Tę ostatnią potęgę można obliczyć za pomocą znanego z poprzednich lekcji algorytmu szybkiego potęgowania.
 
 Warto wspomnieć jeszcze, że istnieje algorytm, oparty na algorytmie Euklidesa (zwany _rozszerzonym algorytmem Euklidesa_), który pozwala szukać odwrotności również wtedy, jeśli $M$ nie jest liczbą pierwszą – wystarczy, aby odwracana reszta $b$ nie miała wspólnego dzielnika z $M$.
 
