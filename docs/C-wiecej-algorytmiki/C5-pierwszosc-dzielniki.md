@@ -101,8 +101,8 @@ Zalecamy w tym zadaniu pamiętać o dwóch rzeczach:
 - Można oczywiście szukać liczb pierwszych (na przykład sitem Eratostenesa),
   aby dzielić $N$ kolejno przez nie, ale nie jest to konieczne.
   Po prostu spróbujmy podzielić $N$ przez 2 tyle razy, ile się uda, a potem analogicznie przez 3.
-  Teraz mamy pewność, że nie uda się podzielić przez 4 – liczba w tym
-  momencie na pewno nie jest parzysta – ani przez 6.
+  Teraz mamy pewność, że nie uda się podzielić przez 4 ani przez 6 – liczba w tym
+  momencie na pewno nie jest parzysta.
   Przez jakie liczby uda się nam w ten sposób podzielić N, a przez jakie na pewno nie?
 
 ## Znaczenie praktyczne, czyli algorytm RSA
