@@ -29,7 +29,7 @@ Istnieje łatwy sposób przyśpieszenia tego algorytmu – popatrzmy, jakie dzie
 Dzielniki można pogrupować w pary: jeden czynnik z pary jest zawsze mniejszy lub równy 6, drugi zawsze większy lub równy 6. W ogólnym wypadku jeden czynnik będzie mniejszy lub równy $\sqrt{n}$, drugi większy lub równy $\sqrt{n}$. Będziemy więc szukać tylko mniejszych dzielników, większe wyliczając na ich podstawie:
 
 ```cpp
-for(int i = 1; i * i <= n; i++)
+for (int i = 1; i * i <= n; i++)
     if (n % i == 0)
     {
         cout << i;
