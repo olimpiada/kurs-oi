@@ -84,7 +84,7 @@ nawiasie sumowane są wszystkie odwrotności liczb pierwszych, nie większych od
 wystarczy nam zatem wiedzieć, że suma jest równa $\log \log N$ (logarytmowi z logarytmu z $N$), pomnożonemu przez pewną stałą.
 
 Całkowita złożoność algorytmu wynosi zatem $O(N \log \log N)$. Należy zauważyć, że $\log \log N$ jest dla wszystkich praktycznych
-danych bardzo małą liczbą (na przykład dla $N = 10^{82}$, szacowanej liczby cząstek we Wszechświecie, $\log \log N$ wciąż jest mniejszy od 9).
+danych bardzo małą liczbą (na przykład dla $N = 10^{82}$ – szacowanej liczby cząstek we Wszechświecie – $\log \log N$ wciąż jest mniejszy od 9).
 Algorytm ten jest więc w praktyce nie do odróżnienia od algorytmów liniowych.
 
 ## Zadanie: rozkład na czynniki
