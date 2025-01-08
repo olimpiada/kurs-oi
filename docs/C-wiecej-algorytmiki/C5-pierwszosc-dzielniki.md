@@ -110,7 +110,7 @@ Zalecamy w tym zadaniu pamiętać o dwóch rzeczach:
 Jeden z najpopularniejszych, najczęściej stosowanych algorytmów szyfrowania, zwany (od nazwisk twórców)
 [algorytmem RSA](http://pl.wikipedia.org/wiki/RSA_(kryptografia) "Algorytm RSA - Wikipedia"), bardzo mocno opiera się na
 problemie rozkładu na czynniki.
-W algorytmie tym wybiera się bardzo duże (na przykład mające po kilka setek _cyfr_) liczby pierwsze $p$ oraz
+W algorytmie tym wybiera się bardzo duże (na przykład mające po kilkaset _cyfr_) liczby pierwsze $p$ oraz
 $q$ i oblicza się ich iloczyn $pq$, który można podać do publicznej wiadomości. Algorytm RSA pozwala zaszyfrować wiadomość, znając wyłącznie
 iloczyn $pq$ – tak więc wysłać zakodowaną wiadomość może każdy. Aby jednak ją odszyfrować, trzeba znać liczby $p$ i $q$, czyli
 rozłożyć $pq$ na czynniki.
