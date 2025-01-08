@@ -45,7 +45,7 @@ pierwszą. Wystarczy w tym celu przekonać się, że nie ma żadnego dzielnika "
 ```cpp
 bool czy_pierwsza(int n)
 {
-    for(int i = 2; i * i <= n; i++)
+    for (int i = 2; i * i <= n; i++)
         if (n % i == 0)                // jeśli n ma mały dzielnik większy od 1
             return false;              // to nie jest pierwsza
 
