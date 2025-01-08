@@ -12,7 +12,7 @@ while (warunek)
     instrukcja;
 ```
 
-Jest ona z wyglądu dosyć podobna do instrukcji `if`. _Warunek_ jest warunkiem logicznym (czyli przyjmującym wartość `true` lub `false`), natomiast _instrukcja_ jest pojedynczą instrukcją lub (częściej) instrukcją złożoną, czyli grupą kilku instrukcji umieszczonych w nawiasach klamrowych ``{ ... }``. Pętla `while` wykonuje kolejne _obroty_. W każdym obrocie najpierw jest sprawdzany _warunek_. Jeśli jest on prawdziwy, wykonywana jest _instrukcja_, a w przeciwnym razie pętla kończy się. Czyli jeśli _warunek_ jest prawdziwy, wykonujemy _instrukcję_, po czym znów sprawdzamy _warunek_ – jeśli jest spełniony, znów wykonujemy _instrukcję_ i tak dalej – aż do chwili, gdy po wykonaniu _instrukcji_ _warunek_ nie będzie już spełniony. 
+Jest ona z wyglądu dosyć podobna do instrukcji `if`. _Warunek_ jest warunkiem logicznym (czyli przyjmującym wartość `true` lub `false`), natomiast _instrukcja_ jest pojedynczą instrukcją lub (częściej) instrukcją złożoną, czyli grupą kilku instrukcji umieszczonych w nawiasach klamrowych ``{ ... }``. Pętla `while` wykonuje kolejne _obroty_. W każdym obrocie najpierw jest sprawdzany _warunek_. Jeśli jest on prawdziwy, wykonywana jest _instrukcja_, a w przeciwnym razie pętla kończy się. Czyli jeśli _warunek_ jest prawdziwy, wykonujemy _instrukcję_, po czym znów sprawdzamy _warunek_ – jeśli jest spełniony, znów wykonujemy _instrukcję_ i tak dalej – aż do chwili, gdy po wykonaniu _instrukcji_ _warunek_ nie będzie już spełniony.
 
 Można zatem pętlę `while` odczytać tak: "dopóki jest spełniony _warunek_, wykonuj _instrukcję_". Trzeba jednak zawsze pamiętać o krokowym charakterze tej pętli: sprawdzenie warunku – wykonanie instrukcji – sprawdzenie warunku – wykonanie instrukcji – ...
 

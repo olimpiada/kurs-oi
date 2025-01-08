@@ -23,5 +23,5 @@ int main()
             res += i;
     printf("%Ld\n",res);
   }
-  
+
 }

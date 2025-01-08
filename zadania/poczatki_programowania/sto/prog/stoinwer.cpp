@@ -11,7 +11,7 @@ using namespace std;
 const int MAXAB=500*1000*1000;
 const int MAXAK=500*1000*1000;
 
-int main() 
+int main()
 {
     oi::Scanner input(stdin, oi::PL);
     int a, b, k;
@@ -30,7 +30,7 @@ int main()
         p1 = '*';
     else if(2*k > min(a,b))
         p2 = '*';
-    else 
+    else
         p3 = '*';
     printf("OK a = %10d b = %10d k = %10d %c%c%c\n", a, b, k, p1, p2, p3);
     return 0;

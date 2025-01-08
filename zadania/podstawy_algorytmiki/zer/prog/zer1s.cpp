@@ -49,7 +49,7 @@ void calc()
 		int q;
 		ignore_value(scanf("%d", &q));
 		text[q] = 1 - text[q];
-		printf("%d\n", find_zeros()); 
+		printf("%d\n", find_zeros());
 	}
 }
 

@@ -41,7 +41,7 @@ int main(int argc, char ** argv)
         L1 = x;
     }
 //    fprintf(stderr,"%d %d\n",L0,L1);
-    
+
     massert(L0+L1==s,"Suma podanych elementow niewlasciwa!");
     printf("OK\n");
     }

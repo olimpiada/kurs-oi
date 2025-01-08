@@ -3,7 +3,7 @@
  *  Zadanie: WES - Wesola malpka
  *  Autor zadania: Joanna Bujnowska
  *  Autor programu: Jacek Tomasiewicz
- *  Zlozonosc czasowa: O(z*log_n) 
+ *  Zlozonosc czasowa: O(z*log_n)
  *  ====================================
  */
 #include<cstdio>

@@ -23,6 +23,6 @@ int main()
 	for(int i=1; i<=h; i++)
 	  for(int j=1; j<=w; j++)
 	    A[i][j] = max(A[i-1][j],A[i][j-1])+D[i][j];
-	printf("%d\n",A[h][w]);	
+	printf("%d\n",A[h][w]);
   }
 }

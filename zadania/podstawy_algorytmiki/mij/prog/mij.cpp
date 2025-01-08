@@ -11,5 +11,5 @@ int main() {
        else wynik+=wschod;
     }
     cout<<wynik<<endl;
-    return 0;   
+    return 0;
 }

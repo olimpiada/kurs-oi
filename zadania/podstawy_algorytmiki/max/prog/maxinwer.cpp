@@ -10,7 +10,7 @@ void inwer(oi::Scanner in) {
     int n;
     // `oi::nl` in `oi::Scanner::Mode::TestInput` mode allows only a single `\n`.
     in >> oi::Num{n, 1, maxn} >> oi::nl;
-    
+
     vector<int> v(n);
     for (int i = 0; i < n; ++i) {
         in >> oi::Num{v[i], 1, maxw};

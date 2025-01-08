@@ -33,7 +33,7 @@ int main() {
   in.readString(liczba, 1005);
   sprawdz(in, liczba);
   in.readSpace();
-  
+
   in.readString(oper, 3);
   if (strcmp(oper, "<") && strcmp(oper, ">") && strcmp(oper, "!=") && strcmp(oper, "==") && strcmp(oper, "<=") && strcmp(oper, ">="))
     in.error("Niepoprawny operator");
