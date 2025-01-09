@@ -57,7 +57,7 @@ bool czy_pierwsza(int n) {
 Powyższy algorytm ma niezłą skuteczność, jeśli musimy sprawdzić pierwszość jednej, zadanej liczby. Gdybyśmy jednak musieli znaleźć wszystkie liczby pierwsze mniejsze od pewnego $N$, lepiej użyć znacznie szybszego (a przy tym znanego już starożytnym) sposobu, zwanego **sitem Eratostenesa**.
 
 Najpierw piszemy w rzędzie wszystkie liczby $2, 3, ..., N$, po czym bierzemy najmniejszą liczbę – w tej chwili jest to 2 – i wykreślamy wszystkie jej
-wielokrotności, czyli 4, 6, 8. Oczywiście wykreślone liczby nie mogą być liczbami pierwszymi, jako że są wielokrotnościami 2.
+wielokrotności, czyli 4, 6, 8... Oczywiście wykreślone liczby nie mogą być liczbami pierwszymi, jako że są wielokrotnościami 2.
 Teraz bierzemy najmniejszą liczbę, której jeszcze nie wykreśliliśmy (czyli 3), i wykreślamy wszystkie jej wielokrotności. Dalej powtarzamy operację: kolejną liczbą jest 4, ale jest już wykreślona, więc następnym krokiem będzie wykreślenie wielokrotności 5. Wszystkie niewykreślone liczby, które rozpatrywaliśmy po drodze (2, 3, 5, ...) to liczby pierwsze, co łatwo udowodnić: każda taka liczba była niewykreślona, kiedy do niej dotarliśmy, więc nie może być wielokrotnością żadnej z mniejszych liczb. Kontynuujemy tę procedurę tak długo, aż dotrzemy do końca tablicy i rozpatrzymy wszystkie liczby.
 
 ```cpp
@@ -147,7 +147,7 @@ niemożliwe, na przykład w modulo 9:
 
 Okazuje się, że jeśli $M$ jest liczbą pierwszą, to dla każdej wartości z przedziału $1\ldots M-1$ istnieje jej odwrotność w arytmetyce modulo $M$.
 Odwrotności można szukać na różne sposoby. My zademonstrujemy w tym celu pewną sztuczkę matematyczną: wiadomo (z tzw. [małego twierdzenia Fermata](http://pl.wikipedia.org/wiki/Ma%C5%82e_twierdzenie_Fermata "Małe twierdzenie Fermata - Wikipedia")), że $b^{M-1}$ daje
-resztę 1 z dzielenia przez $M$. A zatem $b \cdot b^{M-2} equiv 1 \pmod{M}$, więc mamy po prostu $b^{-1} = b^{M-2}$. Tę ostatnią potęgę można obliczyć za pomocą znanego z poprzednich lekcji algorytmu szybkiego potęgowania.
+resztę 1 z dzielenia przez $M$. A zatem $b \cdot b^{M-2} \equiv 1 \pmod{M}$, więc mamy po prostu $b^{-1} = b^{M-2}$. Tę ostatnią potęgę można obliczyć za pomocą znanego z poprzednich lekcji algorytmu szybkiego potęgowania.
 
 Warto wspomnieć jeszcze, że istnieje algorytm, oparty na algorytmie Euklidesa (zwany _rozszerzonym algorytmem Euklidesa_), który pozwala szukać odwrotności również wtedy, jeśli $M$ nie jest liczbą pierwszą – wystarczy, aby odwracana reszta $b$ nie miała wspólnego dzielnika z $M$.
 
