@@ -4,17 +4,31 @@
 
 Grafy skierowane, w których nie ma żadnych cykli (czyli ścieżek z pewnego
 wierzchołka do niego samego) nazywa się *acyklicznymi* (ang. Directed Acyclic
-Graph).
+Graph – DAG). Przykładem może być poniższy graf:
+
+![Przykład](../assets/dag1-light.png#only-light){ loading=lazy width="300" }
+![Przykład](../assets/dag1-dark.png#only-dark){ loading=lazy width="300" class="no-invert" }
 
 W takich grafach możemy przypisać wierzchołkom numery tak, aby krawędzie
 przechodziły tylko od wierzchołka o niższym numerze do wierzchołka o
-wyższym. Taką kolejność nazywamy *posortowaniem topologicznym* wierzchołków.
+wyższym. Taką kolejność nazywamy *kolejnością topologiczną* wierzchołków. Dla
+powyższego grafu może to wyglądać tak:
+
+![Przykład](../assets/dag2-light.gif#only-light){ loading=lazy width="500" }
+![Przykład](../assets/dag2-dark.gif#only-dark){ loading=lazy width="500" class="no-invert" }
+
+Zauważmy jednak, że może istnieć wiele takich ustawień – na przykład możemy
+zamienić dwa ostatnie wierzchołki miejscami, a warunek nadal będzie spełniony.
+
+![Przykład](../assets/dag3-light.gif#only-light){ loading=lazy width="500" }
+![Przykład](../assets/dag3-dark.gif#only-dark){ loading=lazy width="500" class="no-invert" }
+
 To, że zawsze jest to możliwe, najłatwiej pokazać konstruując algorytm, który
 będzie je znajdować. Zaraz to zrobimy, ale najpierw zróbmy pewne spostrzeżenie.
 
 Fakt:
-*W każdym acyklicznym grafie skierowanym istnieje wierzchołek o stopniu
-wejściowym zero.*  
+*W każdym acyklicznym grafie skierowanym istnieje wierzchołek, do którego nie
+wchodzi żadna krawędź.*  
 Dowód:  
 Załóżmy przeciwnie, czyli że każdy wierzchołek ma jakiegoś poprzednika. Weźmy
 dowolny wierzchołek $v_0$. Ma on pewnego poprzednika $v_1$, który z kolei ma
@@ -153,7 +167,8 @@ wierzchołki.
 
 ## Algorytm rekurencyjny
 
-Będziemy budować listę posortowanych wierzchołków rekurencyjnie. Przypomnijmy,
+Alternatywnym podejściem jest użycie algorytmu DFS do rekurencyjnego budowania
+listy posortowanych wierzchołków. Przypomnijmy,
 że aby kolejność wierzchołków spełniała warunek posortowania, wszyscy następnicy
 każdego wierzchołka muszą być po nim na liście. My jednak, aby ułatwić
 implementację, zrobimy odwrotnie i wszyscy następnicy wierzchołka będą *przed*
@@ -187,8 +202,7 @@ int dfs(int v) {
 }
 ```
 
-Aby nasza lista była kompletna, możemy użyć założenia o funkcję `dfs` i
-zagwarantować, że każdy wierzchołek się na niej znajdzie:
+Aby zbudować naszą listę, musimy umieścić na niej wszystkie wierzchołki:
 
 ```cpp
 for (int v = 0; v < n; v++)

@@ -1,37 +1,74 @@
 from manim import *
+import shutil
+from typing import Sequence
 
-config.images_dir = '../docs/assets'
-config.video_dir = '../docs/assets'
+config.format = 'gif'
+config.transparent = True
+config.images_dir = './media'
+config.video_dir = './media'
 config.log_dir = './logs'
 config.partial_movie_dir = './cache'
+config.frame_rate = 30
 
 RED = '#ed1b23'
 GREEN = '#00a650'
 BLUE = '#0894dc'
-BACKGROUND = '#e6e6e6'
-FOREGROUND = '#221e1f'
+FOREGROUND_LIGHT = '#1f1f1f'
+FOREGROUND_DARK = '#e6e6e6'
+FOREGROUND = FOREGROUND_LIGHT
+BACKGROUND_LIGHT = '#fafafa'
+BACKGROUND_DARK = '#1d2028'
+BACKGROUND = BACKGROUND_LIGHT
 
 class Graph:
-    """An undirected unweighted graph without labels."""
-    def __init__(self, V, E, positions):
-        assert len(V) == len(positions)
-        self.V = V
+    def __init__(
+            self,
+            n: int,
+            E: Sequence[tuple[int, int]],
+            positions: Sequence[tuple[float, float]],
+            directed: bool = False,
+        ):
+        assert len(positions) == n
+        self.V = list(range(n))
         self.E = E
-        self.N = {v: [] for v in V}
+        self.N = [[] for _ in self.V]
         for v, u in E:
             self.N[v].append(u)
-            self.N[u].append(v)
-        self.mV = [Dot(point=positions[v], color=FOREGROUND) for v in V]
-        self.mE = [
-            Line(self.mV[v].get_center(), self.mV[u].get_center(), color=FOREGROUND)
-            for v, u in E
-        ]
+            if not directed:
+                self.N[u].append(v)
 
-def render(scene_class, name: str) -> None:
+        def Node(v):
+            return Dot(point=(*positions[v], 0), color=FOREGROUND)
+        self.mV = [Node(v) for v in self.V]
+
+        def Edge(start, end, **kwargs):
+            res = Line(
+                self.mV[start].get_center(), self.mV[end].get_center(),
+                **({'color': FOREGROUND, 'buff': DEFAULT_DOT_RADIUS * 1.5} | kwargs)
+            )
+            if directed:
+                res.add_tip(tip_length=0.15, tip_width=0.15)
+            return res
+        self.EdgeFactory = Edge
+
+        self.mE = [Edge(v, u) for v, u in E]
+
+def render(scene, name: str) -> None:
     global BACKGROUND, FOREGROUND
-    with tempconfig({'output_file': name + '-light', 'background_color': BACKGROUND, 'scene_names': [name]}):
-        scene_class().render()
-    BACKGROUND, FOREGROUND = FOREGROUND, BACKGROUND
-    with tempconfig({'output_file': name + '-dark', 'background_color': BACKGROUND, 'scene_names': [name]}):
-        scene_class().render()
-    BACKGROUND, FOREGROUND = FOREGROUND, BACKGROUND
+
+    def render(scheme: str):
+        with tempconfig({
+            'output_file': f'{name}-{scheme}',
+            'background_color': BACKGROUND,
+            'scene_names': [name],
+        }):
+            scene().render()
+            # render to local directory and copy to `docs/assets` to avoid
+            # `mkdocs serve` constantly reloading the page while the video
+            # is being rendered
+            shutil.copy2(config.output_file, '../docs/assets')
+
+    FOREGROUND, BACKGROUND = FOREGROUND_LIGHT, BACKGROUND_LIGHT
+    render('light')
+    FOREGROUND, BACKGROUND = FOREGROUND_DARK, BACKGROUND_DARK
+    render('dark')
