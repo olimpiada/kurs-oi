@@ -40,7 +40,7 @@ body[data-md-color-scheme="slate"] .md-typeset img {
     filter: invert(1) brightness(1.4);
 }
 
-body[data-md-color-scheme="slate"] .no-invert {
+body[data-md-color-scheme="slate"] .md-typeset img.no-invert {
     filter: none;
 }
 
