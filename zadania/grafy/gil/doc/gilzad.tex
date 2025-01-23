@@ -1,0 +1,35 @@
+\documentclass{spiral-kurs}
+\def\title{Gildie}
+\def\id{gil}
+\def\TL{1~s}
+\def\ML{64~MB}
+\begin{document}
+\makeheader
+
+Król Bajtazar ma nie lada problem. Gildia Szwaczek oraz Gildia Krawców jednocześnie poprosiły o pozwolenie na otwarcie swoich filii w każdym z miast królestwa.
+
+W Bajtocji jest $n$ miast. Niektóre z nich są połączone dwukierunkowymi drogami. Każda z gildii wysunęła postulat, aby dla każdego miasta:
+
+\begin{itemize}
+  \item znajdowała się w nim filia danej gildii, lub
+  \item miasto było bezpośrednio połączone drogą z miastem, w którym znajduje się filia tej gildii.
+\end{itemize}
+
+Z drugiej strony, Król Bajtazar wie, że jeśli pozwoli w jednym mieście otworzyć filie obu gildii, to zapewne doprowadzi to do zmowy gildii i zmonopolizowania rynku odzieżowego. Dlatego też poprosił Cię o pomoc.
+
+\section{Wejście}
+W pierwszym wierszu standardowego wejścia podane są dwie liczby całkowite $n$ oraz $m$ ($1 \le n \le 200\,000$, $0 \le m \le 500\,000$), oznaczające odpowiednio liczbę miast i liczbę dróg w Bajtocji. Miasta są ponumerowane od 1 do $n$. W $(i+1)$-szym wierszu wejścia znajduje się opis $i$-tej drogi; zawiera on liczby $a_i$ oraz $b_i$ ($1 \le a_i, b_i \le n$, $a_i \neq b_1$) oznaczające, że $i$-ta droga łączy miasta $a_i$ oraz $b_i$. Każda para miast jest połączona co najwyżej jedną drogą. Drogi nie krzyżują się -- jedynie mogą spotykać się w miastach -- choć mogą prowadzić tunelami i estakadami.
+
+\section{Wyjście}
+W pierwszym wierszu standardowego wyjścia Twój program powinien wypisać jedno słowo: TAK -- jeśli da się rozmieścić filie gildii w miastach zgodnie z warunkami zadania lub NIE -- w przeciwnym przypadku. W przypadku odpowiedzi TAK, w kolejnych wierszach powinien znaleźć się opis przykładowego rozmieszczenia filii. $(i+1)$-szy wiersz powinien zawierać:
+
+\begin{itemize}
+  \item literę K, jeśli w mieście ma się znaleźć filia gildii krawców, lub
+  \item literę S, jeśli w mieście ma się znaleźć filia gildii szwaczek, lub
+  \item literę N, jeśli w mieście nie ma się znaleźć filia żadnej z dwóch gildii.
+\end{itemize}
+
+
+\example{0}
+
+\end{document}

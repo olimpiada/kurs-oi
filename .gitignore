@@ -1,1 +1,4 @@
 public/
+
+zadania/**/.cache/
+zadania/**/*.tgz
