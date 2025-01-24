@@ -1,4 +1,9 @@
 public/
 
 zadania/**/.cache/
+zadania/**/doc/*.pdf
 zadania/**/*.tgz
+zadania/**/in/*.in
+zadania/**/out/*.out
+!zadania/**/in/???0*.in
+!zadania/**/out/???0*.out
