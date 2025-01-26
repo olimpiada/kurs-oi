@@ -94,3 +94,8 @@ body[data-md-color-primary="blue"] {
 .md-header {
     background-color: #777;
 }
+
+.md-typeset .front-page-logo {
+    height: 70px;
+    margin: 10px;
+}
