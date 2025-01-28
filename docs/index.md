@@ -35,3 +35,16 @@ Jest kilka możliwości:
  * Możesz również zgłosić nam uwagę przez
    [formularz kontaktowy](https://forms.gle/Nj8oRMhaV7QxnFZLA).
 
+<br><br>
+
+![Logo UWr](assets/uwr-logo-light.jpg#only-light){ class="front-page-logo" }
+![Logo UWr](assets/uwr-logo-dark.svg#only-dark){ class="no-invert front-page-logo" }
+![Logo FRI](assets/fri-logo-light.png#only-light){ class="front-page-logo" }
+![Logo FRI](assets/fri-logo-dark.png#only-dark){ class="no-invert front-page-logo" }
+![Logo UW](assets/uw-logo.png){ class="front-page-logo" }
+![Logo MAP](assets/map-logo-light.svg#only-light){ class="front-page-logo" }
+![Logo MAP](assets/map-logo-dark.svg#only-dark){ class="no-invert front-page-logo" }
+![Logo Ministerstwo](assets/ministerstwo-logo-light.png#only-light){ class="no-invert front-page-logo" }
+![Logo Ministerstwo](assets/ministerstwo-logo-dark.png#only-dark){class="no-invert front-page-logo" }  
+Projekt "Mistrzostwa w Algorytmice i Programowaniu – Uczniowie"  
+Zadanie finansowane ze środków Ministerstwa Cyfryzacji
