@@ -40,7 +40,7 @@ wierzchołków! Oznacza to, że któryś z nich się powtarza na tej ścieżce, 
 wyszło nam, że mamy cykl w grafie, ale nasz graf wcale nie ma żadnych
 cykli! Zatem to nasze założenie, że każdy wierzchołek ma pewnego
 poprzednika, było błędne. Prawdą natomiast jest, że musi istnieć co najmniej jeden
-wierzchołek o stopniu wejściowym zero.
+wierzchołek, do którego nie wchodzi żadna krawędź.
 
 ## Algorytm iteracyjny
 
@@ -59,17 +59,21 @@ następnego wierzchołka będzie *po* aktualnie umieszczonym wierzchołku).
 ### Implementacja
 
 Jak szybki może być taki algorytm? Wykona on $n$ iteracji, w każdej musi wziąć
-dowolny wierzchołek o stopniu wejściowym zero, nazwijmy go `v`, a następnie
+dowolny wierzchołek o stopniu wejściowym zero (czyli taki, do którego nie
+wchodzi żadna krawędź), nazwijmy go `v`, a następnie
 usunąć go z grafu. Stopnie wejściowe wszystkich wierzchołków możemy pamiętać w
 tablicy, więc naiwne szukanie zajęłoby nam czas $O(n)$.
 
-Jak zaimplementować usuwanie z grafu? Tablicą `nastepnicy[v]` nie musimy się
+Jak zaimplementować usuwanie z grafu? Listą sąsiedztwa `v` nie musimy się
 przejmować, bo liczymy na to, że nigdy już nie potraktujemy `v` jako istniejący
 wierzchołek, więc nie powinniśmy się do niej odwoływać. Drugą rzeczą, na którą
 `v` ma wpływ, są stopnie wejściowe jego następników, a więc trzeba je wszystkie
 pomniejszyć o 1.
 
-Takie podejście mogłoby wyglądać następująco:
+Załóżmy, że w naszym programie reprezentujemy listy sąsiedztwa przy użyciu
+wektorów, w tablicy `vector<int> nastepnicy[n]`, a stopień wejściowy każdego
+wierzchołka policzyliśmy sobie w oddzielnej tablicy `int stopien_wejsciowy[n]`.
+To czy wierzchołek został usunięty, będziemy zapisywać w tablicy `bool usuniety[n]`.
 
 ```cpp
 vector<int> lista;
@@ -105,7 +109,7 @@ Jak zauważyliśmy, szukanie wierzchołka o stopniu wejściowym zero jest wąski
 gardłem w algorytmie. Czy możemy przyspieszyć ten krok?
 
 Wyobraźmy sobie, że w kolejnych krokach algorytmu mamy worek, w którym znajdują
-się wszystkie wierzchołki o stopniu zero. Wtedy jedna iteracja algorytmu
+się wszystkie wierzchołki o stopniu wejściowym zero. Wtedy jedna iteracja algorytmu
 sprowadzałaby się do:
 
 - Wyjmij dowolny wierzchołek `v` z worka i usuń go z grafu.
@@ -121,8 +125,12 @@ worka we wszystkich iteracjach rozpatrzymy każdą krawędź grafu dokładnie ra
 więc zajmie to czas $O(m)$. Włączając jeszcze koszt początkowej budowy worka i
 iteracji algorytmu, dostaniemy czas $O(n+m)$.
 
-Naszym „workiem” może być jakakolwiek kontener C++, który udostępnia szybkie
-dodawanie i usuwanie elementów, na przykład kolejka, stos albo wektor.
+Tradycyjnie w roli „worka” używa się kolejki – na początku trafiają na nią
+wszystkie wierzchołki o stopniu wejściowym zero. Potem każdy wierzchołek,
+któremu stopień spadnie do zera, trafia na koniec kolejki. Tak naprawdę jednak
+uporządkowanie wierzchołków nie ma dla nas znaczenia, więc w tej roli sprawdzi
+się równie dobrze wektor, stos lub dowolna struktura, do której łatwo się
+dorzuca i usuwa elementy.
 
 Pełna implementacja tego algorytmu może wyglądać następująco:
 
@@ -132,7 +140,7 @@ int stopien_wejsciowy[n];
 
 vector<int> sortuj() {
   // worek będzie trzymał wszystkie wierzchołki o stopniu wejściowym 0
-  stack<int> worek;
+  queue<int> worek;
 
   for (int v = 0; v < n; v++)
     if (stopien_wejsciowy[v] == 0)
@@ -173,8 +181,7 @@ listy posortowanych wierzchołków. Przypomnijmy,
 każdego wierzchołka muszą być po nim na liście. My jednak, aby ułatwić
 implementację, zrobimy odwrotnie i wszyscy następnicy wierzchołka będą *przed*
 nim. Aby otrzymać wynik zgodny z definicją podaną wcześniej, wystarczy później taką
-listę odwrócić (choć nie zawsze jest to konieczne i czasami wygodniej pracować w
-takiej formie).
+listę odwrócić.
 
 Zaimplementujmy więc funkcję `dfs(v)`, której wywołanie będzie gwarantować, że
 na naszej liście znajdzie się wierzchołek `v` i wszystkie wierzchołki
