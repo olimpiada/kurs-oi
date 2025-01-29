@@ -30,9 +30,9 @@ I jak zadziała na poniższym grafie:
 ![Przykład](../assets/dfs1-dark.gif#only-dark){ loading=lazy width="500" class="no-invert" }
 
 Zauważmy, że całą robotę wykonuje za nas rekurencja. Kiedy wchodzimy do
-wierzchołka, od razu idziemy do jego sąsiada, a w momencie, gdy będziemy się
-wracać, automatycznie wybierzemy następnego nieodwiedzonego sąsiada. Jak już
-takich nie ma, to wracamy z wywołania rekurencyjnego.
+wierzchołka, od razu idziemy do jego sąsiada, a w momencie, gdy będziemy
+wracać, automatycznie wybierzemy następnego nieodwiedzonego sąsiada. Gdy już
+takich nie ma, wracamy z wywołania rekurencyjnego.
 
 ## Odległości
 
@@ -43,7 +43,7 @@ odległościami od wierzchołka początkowego – wynika to z faktu, że DFS zna
 *jakąś* ścieżkę do wierzchołka, a nie tę najkrótszą, tak jak to było w przypadku
 BFS.
 
-Warto jednak wspomnieć, że zadziałałoby to, jeżeli nasz graf nie posiadał by
+Warto jednak wspomnieć, że DFS nadawałby się do obliczania odległości, gdyby nasz graf nie posiadał 
 cykli, czyli był drzewem. Jest tak dlatego, że w drzewie istnieje dokładnie
 jedna ścieżka między każdymi dwoma wierzchołkami – zatem ta *jakaś* ścieżka
 znaleziona przez DFS będzie automatycznie tą najkrótszą.

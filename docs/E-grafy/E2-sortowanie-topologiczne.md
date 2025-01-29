@@ -23,8 +23,8 @@ zamienić dwa ostatnie wierzchołki miejscami, a warunek nadal będzie spełnion
 ![Przykład](../assets/dag3-light.gif#only-light){ loading=lazy width="500" }
 ![Przykład](../assets/dag3-dark.gif#only-dark){ loading=lazy width="500" class="no-invert" }
 
-To, że zawsze jest to możliwe, najłatwiej pokazać konstruując algorytm, który
-będzie je znajdować. Zaraz to zrobimy, ale najpierw zróbmy pewne spostrzeżenie.
+To, że kolejność topologiczna zawsze istnieje, najłatwiej pokazać konstruując algorytm, który
+będzie ją znajdować. Zaraz to zrobimy, ale najpierw zróbmy pewne spostrzeżenie.
 
 Fakt:
 *W każdym acyklicznym grafie skierowanym istnieje wierzchołek, do którego nie
@@ -172,7 +172,7 @@ listy posortowanych wierzchołków. Przypomnijmy,
 że aby kolejność wierzchołków spełniała warunek posortowania, wszyscy następnicy
 każdego wierzchołka muszą być po nim na liście. My jednak, aby ułatwić
 implementację, zrobimy odwrotnie i wszyscy następnicy wierzchołka będą *przed*
-nim. Aby otrzymać wynik zgodny z definicją podaną wcześniej, wystarczy taką
+nim. Aby otrzymać wynik zgodny z definicją podaną wcześniej, wystarczy później taką
 listę odwrócić (choć nie zawsze jest to konieczne i czasami wygodniej pracować w
 takiej formie).
 
