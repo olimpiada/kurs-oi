@@ -39,13 +39,11 @@ takich nie ma, wracamy z wywołania rekurencyjnego.
 W algorytmie BFS mogliśmy przypisywać wierzchołkom odległości od wierzchołka
 początkowego, gdy przechodziliśmy krawędzią. Niestety, gdybyśmy spróbowali zrobić
 coś podobnego w algorytmie DFS, to otrzymane liczby nie byłyby prawdziwymi
-odległościami od wierzchołka początkowego – wynika to z faktu, że DFS znajduje
-*jakąś* ścieżkę do wierzchołka, a nie tę najkrótszą, tak jak to było w przypadku
-BFS.
+odległościami od wierzchołka początkowego. Wynika to z faktu, że DFS do każdego wierzchołka dochodzi pierwszą znalezioną ścieżką, nie starając się, aby była to najkrótsza ścieżka -- tak jak robiłby to BFS.
 
 Warto jednak wspomnieć, że DFS nadawałby się do obliczania odległości, gdyby nasz graf nie posiadał 
 cykli, czyli był drzewem. Jest tak dlatego, że w drzewie istnieje dokładnie
-jedna ścieżka między każdymi dwoma wierzchołkami – zatem ta *jakaś* ścieżka
+jedna ścieżka między każdymi dwoma wierzchołkami – zatem "pierwsza możliwa" ścieżka
 znaleziona przez DFS będzie automatycznie tą najkrótszą.
 
 ## Co wybrać, BFS czy DFS?
