@@ -183,29 +183,27 @@ implementację, zrobimy odwrotnie i wszyscy następnicy wierzchołka będą *prz
 nim. Aby otrzymać wynik zgodny z definicją podaną wcześniej, wystarczy później taką
 listę odwrócić.
 
-Zaimplementujmy więc funkcję `dfs(v)`, której wywołanie będzie gwarantować, że
-na naszej liście znajdzie się wierzchołek `v` i wszystkie wierzchołki
-topologicznie od niego większe (i będą one w dobrej kolejności).
+Zaimplementujmy więc funkcję `dfs(v)` – jej głównym celem jest dodanie `v` na koniec
+wynikowej listy. Musimy pamiętać, aby zachować kolejność topologiczną, więc przed
+dodaniem `v` do listy musimy zagwarantować, że wszyscy jego następnicy
+już się na niej znajdują – zrobimy to poprzez wywołanie `dfs(u)` dla wszystkich
+tych, których jeszcze nie ma na liście.
 
 ```cpp
 vector<int> nastepnicy[n];
-bool odwiedzony[n];
+bool na_liscie[n];
 vector<int> lista;
 
 // Po wywołaniu dfs(v), v będzie się znajdować na liście
 int dfs(int v) {
-  if (odwiedzony[v])
-    // v już jest na liście, nic nie trzeba robić
-    return;
-
-  odwiedzony[v] = true;
-
   // Upewniamy się, że wszyscy następnicy są na liście
   for (int u : nastepnicy[v])
-    dfs(u);
+    if (!na_liscie[u])
+      dfs(u);
 
   // Teraz możemy dodać na koniec v
   lista.push_back(v);
+  na_liscie[v] = true;
 }
 ```
 
@@ -213,5 +211,15 @@ Aby zbudować naszą listę, musimy umieścić na niej wszystkie wierzchołki:
 
 ```cpp
 for (int v = 0; v < n; v++)
-  dfs(v);
+  if (!na_liscie[v])
+    dfs(v);
 ```
+
+!!! uwaga
+    Taki algorytm zapętli się, jeżeli w grafie jest cykl. Aby tego uniknąć, można
+    przenieść instrukcję `na_liscie[v] = true` na początek funkcji `dfs` – wtedy
+    algorytm zakończy się, ale nie zauważy cyklu i da zły wynik (bo dobry wynik
+    po prostu nie istnieje). Możemy również połączyć konstrukcję kolejności
+    topologicznej z kolorowaniem wierzchołków odwiedzonych, aby uzyskać
+    algorytm, który albo da nam kolejność topologiczną, albo powie, że w grafie
+    jest cykl.
