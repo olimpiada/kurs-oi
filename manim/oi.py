@@ -1,6 +1,7 @@
 from manim import *
 import shutil
 from typing import Sequence
+from pathlib import Path
 
 config.format = 'gif'
 config.transparent = True
@@ -9,6 +10,7 @@ config.video_dir = './media'
 config.log_dir = './logs'
 config.partial_movie_dir = './cache'
 config.frame_rate = 30
+config.max_files_cached = 300
 
 RED = '#ed1b23'
 GREEN = '#00a650'
@@ -20,12 +22,15 @@ BACKGROUND_LIGHT = '#fafafa'
 BACKGROUND_DARK = '#1d2028'
 BACKGROUND = BACKGROUND_LIGHT
 
+_ASSETS_DIR = Path(__file__).parent.parent / 'docs' / 'assets'
+
 class Graph:
     def __init__(
             self,
             n: int,
             E: Sequence[tuple[int, int]],
             positions: Sequence[tuple[float, float]],
+            *,
             directed: bool = False,
         ):
         assert len(positions) == n
@@ -66,7 +71,7 @@ def render(scene, name: str) -> None:
             # render to local directory and copy to `docs/assets` to avoid
             # `mkdocs serve` constantly reloading the page while the video
             # is being rendered
-            shutil.copy2(config.output_file, '../docs/assets')
+            shutil.copy2(config.output_file, str(_ASSETS_DIR))
 
     FOREGROUND, BACKGROUND = FOREGROUND_LIGHT, BACKGROUND_LIGHT
     render('light')
