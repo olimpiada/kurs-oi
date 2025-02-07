@@ -34,6 +34,16 @@ wierzchołka, od razu idziemy do jego sąsiada, a w momencie, gdy będziemy
 wracać, automatycznie wybierzemy następnego nieodwiedzonego sąsiada. Gdy już
 takich nie ma, wracamy z wywołania rekurencyjnego.
 
+!!! note "Stos zamiast kolejki"
+
+    Co ciekawe, istnieje alternatywna metoda implementacji algorytmu DFS, która
+    nie używa rekurencji. Wygląda ona tak samo jak implementacja BFS, tylko że
+    zamiast kolejki używa się stosu.
+
+    Takiej implementacji jednak rzadko się używa, ponieważ tracimy prostotę
+    implementacji. Jej atutem jest jednak to, że zużywa mniej pamięci niż wersja
+    rekurencyjna, w której wywołania funkcji potrafią zająć dużo pamięci stosu.
+
 ### Odległości
 
 W algorytmie BFS mogliśmy przypisywać wierzchołkom odległości od wierzchołka
@@ -45,27 +55,6 @@ Warto jednak wspomnieć, że DFS nadawałby się do obliczania odległości, gdy
 cykli, czyli był drzewem. Jest tak dlatego, że w drzewie istnieje dokładnie
 jedna ścieżka między każdymi dwoma wierzchołkami – zatem "pierwsza możliwa" ścieżka
 znaleziona przez DFS będzie automatycznie tą najkrótszą.
-
-### Co wybrać, BFS czy DFS?
-
-Algorytm BFS wydaje się robić dokładnie to samo co DFS, a do tego potrafi też
-policzyć odległości w grafie. Patrząc tylko na to, może wydawać się, że nie warto
-się uczyć o DFS, bo zawsze można użyć BFS. Jednak mimo to, większość
-programistów wybiera DFS, gdy może użyć dowolnego z tych dwóch
-algorytmów. Wynika to z wyjątkowej prostoty implementacji DFS.
-
-W przyszłych lekcjach tego kursu poznamy też unikatowe własności DFS, które
-pozwolą nam rozwiązywać problemy, przy których BFS by sobie nie poradził.
-
-!!! note "Stos zamiast kolejki"
-
-    Co ciekawe, istnieje alternatywna metoda implementacji algorytmu DFS, która
-    nie używa rekurencji. Wygląda ona tak samo jak implementacja BFS, tylko że
-    zamiast kolejki używa się stosu.
-
-    Takiej implementacji jednak rzadko się używa, ponieważ tracimy prostotę
-    implementacji. Jej atutem jest jednak to, że zużywa mniej pamięci niż wersja
-    rekurencyjna, w której wywołania funkcji potrafią zająć dużo pamięci stosu.
 
 ### Zadania
 
@@ -118,3 +107,11 @@ void dfs(int v) {
     }
 }
 ```
+
+<!--
+
+### Zadania
+
+TODO: zadanie o wykrywaniu cyklu w grafie
+
+-->
