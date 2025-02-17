@@ -46,5 +46,4 @@ Jest kilka możliwości:
 ![Logo MAP](assets/map-logo-dark.svg#only-dark){ class="no-invert front-page-logo" }
 ![Logo Ministerstwo](assets/ministerstwo-logo-light.png#only-light){ class="no-invert front-page-logo" }
 ![Logo Ministerstwo](assets/ministerstwo-logo-dark.png#only-dark){class="no-invert front-page-logo" }  
-Projekt "Mistrzostwa w Algorytmice i Programowaniu – Uczniowie"  
-Zadanie finansowane ze środków Ministerstwa Cyfryzacji
+Projekt "Mistrzostwa w Algorytmice i Programowaniu – Uczniowie", Zadanie finansowane ze środków Ministerstwa Cyfryzacji

@@ -98,4 +98,5 @@ body[data-md-color-primary="blue"] {
 .md-typeset .front-page-logo {
     height: 70px;
     margin: 10px;
+    max-width: 20%;
 }
